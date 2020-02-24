@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.challengerapproaching.R;
 
-public class darkSamus extends AppCompatActivity {
+public class Dark_Samus extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

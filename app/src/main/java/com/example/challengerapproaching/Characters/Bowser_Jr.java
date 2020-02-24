@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.challengerapproaching.R;
 
-public class captainFalcon extends AppCompatActivity {
+public class Bowser_Jr extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_captain_falcon);
+        setContentView(R.layout.activity_bowser_jr);
     }
 }

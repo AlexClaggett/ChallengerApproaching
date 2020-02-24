@@ -32,13 +32,13 @@
                 android:text="Bayonetta" />
 
             <Button
-                android:id="@+id/boswer"
+                android:id="@+id/bowser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Bowser" />
 
             <Button
-                android:id="@+id/bowserJr."
+                android:id="@+id/bowserJr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Bowser Jr." />
@@ -56,7 +56,7 @@
                 android:text="Captain Falcon" />
 
             <Button
-                android:id="@+id/Chrom"
+                android:id="@+id/chrom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Chrom" />

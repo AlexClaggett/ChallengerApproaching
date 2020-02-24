@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.challengerapproaching.R;
 
-public class darkPit extends AppCompatActivity {
+public class Dr_Mario extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dark_pit);
+        setContentView(R.layout.activity_dr_mario);
     }
 }

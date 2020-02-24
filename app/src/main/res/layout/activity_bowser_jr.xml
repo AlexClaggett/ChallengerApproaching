@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Characters.bowserJr">
+    tools:context=".Characters.Bowser_Jr">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

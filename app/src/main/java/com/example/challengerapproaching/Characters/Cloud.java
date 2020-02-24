@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.challengerapproaching.R;
 
-public class bowserJr extends AppCompatActivity {
+public class Cloud extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bowser_jr);
+        setContentView(R.layout.activity_cloud);
     }
 }
