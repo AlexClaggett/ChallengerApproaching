@@ -7,243 +7,6 @@
     tools:context=".MainActivity">
 
     <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="204dp"
-        android:layout_height="729dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <Button
-                android:id="@+id/button100"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button101"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button102"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button103"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button104"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button105"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button106"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button107"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button108"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button109"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button110"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button111"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button112"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button113"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button114"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button115"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button116"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button117"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button118"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button119"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button120"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button121"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button122"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button123"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button124"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button125"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button126"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button127"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button128"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button129"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button130"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button131"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button132"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button133"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button134"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button135"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button136"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
         android:layout_width="204dp"
         android:layout_height="733dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -254,13 +17,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/banjoKazooie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Banjo & Kazooie" />
+                android:text="Banjo and Kazooie" />
 
             <Button
                 android:id="@+id/bayonetta"
@@ -275,7 +38,7 @@
                 android:text="Bowser" />
 
             <Button
-                android:id="@+id/bowser jr."
+                android:id="@+id/bowserJr."
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Bowser Jr." />
@@ -293,7 +56,7 @@
                 android:text="Captain Falcon" />
 
             <Button
-                android:id="@+id/Chom"
+                android:id="@+id/Chrom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Chrom" />
@@ -359,122 +122,411 @@
                 android:text="Falco" />
 
             <Button
-                android:id="@+id/button91"
+                android:id="@+id/fox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Fox" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/button93"
+                android:id="@+id/ganondorf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Ganondorf" />
 
             <Button
-                android:id="@+id/button94"
+                android:id="@+id/greninja"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="greninja" />
 
             <Button
-                android:id="@+id/button69"
+                android:id="@+id/hero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Hero" />
 
             <Button
-                android:id="@+id/button70"
+                android:id="@+id/iceClimbers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Ice Climbers" />
 
             <Button
-                android:id="@+id/button71"
+                android:id="@+id/ike"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Ike" />
 
             <Button
-                android:id="@+id/button72"
+                android:id="@+id/incineroar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Incineroar" />
 
             <Button
-                android:id="@+id/button61"
+                android:id="@+id/inkling"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Inkling" />
 
             <Button
-                android:id="@+id/button62"
+                android:id="@+id/isabelle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Isabelle" />
 
             <Button
-                android:id="@+id/button63"
+                android:id="@+id/jigglypuff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Jigglypuff" />
 
             <Button
-                android:id="@+id/button64"
+                android:id="@+id/joker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Joker" />
 
             <Button
-                android:id="@+id/button65"
+                android:id="@+id/ken"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Ken" />
 
             <Button
-                android:id="@+id/button66"
+                android:id="@+id/kingDedede"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="King Dedede" />
 
             <Button
-                android:id="@+id/button58"
+                android:id="@+id/kingK.Rool"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="King K. Rool" />
 
             <Button
-                android:id="@+id/button59"
+                android:id="@+id/kirby"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Kirby" />
 
             <Button
-                android:id="@+id/button60"
+                android:id="@+id/link"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Link" />
 
             <Button
-                android:id="@+id/button57"
+                android:id="@+id/littleMac"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Little Mac" />
 
             <Button
-                android:id="@+id/button56"
+                android:id="@+id/lucario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Lucario" />
 
             <Button
-                android:id="@+id/button55"
+                android:id="@+id/lucas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Lucas" />
+
+            <Button
+                android:id="@+id/lucina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lucina" />
+
+            <Button
+                android:id="@+id/Luigi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Luigi" />
+
+            <Button
+                android:id="@+id/mario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mario" />
+
+            <Button
+                android:id="@+id/marth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marth" />
+
+            <Button
+                android:id="@+id/megaMan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mega Man" />
+
         </LinearLayout>
     </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="204dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/metaKnight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meta Knight" />
+
+            <Button
+                android:id="@+id/mewtwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mewtwo" />
+
+            <Button
+                android:id="@+id/miiBrawler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mii Brawler" />
+
+            <Button
+                android:id="@+id/miiGunner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mii Gunner" />
+
+            <Button
+                android:id="@+id/miiSwordfighter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mii Swordfighter" />
+
+            <Button
+                android:id="@+id/mr.GameWatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mr.Game and Watch" />
+
+            <Button
+                android:id="@+id/ness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ness" />
+
+            <Button
+                android:id="@+id/olimar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Olimar" />
+
+            <Button
+                android:id="@+id/pacMan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pac Man" />
+
+            <Button
+                android:id="@+id/palutena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Palutena" />
+
+            <Button
+                android:id="@+id/peach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peach" />
+
+            <Button
+                android:id="@+id/pichu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pichu" />
+
+            <Button
+                android:id="@+id/pikachu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pikachu" />
+
+            <Button
+                android:id="@+id/piranhaPlant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Piranha Plant" />
+
+            <Button
+                android:id="@+id/pit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pit" />
+
+            <Button
+                android:id="@+id/squirtle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Squirtle" />
+
+            <Button
+                android:id="@+id/ivysaur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ivysaur" />
+
+            <Button
+                android:id="@+id/charizard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Charizard" />
+
+            <Button
+                android:id="@+id/richter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Richter" />
+
+            <Button
+                android:id="@+id/ridley"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ridley" />
+
+            <Button
+                android:id="@+id/r.o.b."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R.O.B." />
+
+            <Button
+                android:id="@+id/robin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Robin" />
+
+            <Button
+                android:id="@+id/rosalinaAndLuma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rosalina and Luma" />
+
+            <Button
+                android:id="@+id/roy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Roy" />
+
+            <Button
+                android:id="@+id/ryu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ryu" />
+
+            <Button
+                android:id="@+id/samus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Samus" />
+
+            <Button
+                android:id="@+id/sheik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sheik" />
+
+            <Button
+                android:id="@+id/shulk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shulk" />
+
+            <Button
+                android:id="@+id/simon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simon" />
+
+            <Button
+            android:id="@+id/snake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Snake" />
+
+            <Button
+                android:id="@+id/sonic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sonic" />
+
+            <Button
+                android:id="@+id/terry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Terry" />
+
+            <Button
+                android:id="@+id/toonLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toon Link" />
+
+            <Button
+                android:id="@+id/villager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Villager" />
+
+            <Button
+                android:id="@+id/wario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wario" />
+
+            <Button
+                android:id="@+id/wiiFitTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wii Fit Trainer" />
+
+            <Button
+                android:id="@+id/wolf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wolf" />
+
+            <Button
+                android:id="@+id/yoshi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yoshi" />
+
+            <Button
+                android:id="@+id/youngLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Young Link" />
+
+            <Button
+                android:id="@+id/zelda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zelda" />
+
+            <Button
+                android:id="@+id/zeroSuitSamus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zero Suit Samus" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
