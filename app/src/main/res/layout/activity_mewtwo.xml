@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".Characters.Mewtwo">
 
+    <Spinner
+        android:entries="@array/Mewtwomoves"
+        android:id="@+id/spinner2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="131dp"
+        android:background="#AEACAC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
