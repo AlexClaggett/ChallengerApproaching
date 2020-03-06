@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,7 @@ import com.example.challengerapproaching.Characters.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button banjoKazooie, Bayonetta, Bowser, bowserJr, Byleth,
+    ImageButton banjoKazooie, Bayonetta, Bowser, bowserJr, Byleth,
     captainFalcon, Chrom, Cloud, Corrin, Daisy, darkPit,
    darkSamus, diddyKong, donkeyKong, drMario, duckHunt,
     Falco, Fox, Ganondorf, Greninja, Hero, iceClimbers,
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     Wario, wiiFitTrainer, Wolf, Yoshi, youngLink,
     Zelda, zeroSuitSamus;
 
-    Button [] buttons = {banjoKazooie, Bayonetta, Bowser, bowserJr, Byleth,
+    ImageButton [] buttons = {banjoKazooie, Bayonetta, Bowser, bowserJr, Byleth,
             captainFalcon, Chrom, Cloud, Corrin, Daisy, darkPit,
             darkSamus, diddyKong, donkeyKong, drMario, duckHunt,
             Falco, Fox, Ganondorf, Greninja, Hero, iceClimbers,
@@ -114,8 +115,8 @@ public class MainActivity extends AppCompatActivity {
 
         i = 0;
 
-        for (Button b: buttons){
-            b = (Button)findViewById(ids[i]);
+        for (ImageButton b: buttons){
+            b = (ImageButton)findViewById(ids[i]);
             final Intent tosend = new Intent(MainActivity.this, charClasses[i]);
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
