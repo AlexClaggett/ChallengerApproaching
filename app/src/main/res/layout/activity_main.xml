@@ -21,351 +21,515 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <Button
+                <ImageButton
                     android:id="@+id/banjoKazooie"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/banjo_kazooie"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Banjo and Kazooie" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/bayonetta"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/bayonetta"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Bayonetta" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/bowser"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/bowser"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Bowser" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/bowserJr"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/bowserjr"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Bowser Jr." />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/bylthe"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/byleth"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Bylthe" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/captainFalcon"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/captainfalcon"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Captain Falcon" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/chrom"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/chrom"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Chrom" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/cloud"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/cloud"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Cloud" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/corrin"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/corrin"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Corrin" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/daisy"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/daisy"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Daisy" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/darkPit"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/darkpit"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Dark Pit" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/darkSamus"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/darksamus"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Dark Samus" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/diddyKong"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/diddykong"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Diddy Kong" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/donkeyKong"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/donkeykong"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Donkey Kong" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/dr.mario"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/drmario"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Dr.Mario" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/duckHunt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/duckhunt"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Duck Hunt" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/falco"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/falco"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Falco" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/fox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/fox"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Fox" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/ganondorf"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/ganondorf"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Ganondorf" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/greninja"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/greninja"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="greninja" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/hero"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/hero"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Hero" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/iceClimbers"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/iceclimbers"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Ice Climbers" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/ike"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/ike"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Ike" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/incineroar"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/incineroar"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Incineroar" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/inkling"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/inkling"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Inkling" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/isabelle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/isabelle"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Isabelle" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/jigglypuff"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/jigglypuff"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Jigglypuff" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/joker"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/joker"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Joker" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/ken"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/ken"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Ken" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/kingDedede"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/kingdedede"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="King Dedede" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/kingK.Rool"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/kingkrool"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="King K. Rool" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/kirby"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/kirby"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Kirby" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/link"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/link"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Link" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/littleMac"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/littlemac"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Little Mac" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/lucario"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/lucario"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Lucario" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/lucas"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/lucas"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Lucas" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/lucina"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/lucina"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Lucina" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/Luigi"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/luigi"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Luigi" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/mario"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/mario"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Mario" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/marth"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/marth"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Marth" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/megaMan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/megaman"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Mega Man" />
 
                 <!--            </LinearLayout>-->
@@ -375,351 +539,515 @@
                 <!--                android:layout_height="wrap_content"-->
                 <!--                android:orientation="vertical" >-->
 
-                <Button
+                <ImageButton
                     android:id="@+id/metaKnight"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/metaknight"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Meta Knight" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/mewtwo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/mewtwo"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Mewtwo" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/miiBrawler"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/miibrawler"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Mii Brawler" />
             </TableRow>
 
             <TableRow>
 
-                <Button
-                    android:id="@+id/miiGunner"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Mii Gunner" />
-
-                <Button
+                <ImageButton
                     android:id="@+id/miiSwordfighter"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/miifighter"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Mii Swordfighter" />
+
+                <ImageButton
+                    android:id="@+id/miiGunner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/miigunner"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:text="Mii Gunner" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/mr.GameWatch"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/mrgameandwatch"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Mr.Game and Watch" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/ness"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/ness"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Ness" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/olimar"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/olimar"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Olimar" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/pacMan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/pacman"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Pac Man" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/palutena"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/palutena"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Palutena" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/peach"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/peach"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Peach" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/pichu"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/pichu"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Pichu" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/pikachu"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/pikachu"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Pikachu" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/piranhaPlant"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/piranhaplant"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Piranha Plant" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/pit"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/pit"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Pit" />
             </TableRow>
 
             <TableRow>
 
-                <Button
-                    android:id="@+id/squirtle"
+                <ImageButton
+                    android:id="@+id/charizard"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Squirtle" />
+                    android:src="@drawable/ptcharizard"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:text="Charizard" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/ivysaur"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/ptivysaur"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Ivysaur" />
             </TableRow>
 
             <TableRow>
 
-                <Button
-                    android:id="@+id/charizard"
+                <ImageButton
+                    android:id="@+id/squirtle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Charizard" />
+                    android:src="@drawable/ptsquirtle"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:text="Squirtle" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/richter"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/richter"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Richter" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/ridley"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/ridley"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Ridley" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/r.o.b."
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/rob"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="R.O.B." />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/robin"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/robin"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Robin" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/rosalinaAndLuma"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/rosalinaandluma"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Rosalina and Luma" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/roy"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/roy"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Roy" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/ryu"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/ryu"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Ryu" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/samus"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/samus"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Samus" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/sheik"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/sheik"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Sheik" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/shulk"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/shulk"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Shulk" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/simon"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/simon"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Simon" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/snake"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/snake"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Snake" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/sonic"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/sonic"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Sonic" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/terry"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/terry"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Terry" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/toonLink"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/toonlink"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Toon Link" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/villager"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/villager"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Villager" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/wario"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/wario"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Wario" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/wiiFitTrainer"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/wiifittrainer"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Wii Fit Trainer" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/wolf"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/wolf"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Wolf" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/yoshi"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/yoshi"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Yoshi" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/youngLink"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/younglink"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Young Link" />
             </TableRow>
 
             <TableRow>
 
-                <Button
+                <ImageButton
                     android:id="@+id/zelda"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/zelda"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Zelda" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/zeroSuitSamus"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:src="@drawable/zss"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
                     android:text="Zero Suit Samus" />
             </TableRow>
         </TableLayout>
