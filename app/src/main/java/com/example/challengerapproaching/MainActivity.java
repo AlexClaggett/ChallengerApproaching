@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.*;
 
 import com.example.challengerapproaching.Characters.*;
@@ -79,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             Wario.class, Wii_Fit_Trainer.class, Wolf.class, Yoshi.class, Young_Link.class,
             Zelda.class, Zero_Suit_Samus.class};
 
+    ImageButton eventButton;
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,5 +95,14 @@ public class MainActivity extends AppCompatActivity {
             b.setOnClickListener(v -> startActivity(tosend));
             i++;
         }
+
+        eventButton = findViewById(R.id.ButtonEvent);
+        eventButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Intent event = new Intent(MainActivity.this, Events.class);
+                startActivity(event);
+            }
+        });
     }
 }

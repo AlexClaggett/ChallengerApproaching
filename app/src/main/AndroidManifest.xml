@@ -97,6 +97,7 @@
         <activity android:name=".Characters.Bowser" />
         <activity android:name=".Characters.Bayonetta" />
         <activity android:name=".Characters.Banjo_Kazooie" />
+        <activity android:name=".Events"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

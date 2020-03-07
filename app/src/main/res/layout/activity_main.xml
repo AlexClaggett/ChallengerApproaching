@@ -18,6 +18,23 @@
 
             <TableRow
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/ButtonEvent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/black"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/eventsbutton"
+                    android:text="Tournaments / Events" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
@@ -26,10 +43,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/banjo_kazooie_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/banjo_kazooie_btn"
                     android:text="Banjo and Kazooie" />
 
                 <ImageButton
@@ -37,10 +54,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/bayonetta_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bayonetta_btn"
                     android:text="Bayonetta" />
             </TableRow>
 
@@ -51,10 +68,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/bowser_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bowser_btn"
                     android:text="Bowser" />
 
                 <ImageButton
@@ -62,10 +79,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/bowserjr_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bowserjr_btn"
                     android:text="Bowser Jr." />
             </TableRow>
 
@@ -76,10 +93,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/byleth_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/byleth_btn"
                     android:text="Bylthe" />
 
                 <ImageButton
@@ -87,10 +104,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/captainfalcon_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/captainfalcon_btn"
                     android:text="Captain Falcon" />
             </TableRow>
 
@@ -101,10 +118,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/chrom_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/chrom_btn"
                     android:text="Chrom" />
 
                 <ImageButton
@@ -112,10 +129,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/cloud_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/cloud_btn"
                     android:text="Cloud" />
             </TableRow>
 
@@ -126,10 +143,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/corrin_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/corrin_btn"
                     android:text="Corrin" />
 
                 <ImageButton
@@ -137,10 +154,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/daisy_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/daisy_btn"
                     android:text="Daisy" />
             </TableRow>
 
@@ -151,10 +168,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/darkpit_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/darkpit_btn"
                     android:text="Dark Pit" />
 
                 <ImageButton
@@ -162,10 +179,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/darksamus_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/darksamus_btn"
                     android:text="Dark Samus" />
             </TableRow>
 
@@ -176,10 +193,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/diddykong_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/diddykong_btn"
                     android:text="Diddy Kong" />
 
                 <ImageButton
@@ -187,10 +204,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/donkeykong_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/donkeykong_btn"
                     android:text="Donkey Kong" />
             </TableRow>
 
@@ -201,10 +218,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/drmario_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/drmario_btn"
                     android:text="Dr.Mario" />
 
                 <ImageButton
@@ -212,10 +229,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/duckhunt_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/duckhunt_btn"
                     android:text="Duck Hunt" />
             </TableRow>
 
@@ -226,10 +243,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/falco_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/falco_btn"
                     android:text="Falco" />
 
                 <ImageButton
@@ -237,10 +254,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/fox_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/fox_btn"
                     android:text="Fox" />
             </TableRow>
 
@@ -251,10 +268,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ganondorf_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ganondorf_btn"
                     android:text="Ganondorf" />
 
                 <ImageButton
@@ -262,10 +279,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/greninja_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/greninja_btn"
                     android:text="greninja" />
             </TableRow>
 
@@ -276,10 +293,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hero_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/hero_btn"
                     android:text="Hero" />
 
                 <ImageButton
@@ -287,10 +304,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/iceclimbers_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/iceclimbers_btn"
                     android:text="Ice Climbers" />
             </TableRow>
 
@@ -301,10 +318,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ike_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ike_btn"
                     android:text="Ike" />
 
                 <ImageButton
@@ -312,10 +329,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/incineroar_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/incineroar_btn"
                     android:text="Incineroar" />
             </TableRow>
 
@@ -326,10 +343,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/inkling_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/inkling_btn"
                     android:text="Inkling" />
 
                 <ImageButton
@@ -337,10 +354,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/isabelle_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/isabelle_btn"
                     android:text="Isabelle" />
             </TableRow>
 
@@ -351,10 +368,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/jigglypuff_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/jigglypuff_btn"
                     android:text="Jigglypuff" />
 
                 <ImageButton
@@ -362,10 +379,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/joker_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/joker_btn"
                     android:text="Joker" />
             </TableRow>
 
@@ -376,10 +393,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ken_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ken_btn"
                     android:text="Ken" />
 
                 <ImageButton
@@ -387,10 +404,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/kingdedede_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kingdedede_btn"
                     android:text="King Dedede" />
             </TableRow>
 
@@ -401,10 +418,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/kingkrool_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kingkrool_btn"
                     android:text="King K. Rool" />
 
                 <ImageButton
@@ -412,10 +429,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/kirby_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kirby_btn"
                     android:text="Kirby" />
             </TableRow>
 
@@ -426,10 +443,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/link_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/link_btn"
                     android:text="Link" />
 
                 <ImageButton
@@ -437,10 +454,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/littlemac_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/littlemac_btn"
                     android:text="Little Mac" />
             </TableRow>
 
@@ -451,10 +468,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/lucario_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lucario_btn"
                     android:text="Lucario" />
 
                 <ImageButton
@@ -462,10 +479,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/lucas_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lucas_btn"
                     android:text="Lucas" />
             </TableRow>
 
@@ -476,10 +493,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/lucina_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lucina_btn"
                     android:text="Lucina" />
 
                 <ImageButton
@@ -487,10 +504,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/luigi_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/luigi_btn"
                     android:text="Luigi" />
             </TableRow>
 
@@ -501,10 +518,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/mario_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mario_btn"
                     android:text="Mario" />
 
                 <ImageButton
@@ -512,10 +529,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/marth_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/marth_btn"
                     android:text="Marth" />
             </TableRow>
 
@@ -526,10 +543,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/megaman_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/megaman_btn"
                     android:text="Mega Man" />
 
                 <!--            </LinearLayout>-->
@@ -544,10 +561,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/metaknight_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/metaknight_btn"
                     android:text="Meta Knight" />
             </TableRow>
 
@@ -558,10 +575,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/mewtwo_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mewtwo_btn"
                     android:text="Mewtwo" />
 
                 <ImageButton
@@ -569,10 +586,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/miibrawler_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/miibrawler_btn"
                     android:text="Mii Brawler" />
             </TableRow>
 
@@ -583,10 +600,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/miifighter_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/miifighter_btn"
                     android:text="Mii Swordfighter" />
 
                 <ImageButton
@@ -594,10 +611,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/miigunner_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/miigunner_btn"
                     android:text="Mii Gunner" />
             </TableRow>
 
@@ -608,10 +625,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/mrgameandwatch_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mrgameandwatch_btn"
                     android:text="Mr.Game and Watch" />
 
                 <ImageButton
@@ -619,10 +636,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ness_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ness_btn"
                     android:text="Ness" />
             </TableRow>
 
@@ -633,10 +650,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/olimar_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/olimar_btn"
                     android:text="Olimar" />
 
                 <ImageButton
@@ -644,10 +661,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/pacman_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pacman_btn"
                     android:text="Pac Man" />
             </TableRow>
 
@@ -658,10 +675,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/palutena_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/palutena_btn"
                     android:text="Palutena" />
 
                 <ImageButton
@@ -669,10 +686,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/peach_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/peach_btn"
                     android:text="Peach" />
             </TableRow>
 
@@ -683,10 +700,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/pichu_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pichu_btn"
                     android:text="Pichu" />
 
                 <ImageButton
@@ -694,10 +711,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/pikachu_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pikachu_btn"
                     android:text="Pikachu" />
             </TableRow>
 
@@ -708,10 +725,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/piranhaplant_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/piranhaplant_btn"
                     android:text="Piranha Plant" />
 
                 <ImageButton
@@ -719,10 +736,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/pit_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pit_btn"
                     android:text="Pit" />
             </TableRow>
 
@@ -733,10 +750,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ptcharizard_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ptcharizard_btn"
                     android:text="Charizard" />
 
                 <ImageButton
@@ -744,10 +761,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ptivysaur_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ptivysaur_btn"
                     android:text="Ivysaur" />
             </TableRow>
 
@@ -758,10 +775,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ptsquirtle_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ptsquirtle_btn"
                     android:text="Squirtle" />
 
                 <ImageButton
@@ -769,10 +786,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/richter_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/richter_btn"
                     android:text="Richter" />
             </TableRow>
 
@@ -783,10 +800,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ridley_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ridley_btn"
                     android:text="Ridley" />
 
                 <ImageButton
@@ -794,10 +811,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/rob_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rob_btn"
                     android:text="R.O.B." />
             </TableRow>
 
@@ -808,10 +825,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/robin_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/robin_btn"
                     android:text="Robin" />
 
                 <ImageButton
@@ -819,10 +836,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/rosalinaandluma_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rosalinaandluma_btn"
                     android:text="Rosalina and Luma" />
             </TableRow>
 
@@ -833,10 +850,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/roy_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/roy_btn"
                     android:text="Roy" />
 
                 <ImageButton
@@ -844,10 +861,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ryu_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ryu_btn"
                     android:text="Ryu" />
             </TableRow>
 
@@ -858,10 +875,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/samus_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/samus_btn"
                     android:text="Samus" />
 
                 <ImageButton
@@ -869,10 +886,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/sheik_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sheik_btn"
                     android:text="Sheik" />
             </TableRow>
 
@@ -883,10 +900,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/shulk_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/shulk_btn"
                     android:text="Shulk" />
 
                 <ImageButton
@@ -894,10 +911,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/simon_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/simon_btn"
                     android:text="Simon" />
             </TableRow>
 
@@ -908,10 +925,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/snake_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/snake_btn"
                     android:text="Snake" />
 
                 <ImageButton
@@ -919,10 +936,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/sonic_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sonic_btn"
                     android:text="Sonic" />
             </TableRow>
 
@@ -933,10 +950,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/terry_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/terry_btn"
                     android:text="Terry" />
 
                 <ImageButton
@@ -944,10 +961,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/toonlink_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/toonlink_btn"
                     android:text="Toon Link" />
             </TableRow>
 
@@ -958,10 +975,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/villager_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/villager_btn"
                     android:text="Villager" />
 
                 <ImageButton
@@ -969,10 +986,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/wario_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/wario_btn"
                     android:text="Wario" />
             </TableRow>
 
@@ -983,10 +1000,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/wiifittrainer_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/wiifittrainer_btn"
                     android:text="Wii Fit Trainer" />
 
                 <ImageButton
@@ -994,10 +1011,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/wolf_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/wolf_btn"
                     android:text="Wolf" />
             </TableRow>
 
@@ -1008,10 +1025,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/yoshi_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/yoshi_btn"
                     android:text="Yoshi" />
 
                 <ImageButton
@@ -1019,10 +1036,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/younglink_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/younglink_btn"
                     android:text="Young Link" />
             </TableRow>
 
@@ -1033,10 +1050,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/zelda_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/zelda_btn"
                     android:text="Zelda" />
 
                 <ImageButton
@@ -1044,10 +1061,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/zss_btn"
-                    android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/zss_btn"
                     android:text="Zero Suit Samus" />
             </TableRow>
         </TableLayout>
