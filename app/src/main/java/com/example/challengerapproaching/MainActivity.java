@@ -2,12 +2,9 @@ package com.example.challengerapproaching;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.*;
 
 import com.example.challengerapproaching.Characters.*;
@@ -82,24 +79,6 @@ public class MainActivity extends AppCompatActivity {
             Wario.class, Wii_Fit_Trainer.class, Wolf.class, Yoshi.class, Young_Link.class,
             Zelda.class, Zero_Suit_Samus.class};
 
-    String [] names = {"banjoKazooie", "Bayonetta", "Bowser", "bowserJr", "Byleth",
-            "captainFalcon", "Chrom", "Cloud", "Corrin", "Daisy", "darkPit",
-            "darkSamus", "diddyKong", "donkeyKong", "drMario", "duckHunt",
-            "Falco", "Fox", "Ganondorf", "Greninja", "Hero", "iceClimbers",
-            "Ike", "Incineroar", "Inkling", "Isabelle", "Jigglypuff",
-            "Joker", "Ken", "kingDedede", "kingKRool", "Kirby", "Link",
-            "littleMac", "Lucario", "Lucas", "Lucina", "Luigi", "Mario",
-            "Marth", "megaMan", "metaKnight", "Mewtwo", "miiBrawler",
-            "miiGunner", "miiSwordfighter", "mrGameandWatch",
-            "Ness", "Olimar", "pacMan", "Palutena", "Peach", "Pichu",
-            "Pikachu", "piranhaPlant", "Pit", "Squirtle", "Ivysaur",
-            "Charizard", "Richter", "Ridley", "ROB", "Robin",
-            "rosalinaAndLuma", "Roy", "Ryu", "Samus", "Sheik",
-            "Shulk", "Simon", "Snake", "Sonic", "Terry", "toonLink", "Villager",
-            "Wario", "wiiFitTrainer", "Wolf", "Yoshi", "youngLink",
-            "Zelda", "zeroSuitSamus"};
-
-
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,15 +88,9 @@ public class MainActivity extends AppCompatActivity {
         int i = 0;
 
         for (ImageButton b: buttons){
-            b = (ImageButton)findViewById(ids[i]);
+            b = findViewById(ids[i]);
             final Intent tosend = new Intent(MainActivity.this, charClasses[i]);
-            b.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i = tosend;
-                    startActivity(i);
-                }
-            });
+            b.setOnClickListener(v -> startActivity(tosend));
             i++;
         }
     }
