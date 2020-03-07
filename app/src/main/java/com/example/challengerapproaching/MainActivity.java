@@ -99,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
             "Wario", "wiiFitTrainer", "Wolf", "Yoshi", "youngLink",
             "Zelda", "zeroSuitSamus"};
 
-    character[] characters = new character [names.length];
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -108,12 +107,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         int i = 0;
-        for(String n: names){
-            characters[i] = new character(n);
-            i++;
-        }
-
-        i = 0;
 
         for (ImageButton b: buttons){
             b = (ImageButton)findViewById(ids[i]);
