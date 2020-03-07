@@ -7,39 +7,25 @@
     android:visibility="visible"
     tools:context=".Events">
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="205dp"
+
+    <TextView
+        android:id="@+id/tvEvent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Set up Event:"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:hint="select date"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is text for shits and giggles"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/daychoice"
-        android:layout_width="205dp"
-        android:layout_height="45dp"
-        android:text="Choose Day"
+        android:layout_marginTop="32dp"
+        android:text="Event Setup: "
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <CalendarView
-        android:id="@+id/calendarView2"
-        android:layout_width="205dp"
-        android:layout_height="205dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/daychoice" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
