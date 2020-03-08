@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,22 +23,34 @@ import java.util.Calendar;
  *********************************************************************/
 public class Events extends AppCompatActivity {
 
-  /** Static string for sending Log information to the terminal */
+  /**
+   * Static string for sending Log information to the terminal
+   */
   private static final String TAG = "MainActivity";
 
-  /** Text View to select the desired date */
+  /**
+   * Text View to select the desired date
+   */
   private TextView eventSetup;
 
-  /** date listener that presents the options to the user */
+  /**
+   * date listener that presents the options to the user
+   */
   private DatePickerDialog.OnDateSetListener onDateSetListener;
 
-  /** Layout that holds the dates selected. */
-  private LinearLayout alView;
+  /**
+   * Layout that holds the dates selected.
+   */
+  private LinearLayout lview;
 
-  /** Keeps track of how many dates have been chosen */
+  /**
+   * Keeps track of how many dates have been chosen
+   */
   private int numDates = 0;
 
-  /** Naming format for default Event setup*/
+  /**
+   * Naming format for default Event setup
+   */
   private String dateName;
 
   /********************************************************************
@@ -55,7 +68,7 @@ public class Events extends AppCompatActivity {
 
     // Initialize variables to their respective views
     eventSetup = findViewById(R.id.tvEvent);
-    alView = findViewById(R.id.dateList);
+    lview = findViewById(R.id.dateList);
 
     // Defines what happens when eventSetup is selected
     eventSetup.setOnClickListener(v -> {
@@ -74,9 +87,9 @@ public class Events extends AppCompatActivity {
 
       //Create DatePickerDialog object and initializes it
       DatePickerDialog dialog = new DatePickerDialog(
-                    Events.this,
-                    android.R.style.Theme_Holo_Light_Dialog_MinWidth,
-                    onDateSetListener, year, month, day);
+              Events.this,
+              android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+              onDateSetListener, year, month, day);
       // Set the windows background
       dialog.getWindow().setBackgroundDrawable(
               new ColorDrawable(Color.TRANSPARENT));
@@ -85,41 +98,52 @@ public class Events extends AppCompatActivity {
       dialog.show();
     });
 
-    // Defines what happens when a date is selected from eventSetup
-    onDateSetListener = (pickerView, year, month, dayOfMonth) -> {
+    // Initializes the onDateSetListener to a new object
+    onDateSetListener = new DatePickerDialog.OnDateSetListener() {
+      @Override
+      /***************************************************************
+       * Class that defines what happens once a date is selected.
+       *
+       * @param view the datePicker view
+       * @param year the year selected.
+       * @param month the month selected
+       * @param dayOfMonth the day of the month selected
+       ***************************************************************/
+      public void onDateSet(DatePicker view, int year, int month,
+                            int dayOfMonth) {
+        // Adds one to the month because the calendar starts at 0
+        month = month + 1;
 
-      // Adds one to the month because the calendar starts at 0 in code
-      month = month + 1;
+        // Increment Number of Dates variable
+        numDates++;
 
-      // Increment Number of Dates variable
-      numDates++;
+        // Create the beginning of the date name
+        dateName = "Date" + numDates + ": ";
 
-      // Create the beginning of the date name
-      dateName = "Date" + numDates + ": ";
+        // Create EditText view to hold the selected date
+        EditText newDate = new EditText(Events.this);
 
-      // Create EditText view to hold the selected date called newDate
-      EditText newDate = new EditText(Events.this);
-
-      // Give the newDates id to the number of dates
-      //newDate.setId(numDates);
+        // Give the newDates id to the number of dates
+        //newDate.setId(numDates);
 
       /* Print out a log to the terminal in order to verify date order
          and print out the date selected
        */
-      Log.d(TAG, "onDateSet: mm/dd/yyyy: " + month + "/" +
-              dayOfMonth + "/" + year);
+        Log.d(TAG, "onDateSet: mm/dd/yyyy: " + month + "/" +
+                dayOfMonth + "/" + year);
 
-      // Fill in the date selected
-      String date = month + "/" + dayOfMonth + "/" + year;
+        // Fill in the date selected
+        String date = month + "/" + dayOfMonth + "/" + year;
 
-      // Format size of the date
-      newDate.setTextSize(30);
+        // Format size of the date
+        newDate.setTextSize(30);
 
-      // Set newDate text to the selected date plus generated date name
-      newDate.setText(dateName + date);
+        // Set newDate text to the selected date
+        newDate.setText(dateName + date);
 
-      // Add newDate view to the layout variable
-      alView.addView(newDate);
+        // Add newDate view to the layout variable
+        lview.addView(newDate);
+      }
     };
-  };
+  }
 }
