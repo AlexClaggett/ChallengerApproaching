@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.challengerapproaching.characters.BanjoKazooie;
 import com.example.challengerapproaching.characters.Bayonetta;
 import com.example.challengerapproaching.characters.Bowser;
@@ -66,9 +65,9 @@ import com.example.challengerapproaching.characters.Pichu;
 import com.example.challengerapproaching.characters.Pikachu;
 import com.example.challengerapproaching.characters.PiranhaPlant;
 import com.example.challengerapproaching.characters.Pit;
-import com.example.challengerapproaching.characters.Rob;
 import com.example.challengerapproaching.characters.Richter;
 import com.example.challengerapproaching.characters.Ridley;
+import com.example.challengerapproaching.characters.Rob;
 import com.example.challengerapproaching.characters.Robin;
 import com.example.challengerapproaching.characters.RosalinaAndLuma;
 import com.example.challengerapproaching.characters.Roy;
