@@ -4,14 +4,14 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 
-/** This class sets the content view to Fox's xml
+/** This class sets the content view to Dark Samus's xml
  * file when the respective button is pushed.*/
 
-public class Fox extends AppCompatActivity {
+public class DarkSamus extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_fox);
+    setContentView(R.layout.activity_dark_pit);
   }
 }

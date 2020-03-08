@@ -87,7 +87,7 @@
         <activity android:name=".characters.DrMario" />
         <activity android:name=".characters.DonkeyKong" />
         <activity android:name=".characters.DiddyKong" />
-        <activity android:name=".characters.Dark_Samus" />
+        <activity android:name=".characters.DarkSamus" />
         <activity android:name=".characters.DarkPit" />
         <activity android:name=".characters.Daisy" />
         <activity android:name=".characters.Chrom" />

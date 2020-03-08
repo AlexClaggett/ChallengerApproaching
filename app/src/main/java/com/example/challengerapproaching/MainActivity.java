@@ -19,7 +19,7 @@ import com.example.challengerapproaching.characters.Cloud;
 import com.example.challengerapproaching.characters.Corrin;
 import com.example.challengerapproaching.characters.Daisy;
 import com.example.challengerapproaching.characters.DarkPit;
-import com.example.challengerapproaching.characters.Dark_Samus;
+import com.example.challengerapproaching.characters.DarkSamus;
 import com.example.challengerapproaching.characters.DiddyKong;
 import com.example.challengerapproaching.characters.DonkeyKong;
 import com.example.challengerapproaching.characters.DrMario;
@@ -89,6 +89,9 @@ import com.example.challengerapproaching.characters.Yoshi;
 import com.example.challengerapproaching.characters.YoungLink;
 import com.example.challengerapproaching.characters.Zelda;
 import com.example.challengerapproaching.characters.ZeroSuitSamus;
+
+/**This class generates the character select screen by setting the contentview,
+ * instantiating buttons and setting their listeners to their respective classes. */
 
 public class MainActivity extends AppCompatActivity {
 
@@ -211,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
 
   Class [] charClasses = {BanjoKazooie.class, Bayonetta.class, Bowser.class, BowserJr.class,
     Byleth.class, CaptainFalcon.class, Chrom.class, Cloud.class, Corrin.class, Daisy.class,
-    DarkPit.class, Dark_Samus.class, DiddyKong.class, DonkeyKong.class, DrMario.class,
+    DarkPit.class, DarkSamus.class, DiddyKong.class, DonkeyKong.class, DrMario.class,
     DuckHunt.class, Falco.class, Fox.class, Ganondorf.class, Greninja.class, Hero.class,
     IceClimbers.class, Ike.class, Incineroar.class, Inkling.class, Isabelle.class,
     Jigglypuff.class, Joker.class, Ken.class, KingDedede.class, KingKRool.class, Kirby.class,
