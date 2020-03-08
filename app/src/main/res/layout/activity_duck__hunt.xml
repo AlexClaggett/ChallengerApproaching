@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Characters.Duck_Hunt">
+    tools:context=".characters.DuckHunt">
 
     <Spinner
         android:entries="@array/DuckHuntmoves"

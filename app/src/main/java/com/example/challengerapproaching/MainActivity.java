@@ -7,88 +7,89 @@ import android.view.View;
 import android.widget.ImageButton;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.challengerapproaching.Characters.Banjo_Kazooie;
-import com.example.challengerapproaching.Characters.Bayonetta;
-import com.example.challengerapproaching.Characters.Bowser;
-import com.example.challengerapproaching.Characters.Bowser_Jr;
-import com.example.challengerapproaching.Characters.Bylthe;
-import com.example.challengerapproaching.Characters.Captain_Falcon;
-import com.example.challengerapproaching.Characters.Charizard;
-import com.example.challengerapproaching.Characters.Chrom;
-import com.example.challengerapproaching.Characters.Cloud;
-import com.example.challengerapproaching.Characters.Corrin;
-import com.example.challengerapproaching.Characters.Daisy;
-import com.example.challengerapproaching.Characters.Dark_Pit;
-import com.example.challengerapproaching.Characters.Dark_Samus;
-import com.example.challengerapproaching.Characters.Diddy_Kong;
-import com.example.challengerapproaching.Characters.Donkey_Kong;
-import com.example.challengerapproaching.Characters.Dr_Mario;
-import com.example.challengerapproaching.Characters.Duck_Hunt;
-import com.example.challengerapproaching.Characters.Falco;
-import com.example.challengerapproaching.Characters.Fox;
-import com.example.challengerapproaching.Characters.Ganondorf;
-import com.example.challengerapproaching.Characters.Greninja;
-import com.example.challengerapproaching.Characters.Hero;
-import com.example.challengerapproaching.Characters.Ice_Climbers;
-import com.example.challengerapproaching.Characters.Ike;
-import com.example.challengerapproaching.Characters.Incineroar;
-import com.example.challengerapproaching.Characters.Inkling;
-import com.example.challengerapproaching.Characters.Isabelle;
-import com.example.challengerapproaching.Characters.Ivysaur;
-import com.example.challengerapproaching.Characters.Jigglypuff;
-import com.example.challengerapproaching.Characters.Joker;
-import com.example.challengerapproaching.Characters.Ken;
-import com.example.challengerapproaching.Characters.King_Dedede;
-import com.example.challengerapproaching.Characters.King_K_Rool;
-import com.example.challengerapproaching.Characters.Kirby;
-import com.example.challengerapproaching.Characters.Link;
-import com.example.challengerapproaching.Characters.Little_Mac;
-import com.example.challengerapproaching.Characters.Lucario;
-import com.example.challengerapproaching.Characters.Lucas;
-import com.example.challengerapproaching.Characters.Lucina;
-import com.example.challengerapproaching.Characters.Luigi;
-import com.example.challengerapproaching.Characters.Mario;
-import com.example.challengerapproaching.Characters.Marth;
-import com.example.challengerapproaching.Characters.Mega_Man;
-import com.example.challengerapproaching.Characters.Meta_Knight;
-import com.example.challengerapproaching.Characters.Mewtwo;
-import com.example.challengerapproaching.Characters.Mii_Brawler;
-import com.example.challengerapproaching.Characters.Mii_Gunner;
-import com.example.challengerapproaching.Characters.Mii_Swordfighter;
-import com.example.challengerapproaching.Characters.Mr_Game_and_Watch;
-import com.example.challengerapproaching.Characters.Ness;
-import com.example.challengerapproaching.Characters.Olimar;
-import com.example.challengerapproaching.Characters.Pac_Man;
-import com.example.challengerapproaching.Characters.Palutena;
-import com.example.challengerapproaching.Characters.Peach;
-import com.example.challengerapproaching.Characters.Pichu;
-import com.example.challengerapproaching.Characters.Pikachu;
-import com.example.challengerapproaching.Characters.Piranha_Plant;
-import com.example.challengerapproaching.Characters.Pit;
-import com.example.challengerapproaching.Characters.ROB;
-import com.example.challengerapproaching.Characters.Richter;
-import com.example.challengerapproaching.Characters.Ridley;
-import com.example.challengerapproaching.Characters.Robin;
-import com.example.challengerapproaching.Characters.Rosalina_and_Luma;
-import com.example.challengerapproaching.Characters.Roy;
-import com.example.challengerapproaching.Characters.Ryu;
-import com.example.challengerapproaching.Characters.Samus;
-import com.example.challengerapproaching.Characters.Sheik;
-import com.example.challengerapproaching.Characters.Shulk;
-import com.example.challengerapproaching.Characters.Simon;
-import com.example.challengerapproaching.Characters.Snake;
-import com.example.challengerapproaching.Characters.Sonic;
-import com.example.challengerapproaching.Characters.Squirtle;
-import com.example.challengerapproaching.Characters.Terry;
-import com.example.challengerapproaching.Characters.Toon_Link;
-import com.example.challengerapproaching.Characters.Villager;
-import com.example.challengerapproaching.Characters.Wario;
-import com.example.challengerapproaching.Characters.Wii_Fit_Trainer;
-import com.example.challengerapproaching.Characters.Wolf;
-import com.example.challengerapproaching.Characters.Yoshi;
-import com.example.challengerapproaching.Characters.Young_Link;
-import com.example.challengerapproaching.Characters.Zelda;
-import com.example.challengerapproaching.Characters.Zero_Suit_Samus;
+
+import com.example.challengerapproaching.characters.BanjoKazooie;
+import com.example.challengerapproaching.characters.Bayonetta;
+import com.example.challengerapproaching.characters.Bowser;
+import com.example.challengerapproaching.characters.BowserJr;
+import com.example.challengerapproaching.characters.Byleth;
+import com.example.challengerapproaching.characters.CaptainFalcon;
+import com.example.challengerapproaching.characters.Charizard;
+import com.example.challengerapproaching.characters.Chrom;
+import com.example.challengerapproaching.characters.Cloud;
+import com.example.challengerapproaching.characters.Corrin;
+import com.example.challengerapproaching.characters.Daisy;
+import com.example.challengerapproaching.characters.DarkPit;
+import com.example.challengerapproaching.characters.Dark_Samus;
+import com.example.challengerapproaching.characters.DiddyKong;
+import com.example.challengerapproaching.characters.DonkeyKong;
+import com.example.challengerapproaching.characters.DrMario;
+import com.example.challengerapproaching.characters.DuckHunt;
+import com.example.challengerapproaching.characters.Falco;
+import com.example.challengerapproaching.characters.Fox;
+import com.example.challengerapproaching.characters.Ganondorf;
+import com.example.challengerapproaching.characters.Greninja;
+import com.example.challengerapproaching.characters.Hero;
+import com.example.challengerapproaching.characters.IceClimbers;
+import com.example.challengerapproaching.characters.Ike;
+import com.example.challengerapproaching.characters.Incineroar;
+import com.example.challengerapproaching.characters.Inkling;
+import com.example.challengerapproaching.characters.Isabelle;
+import com.example.challengerapproaching.characters.Ivysaur;
+import com.example.challengerapproaching.characters.Jigglypuff;
+import com.example.challengerapproaching.characters.Joker;
+import com.example.challengerapproaching.characters.Ken;
+import com.example.challengerapproaching.characters.KingDedede;
+import com.example.challengerapproaching.characters.KingKRool;
+import com.example.challengerapproaching.characters.Kirby;
+import com.example.challengerapproaching.characters.Link;
+import com.example.challengerapproaching.characters.LittleMac;
+import com.example.challengerapproaching.characters.Lucario;
+import com.example.challengerapproaching.characters.Lucas;
+import com.example.challengerapproaching.characters.Lucina;
+import com.example.challengerapproaching.characters.Luigi;
+import com.example.challengerapproaching.characters.Mario;
+import com.example.challengerapproaching.characters.Marth;
+import com.example.challengerapproaching.characters.MegaMan;
+import com.example.challengerapproaching.characters.MetaKnight;
+import com.example.challengerapproaching.characters.Mewtwo;
+import com.example.challengerapproaching.characters.MiiBrawler;
+import com.example.challengerapproaching.characters.MiiGunner;
+import com.example.challengerapproaching.characters.MiiSwordfighter;
+import com.example.challengerapproaching.characters.MrGameAndWatch;
+import com.example.challengerapproaching.characters.Ness;
+import com.example.challengerapproaching.characters.Olimar;
+import com.example.challengerapproaching.characters.PacMan;
+import com.example.challengerapproaching.characters.Palutena;
+import com.example.challengerapproaching.characters.Peach;
+import com.example.challengerapproaching.characters.Pichu;
+import com.example.challengerapproaching.characters.Pikachu;
+import com.example.challengerapproaching.characters.PiranhaPlant;
+import com.example.challengerapproaching.characters.Pit;
+import com.example.challengerapproaching.characters.Rob;
+import com.example.challengerapproaching.characters.Richter;
+import com.example.challengerapproaching.characters.Ridley;
+import com.example.challengerapproaching.characters.Robin;
+import com.example.challengerapproaching.characters.RosalinaAndLuma;
+import com.example.challengerapproaching.characters.Roy;
+import com.example.challengerapproaching.characters.Ryu;
+import com.example.challengerapproaching.characters.Samus;
+import com.example.challengerapproaching.characters.Sheik;
+import com.example.challengerapproaching.characters.Shulk;
+import com.example.challengerapproaching.characters.Simon;
+import com.example.challengerapproaching.characters.Snake;
+import com.example.challengerapproaching.characters.Sonic;
+import com.example.challengerapproaching.characters.Squirtle;
+import com.example.challengerapproaching.characters.Terry;
+import com.example.challengerapproaching.characters.ToonLink;
+import com.example.challengerapproaching.characters.Villager;
+import com.example.challengerapproaching.characters.Wario;
+import com.example.challengerapproaching.characters.WiiFitTrainer;
+import com.example.challengerapproaching.characters.Wolf;
+import com.example.challengerapproaching.characters.Yoshi;
+import com.example.challengerapproaching.characters.YoungLink;
+import com.example.challengerapproaching.characters.Zelda;
+import com.example.challengerapproaching.characters.ZeroSuitSamus;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -209,22 +210,22 @@ public class MainActivity extends AppCompatActivity {
     R.id.wario, R.id.wiiFitTrainer, R.id.wolf, R.id.yoshi, R.id.youngLink,
     R.id.zelda, R.id.zeroSuitSamus};
 
-  Class [] charClasses = {Banjo_Kazooie.class, Bayonetta.class, Bowser.class, Bowser_Jr.class,
-    Bylthe.class, Captain_Falcon.class, Chrom.class, Cloud.class, Corrin.class, Daisy.class,
-    Dark_Pit.class, Dark_Samus.class, Diddy_Kong.class, Donkey_Kong.class, Dr_Mario.class,
-    Duck_Hunt.class, Falco.class, Fox.class, Ganondorf.class, Greninja.class, Hero.class,
-    Ice_Climbers.class, Ike.class, Incineroar.class, Inkling.class, Isabelle.class,
-    Jigglypuff.class, Joker.class, Ken.class, King_Dedede.class, King_K_Rool.class, Kirby.class,
-    Link.class, Little_Mac.class, Lucario.class, Lucas.class, Lucina.class, Luigi.class,
-    Mario.class, Marth.class, Mega_Man.class, Meta_Knight.class, Mewtwo.class, Mii_Brawler.class,
-    Mii_Gunner.class, Mii_Swordfighter.class, Mr_Game_and_Watch.class,
-    Ness.class, Olimar.class, Pac_Man.class, Palutena.class, Peach.class, Pichu.class,
-    Pikachu.class, Piranha_Plant.class, Pit.class, Squirtle.class, Ivysaur.class,
-    Charizard.class, Richter.class, Ridley.class, ROB.class, Robin.class,
-    Rosalina_and_Luma.class, Roy.class, Ryu.class, Samus.class, Sheik.class,
-    Shulk.class, Simon.class, Snake.class, Sonic.class, Terry.class, Toon_Link.class,
-    Villager.class, Wario.class, Wii_Fit_Trainer.class, Wolf.class, Yoshi.class, Young_Link.class,
-    Zelda.class, Zero_Suit_Samus.class};
+  Class [] charClasses = {BanjoKazooie.class, Bayonetta.class, Bowser.class, BowserJr.class,
+    Byleth.class, CaptainFalcon.class, Chrom.class, Cloud.class, Corrin.class, Daisy.class,
+    DarkPit.class, Dark_Samus.class, DiddyKong.class, DonkeyKong.class, DrMario.class,
+    DuckHunt.class, Falco.class, Fox.class, Ganondorf.class, Greninja.class, Hero.class,
+    IceClimbers.class, Ike.class, Incineroar.class, Inkling.class, Isabelle.class,
+    Jigglypuff.class, Joker.class, Ken.class, KingDedede.class, KingKRool.class, Kirby.class,
+    Link.class, LittleMac.class, Lucario.class, Lucas.class, Lucina.class, Luigi.class,
+    Mario.class, Marth.class, MegaMan.class, MetaKnight.class, Mewtwo.class, MiiBrawler.class,
+    MiiGunner.class, MiiSwordfighter.class, MrGameAndWatch.class,
+    Ness.class, Olimar.class, PacMan.class, Palutena.class, Peach.class, Pichu.class,
+    Pikachu.class, PiranhaPlant.class, Pit.class, Squirtle.class, Ivysaur.class,
+    Charizard.class, Richter.class, Ridley.class, Rob.class, Robin.class,
+    RosalinaAndLuma.class, Roy.class, Ryu.class, Samus.class, Sheik.class,
+    Shulk.class, Simon.class, Snake.class, Sonic.class, Terry.class, ToonLink.class,
+    Villager.class, Wario.class, WiiFitTrainer.class, Wolf.class, Yoshi.class, YoungLink.class,
+    Zelda.class, ZeroSuitSamus.class};
 
   ImageButton eventButton;
 

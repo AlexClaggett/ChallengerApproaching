@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Characters.Mr_Game_and_Watch">
+    tools:context=".characters.MrGameAndWatch">
 
     <Spinner
         android:entries="@array/MrGame_Watchmoves"
