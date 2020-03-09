@@ -24,17 +24,17 @@ import java.util.Calendar;
 public class Events extends AppCompatActivity {
 
   /**
-   * Static string for sending Log information to the terminal
+   * Static string for sending Log information to the terminal.
    */
   private static final String TAG = "MainActivity";
 
   /**
-   * Text View to select the desired date
+   * Text View to select the desired date.
    */
   private TextView eventSetup;
 
   /**
-   * date listener that presents the options to the user
+   * date listener that presents the options to the user.
    */
   private DatePickerDialog.OnDateSetListener onDateSetListener;
 
@@ -44,12 +44,12 @@ public class Events extends AppCompatActivity {
   private LinearLayout lview;
 
   /**
-   * Keeps track of how many dates have been chosen
+   * Keeps track of how many dates have been chosen.
    */
   private int numDates = 0;
 
   /**
-   * Naming format for default Event setup
+   * Naming format for default Event setup.
    */
   private String dateName;
 
@@ -100,7 +100,6 @@ public class Events extends AppCompatActivity {
 
     // Initializes the onDateSetListener to a new object
     onDateSetListener = new DatePickerDialog.OnDateSetListener() {
-      @Override
       /***************************************************************
        * Class that defines what happens once a date is selected.
        *
@@ -109,6 +108,7 @@ public class Events extends AppCompatActivity {
        * @param month the month selected
        * @param dayOfMonth the day of the month selected
        ***************************************************************/
+      @Override
       public void onDateSet(DatePicker view, int year, int month,
                             int dayOfMonth) {
         // Adds one to the month because the calendar starts at 0
@@ -126,11 +126,11 @@ public class Events extends AppCompatActivity {
         // Give the newDates id to the number of dates
         //newDate.setId(numDates);
 
-      /* Print out a log to the terminal in order to verify date order
+        /* Print out a log to the terminal in order to verify date order
          and print out the date selected
        */
-        Log.d(TAG, "onDateSet: mm/dd/yyyy: " + month + "/" +
-                dayOfMonth + "/" + year);
+        Log.d(TAG, "onDateSet: mm/dd/yyyy: " + month + "/"
+                + dayOfMonth + "/" + year);
 
         // Fill in the date selected
         String date = month + "/" + dayOfMonth + "/" + year;
