@@ -7,14 +7,23 @@
     tools:context=".characters.Bayonetta">
 
     <Spinner
-        android:entries="@array/Bayonettamoves"
         android:id="@+id/spinner2"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="131dp"
+        android:layout_marginTop="516dp"
         android:background="#AEACAC"
+        android:entries="@array/Bayonettamoves"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.challengerapproaching.utils.GifImageView
+        android:id="@+id/GifImageView"
+        android:layout_width="307dp"
+        android:layout_height="22dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="210dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
