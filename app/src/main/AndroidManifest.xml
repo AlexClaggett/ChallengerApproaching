@@ -15,255 +15,340 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".characters.Corrin"
-            android:parentActivityName=".MainActivity"
-            android:label="Corrin"/>
-        <activity android:name=".characters.Cloud"
-            android:parentActivityName=".MainActivity"
-            android:label="Cloud"/>
-        <activity android:name=".characters.ZeroSuitSamus"
-            android:parentActivityName=".MainActivity"
-            android:label="Zero Suit Samus"/>
-        <activity android:name=".characters.Zelda"
-            android:parentActivityName=".MainActivity"
-            android:label="Zelda"/>
-        <activity android:name=".characters.Yoshi"
-            android:parentActivityName=".MainActivity"
-            android:label="Falco"/>
-        <activity android:name=".characters.YoungLink"
-            android:parentActivityName=".MainActivity"
-            android:label="Young Link"/>
-        <activity android:name=".characters.Wolf"
-            android:parentActivityName=".MainActivity"
-            android:label="Wolf"/>
-        <activity android:name=".characters.WiiFitTrainer"
-            android:parentActivityName=".MainActivity"
-            android:label="Wii Fit Trainer"/>
-        <activity android:name=".characters.Wario"
-            android:parentActivityName=".MainActivity"
-            android:label="Wario"/>
-        <activity android:name=".characters.Villager"
-            android:parentActivityName=".MainActivity"
-            android:label="Villager"/>
-        <activity android:name=".characters.ToonLink"
-            android:parentActivityName=".MainActivity"
-            android:label="Toon Link"/>
-        <activity android:name=".characters.Terry"
-            android:parentActivityName=".MainActivity"
-            android:label="Terry"/>
-        <activity android:name=".characters.Sonic"
-            android:parentActivityName=".MainActivity"
-            android:label="Sonic"/>
-        <activity android:name=".characters.Snake"
-            android:parentActivityName=".MainActivity"
-            android:label="Snake"/>
-        <activity android:name=".characters.Simon"
-            android:parentActivityName=".MainActivity"
-            android:label="Simon"/>
-        <activity android:name=".characters.Shulk"
-            android:parentActivityName=".MainActivity"
-            android:label="Shulk"/>
-        <activity android:name=".characters.Sheik"
-            android:parentActivityName=".MainActivity"
-            android:label="Sheik"/>
-        <activity android:name=".characters.Samus"
-            android:parentActivityName=".MainActivity"
-            android:label="Samus"/>
-        <activity android:name=".characters.Ryu"
-            android:parentActivityName=".MainActivity"
-            android:label="Ryu"/>
-        <activity android:name=".characters.Roy"
-            android:parentActivityName=".MainActivity"
-            android:label="Roy"/>
-        <activity android:name=".characters.RosalinaAndLuma"
-            android:parentActivityName=".MainActivity"
-            android:label="Rosalina and Luma"/>
-        <activity android:name=".characters.Robin"
-            android:parentActivityName=".MainActivity"
-            android:label="Robin"/>
-        <activity android:name=".characters.Rob"
-            android:parentActivityName=".MainActivity"
-            android:label="Rob"/>
-        <activity android:name=".characters.Ridley"
-            android:parentActivityName=".MainActivity"
-            android:label="Ridley"/>
-        <activity android:name=".characters.Richter"
-            android:parentActivityName=".MainActivity"
-            android:label="Richter"/>
-        <activity android:name=".characters.Charizard"
-            android:parentActivityName=".MainActivity"
-            android:label="Pokemon Trainer: Charizard"/>
-        <activity android:name=".characters.Ivysaur"
-            android:parentActivityName=".MainActivity"
-            android:label="Pokemon Trainer: Ivysaur"/>
-        <activity android:name=".characters.Squirtle"
-            android:parentActivityName=".MainActivity"
-            android:label="Pokemon Trainer: Squirtle"/>
-        <activity android:name=".characters.Pit"
-            android:parentActivityName=".MainActivity"
-            android:label="Pit"/>
-        <activity android:name=".characters.PiranhaPlant"
-            android:parentActivityName=".MainActivity"
-            android:label="Piranha Plant"/>
-        <activity android:name=".characters.Pikachu"
-            android:parentActivityName=".MainActivity"
-            android:label="Pikachu"/>
-        <activity android:name=".characters.Pichu"
-            android:parentActivityName=".MainActivity"
-            android:label="Pichu"/>
-        <activity android:name=".characters.Peach"
-            android:parentActivityName=".MainActivity"
-            android:label="Peach"/>
-        <activity android:name=".characters.Palutena"
-            android:parentActivityName=".MainActivity"
-            android:label="Palutena"/>
-        <activity android:name=".characters.PacMan"
-            android:parentActivityName=".MainActivity"
-            android:label="PacMan"/>
-        <activity android:name=".characters.Olimar"
-            android:parentActivityName=".MainActivity"
-            android:label="Olimar"/>
-        <activity android:name=".characters.Ness"
-            android:parentActivityName=".MainActivity"
-            android:label="Ness"/>
-        <activity android:name=".characters.MrGameAndWatch"
-            android:parentActivityName=".MainActivity"
-            android:label="Mr. Game And Watch"/>
-        <activity android:name=".characters.MiiSwordfighter"
-            android:parentActivityName=".MainActivity"
-            android:label="Mii Sword Fighter"/>
-        <activity android:name=".characters.MiiGunner"
-            android:parentActivityName=".MainActivity"
-            android:label="Mii Gunner"/>
-        <activity android:name=".characters.MiiBrawler"
-            android:parentActivityName=".MainActivity"
-            android:label="Mii Brawler"/>
-        <activity android:name=".characters.Mewtwo"
-            android:parentActivityName=".MainActivity"
-            android:label="Mewtwo"/>
-        <activity android:name=".characters.MetaKnight"
-            android:parentActivityName=".MainActivity"
-            android:label="MetaKnight"/>
-        <activity android:name=".characters.MegaMan"
-            android:parentActivityName=".MainActivity"
-            android:label="MegaMan"/>
-        <activity android:name=".characters.Marth"
-            android:parentActivityName=".MainActivity"
-            android:label="Marth"/>
-        <activity android:name=".characters.Mario"
-            android:parentActivityName=".MainActivity"
-            android:label="Mario"/>
-        <activity android:name=".characters.Luigi"
-            android:parentActivityName=".MainActivity"
-            android:label="Luigi"/>
-        <activity android:name=".characters.Lucina"
-            android:parentActivityName=".MainActivity"
-            android:label="Lucina"/>
-        <activity android:name=".characters.Lucas"
-            android:parentActivityName=".MainActivity"
-            android:label="Lucas"/>
-        <activity android:name=".characters.Lucario"
-            android:parentActivityName=".MainActivity"
-            android:label="Lucario"/>
-        <activity android:name=".characters.LittleMac"
-            android:parentActivityName=".MainActivity"
-            android:label="LittleMac"/>
-        <activity android:name=".characters.Link"
-            android:parentActivityName=".MainActivity"
-            android:label="Link"/>
-        <activity android:name=".characters.Kirby"
-            android:parentActivityName=".MainActivity"
-            android:label="Kirby"/>
-        <activity android:name=".characters.KingKRool"
-            android:parentActivityName=".MainActivity"
-            android:label="King K.Rool"/>
-        <activity android:name=".characters.KingDedede"
-            android:parentActivityName=".MainActivity"
-            android:label="King Dedede"/>
-        <activity android:name=".characters.Ken"
-            android:parentActivityName=".MainActivity"
-            android:label="Ken"/>
-        <activity android:name=".characters.Joker"
-            android:parentActivityName=".MainActivity"
-            android:label="Joker"/>
-        <activity android:name=".characters.Jigglypuff"
-            android:parentActivityName=".MainActivity"
-            android:label="Jigglypuff"/>
-        <activity android:name=".characters.Isabelle"
-            android:parentActivityName=".MainActivity"
-            android:label="Isabelle"/>
-        <activity android:name=".characters.Inkling"
-            android:parentActivityName=".MainActivity"
-            android:label="Inkling"/>
-        <activity android:name=".characters.Incineroar"
-            android:parentActivityName=".MainActivity"
-            android:label="Incineroar"/>
-        <activity android:name=".characters.Ike"
-            android:parentActivityName=".MainActivity"
-            android:label="Ike"/>
-        <activity android:name=".characters.IceClimbers"
-            android:parentActivityName=".MainActivity"
-            android:label="Ice Climbers"/>
-        <activity android:name=".characters.Hero"
-            android:parentActivityName=".MainActivity"
-            android:label="Hero"/>
-        <activity android:name=".characters.Greninja"
-            android:parentActivityName=".MainActivity"
-            android:label="Greninja"/>
-        <activity android:name=".characters.Ganondorf"
-            android:parentActivityName=".MainActivity"
-            android:label="Ganondorf"/>
-        <activity android:name=".characters.Fox"
-            android:parentActivityName=".MainActivity"
-            android:label="Fox"/>
-        <activity android:name=".characters.Falco"
-            android:parentActivityName=".MainActivity"
-            android:label="Falco"/>
-        <activity android:name=".characters.DuckHunt"
-            android:parentActivityName=".MainActivity"
-            android:label="Duck Hunt"/>
-        <activity android:name=".characters.DrMario"
-            android:parentActivityName=".MainActivity"
-            android:label="Dr. Mario"/>
-        <activity android:name=".characters.DonkeyKong"
-            android:parentActivityName=".MainActivity"
-            android:label="Donkey Kong"/>
-        <activity android:name=".characters.DiddyKong"
-            android:parentActivityName=".MainActivity"
-            android:label="Diddy Kong"/>
-        <activity android:name=".characters.DarkSamus"
-            android:parentActivityName=".MainActivity"
-            android:label="Dark Samus"/>
-        <activity android:name=".characters.DarkPit"
-            android:parentActivityName=".MainActivity"
-            android:label="Dark Pit"/>
-        <activity android:name=".characters.Daisy"
-            android:parentActivityName=".MainActivity"
-            android:label="Daisy"/>
-        <activity android:name=".characters.Chrom"
-            android:parentActivityName=".MainActivity"
-            android:label="Chrom"/>
-        <activity android:name=".characters.CaptainFalcon"
-            android:parentActivityName=".MainActivity"
-            android:label="Captain Falcon"/>
-        <activity android:name=".characters.Byleth"
-            android:parentActivityName=".MainActivity"
-            android:label="Byleth"/>
-        <activity android:name=".characters.BowserJr"
-            android:parentActivityName=".MainActivity"
-            android:label="Bowser Jr"/>
-        <activity android:name=".characters.Bowser"
-            android:parentActivityName=".MainActivity"
-            android:label="Bowser"/>
-        <activity android:name=".characters.Bayonetta"
-            android:parentActivityName=".MainActivity"
-            android:label="Bayonetta"/>
-        <activity android:name=".characters.BanjoKazooie"
-            android:parentActivityName=".MainActivity"
-            android:label="Banjo Kazooie"/>
-        <activity android:name=".Events"
-            android:parentActivityName=".MainActivity"
-            android:label="Tournaments / Events"/>
+        <activity android:name=".Stages"></activity>
+        <activity android:name=".CharacterSelect" />
+        <activity
+            android:name=".characters.Corrin"
+            android:label="Corrin"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Cloud"
+            android:label="Cloud"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.ZeroSuitSamus"
+            android:label="Zero Suit Samus"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Zelda"
+            android:label="Zelda"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Yoshi"
+            android:label="Falco"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.YoungLink"
+            android:label="Young Link"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Wolf"
+            android:label="Wolf"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.WiiFitTrainer"
+            android:label="Wii Fit Trainer"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Wario"
+            android:label="Wario"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Villager"
+            android:label="Villager"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.ToonLink"
+            android:label="Toon Link"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Terry"
+            android:label="Terry"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Sonic"
+            android:label="Sonic"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Snake"
+            android:label="Snake"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Simon"
+            android:label="Simon"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Shulk"
+            android:label="Shulk"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Sheik"
+            android:label="Sheik"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Samus"
+            android:label="Samus"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Ryu"
+            android:label="Ryu"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Roy"
+            android:label="Roy"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.RosalinaAndLuma"
+            android:label="Rosalina and Luma"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Robin"
+            android:label="Robin"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Rob"
+            android:label="Rob"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Ridley"
+            android:label="Ridley"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Richter"
+            android:label="Richter"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Charizard"
+            android:label="Pokemon Trainer: Charizard"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Ivysaur"
+            android:label="Pokemon Trainer: Ivysaur"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Squirtle"
+            android:label="Pokemon Trainer: Squirtle"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Pit"
+            android:label="Pit"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.PiranhaPlant"
+            android:label="Piranha Plant"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Pikachu"
+            android:label="Pikachu"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Pichu"
+            android:label="Pichu"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Peach"
+            android:label="Peach"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Palutena"
+            android:label="Palutena"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.PacMan"
+            android:label="PacMan"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Olimar"
+            android:label="Olimar"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Ness"
+            android:label="Ness"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.MrGameAndWatch"
+            android:label="Mr. Game And Watch"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.MiiSwordfighter"
+            android:label="Mii Sword Fighter"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.MiiGunner"
+            android:label="Mii Gunner"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.MiiBrawler"
+            android:label="Mii Brawler"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Mewtwo"
+            android:label="Mewtwo"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.MetaKnight"
+            android:label="MetaKnight"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.MegaMan"
+            android:label="MegaMan"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Marth"
+            android:label="Marth"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Mario"
+            android:label="Mario"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Luigi"
+            android:label="Luigi"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Lucina"
+            android:label="Lucina"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Lucas"
+            android:label="Lucas"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Lucario"
+            android:label="Lucario"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.LittleMac"
+            android:label="LittleMac"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Link"
+            android:label="Link"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Kirby"
+            android:label="Kirby"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.KingKRool"
+            android:label="King K.Rool"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.KingDedede"
+            android:label="King Dedede"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Ken"
+            android:label="Ken"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Joker"
+            android:label="Joker"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Jigglypuff"
+            android:label="Jigglypuff"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Isabelle"
+            android:label="Isabelle"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Inkling"
+            android:label="Inkling"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Incineroar"
+            android:label="Incineroar"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Ike"
+            android:label="Ike"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.IceClimbers"
+            android:label="Ice Climbers"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Hero"
+            android:label="Hero"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Greninja"
+            android:label="Greninja"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Ganondorf"
+            android:label="Ganondorf"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Fox"
+            android:label="Fox"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Falco"
+            android:label="Falco"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.DuckHunt"
+            android:label="Duck Hunt"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.DrMario"
+            android:label="Dr. Mario"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.DonkeyKong"
+            android:label="Donkey Kong"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.DiddyKong"
+            android:label="Diddy Kong"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.DarkSamus"
+            android:label="Dark Samus"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.DarkPit"
+            android:label="Dark Pit"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Daisy"
+            android:label="Daisy"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Chrom"
+            android:label="Chrom"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.CaptainFalcon"
+            android:label="Captain Falcon"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Byleth"
+            android:label="Byleth"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.BowserJr"
+            android:label="Bowser Jr"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Bowser"
+            android:label="Bowser"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.Bayonetta"
+            android:label="Bayonetta"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".characters.BanjoKazooie"
+            android:label="Banjo Kazooie"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Events"
+            android:label="Tournaments / Events"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

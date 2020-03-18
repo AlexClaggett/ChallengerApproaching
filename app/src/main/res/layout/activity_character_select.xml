@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CharacterSelect">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/ButtonEvent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/black"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/eventsbutton"
+                    android:text="Tournaments / Events" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/banjoKazooie"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/banjo_kazooie_btn"
+                    android:text="Banjo and Kazooie" />
+
+                <ImageButton
+                    android:id="@+id/bayonetta"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bayonetta_btn"
+                    android:text="Bayonetta" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/bowser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bowser_btn"
+                    android:text="Bowser" />
+
+                <ImageButton
+                    android:id="@+id/bowserJr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bowserjr_btn"
+                    android:text="Bowser Jr." />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/bylthe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/byleth_btn"
+                    android:text="Bylthe" />
+
+                <ImageButton
+                    android:id="@+id/captainFalcon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/captainfalcon_btn"
+                    android:text="Captain Falcon" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/chrom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/chrom_btn"
+                    android:text="Chrom" />
+
+                <ImageButton
+                    android:id="@+id/cloud"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/cloud_btn"
+                    android:text="Cloud" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/corrin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/corrin_btn"
+                    android:text="Corrin" />
+
+                <ImageButton
+                    android:id="@+id/daisy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/daisy_btn"
+                    android:text="Daisy" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/darkPit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/darkpit_btn"
+                    android:text="Dark Pit" />
+
+                <ImageButton
+                    android:id="@+id/darkSamus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/darksamus_btn"
+                    android:text="Dark Samus" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/diddyKong"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/diddykong_btn"
+                    android:text="Diddy Kong" />
+
+                <ImageButton
+                    android:id="@+id/donkeyKong"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/donkeykong_btn"
+                    android:text="Donkey Kong" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/dr.mario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/drmario_btn"
+                    android:text="Dr.Mario" />
+
+                <ImageButton
+                    android:id="@+id/duckHunt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/duckhunt_btn"
+                    android:text="Duck Hunt" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/falco"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/falco_btn"
+                    android:text="Falco" />
+
+                <ImageButton
+                    android:id="@+id/fox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/fox_btn"
+                    android:text="Fox" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/ganondorf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ganondorf_btn"
+                    android:text="Ganondorf" />
+
+                <ImageButton
+                    android:id="@+id/greninja"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/greninja_btn"
+                    android:text="greninja" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/hero"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/hero_btn"
+                    android:text="Hero" />
+
+                <ImageButton
+                    android:id="@+id/iceClimbers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/iceclimbers_btn"
+                    android:text="Ice Climbers" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/ike"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ike_btn"
+                    android:text="Ike" />
+
+                <ImageButton
+                    android:id="@+id/incineroar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/incineroar_btn"
+                    android:text="Incineroar" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/inkling"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/inkling_btn"
+                    android:text="Inkling" />
+
+                <ImageButton
+                    android:id="@+id/isabelle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/isabelle_btn"
+                    android:text="Isabelle" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/jigglypuff"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/jigglypuff_btn"
+                    android:text="Jigglypuff" />
+
+                <ImageButton
+                    android:id="@+id/joker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/joker_btn"
+                    android:text="Joker" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/ken"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ken_btn"
+                    android:text="Ken" />
+
+                <ImageButton
+                    android:id="@+id/kingDedede"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kingdedede_btn"
+                    android:text="King Dedede" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/kingK.Rool"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kingkrool_btn"
+                    android:text="King K. Rool" />
+
+                <ImageButton
+                    android:id="@+id/kirby"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kirby_btn"
+                    android:text="Kirby" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/link"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/link_btn"
+                    android:text="Link" />
+
+                <ImageButton
+                    android:id="@+id/littleMac"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/littlemac_btn"
+                    android:text="Little Mac" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/lucario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lucario_btn"
+                    android:text="Lucario" />
+
+                <ImageButton
+                    android:id="@+id/lucas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lucas_btn"
+                    android:text="Lucas" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/lucina"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lucina_btn"
+                    android:text="Lucina" />
+
+                <ImageButton
+                    android:id="@+id/Luigi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/luigi_btn"
+                    android:text="Luigi" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/mario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mario_btn"
+                    android:text="Mario" />
+
+                <ImageButton
+                    android:id="@+id/marth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/marth_btn"
+                    android:text="Marth" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/megaMan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/megaman_btn"
+                    android:text="Mega Man" />
+
+                <!--            </LinearLayout>-->
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/layout2"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:orientation="vertical" >-->
+
+                <ImageButton
+                    android:id="@+id/metaKnight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/metaknight_btn"
+                    android:text="Meta Knight" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/mewtwo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mewtwo_btn"
+                    android:text="Mewtwo" />
+
+                <ImageButton
+                    android:id="@+id/miiBrawler"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/miibrawler_btn"
+                    android:text="Mii Brawler" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/miiSwordfighter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/miifighter_btn"
+                    android:text="Mii Swordfighter" />
+
+                <ImageButton
+                    android:id="@+id/miiGunner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/miigunner_btn"
+                    android:text="Mii Gunner" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/mr.GameWatch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mrgameandwatch_btn"
+                    android:text="Mr.Game and Watch" />
+
+                <ImageButton
+                    android:id="@+id/ness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ness_btn"
+                    android:text="Ness" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/olimar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/olimar_btn"
+                    android:text="Olimar" />
+
+                <ImageButton
+                    android:id="@+id/pacMan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pacman_btn"
+                    android:text="Pac Man" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/palutena"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/palutena_btn"
+                    android:text="Palutena" />
+
+                <ImageButton
+                    android:id="@+id/peach"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/peach_btn"
+                    android:text="Peach" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/pichu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pichu_btn"
+                    android:text="Pichu" />
+
+                <ImageButton
+                    android:id="@+id/pikachu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pikachu_btn"
+                    android:text="Pikachu" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/piranhaPlant"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/piranhaplant_btn"
+                    android:text="Piranha Plant" />
+
+                <ImageButton
+                    android:id="@+id/pit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pit_btn"
+                    android:text="Pit" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/charizard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ptcharizard_btn"
+                    android:text="Charizard" />
+
+                <ImageButton
+                    android:id="@+id/ivysaur"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ptivysaur_btn"
+                    android:text="Ivysaur" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/squirtle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ptsquirtle_btn"
+                    android:text="Squirtle" />
+
+                <ImageButton
+                    android:id="@+id/richter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/richter_btn"
+                    android:text="Richter" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/ridley"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ridley_btn"
+                    android:text="Ridley" />
+
+                <ImageButton
+                    android:id="@+id/r.o.b."
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rob_btn"
+                    android:text="R.O.B." />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/robin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/robin_btn"
+                    android:text="Robin" />
+
+                <ImageButton
+                    android:id="@+id/rosalinaAndLuma"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rosalinaandluma_btn"
+                    android:text="Rosalina and Luma" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/roy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/roy_btn"
+                    android:text="Roy" />
+
+                <ImageButton
+                    android:id="@+id/ryu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ryu_btn"
+                    android:text="Ryu" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/samus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/samus_btn"
+                    android:text="Samus" />
+
+                <ImageButton
+                    android:id="@+id/sheik"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sheik_btn"
+                    android:text="Sheik" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/shulk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/shulk_btn"
+                    android:text="Shulk" />
+
+                <ImageButton
+                    android:id="@+id/simon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/simon_btn"
+                    android:text="Simon" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/snake"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/snake_btn"
+                    android:text="Snake" />
+
+                <ImageButton
+                    android:id="@+id/sonic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sonic_btn"
+                    android:text="Sonic" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/terry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/terry_btn"
+                    android:text="Terry" />
+
+                <ImageButton
+                    android:id="@+id/toonLink"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/toonlink_btn"
+                    android:text="Toon Link" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/villager"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/villager_btn"
+                    android:text="Villager" />
+
+                <ImageButton
+                    android:id="@+id/wario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/wario_btn"
+                    android:text="Wario" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/wiiFitTrainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/wiifittrainer_btn"
+                    android:text="Wii Fit Trainer" />
+
+                <ImageButton
+                    android:id="@+id/wolf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/wolf_btn"
+                    android:text="Wolf" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/yoshi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/yoshi_btn"
+                    android:text="Yoshi" />
+
+                <ImageButton
+                    android:id="@+id/youngLink"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/younglink_btn"
+                    android:text="Young Link" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/zelda"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/zelda_btn"
+                    android:text="Zelda" />
+
+                <ImageButton
+                    android:id="@+id/zeroSuitSamus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/zss_btn"
+                    android:text="Zero Suit Samus" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
