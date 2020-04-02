@@ -1,12 +1,21 @@
 package com.example.challengerapproaching.utils;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Movie;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.SystemClock;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+
 
 public class GifImageView extends View {
 
@@ -75,6 +84,11 @@ public class GifImageView extends View {
 
     public void setGifImageResource(int id) {
         mInputStream = mContext.getResources().openRawResource(id);
+        init();
+    }
+
+    public void setGifImageURL(String mUrl) throws IOException {
+        mInputStream = new java.net.URL(mUrl).openStream();
         init();
     }
 }

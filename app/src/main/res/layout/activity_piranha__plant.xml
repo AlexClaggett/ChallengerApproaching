@@ -7,7 +7,7 @@
     tools:context=".characters.PiranhaPlant">
 
     <Spinner
-        android:entries="@array/Pikachumoves"
+        android:entries="@array/PiranhaPlantmoves"
         android:id="@+id/spinner2"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
@@ -15,6 +15,17 @@
         android:layout_marginLeft="1dp"
         android:layout_marginTop="131dp"
         android:background="#AEACAC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.challengerapproaching.utils.GifImageView
+        android:id="@+id/GifImageView"
+        android:layout_width="307dp"
+        android:layout_height="22dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="210dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

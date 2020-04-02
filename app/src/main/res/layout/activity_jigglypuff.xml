@@ -17,4 +17,16 @@
         android:background="#AEACAC"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.challengerapproaching.utils.GifImageView
+        android:id="@+id/GifImageView"
+        android:layout_width="307dp"
+        android:layout_height="22dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

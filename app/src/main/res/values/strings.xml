@@ -175,8 +175,8 @@
         <item>NAir</item>
         <item>PivotGrab</item>
         <item>Pummel</item>
-        <item>SunSalutationMax</item>
-        <item>SunSalutationMin</item>
+<!--        <item>SunSalutationMax</item>-->
+<!--        <item>SunSalutationMin</item>-->
         <item>SuperHoop</item>
         <item>UAir</item>
         <item>USmash</item>
@@ -188,7 +188,7 @@
         <item>Bair</item>
         <item>BairLanding</item>
         <item>BThrow</item>
-        <item>Chef</item>
+<!--        <item>Chef</item>-->
         <item>Chef</item>
         <item>Dair</item>
         <item>DairLanding</item>
@@ -217,7 +217,7 @@
         <item>Judge9</item>
         <item>NAir</item>
         <item>OilPanic</item>
-        <item>OilPanic</item>
+<!--        <item>OilPanic</item>-->
         <item>PivotGrab</item>
         <item>Pummel</item>
         <item>UAir</item>
@@ -262,7 +262,26 @@
     </string-array>
 
     <string-array name="IceClimbersmoves">
-        <item>IceShot</item>
+<!--        <item>IceShot</item>-->
+        <item>NanaBAir</item>
+        <item>NanaBelay</item>
+        <item>NanaDAir</item>
+        <item>NanaDashAttack</item>
+        <item>NanaDSmash</item>
+        <item>NanaDTilt</item>
+        <item>NanaFAir</item>
+        <item>NanaFSmash</item>
+        <item>NanaFTilt</item>
+        <item>NanaFTiltUp</item>
+        <item>NanaJab1</item>
+        <item>NanaJab2</item>
+        <item>NanaNAir</item>
+        <item>NanaSqualHammerSolo</item>
+        <item>NanaSquallHammerDuo</item>
+        <item>NanaTiltDown</item>
+        <item>NanaUAir</item>
+        <item>NanaUSmash</item>
+        <item>NanaUTilt</item>
         <item>PopoBAir</item>
         <item>PopoBThrow</item>
         <item>PopoDAir</item>
@@ -289,25 +308,6 @@
         <item>PopoUSmash</item>
         <item>PopoUThrow</item>
         <item>PopoUTilt</item>
-        <item>NanaBAir</item>
-        <item>NanaBelay</item>
-        <item>NanaDAir</item>
-        <item>NanaDashAttack</item>
-        <item>NanaDSmash</item>
-        <item>NanaDTilt</item>
-        <item>NanaFAir</item>
-        <item>NanaFSmash</item>
-        <item>NanaFTilt</item>
-        <item>NanaFTiltUp</item>
-        <item>NanaJab1</item>
-        <item>NanaJab2</item>
-        <item>NanaNAir</item>
-        <item>NanaSqualHammerSolo</item>
-        <item>NanaSquallHammerDuo</item>
-        <item>NanaTiltDown</item>
-        <item>NanaUAir</item>
-        <item>NanaUSmash</item>
-        <item>NanaUTilt</item>
     </string-array>
 
     <string-array name="DonkeyKongmoves">
@@ -410,8 +410,8 @@
         <item>Pound</item>
         <item>Pummel</item>
         <item>Rest</item>
-        <item>RolloutA</item>
-        <item>RolloutG</item>
+<!--        <item>RolloutA</item>-->
+<!--        <item>RolloutG</item>-->
         <item>Sing</item>
         <item>UAir</item>
         <item>USmash</item>
@@ -551,8 +551,6 @@
         <item>UTilt</item>
     </string-array>
 
-    <string-array name="MiiFightermoves"></string-array>
-
     <string-array name="Bayonettamoves">
         <item>AfterburnerKickDown</item>
         <item>AfterburnerKickLanding</item>
@@ -627,8 +625,8 @@
 
     <string-array name="DarkSamusmoves">
         <item>BAir</item>
-        <item>Bomb</item>
-        <item>BombExplosion</item>
+<!--        <item>Bomb</item>-->
+<!--        <item>BombExplosion</item>-->
         <item>BThrow</item>
         <item>ChargeShotMax</item>
         <item>ChargeShotMin</item>
@@ -647,12 +645,12 @@
         <item>FTiltUp</item>
         <item>Jab1</item>
         <item>Jab2</item>
-        <item>Missile</item>
+<!--        <item>Missile</item>-->
         <item>NAir</item>
         <item>Pummel</item>
         <item>ScrewAttackA</item>
         <item>ScrewAttackG</item>
-        <item>SuperMissile</item>
+<!--        <item>SuperMissile</item>-->
         <item>UAir</item>
         <item>USmash</item>
         <item>UThrow</item>
@@ -687,8 +685,8 @@
         <item>PivotGrab</item>
         <item>Pummel</item>
         <item>RocketBarrels</item>
-        <item>RocketBarrels</item>
-        <item>RocketBarrelsExplosion</item>
+<!--        <item>RocketBarrels</item>-->
+<!--        <item>RocketBarrelsExplosion</item>-->
         <item>UAir</item>
         <item>USmash</item>
         <item>UThrow</item>
@@ -759,7 +757,7 @@
         <item>Jab1</item>
         <item>Jab2</item>
         <item>Jab3</item>
-        <item>Kannonball</item>
+<!--        <item>Kannonball</item>-->
         <item>NAir</item>
         <item>PivotGrab</item>
         <item>Propellerpack</item>
@@ -803,12 +801,12 @@
     </string-array>
 
     <string-array name="MiiGunnermoves">
-        <item>BombDrop</item>
-        <item>BombDropExplosion</item>
-        <item>GrenadeLauncher</item>
-        <item>GrenadeLauncherExplosion</item>
-        <item>MiiMissile</item>
-        <item>SuperMissile</item>
+<!--        <item>BombDrop</item>-->
+<!--        <item>BombDropExplosion</item>-->
+<!--        <item>GrenadeLauncher</item>-->
+<!--        <item>GrenadeLauncherExplosion</item>-->
+<!--        <item>MiiMissile</item>-->
+<!--        <item>SuperMissile</item>-->
         <item>AbsorbingVortex</item>
         <item>BAir</item>
         <item>BThrow</item>
@@ -839,9 +837,9 @@
     </string-array>
 
     <string-array name="YoungLinkmoves">
-        <item>Arrow</item>
+<!--        <item>Arrow</item>-->
         <item>BAir</item>
-        <item>Boomerang</item>
+<!--        <item>Boomerang</item>-->
         <item>BThrow</item>
         <item>DAir</item>
         <item>DashAttack</item>
@@ -873,7 +871,7 @@
 
     <string-array name="BowserJrmoves">
         <item>AbandonShip</item>
-        <item>AbandonShipExplosion</item>
+<!--        <item>AbandonShipExplosion</item>-->
         <item>AbandonShipHammer</item>
         <item>BAir</item>
         <item>BThrow</item>
@@ -914,8 +912,8 @@
     <string-array name="DuckHuntmoves">
         <item>BAir</item>
         <item>BThrow</item>
-        <item>ClayShooting</item>
-        <item>ClayShootingBurst</item>
+<!--        <item>ClayShooting</item>-->
+<!--        <item>ClayShootingBurst</item>-->
         <item>DAir</item>
         <item>DashAttack</item>
         <item>DashGrab</item>
@@ -937,9 +935,9 @@
         <item>NAir</item>
         <item>PivotGrab</item>
         <item>Pummel</item>
-        <item>TrickShotExplosion</item>
-        <item>TrickShotFly</item>
-        <item>TrickShotStand</item>
+<!--        <item>TrickShotExplosion</item>-->
+<!--        <item>TrickShotFly</item>-->
+<!--        <item>TrickShotStand</item>-->
         <item>UAir</item>
         <item>USmash</item>
         <item>UThrow</item>
@@ -986,10 +984,10 @@
 
     <string-array name="Isabellemoves">
         <item>BAir</item>
-        <item>BalloonHurtbox</item>
+<!--        <item>BalloonHurtbox</item>-->
         <item>BThrow</item>
         <item>DAir</item>
-        <item>DashAttack</item>
+<!--        <item>DashAttack</item>-->
         <item>DashGrab</item>
         <item>DSmash</item>
         <item>DThrow</item>
@@ -1130,9 +1128,9 @@
     </string-array>
 
     <string-array name="ToonLinkmoves">
-        <item>Arrow</item>
+<!--        <item>Arrow</item>-->
         <item>BAir</item>
-        <item>Boomerang</item>
+<!--        <item>Boomerang</item>-->
         <item>BThrow</item>
         <item>DAir</item>
         <item>DAirLanding</item>
@@ -1162,7 +1160,7 @@
 
     <string-array name="Villagermoves">
         <item>BAir</item>
-        <item>BalloonHurtbox</item>
+<!--        <item>BalloonHurtbox</item>-->
         <item>BThrow</item>
         <item>DAir1</item>
         <item>DAir2</item>
@@ -1181,10 +1179,10 @@
         <item>Jab1End</item>
         <item>Jab2</item>
         <item>Jab2End</item>
-        <item>LloidRocketExplosion</item>
-        <item>LloidRocketFall</item>
-        <item>LloidRocketFly</item>
-        <item>LloidRocketWallExplosion</item>
+<!--        <item>LloidRocketExplosion</item>-->
+<!--        <item>LloidRocketFall</item>-->
+<!--        <item>LloidRocketFly</item>-->
+<!--        <item>LloidRocketWallExplosion</item>-->
         <item>NAir</item>
         <item>PivotGrab</item>
         <item>Pocket</item>
@@ -1292,9 +1290,9 @@
         <item>Pummel</item>
         <item>SplatBomb</item>
         <item>SplatBombExplosion</item>
-        <item>SplatRollerA</item>
-        <item>SplatRollerG</item>
-        <item>SplatRollerNoInk</item>
+<!--        <item>SplatRollerA</item>-->
+<!--        <item>SplatRollerG</item>-->
+<!--        <item>SplatRollerNoInk</item>-->
         <item>SuperJump</item>
         <item>UAir</item>
         <item>USmash</item>
@@ -1370,7 +1368,7 @@
     <string-array name="MegaManmoves">
         <item>BAir</item>
         <item>BThrow</item>
-        <item>CrashBomber</item>
+<!--        <item>CrashBomber</item>-->
         <item>CrashBomberExplosion</item>
         <item>DAir</item>
         <item>DashAttack</item>
@@ -1430,7 +1428,7 @@
         <item>BAirDown</item>
         <item>BAirUp</item>
         <item>BThrow</item>
-        <item>Cross</item>
+<!--        <item>Cross</item>-->
         <item>DAir</item>
         <item>DashAttack</item>
         <item>DashGrab</item>
@@ -1463,7 +1461,7 @@
 
     <string-array name="Bowsermoves">
         <item>BAir</item>
-        <item>BowserBomb</item>
+<!--        <item>BowserBomb</item>-->
         <item>BowserBombG</item>
         <item>BowserBombLanding</item>
         <item>BThrow</item>
@@ -1510,7 +1508,7 @@
         <item>DThrow</item>
         <item>DTilt</item>
         <item>Failnaught</item>
-        <item>FailnaughtMax</item>
+<!--        <item>FailnaughtMax</item>-->
         <item>FailnaughtMax</item>
         <item>FAir</item>
         <item>FSmash</item>
@@ -1546,14 +1544,14 @@
         <item>DashAttack</item>
         <item>DashGrab</item>
         <item>DragonAscent</item>
-        <item>DragonLunge</item>
+<!--        <item>DragonLunge</item>-->
         <item>DragonLungeKick</item>
         <item>DragonLungeKickBack</item>
         <item>DSmash</item>
         <item>DThrow</item>
         <item>DTilt</item>
         <item>FAir</item>
-        <item>FSmash</item>
+<!--        <item>FSmash</item>-->
         <item>FSmashCharge</item>
         <item>FThrow</item>
         <item>FTilt</item>
@@ -1663,7 +1661,7 @@
         <item>BlueDAir</item>
         <item>BlueDSmash</item>
         <item>BlueFAir</item>
-        <item>BlueFSmash</item>
+<!--        <item>BlueFSmash</item>-->
         <item>BlueGrab</item>
         <item>BluePikminThrow</item>
         <item>BlueUAir</item>
@@ -1673,7 +1671,7 @@
         <item>PurpleDAir</item>
         <item>PurpleDSmash</item>
         <item>PurpleFAir</item>
-        <item>PurpleFSmash</item>
+<!--        <item>PurpleFSmash</item>-->
         <item>PurpleGrab</item>
         <item>PurplePikminThrow</item>
         <item>PurpleUAir</item>
@@ -1683,7 +1681,7 @@
         <item>RedDAir</item>
         <item>RedDSmash</item>
         <item>RedFAir</item>
-        <item>RedFSmash</item>
+<!--        <item>RedFSmash</item>-->
         <item>RedGrab</item>
         <item>RedPikminThrow</item>
         <item>RedUAir</item>
@@ -1693,7 +1691,7 @@
         <item>WhiteDAir</item>
         <item>WhiteDSmash</item>
         <item>WhiteFAir</item>
-        <item>WhiteFSmash</item>
+<!--        <item>WhiteFSmash</item>-->
         <item>WhiteGrab</item>
         <item>WhitePikminThrow</item>
         <item>WhiteUAir</item>
@@ -1703,7 +1701,7 @@
         <item>YellowDAir</item>
         <item>YellowDSmash</item>
         <item>YellowFAir</item>
-        <item>YellowFSmash</item>
+<!--        <item>YellowFSmash</item>-->
         <item>YellowGrab</item>
         <item>YellowPikminThrow</item>
         <item>YellowUAir</item>
@@ -1869,7 +1867,7 @@
         <item>BAir</item>
         <item>BThrow</item>
         <item>DAir</item>
-        <item>DaisyBomber</item>
+<!--        <item>DaisyBomber</item>-->
         <item>DaisyBomberHit</item>
         <item>DaisyParasol</item>
         <item>DaisyParasolFall</item>
@@ -1909,8 +1907,8 @@
         <item>DTilt</item>
         <item>FAir</item>
         <item>FAirLanding</item>
-        <item>FalcoPhantasmA</item>
-        <item>FalcoPhantasmG</item>
+<!--        <item>FalcoPhantasmA</item>-->
+<!--        <item>FalcoPhantasmG</item>-->
         <item>Firebird</item>
         <item>FSmash</item>
         <item>FThrow</item>
@@ -2028,7 +2026,7 @@
         <item>PivotGrab</item>
         <item>Pummel</item>
         <item>Stone</item>
-        <item>StoneLanding</item>
+<!--        <item>StoneLanding</item>-->
         <item>UAir</item>
         <item>USmash</item>
         <item>UThrow</item>
@@ -2054,9 +2052,9 @@
         <item>Jab3</item>
         <item>NAir</item>
         <item>PKFireA</item>
-        <item>PKFireBurst</item>
+<!--        <item>PKFireBurst</item>-->
         <item>PKFireG</item>
-        <item>PKFreeze</item>
+<!--        <item>PKFreeze</item>-->
         <item>PKThunder2</item>
         <item>PSIMagnet</item>
         <item>Pummel</item>
@@ -2102,7 +2100,7 @@
         <item>USmash</item>
         <item>UThrow</item>
         <item>UTilt</item>
-        <item>ZAirHitbox</item>
+<!--        <item>ZAirHitbox</item>-->
     </string-array>
 
     <string-array name="Mariomoves">
@@ -2197,7 +2195,7 @@
         <item>Jab1</item>
         <item>Jab2</item>
         <item>NAir</item>
-        <item>PeachBomber</item>
+<!--        <item>PeachBomber</item>-->
         <item>PeachBomberHit</item>
         <item>PeachParasol</item>
         <item>PeachParasolFall</item>
@@ -2230,8 +2228,8 @@
         <item>Pummel</item>
         <item>SkullBash</item>
         <item>ThunderHit</item>
-        <item>ThunderJoltA</item>
-        <item>ThunderJoltG</item>
+<!--        <item>ThunderJoltA</item>-->
+<!--        <item>ThunderJoltG</item>-->
         <item>UAir</item>
         <item>USmash</item>
         <item>UThrow</item>
@@ -2279,7 +2277,7 @@
     <string-array name="Samusmoves">
         <item>BAir</item>
         <item>Bomb</item>
-        <item>BombExplosion</item>
+<!--        <item>BombExplosion</item>-->
         <item>BThrow</item>
         <item>ChargeShotMax</item>
         <item>ChargeShotMin</item>
@@ -2298,12 +2296,12 @@
         <item>FTiltUp</item>
         <item>Jab1</item>
         <item>Jab2</item>
-        <item>Missile</item>
+<!--        <item>Missile</item>-->
         <item>NAir</item>
         <item>Pummel</item>
         <item>ScrewAttackA</item>
         <item>ScrewAttackG</item>
-        <item>SuperMissile</item>
+<!--        <item>SuperMissile</item>-->
         <item>UAir</item>
         <item>USmash</item>
         <item>UThrow</item>
@@ -2331,7 +2329,7 @@
         <item>JabRapid</item>
         <item>JabRapidEnd</item>
         <item>NAir</item>
-        <item>Needle</item>
+<!--        <item>Needle</item>-->
         <item>PivotGrab</item>
         <item>Pummel</item>
         <item>UAir</item>
@@ -2365,8 +2363,8 @@
         <item>Jab1</item>
         <item>Jab2</item>
         <item>Jab3</item>
-        <item>monado</item>
-        <item>monadodir</item>
+<!--        <item>monado</item>-->
+<!--        <item>monadodir</item>-->
         <item>NAir</item>
         <item>PivotGrab</item>
         <item>Pummel</item>
@@ -2384,7 +2382,7 @@
         <item>BAirDown</item>
         <item>BAirUp</item>
         <item>BThrow</item>
-        <item>Cross</item>
+<!--        <item>Cross</item>-->
         <item>DAir</item>
         <item>DashAttack</item>
         <item>DashGrab</item>
@@ -2418,8 +2416,8 @@
     <string-array name="Snakemoves">
         <item>BAir</item>
         <item>BThrow</item>
-        <item>C4</item>
-        <item>Cypher</item>
+<!--        <item>C4</item>-->
+<!--        <item>Cypher</item>-->
         <item>DAir</item>
         <item>DashAttack</item>
         <item>DashGrab</item>
@@ -2436,15 +2434,15 @@
         <item>Jab2</item>
         <item>Jab3</item>
         <item>NAir</item>
-        <item>Nikita20Explosion20Strong</item>
-        <item>Nikita20Explosion20Weak</item>
-        <item>Nikita20Hurtbox20Weak</item>
+<!--        <item>Nikita20Explosion20Strong</item>-->
+<!--        <item>Nikita20Explosion20Weak</item>-->
+<!--        <item>Nikita20Hurtbox20Weak</item>-->
         <item>PivotGrab</item>
         <item>Pummel</item>
         <item>UAir</item>
         <item>USmash</item>
-        <item>USmashExplosion</item>
-        <item>USmashSearch</item>
+<!--        <item>USmashExplosion</item>-->
+<!--        <item>USmashSearch</item>-->
         <item>UThrow</item>
         <item>UTilt</item>
     </string-array>
@@ -2467,18 +2465,18 @@
         <item>FTiltDown</item>
         <item>FTiltUp</item>
         <item>Grab</item>
-        <item>HomingAttack</item>
+<!--        <item>HomingAttack</item>-->
         <item>Jab1</item>
         <item>Jab2</item>
         <item>Jab3</item>
         <item>NAir</item>
         <item>PivotGrab</item>
         <item>Pummel</item>
-        <item>SpinCharge</item>
-        <item>SpinChargeJump</item>
-        <item>SpinDash</item>
-        <item>SpinDashJump</item>
-        <item>SpringJump</item>
+<!--        <item>SpinCharge</item>-->
+<!--        <item>SpinChargeJump</item>-->
+<!--        <item>SpinDash</item>-->
+<!--        <item>SpinDashJump</item>-->
+<!--        <item>SpringJump</item>-->
         <item>UAir</item>
         <item>USmash</item>
         <item>UThrow</item>
@@ -2589,7 +2587,7 @@
         <item>EggLay</item>
         <item>EggRoll</item>
         <item>EggThrow</item>
-        <item>EggThrowBurst</item>
+<!--        <item>EggThrowBurst</item>-->
         <item>FAir</item>
         <item>FSmash</item>
         <item>FSmashDown</item>
@@ -2608,7 +2606,7 @@
         <item>USmash</item>
         <item>UThrow</item>
         <item>UTilt</item>
-        <item>YoshiBombFall</item>
+<!--        <item>YoshiBombFall</item>-->
         <item>YoshiBombG</item>
     </string-array>
 
@@ -2618,7 +2616,7 @@
         <item>DAir</item>
         <item>DashAttack</item>
         <item>DashGrab</item>
-        <item>DinsFire</item>
+<!--        <item>DinsFire</item>-->
         <item>DSmash</item>
         <item>DThrow</item>
         <item>DTilt</item>
@@ -2671,7 +2669,7 @@
         <item>Jab2</item>
         <item>Jab3</item>
         <item>Kaboom</item>
-        <item>Kaclang</item>
+<!--        <item>Kaclang</item>-->
         <item>KacrackleSlash</item>
         <item>Kamikazee</item>
         <item>Kazap</item>
@@ -2681,7 +2679,7 @@
         <item>PivotGrab</item>
         <item>Pummel</item>
         <item>Sizzle</item>
-        <item>Thwack</item>
+<!--        <item>Thwack</item>-->
         <item>UAir</item>
         <item>USmash</item>
         <item>UThrow</item>
@@ -2691,9 +2689,9 @@
     </string-array>
 
     <string-array name="Linkmoves">
-        <item>Arrow</item>
+<!--        <item>Arrow</item>-->
         <item>BAir</item>
-        <item>Boomerang</item>
+<!--        <item>Boomerang</item>-->
         <item>BThrow</item>
         <item>DAir</item>
         <item>DashAttack</item>
@@ -2729,7 +2727,7 @@
         <item>DashAttack</item>
         <item>DashGrab</item>
         <item>DSmash</item>
-        <item>DSmashCharge</item>
+<!--        <item>DSmashCharge</item>-->
         <item>DThrow</item>
         <item>DTilt</item>
         <item>FAir</item>
@@ -2746,15 +2744,15 @@
         <item>PivotGrab</item>
         <item>PKFireA</item>
         <item>PKFireG</item>
-        <item>PKFirePillar</item>
-        <item>PKFlash</item>
+<!--        <item>PKFirePillar</item>-->
+<!--        <item>PKFlash</item>-->
         <item>PKThunder2</item>
         <item>PSIMagnet</item>
         <item>PSIMagnetEnd</item>
         <item>Pummel</item>
         <item>UAir</item>
-        <item>USmash</item>
-        <item>USmashCharge</item>
+<!--        <item>USmash</item>-->
+<!--        <item>USmashCharge</item>-->
         <item>UThrow</item>
         <item>UTilt</item>
     </string-array>
@@ -2804,7 +2802,7 @@
         <item>DTilt</item>
         <item>FAir</item>
         <item>FireFox</item>
-        <item>FoxIllusion</item>
+<!--        <item>FoxIllusion</item>-->
         <item>FSmash</item>
         <item>FThrow</item>
         <item>FTilt</item>
