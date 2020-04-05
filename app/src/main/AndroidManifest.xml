@@ -7,7 +7,9 @@
         android:normalScreens="true"
         android:smallScreens="true"
         android:xlargeScreens="true" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,7 +17,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Stages"></activity>
+        <activity android:name="com.example.challengerapproaching.Stages.TownAndCity"></activity>
+        <activity android:name="com.example.challengerapproaching.Stages.LylatCruise" />
+        <activity android:name="com.example.challengerapproaching.Stages.YoshisStory" />
+        <activity android:name="com.example.challengerapproaching.Stages.BattleField" />
+        <activity android:name="com.example.challengerapproaching.Stages.UnovaPokemonLeague" />
+        <activity android:name="com.example.challengerapproaching.Stages.KalosPokemonLeague" />
+        <activity android:name="com.example.challengerapproaching.Stages.PokemonStadium2" />
+        <activity android:name="com.example.challengerapproaching.Stages.PokemonStadium" />
+        <activity android:name="com.example.challengerapproaching.Stages.YoshiIsland" />
+        <activity android:name="com.example.challengerapproaching.Stages.Smashville" />
+        <activity android:name="com.example.challengerapproaching.Stages.FinalDestination" />
+        <activity android:name=".StageSelect" />
         <activity android:name=".CharacterSelect" />
         <activity
             android:name=".characters.Corrin"

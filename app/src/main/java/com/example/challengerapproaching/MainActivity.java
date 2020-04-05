@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
   /** Array of Classes for each character. */
   Class [] charClasses = {CharacterSelect.class, Events.class,
-          Stages.class};
+          StageSelect.class};
 
   /********************************************************************
    * Upon app start up this method sets the content view to main
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     stages = findViewById(R.id.stages);
     stages.setOnClickListener(v -> {
-      final Intent toStages = new Intent(MainActivity.this, Stages.class);
+      final Intent toStages = new Intent(MainActivity.this, StageSelect.class);
       startActivity(toStages);
     });
 
