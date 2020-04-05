@@ -8,45 +8,56 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/events"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:adjustViewBounds="true"
-            android:background="@android:color/black"
-            android:scaleType="fitCenter"
-            android:src="@drawable/eventsbutton"
-            android:text="Tournaments / Events"
-            app:layout_constraintBottom_toTopOf="@+id/characters"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/menu_background" />
 
-        <Button
+        <ImageButton
             android:id="@+id/characters"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Characters"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="350dp"
+            android:background="#00654F4F"
+            android:scaleType="fitCenter"
+            android:src="@drawable/menu_button_characterselect"
+            app:layout_constraintBottom_toTopOf="@id/events"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <ImageButton
+            android:id="@+id/events"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:background="#00654F4F"
+            android:scaleType="fitCenter"
+            android:src="@drawable/menu_button_event"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/characters"
+            app:layout_constraintBottom_toTopOf="@id/stages"
+            />
+
+        <ImageButton
             android:id="@+id/stages"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Stages"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="80dp"
+            android:background="#00654F4F"
+            android:scaleType="fitCenter"
+            android:src="@drawable/menu_button_stages"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/characters" />
+            app:layout_constraintTop_toBottomOf="@+id/events"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
