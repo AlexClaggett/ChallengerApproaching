@@ -12,10 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
   /** Image Button for Young Link. */
-  Button characters;
+  ImageButton characters;
 
   /** Image Button for Zelda. */
-  Button stages;
+  ImageButton stages;
 
   /** Image Button for Zero Suit Samus. */
   ImageButton events;
