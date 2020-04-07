@@ -7,14 +7,12 @@
     tools:context=".characters.Fox">
 
     <Spinner
-        android:entries="@array/Foxmoves"
         android:id="@+id/spinner2"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="131dp"
+        android:layout_marginTop="164dp"
         android:background="#AEACAC"
+        android:entries="@array/Foxmoves"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,10 +21,19 @@
         android:layout_width="307dp"
         android:layout_height="22dp"
         android:layout_centerInParent="true"
-        android:layout_marginStart="115dp"
-        android:layout_marginLeft="115dp"
         android:layout_marginTop="210dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="280dp"
+        android:layout_marginStart="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="150dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

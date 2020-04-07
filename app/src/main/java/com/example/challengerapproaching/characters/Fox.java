@@ -1,8 +1,11 @@
 package com.example.challengerapproaching.characters;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +13,7 @@ import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 /** This class sets the content view to Fox's xml
  * file when the respective button is pushed.*/
@@ -29,7 +33,7 @@ public class Fox extends AppCompatActivity {
           "FoxDTilt.gif",
           "FoxFAir.gif",
           "FoxFireFox.gif",
-//          "FoxFoxIllusion.png",
+          "FoxFoxIllusion.png",
           "FoxFSmash.gif",
           "FoxFThrow.gif",
           "FoxFTilt.gif",
@@ -61,14 +65,28 @@ public class Fox extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
+        ImageView imageView = findViewById(R.id.imageView3);
         String toURL = "https://ultimateframedata.com/hitboxes/fox/" + Foxmoves[position];
-        try {
-          gifImageView.setGifImageURL(toURL);
-        } catch (IOException e) {
-          e.printStackTrace();
+        if (toURL.endsWith("png")) {
+          gifImageView.setVisibility(View.INVISIBLE);
+          try {
+            InputStream inputStream = new java.net.URL(toURL).openStream();
+            Bitmap bm = BitmapFactory.decodeStream(inputStream);
+            imageView.setImageBitmap(bm);
+            imageView.setVisibility(View.VISIBLE);
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
+        } else {
+          imageView.setVisibility(View.INVISIBLE);
+          try {
+            gifImageView.setGifImageURL(toURL);
+            gifImageView.setVisibility(View.VISIBLE);
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
         }
       }
-
       @Override
       public void onNothingSelected(AdapterView<?> parent) {
 
