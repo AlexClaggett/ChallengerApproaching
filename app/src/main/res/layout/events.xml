@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
     tools:context=".Events">
 
-
-    <TextView
-        android:id="@+id/tvEvent"
+    <Button
+        android:id="@+id/eventCreation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:hint="select date"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="50dp"
+        android:text="Create Event" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Event Setup: "
+        android:gravity="center_horizontal"
+        android:text="here is the event name"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerVertical="true" />
 
-    <ScrollView
-        android:id="@+id/dateScroll"
-        android:layout_width="409dp"
+    <TextView
+        android:id="@+id/dView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEvent">
+        android:gravity="center_horizontal"
+        android:text="here is the event date"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/tView"/>
 
-        <LinearLayout
-            android:id="@+id/dateList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <Button
+        android:id="@+id/savebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventCreation"
+        android:layout_marginTop="-0dp"
+        android:text="Save Events" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/viewevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/savebutton"
+        android:layout_marginTop="0dp"
+        android:text="View Events" />
+
+</RelativeLayout>

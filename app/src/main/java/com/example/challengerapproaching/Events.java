@@ -1,16 +1,18 @@
 package com.example.challengerapproaching;
 
-import android.app.DatePickerDialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.Calendar;
+
+import com.example.challengerapproaching.utils.ListDataActivity;
+import com.example.challengerapproaching.utils.databaseHelper;
+import com.example.challengerapproaching.utils.eventDialog;
 
 /**********************************************************************
  Event Activity for ChallengerApproaching App. Functions as a reminder,
@@ -21,37 +23,33 @@ import java.util.Calendar;
  @authors Alex Clagget, Brad Samack, Katie Cussans, Tristan Kingsley
  @version v1.0 First Release
  *********************************************************************/
-public class Events extends AppCompatActivity {
+public class Events extends AppCompatActivity implements eventDialog.EventDialogListener {
 
+  databaseHelper eventDatabase;
   /**
    * Static string for sending Log information to the terminal.
    */
   private static final String TAG = "MainActivity";
 
   /**
-   * Text View to select the desired date.
+   * Text View to show the name for event given.
    */
-  private TextView eventSetup;
+  private TextView eventName;
 
   /**
-   * date listener that presents the options to the user.
+   * Text View to show the date of the event.
    */
-  private DatePickerDialog.OnDateSetListener onDateSetListener;
+  private TextView eventDate;
 
   /**
-   * Layout that holds the dates selected.
+   * Button for creating an event.
    */
-  private LinearLayout lview;
+  private Button button;
 
-  /**
-   * Keeps track of how many dates have been chosen.
-   */
-  private int numDates = 0;
+  private Button saveBtn;
 
-  /**
-   * Naming format for default Event setup.
-   */
-  private String dateName;
+  private Button viewEvent;
+
 
   /********************************************************************
    * OnCreate method to initialize the Events screen to be presented
@@ -67,83 +65,58 @@ public class Events extends AppCompatActivity {
     setContentView(R.layout.events);
 
     // Initialize variables to their respective views
-    eventSetup = findViewById(R.id.tvEvent);
-    lview = findViewById(R.id.dateList);
+    button = findViewById(R.id.eventCreation);
+    eventName = findViewById(R.id.tView);
+    eventDate = findViewById(R.id.dView);
+    saveBtn = findViewById(R.id.savebutton);
+    viewEvent = findViewById(R.id.viewevent);
+    eventDatabase = new databaseHelper(this);
+    // Set onClick Listener for event creation
 
-    // Defines what happens when eventSetup is selected
-    eventSetup.setOnClickListener(v -> {
-
-      // Create calendar object equal to today's date
-      Calendar cal = Calendar.getInstance();
-
-      // Create year int to hold the calendar year
-      int year = cal.get(Calendar.YEAR);
-
-      // Create month int to hold the calendar month
-      int month = cal.get(Calendar.MONTH);
-
-      // Create day int to hold the calendar day
-      int day = cal.get(Calendar.DAY_OF_MONTH);
-
-      //Create DatePickerDialog object and initializes it
-      DatePickerDialog dialog = new DatePickerDialog(
-              Events.this,
-              android.R.style.Theme_Holo_Light_Dialog_MinWidth,
-              onDateSetListener, year, month, day);
-      // Set the windows background
-      dialog.getWindow().setBackgroundDrawable(
-              new ColorDrawable(Color.TRANSPARENT));
-
-      // Tell the system to show the DatePickerDialog
-      dialog.show();
-    });
-
-    // Initializes the onDateSetListener to a new object
-    onDateSetListener = new DatePickerDialog.OnDateSetListener() {
-      /***************************************************************
-       * Class that defines what happens once a date is selected.
-       *
-       * @param view the datePicker view
-       * @param year the year selected.
-       * @param month the month selected
-       * @param dayOfMonth the day of the month selected
-       ***************************************************************/
+    button.setOnClickListener(new View.OnClickListener() {
       @Override
-      public void onDateSet(DatePicker view, int year, int month,
-                            int dayOfMonth) {
-        // Adds one to the month because the calendar starts at 0
-        month = month + 1;
-
-        // Increment Number of Dates variable
-        numDates++;
-
-        // Create the beginning of the date name
-        dateName = "Date" + numDates + ": ";
-
-        // Create EditText view to hold the selected date
-        EditText newDate = new EditText(Events.this);
-
-        // Give the newDates id to the number of dates
-        //newDate.setId(numDates);
-
-        /* Print out a log to the terminal in order to verify date order
-         and print out the date selected
-       */
-        Log.d(TAG, "onDateSet: mm/dd/yyyy: " + month + "/"
-                + dayOfMonth + "/" + year);
-
-        // Fill in the date selected
-        String date = month + "/" + dayOfMonth + "/" + year;
-
-        // Format size of the date
-        newDate.setTextSize(30);
-
-        // Set newDate text to the selected date
-        newDate.setText(dateName + date);
-
-        // Add newDate view to the layout variable
-        lview.addView(newDate);
+      public void onClick(View v) {
+        openDialog();
       }
-    };
+    });
+    saveBtn.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        String name = eventName.getText().toString();
+        String date = eventDate.getText().toString();
+        if (eventName.length() != 0 && eventDate.length() != 0){
+          AddData(name, date);
+        }
+        else{
+          toastMessage("You must put something for the date and name");
+        }
+      }
+    });
+    viewEvent.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(Events.this, ListDataActivity.class);
+        startActivity(intent);
+      }
+    });
+  }
+
+  public void openDialog() {
+    eventDialog newEvent = new eventDialog();
+    newEvent.show(getSupportFragmentManager(), "create event");
+  }
+
+  @Override
+  public void applyText(String name, String date) {
+    eventName.setText(name);
+    eventDate.setText(date);
+  }
+
+  public void AddData(String newName, String newDate){
+    boolean insertData = eventDatabase.addData(newName, newDate);
+  }
+
+  private void toastMessage(String message) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }
 }

@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Challenger Approaching</string>
 
+    <string-array name="eventOccurance">
+        <item>Occurrence</item>
+        <item>Once</item>
+        <item>Weekly</item>
+        <item>Biweekly</item>
+        <item>Monthly</item>
+    </string-array>
     <string-array name="MiiSwordfightermoves">
         <item>AirborneAssault</item>
         <item>AirborneAssaultHit</item>
