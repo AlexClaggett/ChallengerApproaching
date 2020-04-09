@@ -25,12 +25,14 @@
                     android:id="@+id/BattleField"
                     android:layout_width="207dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Battlefield" />
 
                 <Button
                     android:id="@+id/FinalDestination"
                     android:layout_width="204dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Final Destination" />
             </TableRow>
 
@@ -40,12 +42,14 @@
                     android:id="@+id/KalosPokemonStadium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Kalos Pokemon Stadium" />
 
                 <Button
                     android:id="@+id/LylatCruise"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Lylat Cruise" />
             </TableRow>
 
@@ -55,12 +59,14 @@
                     android:id="@+id/PokemonStadium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Pokemon Staidum" />
 
                 <Button
                     android:id="@+id/PokemonStadium2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Pokemon Stadium 2" />
             </TableRow>
 
@@ -70,39 +76,49 @@
                     android:id="@+id/Smashville"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Smashville" />
 
                 <Button
                     android:id="@+id/TownAndCity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Town and City" />
             </TableRow>
 
-            <TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <Button
                     android:id="@+id/UnovaPokemonLeague"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Unova Pokemon League" />
 
                 <Button
                     android:id="@+id/YoshiIsland"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Yoshi's Island" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/YoshisStory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yoshi's Story" />
             </TableRow>
 
         </TableLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/YoshisStory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Yoshi's Story"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
