@@ -362,6 +362,8 @@
             android:name=".Events"
             android:label="Tournaments / Events"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".utils.ListDataActivity" />
+        <activity android:name=".utils.EditDataActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

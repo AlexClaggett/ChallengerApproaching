@@ -32,7 +32,7 @@
                     android:id="@+id/FinalDestination"
                     android:layout_width="204dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="Final Destination" />
             </TableRow>
 
@@ -49,7 +49,7 @@
                     android:id="@+id/LylatCruise"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="Lylat Cruise" />
             </TableRow>
 
@@ -66,7 +66,7 @@
                     android:id="@+id/PokemonStadium2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="Pokemon Stadium 2" />
             </TableRow>
 
@@ -83,7 +83,7 @@
                     android:id="@+id/TownAndCity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="Town and City" />
             </TableRow>
 
@@ -102,7 +102,7 @@
                     android:id="@+id/YoshiIsland"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="Yoshi's Island" />
             </TableRow>
 
