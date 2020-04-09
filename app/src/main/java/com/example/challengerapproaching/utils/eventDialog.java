@@ -99,6 +99,7 @@ public class eventDialog extends AppCompatDialogFragment {
                     public void onClick(DialogInterface dialog, int which) {
                         String eventName = editTextEventName.getText().toString();
                         String eventDate = editTextEventDate.getText().toString();
+
                         listener.applyText(eventName, eventDate);
                     }
                 });

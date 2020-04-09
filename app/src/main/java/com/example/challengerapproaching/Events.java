@@ -46,8 +46,6 @@ public class Events extends AppCompatActivity implements eventDialog.EventDialog
    */
   private Button button;
 
-  private Button saveBtn;
-
   private Button viewEvent;
 
 
@@ -68,7 +66,6 @@ public class Events extends AppCompatActivity implements eventDialog.EventDialog
     button = findViewById(R.id.eventCreation);
     eventName = findViewById(R.id.tView);
     eventDate = findViewById(R.id.dView);
-    saveBtn = findViewById(R.id.savebutton);
     viewEvent = findViewById(R.id.viewevent);
     eventDatabase = new databaseHelper(this);
     // Set onClick Listener for event creation
@@ -79,19 +76,7 @@ public class Events extends AppCompatActivity implements eventDialog.EventDialog
         openDialog();
       }
     });
-    saveBtn.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        String name = eventName.getText().toString();
-        String date = eventDate.getText().toString();
-        if (eventName.length() != 0 && eventDate.length() != 0){
-          AddData(name, date);
-        }
-        else{
-          toastMessage("You must put something for the date and name");
-        }
-      }
-    });
+
     viewEvent.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -110,6 +95,12 @@ public class Events extends AppCompatActivity implements eventDialog.EventDialog
   public void applyText(String name, String date) {
     eventName.setText(name);
     eventDate.setText(date);
+    if (eventName.length() != 0 && eventDate.length() != 0){
+          AddData(name, date);
+    }
+    else{
+        toastMessage("You must put something for the date and name");
+    }
   }
 
   public void AddData(String newName, String newDate){
