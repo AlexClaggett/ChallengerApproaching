@@ -1,13 +1,14 @@
 package com.example.challengerapproaching;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.challengerapproaching.utils.ListDataActivity;
@@ -29,7 +30,7 @@ public class Events extends AppCompatActivity implements eventDialog.EventDialog
   /**
    * Static string for sending Log information to the terminal.
    */
-  private static final String TAG = "MainActivity";
+  private static final String TAG = "Events";
 
   /**
    * Text View to show the name for event given.
@@ -48,6 +49,7 @@ public class Events extends AppCompatActivity implements eventDialog.EventDialog
 
   private Button viewEvent;
 
+  private CalendarView eventsCalendar;
 
   /********************************************************************
    * OnCreate method to initialize the Events screen to be presented
@@ -67,9 +69,10 @@ public class Events extends AppCompatActivity implements eventDialog.EventDialog
     eventName = findViewById(R.id.tView);
     eventDate = findViewById(R.id.dView);
     viewEvent = findViewById(R.id.viewevent);
+    eventsCalendar = findViewById(R.id.eventsCalendar);
     eventDatabase = new databaseHelper(this);
-    // Set onClick Listener for event creation
 
+    // Set onClick Listener for event creation
     button.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -84,6 +87,8 @@ public class Events extends AppCompatActivity implements eventDialog.EventDialog
         startActivity(intent);
       }
     });
+
+    eventsCalendar.setBackgroundColor(android.R.style.Theme_Holo_Light_DarkActionBar);
   }
 
   public void openDialog() {
