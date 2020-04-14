@@ -434,10 +434,5 @@ public class CharacterSelect extends AppCompatActivity {
             i++;
         }
 
-        eventButton = findViewById(R.id.ButtonEvent);
-        eventButton.setOnClickListener(v -> {
-            final Intent event = new Intent(CharacterSelect.this, Events.class);
-            startActivity(event);
-        });
     }
 }

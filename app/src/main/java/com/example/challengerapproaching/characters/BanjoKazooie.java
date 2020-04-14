@@ -3,6 +3,7 @@ package com.example.challengerapproaching.characters;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +17,7 @@ import java.io.IOException;
 
 public class BanjoKazooie extends AppCompatActivity {
 
-  String [] Banjo_Kazooiemoves = {
+  String [] Banjo_Kazooiemoves2 = {
 //          "BanjoKazooieBreegullBlaster1-6.png",
 //          "BanjoKazooieBreegullBlaster13.png",
 //          "BanjoKazooieBreegullBlaster7-12.png",
@@ -59,12 +60,20 @@ public class BanjoKazooie extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_banjo__kazooie);
 
+    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+            this,
+            R.layout.selectmove_spinner_design,
+            getResources().getStringArray(R.array.Banjo_Kazooiemoves)
+    );
+    adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
+
     Spinner spnLocale = findViewById(R.id.spinner2);
+    spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/banjo_and_kazooie/" + Banjo_Kazooiemoves[position];
+        String toURL = "https://ultimateframedata.com/hitboxes/banjo_and_kazooie/" + Banjo_Kazooiemoves2[position];
         try {
           gifImageView.setGifImageURL(toURL);
         } catch (IOException e) {
@@ -77,6 +86,8 @@ public class BanjoKazooie extends AppCompatActivity {
 
       }
     });
+
+
 
   }
 }
