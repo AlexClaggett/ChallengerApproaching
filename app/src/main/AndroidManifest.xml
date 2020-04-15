@@ -17,351 +17,383 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.challengerapproaching.Stages.TownAndCity"></activity>
-        <activity android:name="com.example.challengerapproaching.Stages.LylatCruise" />
-        <activity android:name="com.example.challengerapproaching.Stages.YoshisStory" />
-        <activity android:name="com.example.challengerapproaching.Stages.BattleField" />
-        <activity android:name="com.example.challengerapproaching.Stages.UnovaPokemonLeague" />
-        <activity android:name="com.example.challengerapproaching.Stages.KalosPokemonLeague" />
-        <activity android:name="com.example.challengerapproaching.Stages.PokemonStadium2" />
-        <activity android:name="com.example.challengerapproaching.Stages.PokemonStadium" />
-        <activity android:name="com.example.challengerapproaching.Stages.YoshiIsland" />
-        <activity android:name="com.example.challengerapproaching.Stages.Smashville" />
-        <activity android:name="com.example.challengerapproaching.Stages.FinalDestination" />
-        <activity android:name=".StageSelect" />
-        <activity android:name=".CharacterSelect" />
+        <activity android:name="com.example.challengerapproaching.Stages.TownAndCity"
+            android:label="Town and City"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name="com.example.challengerapproaching.Stages.LylatCruise"
+            android:label="Lylat Cruise"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name="com.example.challengerapproaching.Stages.YoshisStory"
+            android:label="Yoshi's Story"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name="com.example.challengerapproaching.Stages.BattleField"
+            android:label="Battlefield"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name="com.example.challengerapproaching.Stages.UnovaPokemonLeague"
+            android:label="Unova Pokemon League"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name="com.example.challengerapproaching.Stages.KalosPokemonLeague"
+            android:label="Kalos Pokemon League"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name="com.example.challengerapproaching.Stages.PokemonStadium2"
+            android:label="Pokemon Stadium 2"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name="com.example.challengerapproaching.Stages.PokemonStadium"
+            android:label="Pokemon Stadium"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name="com.example.challengerapproaching.Stages.YoshiIsland"
+            android:label="Yoshi's Island"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name="com.example.challengerapproaching.Stages.Smashville"
+            android:label="Smashville"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name="com.example.challengerapproaching.Stages.FinalDestination"
+            android:label="Final Destination"
+            android:parentActivityName=".StageSelect"/>
+        <activity android:name=".StageSelect"
+            android:label="Stage Select"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".CharacterSelect"
+            android:label="Character Select"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".characters.Corrin"
             android:label="Corrin"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Cloud"
             android:label="Cloud"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.ZeroSuitSamus"
             android:label="Zero Suit Samus"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Zelda"
             android:label="Zelda"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Yoshi"
             android:label="Falco"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.YoungLink"
             android:label="Young Link"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Wolf"
             android:label="Wolf"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.WiiFitTrainer"
             android:label="Wii Fit Trainer"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Wario"
             android:label="Wario"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Villager"
             android:label="Villager"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.ToonLink"
             android:label="Toon Link"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Terry"
             android:label="Terry"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Sonic"
             android:label="Sonic"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Snake"
             android:label="Snake"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Simon"
             android:label="Simon"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Shulk"
             android:label="Shulk"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Sheik"
             android:label="Sheik"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Samus"
             android:label="Samus"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Ryu"
             android:label="Ryu"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Roy"
             android:label="Roy"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.RosalinaAndLuma"
             android:label="Rosalina and Luma"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Robin"
             android:label="Robin"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Rob"
             android:label="Rob"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Ridley"
             android:label="Ridley"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Richter"
             android:label="Richter"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Charizard"
             android:label="Pokemon Trainer: Charizard"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Ivysaur"
             android:label="Pokemon Trainer: Ivysaur"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Squirtle"
             android:label="Pokemon Trainer: Squirtle"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Pit"
             android:label="Pit"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.PiranhaPlant"
             android:label="Piranha Plant"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Pikachu"
             android:label="Pikachu"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Pichu"
             android:label="Pichu"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Peach"
             android:label="Peach"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Palutena"
             android:label="Palutena"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.PacMan"
             android:label="PacMan"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Olimar"
             android:label="Olimar"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Ness"
             android:label="Ness"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.MrGameAndWatch"
             android:label="Mr. Game And Watch"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.MiiSwordfighter"
             android:label="Mii Sword Fighter"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.MiiGunner"
             android:label="Mii Gunner"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.MiiBrawler"
             android:label="Mii Brawler"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Mewtwo"
             android:label="Mewtwo"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.MetaKnight"
             android:label="MetaKnight"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.MegaMan"
             android:label="MegaMan"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Marth"
             android:label="Marth"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Mario"
             android:label="Mario"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Luigi"
             android:label="Luigi"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Lucina"
             android:label="Lucina"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Lucas"
             android:label="Lucas"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Lucario"
             android:label="Lucario"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.LittleMac"
             android:label="LittleMac"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Link"
             android:label="Link"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Kirby"
             android:label="Kirby"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.KingKRool"
             android:label="King K.Rool"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.KingDedede"
             android:label="King Dedede"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Ken"
             android:label="Ken"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Joker"
             android:label="Joker"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Jigglypuff"
             android:label="Jigglypuff"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Isabelle"
             android:label="Isabelle"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Inkling"
             android:label="Inkling"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Incineroar"
             android:label="Incineroar"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Ike"
             android:label="Ike"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.IceClimbers"
             android:label="Ice Climbers"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Hero"
             android:label="Hero"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Greninja"
             android:label="Greninja"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Ganondorf"
             android:label="Ganondorf"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Fox"
             android:label="Fox"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Falco"
             android:label="Falco"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.DuckHunt"
             android:label="Duck Hunt"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.DrMario"
             android:label="Dr. Mario"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.DonkeyKong"
             android:label="Donkey Kong"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.DiddyKong"
             android:label="Diddy Kong"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.DarkSamus"
             android:label="Dark Samus"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.DarkPit"
             android:label="Dark Pit"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Daisy"
             android:label="Daisy"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Chrom"
             android:label="Chrom"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.CaptainFalcon"
             android:label="Captain Falcon"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Byleth"
             android:label="Byleth"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.BowserJr"
             android:label="Bowser Jr"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Bowser"
             android:label="Bowser"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Bayonetta"
             android:label="Bayonetta"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.BanjoKazooie"
             android:label="Banjo Kazooie"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".CharacterSelect" />
         <activity
-            android:name=".Events"
+            android:name=".Events_Activity"
             android:label="Tournaments / Events"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".utils.ListDataActivity"
+            android:label="Upcoming Events"
+            android:parentActivityName=".Events_Activity"/>
+        <activity android:name=".utils.EditDataActivity"
+            android:label="Edit Event"
+            android:parentActivityName=".utils.ListDataActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

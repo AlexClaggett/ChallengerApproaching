@@ -3,6 +3,7 @@ package com.example.challengerapproaching.characters;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +19,7 @@ import java.net.URL;
 
 public class CaptainFalcon extends AppCompatActivity {
 
-  String [] CaptainFalconmoves = {
+  String [] CaptainFalconmoves2 = {
           "CaptainFalconBAir.gif",
           "CaptainFalconBThrow.gif",
           "CaptainFalconDAir.gif",
@@ -68,12 +69,20 @@ public class CaptainFalcon extends AppCompatActivity {
     setContentView(R.layout.activity_captain_falcon);
 
 
+    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+            this,
+            R.layout.selectmove_spinner_design,
+            getResources().getStringArray(R.array.CaptainFalconmoves)
+    );
+    adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
+
     Spinner spnLocale = findViewById(R.id.spinner2);
+    spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/captain_falcon/" + CaptainFalconmoves[position];
+        String toURL = "https://ultimateframedata.com/hitboxes/captain_falcon/" + CaptainFalconmoves2[position];
         try {
           gifImageView.setGifImageURL(toURL);
         } catch (IOException e) {

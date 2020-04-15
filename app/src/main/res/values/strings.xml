@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Challenger Approaching</string>
+    <string name="banjo_amp_kazooie"><![CDATA[Banjo & Kazooie]]></string>
 
+    <string-array name="eventOccurance">
+        <item>Occurrence</item>
+        <item>Once</item>
+        <item>Weekly</item>
+        <item>Biweekly</item>
+        <item>Monthly</item>
+    </string-array>
     <string-array name="MiiSwordfightermoves">
         <item>AirborneAssault</item>
         <item>AirborneAssaultHit</item>
