@@ -15,4 +15,104 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/kalos" />
+
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="493dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/BF_SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stage Stats"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/BF_SW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stage Width: 160"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_PC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Platform Count: 2"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_PH3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Platform Heights: "
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZT4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Left: 30"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZR4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Right 24.119"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blast Zone Dimensions:"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Top: 192"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Right: 165"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Left: 165"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Bottom: 118"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Camera: 60"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

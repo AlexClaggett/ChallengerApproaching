@@ -54,7 +54,28 @@
                 android:id="@+id/BF_PH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Platform Height Span: 14.021"
+                android:text="Platform Heights: "
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZT2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Left: 41.539"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZR2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Middle: 27.518"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZR9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Right: 41.539"
                 android:textSize="24sp" />
 
             <TextView
