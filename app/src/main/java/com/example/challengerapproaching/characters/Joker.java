@@ -3,6 +3,7 @@ package com.example.challengerapproaching.characters;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -84,7 +85,15 @@ public class Joker extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_joker);
 
+    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+            this,
+            R.layout.selectmove_spinner_design,
+            getResources().getStringArray(R.array.Jokermoves)
+    );
+    adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
+
     Spinner spnLocale = findViewById(R.id.spinner2);
+    spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

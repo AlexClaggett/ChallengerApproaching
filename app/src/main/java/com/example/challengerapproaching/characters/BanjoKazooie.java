@@ -69,6 +69,7 @@ public class BanjoKazooie extends AppCompatActivity {
 
     Spinner spnLocale = findViewById(R.id.spinner2);
     spnLocale.setAdapter(adapter);
+
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -79,6 +80,7 @@ public class BanjoKazooie extends AppCompatActivity {
         } catch (IOException e) {
           e.printStackTrace();
         }
+
       }
 
       @Override

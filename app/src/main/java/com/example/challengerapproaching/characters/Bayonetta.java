@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +25,7 @@ import java.net.URISyntaxException;
 
 public class Bayonetta extends AppCompatActivity {
 
-  String [] Bayonettamoves = {
+  String [] Bayonettamoves2 = {
           "BayonettaAfterburnerKickDown.gif",
           "BayonettaAfterburnerKickLanding.gif",
           "BayonettaAfterburnerKickUp.gif",
@@ -71,12 +72,20 @@ public class Bayonetta extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_bayonetta);
 
+    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+            this,
+            R.layout.selectmove_spinner_design,
+            getResources().getStringArray(R.array.Bayonettamoves)
+    );
+    adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
     Spinner spnLocale = findViewById(R.id.spinner2);
+    spnLocale.setAdapter(adapter);
+
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/bayonetta/" + Bayonettamoves[position];
+        String toURL = "https://ultimateframedata.com/hitboxes/bayonetta/" + Bayonettamoves2[position];
         try {
           gifImageView.setGifImageURL(toURL);
         } catch (IOException e) {
