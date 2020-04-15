@@ -22,7 +22,6 @@ public class ListDataActivity extends AppCompatActivity {
     private static final String TAG ="ListDataActivity";
 
     databaseHelper eventDatabase;
-
     private ListView eventsList;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,22 +36,26 @@ public class ListDataActivity extends AppCompatActivity {
     private void populateListView() {
         Log.d(TAG, "populateListView: Displaying data in the ListView.");
 
-        Cursor data = eventDatabase.getData();
-        ArrayList<String> listData = new ArrayList<>();
-        while (data.moveToNext()){
-            listData.add(data.getString(1));
-            listData.add(data.getString(2));
+        ArrayList<event> eventList;
+        eventList = eventDatabase.getAllData();
+        ArrayList<String> eventTitle = new ArrayList<>();
+        for(int i = 0; i < eventList.size(); i++){
+            eventTitle.add(eventList.get(i).getName() + "\n" + eventList.get(i).getDate());
         }
 
-        ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
-        eventsList.setAdapter(adapter);
+        if(eventList.size() != 0)
+            Log.d(TAG, "Peek at array list: " + eventList.toString());
 
+        ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, eventTitle);
+        eventsList.setAdapter(adapter);
+        ArrayList<event> finalEventList = eventList;
         eventsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String name = adapterView.getItemAtPosition(i).toString();
-                Log.d(TAG, "onItemClick: You Clicked on " + name);
+                String name = (finalEventList.get(i).getName());
+                String date = (finalEventList.get(i).getDate());
+                Log.d(TAG, "onItemClick: You Clicked on " + eventTitle.get(i));
 
-                Cursor data = eventDatabase.getItemID(name);
+                Cursor data = eventDatabase.getDateID(date);
                 int itemID = -1;
                 while(data.moveToNext()){
                     itemID = data.getInt(0);
@@ -62,6 +65,9 @@ public class ListDataActivity extends AppCompatActivity {
                     Intent editScreenIntent = new Intent (ListDataActivity.this, EditDataActivity.class);
                     editScreenIntent.putExtra("id", itemID);
                     editScreenIntent.putExtra("name", name);
+                    editScreenIntent.putExtra("date", date);
+                    Log.d(TAG, "attempting to start edit screen");
+                    Intent intent = getIntent();
                     startActivity(editScreenIntent);
                 }
                 else{

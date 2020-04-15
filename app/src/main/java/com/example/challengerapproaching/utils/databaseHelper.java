@@ -7,6 +7,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.ArrayList;
+
+import static java.lang.Integer.parseInt;
+
+
 public class databaseHelper extends SQLiteOpenHelper {
 
     private static final String TAG = "DatabaseHelper";
@@ -22,7 +27,7 @@ public class databaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP IF TABLE EXISTS " + TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS" + TABLE_NAME);
         onCreate(db);
     }
 
@@ -54,17 +59,41 @@ public class databaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public Cursor getData(){
+    public ArrayList<event> getAllData(){
+        ArrayList<event> events = new ArrayList<event>();
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT * FROM " + TABLE_NAME;
         Cursor data = db.rawQuery(query, null);
-        return data;
+
+        if (data.moveToFirst()) {
+            do {
+                event ev = new event();
+                ev.setId(data.getInt(data.getColumnIndex(COL1)));
+                ev.setName(data.getString(data.getColumnIndex(COL2)));
+                ev.setDate(data.getString(data.getColumnIndex(COL3)));
+                events.add(ev);
+            } while(data.moveToNext());
+        }
+        for(int i = 0; i < events.size(); i++) {
+            Log.d(TAG, "Events List Id: " + i + " " + events.get(i).getId());
+            Log.d(TAG, "Events List Name: " + i + " " + events.get(i).getName());
+            Log.d(TAG, "Events List Date: " + i + " " + events.get(i).getDate());
+        }
+        return events;
     }
 
-    public Cursor getItemID(String name){
+//    public Cursor getNameID(String name){
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        String query = "SELECT " + COL1 + " FROM " + TABLE_NAME +
+//                " WHERE " + COL3 + " = '" + name + "'";
+//        Cursor data = db.rawQuery(query, null);
+//        return data;
+//    }
+
+    public Cursor getDateID(String date){
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT " + COL1 + " FROM " + TABLE_NAME +
-                " WHERE " + COL2 + " = '" + name + "'";
+                " WHERE " + COL3 + " = '" + date + "'";
         Cursor data = db.rawQuery(query, null);
         return data;
     }
@@ -79,14 +108,99 @@ public class databaseHelper extends SQLiteOpenHelper {
         db.execSQL(query);
     }
 
-    public void deleteEvent(int id, String name){
+    public void updateDate(String newDate, int id, String oldDate){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "UPDATE " + TABLE_NAME + " SET " + COL3 +
+                " = '" + newDate + "' Where " + COL1 + " = '" + id + "'" +
+                " AND " + COL3 + " = '" + oldDate + "'";
+        Log.d(TAG, "updateName: query: " + query);
+        Log.d(TAG, "updateName: Setting name to " + newDate);
+        db.execSQL(query);
+    }
+
+    public void deleteEvent(int id, String name, String date){
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "DELETE FROM " + TABLE_NAME + " WHERE "
-                + COL1 + " = '" + id + "'" + " AND " + COL2
-                + " = '" + name + "'";
+                + COL1 + " = '" + id + "'" + " AND " + COL3
+                + " = '" + date + "'";
         Log.d(TAG, "deleteName: query: " + query);
-        Log.d(TAG, "deleteName: Deleting Event: " + name);
+        Log.d(TAG, "deleteName: Deleting Event: " + name + " on " +  date);
         db.execSQL(query);
 
+    }
+
+    public event getMostRecent(){
+        event mostRecent = new event("None", "None");
+        event curEvent = new event();
+        String dateParts;
+        int curMonth, curDay, curYear;
+        int month, day, year;
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_NAME;
+        Cursor data = db.rawQuery(query, null);
+        Log.d(TAG, "Query Ran");
+        if (data.moveToFirst()){
+            do {
+                curEvent.setId(data.getInt(data.getColumnIndex(COL1)));
+                curEvent.setName(data.getString(data.getColumnIndex(COL2)));
+                curEvent.setDate(data.getString(data.getColumnIndex(COL3)));
+                dateParts = curEvent.getDate();
+                Log.d(TAG,"Database Current Date: " + dateParts);
+                curMonth = parseInt(dateParts.substring(0,dateParts.indexOf("/")));
+                dateParts = dateParts.substring(dateParts.indexOf("/")+1);
+                Log.d(TAG,"Database Current Date minus month: " + dateParts);
+                curDay = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+                dateParts = dateParts.substring(dateParts.indexOf("/")+1);
+                Log.d(TAG,"Database Current Year: " + dateParts);
+                curYear = parseInt(dateParts);
+
+                if (mostRecent.getDate().equals("None")) {
+                    mostRecent.setName(curEvent.getName());
+                    mostRecent.setDate(curEvent.getDate());
+                }
+                else{
+                    dateParts = mostRecent.getDate();
+                    month = parseInt(dateParts.substring(0,dateParts.indexOf("/")));
+                    dateParts = dateParts.substring(dateParts.indexOf("/")+1);
+                    day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+                    dateParts = dateParts.substring(dateParts.indexOf("/")+1);
+                    year = parseInt(dateParts);
+
+                    if(curYear < year){
+                        mostRecent.setId(curEvent.getId());
+                        mostRecent.setName(curEvent.getName());
+                        mostRecent.setDate(curEvent.getDate());
+                    }
+                    else if(curYear == year && curMonth < month){
+                        mostRecent.setId(curEvent.getId());
+                        mostRecent.setName(curEvent.getName());
+                        mostRecent.setDate(curEvent.getDate());
+                    }
+                    else if(curYear == year && curMonth == month && curDay < day){
+                        mostRecent.setId(curEvent.getId());
+                        mostRecent.setName(curEvent.getName());
+                        mostRecent.setDate(curEvent.getDate());
+                    }
+                }
+                Log.d(TAG, "Most Recent Date: " + mostRecent.getDate());
+            } while(data.moveToNext());
+        }
+        return mostRecent;
+    }
+
+    public int getNumEvents(){
+        int count = 0;
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_NAME;
+        Cursor data = db.rawQuery(query, null);
+        if(data.moveToFirst()){
+            do{
+                count++;
+            } while(data.moveToNext());
+        }
+        else{
+            return count;
+        }
+        return count;
     }
 }

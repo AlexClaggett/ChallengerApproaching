@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -27,7 +28,7 @@ public class eventDialog extends AppCompatDialogFragment {
     private TextView editTextEventDate;
     private EventDialogListener listener;
     private DatePickerDialog.OnDateSetListener onDateSetListener;
-
+    public Calendar newDate;
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class eventDialog extends AppCompatDialogFragment {
 
         editTextEventName = view.findViewById(R.id.edit_eventname);
         editTextEventDate = view.findViewById(R.id.edit_eventDate);
+        newDate = Calendar.getInstance();
         // Defines what happens when eventSetup is selected
         editTextEventDate.setOnClickListener(v ->{
             // Create calendar object equal to today's date
@@ -54,7 +56,7 @@ public class eventDialog extends AppCompatDialogFragment {
             //Create DatePickerDialog object and initializes it
             DatePickerDialog dialog = new DatePickerDialog(
                     eventDialog.this.getActivity(),
-                    android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                    android.R.style.Theme_Holo_Dialog_MinWidth,
                     onDateSetListener, year, month, day);
             // Set the windows background
             dialog.getWindow().setBackgroundDrawable(
@@ -82,10 +84,10 @@ public class eventDialog extends AppCompatDialogFragment {
                 date += month +"/";
                 date += dayOfMonth + "/";
                 date += year;
+                newDate.set(year,month,dayOfMonth);
                 editTextEventDate.setText(date);
             }
         };
-
         builder.setView(view)
                 .setTitle("Event Creation")
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
@@ -97,10 +99,11 @@ public class eventDialog extends AppCompatDialogFragment {
                 .setPositiveButton("Create", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
                         String eventName = editTextEventName.getText().toString();
                         String eventDate = editTextEventDate.getText().toString();
-
-                        listener.applyText(eventName, eventDate);
+                        Log.d("EventDialog","New Date is: " + newDate.getTime());
+                        listener.applyText(eventName, eventDate, newDate);
                     }
                 });
 
@@ -121,7 +124,7 @@ public class eventDialog extends AppCompatDialogFragment {
     }
 
     public interface EventDialogListener{
-        void applyText(String eventName, String date);
+        void applyText(String eventName, String date, Calendar newDate);
     }
 }
 
