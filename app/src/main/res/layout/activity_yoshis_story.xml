@@ -15,4 +15,111 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/story" />
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="495dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/BF_SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stage Stats"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/BF_SW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stage Width: 136"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_PC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Platform Count: 3"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_PH10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Platform Heights: "
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZT12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Left: 28.468"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZT15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Middle: 50.997"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZT14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Right: 28.468"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blast Zone Dimensions:"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Top: 180"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Right: 159.107"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Left: 159.107"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Bottom: 180"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BF_BZC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Camera: 58.042"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
