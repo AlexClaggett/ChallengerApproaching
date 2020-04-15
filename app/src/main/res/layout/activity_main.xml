@@ -25,7 +25,7 @@
         <ImageButton
             android:id="@+id/characters"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_marginTop="350dp"
             android:background="#00654F4F"
             android:scaleType="fitCenter"
@@ -37,7 +37,7 @@
         <ImageButton
             android:id="@+id/events"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:background="#00654F4F"
             android:scaleType="fitCenter"
@@ -50,7 +50,7 @@
         <ImageButton
             android:id="@+id/stages"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="80dp"
             android:background="#00654F4F"

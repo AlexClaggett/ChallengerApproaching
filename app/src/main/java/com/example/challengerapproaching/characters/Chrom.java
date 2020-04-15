@@ -3,6 +3,7 @@ package com.example.challengerapproaching.characters;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +17,7 @@ import java.io.IOException;
 
 public class Chrom extends AppCompatActivity {
 
-  String [] Chrommoves = {
+  String [] Chrommoves2 = {
           "ChromBAir.gif",
           "ChromBThrow.gif",
           "ChromCounter.gif",
@@ -61,12 +62,20 @@ public class Chrom extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_chrom);
 
+    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+            this,
+            R.layout.selectmove_spinner_design,
+            getResources().getStringArray(R.array.Chrommoves)
+    );
+    adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
+
     Spinner spnLocale = findViewById(R.id.spinner2);
+    spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/chrom/" + Chrommoves[position];
+        String toURL = "https://ultimateframedata.com/hitboxes/chrom/" + Chrommoves2[position];
         try {
           gifImageView.setGifImageURL(toURL);
         } catch (IOException e) {

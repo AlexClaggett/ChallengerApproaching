@@ -3,6 +3,7 @@ package com.example.challengerapproaching.characters;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +17,7 @@ import java.io.IOException;
 
 public class Bowser extends AppCompatActivity {
 
-  String [] Bowsermoves = {
+  String [] Bowsermoves2 = {
           "BowserBAir.gif",
 //          "BowserBowserBomb.png",
           "BowserBowserBombG.gif",
@@ -56,12 +57,20 @@ public class Bowser extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_bowser);
 
+    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+            this,
+            R.layout.selectmove_spinner_design,
+            getResources().getStringArray(R.array.Bowsermoves)
+    );
+    adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
+
     Spinner spnLocale = findViewById(R.id.spinner2);
+    spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/bowser/" + Bowsermoves[position];
+        String toURL = "https://ultimateframedata.com/hitboxes/bowser/" + Bowsermoves2[position];
         try {
           gifImageView.setGifImageURL(toURL);
         } catch (IOException e) {
