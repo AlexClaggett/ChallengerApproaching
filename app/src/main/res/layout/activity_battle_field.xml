@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/character_background"
-    tools:context="com.example.challengerapproaching.Stages.BattleField">
+    tools:context="com.example.challengerapproaching.stages.BattleField">
 
 
     <ImageView

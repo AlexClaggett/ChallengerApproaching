@@ -80,9 +80,9 @@ public class Ryu extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/ryu/" + ryuMoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/ryu/" + ryuMoves[position];
         try {
-          gifImageView.setGifImageUrl(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

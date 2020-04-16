@@ -82,4 +82,4 @@ public class ZeroSuitSamus extends AppCompatActivity {
       }
     });
   }
-  }
+}

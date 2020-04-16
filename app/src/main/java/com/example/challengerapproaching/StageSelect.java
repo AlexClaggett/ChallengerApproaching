@@ -6,17 +6,17 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.challengerapproaching.Stages.BattleField;
-import com.example.challengerapproaching.Stages.FinalDestination;
-import com.example.challengerapproaching.Stages.KalosPokemonLeague;
-import com.example.challengerapproaching.Stages.LylatCruise;
-import com.example.challengerapproaching.Stages.PokemonStadium;
-import com.example.challengerapproaching.Stages.PokemonStadium2;
-import com.example.challengerapproaching.Stages.Smashville;
-import com.example.challengerapproaching.Stages.TownAndCity;
-import com.example.challengerapproaching.Stages.UnovaPokemonLeague;
-import com.example.challengerapproaching.Stages.YoshiIsland;
-import com.example.challengerapproaching.Stages.YoshisStory;
+import com.example.challengerapproaching.stages.BattleField;
+import com.example.challengerapproaching.stages.FinalDestination;
+import com.example.challengerapproaching.stages.KalosPokemonLeague;
+import com.example.challengerapproaching.stages.LylatCruise;
+import com.example.challengerapproaching.stages.PokemonStadium;
+import com.example.challengerapproaching.stages.PokemonStadium2;
+import com.example.challengerapproaching.stages.Smashville;
+import com.example.challengerapproaching.stages.TownAndCity;
+import com.example.challengerapproaching.stages.UnovaPokemonLeague;
+import com.example.challengerapproaching.stages.YoshiIsland;
+import com.example.challengerapproaching.stages.YoshisStory;
 
 /**********************************************************************
  * This class generates the stage select screen by
