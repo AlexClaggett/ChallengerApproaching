@@ -21,101 +21,158 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <Button
+                <ImageButton
                     android:id="@+id/BattleField"
-                    android:layout_width="207dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Battlefield" />
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/battlefieldbtn"
+                    />
+            </TableRow>
 
-                <Button
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ImageButton
                     android:id="@+id/FinalDestination"
-                    android:layout_width="204dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Final Destination" />
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/finaldestinationbtn" />
             </TableRow>
 
-            <TableRow>
-
-                <Button
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ImageButton
                     android:id="@+id/KalosPokemonStadium"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Kalos Pokemon Stadium" />
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kalosbtn" />
+            </TableRow>
 
-                <Button
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ImageButton
                     android:id="@+id/LylatCruise"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Lylat Cruise" />
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lylatbtn" />
             </TableRow>
 
-            <TableRow>
-
-                <Button
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ImageButton
                     android:id="@+id/PokemonStadium"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Pokemon Staidum" />
-
-                <Button
-                    android:id="@+id/PokemonStadium2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Pokemon Stadium 2" />
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pokemonbtn" />
             </TableRow>
 
-            <TableRow>
-
-                <Button
-                    android:id="@+id/Smashville"
-                    android:layout_width="wrap_content"
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ImageButton
+                    android:id="@+id/PokemonStadium2"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Smashville" />
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pokemontwobtn" />
+            </TableRow>
 
-                <Button
-                    android:id="@+id/TownAndCity"
-                    android:layout_width="wrap_content"
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ImageButton
+                    android:id="@+id/Smashville"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Town and City" />
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/smashvillebtn" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ImageButton
+                    android:id="@+id/TownAndCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/towncitybtn"/>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
+                <ImageButton
                     android:id="@+id/UnovaPokemonLeague"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Unova Pokemon League" />
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/unovabtn" />
+            </TableRow>
 
-                <Button
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ImageButton
                     android:id="@+id/YoshiIsland"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Yoshi's Island" />
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/islandbtn" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <Button
+                <ImageButton
                     android:id="@+id/YoshisStory"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Yoshi's Story" />
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/storybtn" />
             </TableRow>
 
         </TableLayout>
