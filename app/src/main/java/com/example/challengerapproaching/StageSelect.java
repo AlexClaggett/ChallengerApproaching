@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 
 import androidx.annotation.RequiresApi;
@@ -19,40 +20,40 @@ import com.example.challengerapproaching.Stages.*;
 public class StageSelect extends AppCompatActivity {
 
     /** Button For Battle Field. */
-    Button BattleField;
+    ImageButton BattleField;
 
     /** Button For Final Destination. */
-    Button FinalDestination;
+    ImageButton FinalDestination;
 
     /** Button For Kalos Pokemon League. */
-    Button KalosPokemonLeague;
+    ImageButton KalosPokemonLeague;
 
     /** Button For Lylat Cruise. */
-    Button LylatCruise;
+    ImageButton LylatCruise;
 
     /** Button For Pokemon Stadium. */
-    Button PokemonStadium;
+    ImageButton PokemonStadium;
 
     /** Button For Pokemon Stadium 2. */
-    Button PokemonStadium2;
+    ImageButton PokemonStadium2;
 
     /** Button For Smashville. */
-    Button Smashville;
+    ImageButton Smashville;
 
     /** Button For Town and City. */
-    Button TownAndCity;
+    ImageButton TownAndCity;
 
     /** Button For Unova Pokemon League. */
-    Button UnovaPokemonLeague;
+    ImageButton UnovaPokemonLeague;
 
     /** Button For Yoshi's Island.*/
-    Button YoshiIsland;
+    ImageButton YoshiIsland;
 
     /** Button For Yoshi's Story. */
-    Button YoshisStory;
+    ImageButton YoshisStory;
 
     /** Button array of the stage buttons. */
-    Button [] buttons = {BattleField, FinalDestination, KalosPokemonLeague
+    ImageButton [] buttons = {BattleField, FinalDestination, KalosPokemonLeague
             , LylatCruise, PokemonStadium, PokemonStadium2,
             Smashville, TownAndCity, UnovaPokemonLeague,
             YoshiIsland, YoshisStory};
@@ -81,7 +82,7 @@ public class StageSelect extends AppCompatActivity {
 
         int i = 0;
 
-        for (Button b: buttons) {
+        for (ImageButton b: buttons) {
             b = findViewById(ids[i]);
             final Intent tosend = new Intent(StageSelect.this,
                     charClasses[i]);
