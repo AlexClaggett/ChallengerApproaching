@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Ivysaur's xml
@@ -17,35 +15,35 @@ import java.io.IOException;
 
 public class Ivysaur extends AppCompatActivity {
 
-  String [] Ivysaurmoves = {
-          "IvysaurBAir.gif",
-          "IvysaurBThrow.gif",
-          "IvysaurBulletSeedA.gif",
-          "IvysaurBulletSeedG.gif",
-          "IvysaurDAir.gif",
-          "IvysaurDashAttack.gif",
-          "IvysaurDashGrab.gif",
-          "IvysaurDSmash.gif",
-          "IvysaurDThrow.gif",
-          "IvysaurDTilt.gif",
-          "IvysaurFAir.gif",
-          "IvysaurFSmash.gif",
-          "IvysaurFSmashDown.gif",
-          "IvysaurFSmashUp.gif",
-          "IvysaurFThrow.gif",
-          "IvysaurFTilt.gif",
-          "IvysaurGrab.gif",
-          "IvysaurJab1.gif",
-          "IvysaurJab2.gif",
-          "IvysaurJabRapid.gif",
-          "IvysaurJabRapidEnd.gif",
-          "IvysaurNAir.gif",
-          "IvysaurPivotGrab.gif",
-          "IvysaurPummel.gif",
-          "IvysaurUAir.gif",
-          "IvysaurUSmash.gif",
-          "IvysaurUThrow.gif",
-          "IvysaurUTilt.gif"
+  String [] ivysaurMoves = {
+      "IvysaurBAir.gif",
+      "IvysaurBThrow.gif",
+      "IvysaurBulletSeedA.gif",
+      "IvysaurBulletSeedG.gif",
+      "IvysaurDAir.gif",
+      "IvysaurDashAttack.gif",
+      "IvysaurDashGrab.gif",
+      "IvysaurDSmash.gif",
+      "IvysaurDThrow.gif",
+      "IvysaurDTilt.gif",
+      "IvysaurFAir.gif",
+      "IvysaurFSmash.gif",
+      "IvysaurFSmashDown.gif",
+      "IvysaurFSmashUp.gif",
+      "IvysaurFThrow.gif",
+      "IvysaurFTilt.gif",
+      "IvysaurGrab.gif",
+      "IvysaurJab1.gif",
+      "IvysaurJab2.gif",
+      "IvysaurJabRapid.gif",
+      "IvysaurJabRapidEnd.gif",
+      "IvysaurNAir.gif",
+      "IvysaurPivotGrab.gif",
+      "IvysaurPummel.gif",
+      "IvysaurUAir.gif",
+      "IvysaurUSmash.gif",
+      "IvysaurUThrow.gif",
+      "IvysaurUTilt.gif"
   };
 
   @Override
@@ -66,9 +64,9 @@ public class Ivysaur extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/pt_ivysaur/" + Ivysaurmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/pt_ivysaur/" + ivysaurMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

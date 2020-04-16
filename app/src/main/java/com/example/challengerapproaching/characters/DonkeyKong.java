@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Donkey Kong's xml
@@ -17,42 +15,42 @@ import java.io.IOException;
 
 public class DonkeyKong extends AppCompatActivity {
 
-  String [] DonkeyKongmoves = {
-          "DonkeyKongBAir.gif",
-          "DonkeyKongBThrow.gif",
-          "DonkeyKongCargoBThrow.gif",
-          "DonkeyKongCargoDThrow.gif",
-          "DonkeyKongCargoFThrow.gif",
-          "DonkeyKongCargoUThrow.gif",
-          "DonkeyKongDAir.gif",
-          "DonkeyKongDashAttack.gif",
-          "DonkeyKongDashGrab.gif",
-          "DonkeyKongDSmash.gif",
-          "DonkeyKongDThrow.gif",
-          "DonkeyKongDTilt.gif",
-          "DonkeyKongFAir.gif",
-          "DonkeyKongFSmash.gif",
-          "DonkeyKongFTilt.gif",
-          "DonkeyKongGiantPunchA.gif",
-          "DonkeyKongGiantPunchAMax.gif",
-          "DonkeyKongGiantPunchG.gif",
-          "DonkeyKongGiantPunchGMax.gif",
-          "DonkeyKongGrab.gif",
-          "DonkeyKongHandSlapA.gif",
-          "DonkeyKongHandSlapG.gif",
-          "DonkeyKongHeadbuttA.gif",
-          "DonkeyKongHeadbuttG.gif",
-          "DonkeyKongJab1.gif",
-          "DonkeyKongJab2.gif",
-          "DonkeyKongNAir.gif",
-          "DonkeyKongPivotGrab.gif",
-          "DonkeyKongPummel.gif",
-          "DonkeyKongSpinningKongA.gif",
-          "DonkeyKongSpinningKongG.gif",
-          "DonkeyKongUAir.gif",
-          "DonkeyKongUSmash.gif",
-          "DonkeyKongUThrow.gif",
-          "DonkeyKongUTilt.gif"
+  String [] donkeyKongMoves = {
+      "DonkeyKongBAir.gif",
+      "DonkeyKongBThrow.gif",
+      "DonkeyKongCargoBThrow.gif",
+      "DonkeyKongCargoDThrow.gif",
+      "DonkeyKongCargoFThrow.gif",
+      "DonkeyKongCargoUThrow.gif",
+      "DonkeyKongDAir.gif",
+      "DonkeyKongDashAttack.gif",
+      "DonkeyKongDashGrab.gif",
+      "DonkeyKongDSmash.gif",
+      "DonkeyKongDThrow.gif",
+      "DonkeyKongDTilt.gif",
+      "DonkeyKongFAir.gif",
+      "DonkeyKongFSmash.gif",
+      "DonkeyKongFTilt.gif",
+      "DonkeyKongGiantPunchA.gif",
+      "DonkeyKongGiantPunchAMax.gif",
+      "DonkeyKongGiantPunchG.gif",
+      "DonkeyKongGiantPunchGMax.gif",
+      "DonkeyKongGrab.gif",
+      "DonkeyKongHandSlapA.gif",
+      "DonkeyKongHandSlapG.gif",
+      "DonkeyKongHeadbuttA.gif",
+      "DonkeyKongHeadbuttG.gif",
+      "DonkeyKongJab1.gif",
+      "DonkeyKongJab2.gif",
+      "DonkeyKongNAir.gif",
+      "DonkeyKongPivotGrab.gif",
+      "DonkeyKongPummel.gif",
+      "DonkeyKongSpinningKongA.gif",
+      "DonkeyKongSpinningKongG.gif",
+      "DonkeyKongUAir.gif",
+      "DonkeyKongUSmash.gif",
+      "DonkeyKongUThrow.gif",
+      "DonkeyKongUTilt.gif"
   };
 
   @Override
@@ -72,9 +70,9 @@ public class DonkeyKong extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/donkey_kong/" + DonkeyKongmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/donkey_kong/" + donkeyKongMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

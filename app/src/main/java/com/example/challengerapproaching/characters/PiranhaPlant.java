@@ -1,16 +1,13 @@
 package com.example.challengerapproaching.characters;
 
 import android.os.Bundle;
-import android.os.health.PidHealthStats;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Piranha Plant's xml
@@ -18,39 +15,39 @@ import java.io.IOException;
 
 public class PiranhaPlant extends AppCompatActivity {
 
-  String [] PiranhaPlantmoves = {
-          "PiranhaPlantBAir.gif",
-          "PiranhaPlantBThrow.gif",
-          "PiranhaPlantDAir.gif",
-          "PiranhaPlantDashAttack.gif",
-          "PiranhaPlantDashGrab.gif",
-          "PiranhaPlantDSmash.gif",
-          "PiranhaPlantDThrow.gif",
-          "PiranhaPlantDTilt.gif",
-          "PiranhaPlantFAir.gif",
-          "PiranhaPlantFootstoolAttack.gif",
-          "PiranhaPlantFSmash.gif",
-          "PiranhaPlantFThrow.gif",
-          "PiranhaPlantFTilt1.gif",
-          "PiranhaPlantFTilt2.gif",
-          "PiranhaPlantGrab.gif",
-          "PiranhaPlantJab1.gif",
-          "PiranhaPlantJab2.gif",
-          "PiranhaPlantJab3.gif",
-          "PiranhaPlantJabRapid.gif",
-          "PiranhaPlantJabRapidEnd.gif",
-          "PiranhaPlantLong-StemStrike.gif",
-          "PiranhaPlantNAir.gif",
-          "PiranhaPlantPiranhacopter.gif",
-          "PiranhaPlantPivotGrab.gif",
-          "PiranhaPlantPoisonBreathMax.gif",
-          "PiranhaPlantPoisonBreathMin.gif",
-          "PiranhaPlantPtooie.gif",
-          "PiranhaPlantPummel.gif",
-          "PiranhaPlantUAir.gif",
-          "PiranhaPlantUSmash.gif",
-          "PiranhaPlantUThrow.gif",
-          "PiranhaPlantUTilt.gif"
+  String [] piranhaPlantMoves = {
+      "PiranhaPlantBAir.gif",
+      "PiranhaPlantBThrow.gif",
+      "PiranhaPlantDAir.gif",
+      "PiranhaPlantDashAttack.gif",
+      "PiranhaPlantDashGrab.gif",
+      "PiranhaPlantDSmash.gif",
+      "PiranhaPlantDThrow.gif",
+      "PiranhaPlantDTilt.gif",
+      "PiranhaPlantFAir.gif",
+      "PiranhaPlantFootstoolAttack.gif",
+      "PiranhaPlantFSmash.gif",
+      "PiranhaPlantFThrow.gif",
+      "PiranhaPlantFTilt1.gif",
+      "PiranhaPlantFTilt2.gif",
+      "PiranhaPlantGrab.gif",
+      "PiranhaPlantJab1.gif",
+      "PiranhaPlantJab2.gif",
+      "PiranhaPlantJab3.gif",
+      "PiranhaPlantJabRapid.gif",
+      "PiranhaPlantJabRapidEnd.gif",
+      "PiranhaPlantLong-StemStrike.gif",
+      "PiranhaPlantNAir.gif",
+      "PiranhaPlantPiranhacopter.gif",
+      "PiranhaPlantPivotGrab.gif",
+      "PiranhaPlantPoisonBreathMax.gif",
+      "PiranhaPlantPoisonBreathMin.gif",
+      "PiranhaPlantPtooie.gif",
+      "PiranhaPlantPummel.gif",
+      "PiranhaPlantUAir.gif",
+      "PiranhaPlantUSmash.gif",
+      "PiranhaPlantUThrow.gif",
+      "PiranhaPlantUTilt.gif"
   };
 
   @Override
@@ -71,9 +68,9 @@ public class PiranhaPlant extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/piranha_plant/" + PiranhaPlantmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/piranha_plant/" + piranhaPlantMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Zero Suit Samus's xml
@@ -17,38 +15,38 @@ import java.io.IOException;
 
 public class ZeroSuitSamus extends AppCompatActivity {
 
-  String [] ZeroSuitSamusmoves = {
-          "ZeroSuitSamusBAir.gif",
-          "ZeroSuitSamusBoostKickA.gif",
-          "ZeroSuitSamusBoostKickG.gif",
-          "ZeroSuitSamusBThrow.gif",
-          "ZeroSuitSamusDAir.gif",
-          "ZeroSuitSamusDAirLanding.gif",
-          "ZeroSuitSamusDashAttack.gif",
-          "ZeroSuitSamusDSmash.gif",
-          "ZeroSuitSamusDThrow.gif",
-          "ZeroSuitSamusDTilt.gif",
-          "ZeroSuitSamusFAir.gif",
-          "ZeroSuitSamusFlipJumpFootstool.gif",
-          "ZeroSuitSamusFlipJumpKick.gif",
-          "ZeroSuitSamusFSmash.gif",
-          "ZeroSuitSamusFSmashDown.gif",
-          "ZeroSuitSamusFSmashUp.gif",
-          "ZeroSuitSamusFThrow.gif",
-          "ZeroSuitSamusFTilt.gif",
-          "ZeroSuitSamusFTiltDown.gif",
-          "ZeroSuitSamusFTiltUp.gif",
-          "ZeroSuitSamusJab1.gif",
-          "ZeroSuitSamusJab2.gif",
-          "ZeroSuitSamusJab3.gif",
-          "ZeroSuitSamusNAir.gif",
-          "ZeroSuitSamusPlasmaWhip.gif",
-          "ZeroSuitSamusPlasmaWhipUp.gif",
-          "ZeroSuitSamusPummel.gif",
-          "ZeroSuitSamusUAir.gif",
-          "ZeroSuitSamusUSmash.gif",
-          "ZeroSuitSamusUThrow.gif",
-          "ZeroSuitSamusUTilt.gif"
+  String [] zeroSuitSamusMoves = {
+      "ZeroSuitSamusBAir.gif",
+      "ZeroSuitSamusBoostKickA.gif",
+      "ZeroSuitSamusBoostKickG.gif",
+      "ZeroSuitSamusBThrow.gif",
+      "ZeroSuitSamusDAir.gif",
+      "ZeroSuitSamusDAirLanding.gif",
+      "ZeroSuitSamusDashAttack.gif",
+      "ZeroSuitSamusDSmash.gif",
+      "ZeroSuitSamusDThrow.gif",
+      "ZeroSuitSamusDTilt.gif",
+      "ZeroSuitSamusFAir.gif",
+      "ZeroSuitSamusFlipJumpFootstool.gif",
+      "ZeroSuitSamusFlipJumpKick.gif",
+      "ZeroSuitSamusFSmash.gif",
+      "ZeroSuitSamusFSmashDown.gif",
+      "ZeroSuitSamusFSmashUp.gif",
+      "ZeroSuitSamusFThrow.gif",
+      "ZeroSuitSamusFTilt.gif",
+      "ZeroSuitSamusFTiltDown.gif",
+      "ZeroSuitSamusFTiltUp.gif",
+      "ZeroSuitSamusJab1.gif",
+      "ZeroSuitSamusJab2.gif",
+      "ZeroSuitSamusJab3.gif",
+      "ZeroSuitSamusNAir.gif",
+      "ZeroSuitSamusPlasmaWhip.gif",
+      "ZeroSuitSamusPlasmaWhipUp.gif",
+      "ZeroSuitSamusPummel.gif",
+      "ZeroSuitSamusUAir.gif",
+      "ZeroSuitSamusUSmash.gif",
+      "ZeroSuitSamusUThrow.gif",
+      "ZeroSuitSamusUTilt.gif"
   };
 
   @Override
@@ -70,9 +68,9 @@ public class ZeroSuitSamus extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/zero_suit_samus/" + ZeroSuitSamusmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/zero_suit_samus/" + zeroSuitSamusMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

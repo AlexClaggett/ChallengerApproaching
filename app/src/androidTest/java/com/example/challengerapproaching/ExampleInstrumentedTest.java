@@ -5,8 +5,13 @@ import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.example.challengerapproaching.characters.DonkeyKong;
+import com.example.challengerapproaching.utils.GifImageView;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.io.IOException;
 
 import static org.junit.Assert.*;
 

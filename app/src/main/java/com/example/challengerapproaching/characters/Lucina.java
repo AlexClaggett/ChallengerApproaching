@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Lucina's xml
@@ -17,45 +15,45 @@ import java.io.IOException;
 
 public class Lucina extends AppCompatActivity {
 
-  String [] Lucinamoves = {
-          "LucinaBAir.gif",
-          "LucinaBThrow.gif",
-          "LucinaCounter.gif",
-          "LucinaCounterHit.gif",
-          "LucinaDAir.gif",
-          "LucinaDancingBlade1.gif",
-          "LucinaDancingBlade2.gif",
-          "LucinaDancingBlade2Up.gif",
-          "LucinaDancingBlade3.gif",
-          "LucinaDancingBlade3Down.gif",
-          "LucinaDancingBlade3Up.gif",
-          "LucinaDancingBlade4.gif",
-          "LucinaDancingBlade4Down.gif",
-          "LucinaDancingBlade4Up.gif",
-          "LucinaDashAttack.gif",
-          "LucinaDashGrab.gif",
-          "LucinaDolphinSlashA.gif",
-          "LucinaDolphinSlashG.gif",
-          "LucinaDSmash.gif",
-          "LucinaDThrow.gif",
-          "LucinaDTilt.gif",
-          "LucinaFAir.gif",
-          "LucinaFSmash.gif",
-          "LucinaFThrow.gif",
-          "LucinaFTilt.gif",
-          "LucinaGrab.gif",
-          "LucinaJab1.gif",
-          "LucinaJab2.gif",
-          "LucinaNAir.gif",
-          "LucinaPivotGrab.gif",
-          "LucinaPummel.gif",
-          "LucinaShieldbreaker.gif",
-          "LucinaShieldbreakerDown.gif",
-          "LucinaShieldbreakerUp.gif",
-          "LucinaUAir.gif",
-          "LucinaUSmash.gif",
-          "LucinaUThrow.gif",
-          "LucinaUTilt.gif",
+  String [] lucinaMoves = {
+      "LucinaBAir.gif",
+      "LucinaBThrow.gif",
+      "LucinaCounter.gif",
+      "LucinaCounterHit.gif",
+      "LucinaDAir.gif",
+      "LucinaDancingBlade1.gif",
+      "LucinaDancingBlade2.gif",
+      "LucinaDancingBlade2Up.gif",
+      "LucinaDancingBlade3.gif",
+      "LucinaDancingBlade3Down.gif",
+      "LucinaDancingBlade3Up.gif",
+      "LucinaDancingBlade4.gif",
+      "LucinaDancingBlade4Down.gif",
+      "LucinaDancingBlade4Up.gif",
+      "LucinaDashAttack.gif",
+      "LucinaDashGrab.gif",
+      "LucinaDolphinSlashA.gif",
+      "LucinaDolphinSlashG.gif",
+      "LucinaDSmash.gif",
+      "LucinaDThrow.gif",
+      "LucinaDTilt.gif",
+      "LucinaFAir.gif",
+      "LucinaFSmash.gif",
+      "LucinaFThrow.gif",
+      "LucinaFTilt.gif",
+      "LucinaGrab.gif",
+      "LucinaJab1.gif",
+      "LucinaJab2.gif",
+      "LucinaNAir.gif",
+      "LucinaPivotGrab.gif",
+      "LucinaPummel.gif",
+      "LucinaShieldbreaker.gif",
+      "LucinaShieldbreakerDown.gif",
+      "LucinaShieldbreakerUp.gif",
+      "LucinaUAir.gif",
+      "LucinaUSmash.gif",
+      "LucinaUThrow.gif",
+      "LucinaUTilt.gif",
   };
 
   @Override
@@ -76,9 +74,9 @@ public class Lucina extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/lucina/" + Lucinamoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/lucina/" + lucinaMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

@@ -5,14 +5,12 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -22,38 +20,38 @@ import java.io.InputStream;
 public class Fox extends AppCompatActivity {
 
 
-  String [] Foxmoves = {
-          "FoxBAir.gif",
-          "FoxBlaster.gif",
-          "FoxBThrow.gif",
-          "FoxDAir.gif",
-          "FoxDashAttack.gif",
-          "FoxDashGrab.gif",
-          "FoxDSmash.gif",
-          "FoxDThrow.gif",
-          "FoxDTilt.gif",
-          "FoxFAir.gif",
-          "FoxFireFox.gif",
-          "FoxFoxIllusion.png",
-          "FoxFSmash.gif",
-          "FoxFThrow.gif",
-          "FoxFTilt.gif",
-          "FoxFTiltDown.gif",
-          "FoxFTiltUp.gif",
-          "FoxGrab.gif",
-          "FoxJab1.gif",
-          "FoxJab2.gif",
-          "FoxJabRapid.gif",
-          "FoxJabRapidEnd.gif",
-          "FoxNAir.gif",
-          "FoxPivotGrab.gif",
-          "FoxPummel.gif",
-          "FoxReflector.gif",
-          "FoxReflectorStart.gif",
-          "FoxUAir.gif",
-          "FoxUSmash.gif",
-          "FoxUTHrow.gif",
-          "FoxUTilt.gif",
+  String [] foxMoves = {
+      "FoxBAir.gif",
+      "FoxBlaster.gif",
+      "FoxBThrow.gif",
+      "FoxDAir.gif",
+      "FoxDashAttack.gif",
+      "FoxDashGrab.gif",
+      "FoxDSmash.gif",
+      "FoxDThrow.gif",
+      "FoxDTilt.gif",
+      "FoxFAir.gif",
+      "FoxFireFox.gif",
+      "FoxFoxIllusion.png",
+      "FoxFSmash.gif",
+      "FoxFThrow.gif",
+      "FoxFTilt.gif",
+      "FoxFTiltDown.gif",
+      "FoxFTiltUp.gif",
+      "FoxGrab.gif",
+      "FoxJab1.gif",
+      "FoxJab2.gif",
+      "FoxJabRapid.gif",
+      "FoxJabRapidEnd.gif",
+      "FoxNAir.gif",
+      "FoxPivotGrab.gif",
+      "FoxPummel.gif",
+      "FoxReflector.gif",
+      "FoxReflectorStart.gif",
+      "FoxUAir.gif",
+      "FoxUSmash.gif",
+      "FoxUTHrow.gif",
+      "FoxUTilt.gif",
   };
 
   @Override
@@ -76,11 +74,11 @@ public class Fox extends AppCompatActivity {
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
         ImageView imageView = findViewById(R.id.imageView3);
-        String toURL = "https://ultimateframedata.com/hitboxes/fox/" + Foxmoves[position];
-        if (toURL.endsWith("png")) {
+        String toUrl = "https://ultimateframedata.com/hitboxes/fox/" + foxMoves[position];
+        if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
-            InputStream inputStream = new java.net.URL(toURL).openStream();
+            InputStream inputStream = new java.net.URL(toUrl).openStream();
             Bitmap bm = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bm);
             imageView.setVisibility(View.VISIBLE);
@@ -90,13 +88,14 @@ public class Fox extends AppCompatActivity {
         } else {
           imageView.setVisibility(View.INVISIBLE);
           try {
-            gifImageView.setGifImageURL(toURL);
+            gifImageView.setGifImageUrl(toUrl);
             gifImageView.setVisibility(View.VISIBLE);
           } catch (IOException e) {
             e.printStackTrace();
           }
         }
       }
+
       @Override
       public void onNothingSelected(AdapterView<?> parent) {
 

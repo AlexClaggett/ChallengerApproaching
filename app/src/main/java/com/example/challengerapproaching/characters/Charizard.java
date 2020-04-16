@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Charizard's xml
@@ -17,34 +15,34 @@ import java.io.IOException;
 
 public class Charizard extends AppCompatActivity {
 
-  String [] charitardmoves = {
-          "charitardBAir.gif",
-          "charitardBThrow.gif",
-          "charitardDAir.gif",
-          "charitardDashAttack.gif",
-          "charitardDashGrab.gif",
-          "charitardDSmash.gif",
-          "charitardDThrow.gif",
-          "charitardDTilt.gif",
-          "charitardFAir.gif",
-          "charitardFlareBlitz.gif",
-          "charitardFly.gif",
-          "charitardFSmash.gif",
-          "charitardFThrow.gif",
-          "charitardFTilt.gif",
-          "charitardFTiltDown.gif",
-          "charitardFTiltUp.gif",
-          "charitardGrab.gif",
-          "charitardJab1.gif",
-          "charitardJab2.gif",
-          "charitardJab3.gif",
-          "charitardNAir.gif",
-          "charitardPivotGrab.gif",
-          "charitardPummel.gif",
-          "charitardUAir.gif",
-          "charitardUSmash.gif",
-          "charitardUThrow.gif",
-          "charitardUTilt.gif"
+  String [] charizardMoves = {
+      "charitardBAir.gif",
+      "charitardBThrow.gif",
+      "charitardDAir.gif",
+      "charitardDashAttack.gif",
+      "charitardDashGrab.gif",
+      "charitardDSmash.gif",
+      "charitardDThrow.gif",
+      "charitardDTilt.gif",
+      "charitardFAir.gif",
+      "charitardFlareBlitz.gif",
+      "charitardFly.gif",
+      "charitardFSmash.gif",
+      "charitardFThrow.gif",
+      "charitardFTilt.gif",
+      "charitardFTiltDown.gif",
+      "charitardFTiltUp.gif",
+      "charitardGrab.gif",
+      "charitardJab1.gif",
+      "charitardJab2.gif",
+      "charitardJab3.gif",
+      "charitardNAir.gif",
+      "charitardPivotGrab.gif",
+      "charitardPummel.gif",
+      "charitardUAir.gif",
+      "charitardUSmash.gif",
+      "charitardUThrow.gif",
+      "charitardUTilt.gif"
   };
 
 
@@ -66,9 +64,9 @@ public class Charizard extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/pt_charizard/" + charitardmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/pt_charizard/" + charizardMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

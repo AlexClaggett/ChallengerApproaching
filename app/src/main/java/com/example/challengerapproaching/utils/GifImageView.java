@@ -1,94 +1,65 @@
 package com.example.challengerapproaching.utils;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Movie;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.SystemClock;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-
 
 public class GifImageView extends View {
 
-    private InputStream mInputStream;
-    private Movie mMovie;
-    private int mWidth, mHeight;
-    private long mStart;
-    private Context mContext;
+  private InputStream inputStream;
+  private Movie movie;
+  private int width;
+  private int height;
+  private long start;
 
-    public GifImageView(Context context) {
-        super(context);
-        this.mContext = context;
+  public GifImageView(Context context, AttributeSet attrs) {
+    super(context, attrs, 0);
+  }
+
+  private void init() {
+    setFocusable(true);
+    movie = Movie.decodeStream(inputStream);
+    width = movie.width();
+    height = movie.height();
+    requestLayout();
+  }
+
+  @Override
+  protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    setMeasuredDimension(width, height);
+  }
+
+  @Override
+  protected void onDraw(Canvas canvas) {
+    long now = SystemClock.uptimeMillis();
+
+    if (start == 0) {
+      start = now;
     }
 
-    public GifImageView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+    if (movie != null) {
+
+      int duration = movie.duration();
+      if (duration == 0) {
+        duration = 1000;
+      }
+
+      int relTime = (int) ((now - start) % duration);
+
+      movie.setTime(relTime);
+
+      movie.draw(canvas, 0, 0);
+      invalidate();
     }
+  }
 
-    public GifImageView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        this.mContext = context;
-        if (attrs.getAttributeName(1).equals("background")) {
-            int id = Integer.parseInt(attrs.getAttributeValue(1).substring(1));
-            setGifImageResource(id);
-        }
-    }
-
-    private void init() {
-        setFocusable(true);
-        mMovie = Movie.decodeStream(mInputStream);
-        mWidth = mMovie.width();
-        mHeight = mMovie.height();
-
-        requestLayout();
-    }
-
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        setMeasuredDimension(mWidth, mHeight);
-    }
-
-    @Override
-    protected void onDraw(Canvas canvas) {
-
-        long now = SystemClock.uptimeMillis();
-
-        if (mStart == 0) {
-            mStart = now;
-        }
-
-        if (mMovie != null) {
-
-            int duration = mMovie.duration();
-            if (duration == 0) {
-                duration = 1000;
-            }
-
-            int relTime = (int) ((now - mStart) % duration);
-
-            mMovie.setTime(relTime);
-
-            mMovie.draw(canvas, 0, 0);
-            invalidate();
-        }
-    }
-
-    public void setGifImageResource(int id) {
-        mInputStream = mContext.getResources().openRawResource(id);
-        init();
-    }
-
-    public void setGifImageURL(String mUrl) throws IOException {
-        mInputStream = new java.net.URL(mUrl).openStream();
-        init();
-    }
+  public void setGifImageUrl(String url) throws IOException {
+    inputStream = new java.net.URL(url).openStream();
+    init();
+  }
 }

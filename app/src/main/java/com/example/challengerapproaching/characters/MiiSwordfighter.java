@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Mii Swordfighter's xml
@@ -17,46 +15,46 @@ import java.io.IOException;
 
 public class MiiSwordfighter extends AppCompatActivity {
 
-  String [] MiiSwordfightermoves = {
-          "MiiSwordfighterAirborneAssault.gif",
-          "MiiSwordfighterAirborneAssaultHit.gif",
-          "MiiSwordfighterBAir.gif",
-          "MiiSwordfighterBladeCounter.gif",
-          "MiiSwordfighterBladeCounterHit.gif",
-          "MiiSwordfighterBlurringBlade.gif",
-          "MiiSwordfighterBThrow.gif",
-          "MiiSwordfighterChakram.png",
-          "MiiSwordfighterDAir.gif",
-          "MiiSwordfighterDashAttack.gif",
-          "MiiSwordfighterDashGrab.gif",
-          "MiiSwordfighterDSmash.gif",
-          "MiiSwordfighterDThrow.gif",
-          "MiiSwordfighterDTilt.gif",
-          "MiiSwordfighterFAir.gif",
-          "MiiSwordfighterFSmash.gif",
-          "MiiSwordfighterFThrow.gif",
-          "MiiSwordfighterFTilt.gif",
-          "MiiSwordfighterGaleStabHit.gif",
-          "MiiSwordfighterGrab.gif",
-          "MiiSwordfighterHerosSpinA.gif",
-          "MiiSwordfighterHerosSpinG.gif",
-          "MiiSwordfighterJab1.gif",
-          "MiiSwordfighterJab2.gif",
-          "MiiSwordfighterJab3.gif",
-          "MiiSwordfighterNAir.gif",
-          "MiiSwordfighterPivotGrab.gif",
-          "MiiSwordfighterPowerThrustA.gif",
-          "MiiSwordfighterPowerThrustALanding.gif",
-          "MiiSwordfighterPowerThrustG.gif",
-          "MiiSwordfighterPummel.gif",
-          "MiiSwordfighterReversalSlash.gif",
-          "MiiSwordfighterSkywardSlashDash.gif",
-          "MiiSwordfighterStoneScabbard.gif",
-          "MiiSwordfighterStoneScabbardLanding.gif",
-          "MiiSwordfighterUAir.gif",
-          "MiiSwordfighterUSmash.gif",
-          "MiiSwordfighterUThrow.gif",
-          "MiiSwordfighterUTilt.gif",
+  String [] miiSwordfighterMoves = {
+      "MiiSwordfighterAirborneAssault.gif",
+      "MiiSwordfighterAirborneAssaultHit.gif",
+      "MiiSwordfighterBAir.gif",
+      "MiiSwordfighterBladeCounter.gif",
+      "MiiSwordfighterBladeCounterHit.gif",
+      "MiiSwordfighterBlurringBlade.gif",
+      "MiiSwordfighterBThrow.gif",
+      "MiiSwordfighterChakram.png",
+      "MiiSwordfighterDAir.gif",
+      "MiiSwordfighterDashAttack.gif",
+      "MiiSwordfighterDashGrab.gif",
+      "MiiSwordfighterDSmash.gif",
+      "MiiSwordfighterDThrow.gif",
+      "MiiSwordfighterDTilt.gif",
+      "MiiSwordfighterFAir.gif",
+      "MiiSwordfighterFSmash.gif",
+      "MiiSwordfighterFThrow.gif",
+      "MiiSwordfighterFTilt.gif",
+      "MiiSwordfighterGaleStabHit.gif",
+      "MiiSwordfighterGrab.gif",
+      "MiiSwordfighterHerosSpinA.gif",
+      "MiiSwordfighterHerosSpinG.gif",
+      "MiiSwordfighterJab1.gif",
+      "MiiSwordfighterJab2.gif",
+      "MiiSwordfighterJab3.gif",
+      "MiiSwordfighterNAir.gif",
+      "MiiSwordfighterPivotGrab.gif",
+      "MiiSwordfighterPowerThrustA.gif",
+      "MiiSwordfighterPowerThrustALanding.gif",
+      "MiiSwordfighterPowerThrustG.gif",
+      "MiiSwordfighterPummel.gif",
+      "MiiSwordfighterReversalSlash.gif",
+      "MiiSwordfighterSkywardSlashDash.gif",
+      "MiiSwordfighterStoneScabbard.gif",
+      "MiiSwordfighterStoneScabbardLanding.gif",
+      "MiiSwordfighterUAir.gif",
+      "MiiSwordfighterUSmash.gif",
+      "MiiSwordfighterUThrow.gif",
+      "MiiSwordfighterUTilt.gif",
   };
 
   @Override
@@ -77,9 +75,9 @@ public class MiiSwordfighter extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/mii_swordfighte/" + MiiSwordfightermoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/mii_swordfighte/" + miiSwordfighterMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

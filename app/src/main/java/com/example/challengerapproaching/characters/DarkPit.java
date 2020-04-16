@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Dark Pit's xml
@@ -17,37 +15,37 @@ import java.io.IOException;
 
 public class DarkPit extends AppCompatActivity {
 
-  String [] DarkPitmoves = {
-          "DarkPitBAir.gif",
-          "DarkPitBThrow.gif",
-          "DarkPitDAir.gif",
-          "DarkPitDashAttack.gif",
-          "DarkPitDashGrab.gif",
-          "DarkPitDSmash.gif",
-          "DarkPitDThrow.gif",
-          "DarkPitDTilt.gif",
-          "DarkPitElectroshockArmA.gif",
-          "DarkPitElectroshockArmG.gif",
-          "DarkPitElectroshockArmHitA.gif",
-          "DarkPitElectroshockArmHitG.gif",
-          "DarkPitFAir.gif",
-          "DarkPitFSmash.gif",
-          "DarkPitFThrow.gif",
-          "DarkPitFTilt.gif",
-          "DarkPitGrab.gif",
-          "DarkPitGuardianOrbitars.gif",
-          "DarkPitJab1.gif",
-          "DarkPitJab2.gif",
-          "DarkPitJab3.gif",
-          "DarkPitJabRapid.gif",
-          "DarkPitJabRapidEnd.gif",
-          "DarkPitNAir.gif",
-          "DarkPitPivotGrab.gif",
-          "DarkPitPummel.gif",
-          "DarkPitUAir.gif",
-          "DarkPitUSmash.gif",
-          "DarkPitUThrow.gif",
-          "DarkPitUTilt.gif"
+  String [] darkPitMoves = {
+      "DarkPitBAir.gif",
+      "DarkPitBThrow.gif",
+      "DarkPitDAir.gif",
+      "DarkPitDashAttack.gif",
+      "DarkPitDashGrab.gif",
+      "DarkPitDSmash.gif",
+      "DarkPitDThrow.gif",
+      "DarkPitDTilt.gif",
+      "DarkPitElectroshockArmA.gif",
+      "DarkPitElectroshockArmG.gif",
+      "DarkPitElectroshockArmHitA.gif",
+      "DarkPitElectroshockArmHitG.gif",
+      "DarkPitFAir.gif",
+      "DarkPitFSmash.gif",
+      "DarkPitFThrow.gif",
+      "DarkPitFTilt.gif",
+      "DarkPitGrab.gif",
+      "DarkPitGuardianOrbitars.gif",
+      "DarkPitJab1.gif",
+      "DarkPitJab2.gif",
+      "DarkPitJab3.gif",
+      "DarkPitJabRapid.gif",
+      "DarkPitJabRapidEnd.gif",
+      "DarkPitNAir.gif",
+      "DarkPitPivotGrab.gif",
+      "DarkPitPummel.gif",
+      "DarkPitUAir.gif",
+      "DarkPitUSmash.gif",
+      "DarkPitUThrow.gif",
+      "DarkPitUTilt.gif"
   };
 
   @Override
@@ -68,9 +66,9 @@ public class DarkPit extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/dark_pit/" + DarkPitmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/dark_pit/" + darkPitMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }
