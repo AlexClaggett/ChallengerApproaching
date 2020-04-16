@@ -4,124 +4,332 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/character_background"
     tools:context="com.example.challengerapproaching.Stages.BattleField">
 
-    <ScrollView
-        android:layout_width="422dp"
-        android:layout_height="501dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/BF_SS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Stage Stats"
-                android:textSize="36sp" />
-
-            <TextView
-                android:id="@+id/BF_SW"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Stage Width: 159.975"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_PC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Platform Count: 3"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_PH2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Platform Heights: "
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_BZR3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="      Left: 24.119"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_BZT3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="      Middle: 47.189"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_BZR5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="      Right: 24.119"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_BD"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Blast Zone Dimensions:"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_BZT"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="      Top: 190"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_BZR"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="      Right: 160.011"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_BZL"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="      Left: 160.014"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_BZB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="      Bottom: 140"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/BF_BZC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="      Camera: 80"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-    </ScrollView>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="413dp"
-        android:layout_height="732dp"
-        android:layout_marginBottom="232dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:adjustViewBounds="false"
+        android:scaleType="fitStart"
+        android:src="@drawable/battlefield"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BATTLEFIELD"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/BF_SS"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/BF_SS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="STAGE STATS"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:background="#9f0022"
+        app:layout_constraintBottom_toTopOf="@id/Stats"
+        />
+
+    <ScrollView
+        android:id="@+id/Stats"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/battlefield" />
+        android:background="#404040">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/BF_SW"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Stage Width: "
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+
+                <TextView
+                    android:id="@+id/BF_SW_Value"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" 159.975"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_PC"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Platform Count: "
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/cell_shape"/>
+
+                <TextView
+                    android:id="@+id/BF_PC_Value"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" 3"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_PH2"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Platform Heights"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_BZR3"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Left:"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/cell_shape"/>
+
+                <TextView
+                    android:id="@+id/BF_PBZR3_Value"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" 24.119"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_BZT3"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Middle:"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/cell_shape"/>
+
+                <TextView
+                    android:id="@+id/BF_PBZT3_Value"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" 47.189"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_BZR5"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Right:"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/cell_shape"/>
+
+                <TextView
+                    android:id="@+id/BF_BZR5_Value"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" 24.119"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_BD"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Blast Zone Dimensions"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                   />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_BZT"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Top:"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/cell_shape"/>
+
+                <TextView
+                    android:id="@+id/BF_BZT_Value"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" 190"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_BZR"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Right:"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/cell_shape"/>
+
+                <TextView
+                    android:id="@+id/BF_BZR_Value"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" 160.011"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_BZL"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Left:"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/cell_shape"/>
+
+                <TextView
+                    android:id="@+id/BF_BZL_Value"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" 160.014"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_BZB"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Bottom:"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/cell_shape"/>
+
+                <TextView
+                    android:id="@+id/BF_BZB_Value"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" 140"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/BF_BZC"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" Camera:"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/cell_shape"/>
+
+                <TextView
+                    android:id="@+id/BF_BZC_Value"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text=" 80"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:background="@drawable/cell_shape"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
