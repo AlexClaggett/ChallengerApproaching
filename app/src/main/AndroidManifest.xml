@@ -385,12 +385,12 @@
             android:label="Banjo Kazooie"
             android:parentActivityName=".CharacterSelect" />
         <activity
-            android:name=".Events_Activity"
+            android:name=".EventsActivity"
             android:label="Tournaments / Events"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".utils.ListDataActivity"
             android:label="Upcoming Events"
-            android:parentActivityName=".Events_Activity"/>
+            android:parentActivityName=".EventsActivity"/>
         <activity android:name=".utils.EditDataActivity"
             android:label="Edit Event"
             android:parentActivityName=".utils.ListDataActivity"/>

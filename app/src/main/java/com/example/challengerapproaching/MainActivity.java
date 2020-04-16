@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
   int [] ids = {R.id.characters, R.id.events, R.id.stages};
 
   /** Array of Classes for each character. */
-  Class [] charClasses = {CharacterSelect.class, Events_Activity.class,
+  Class [] charClasses = {CharacterSelect.class, EventsActivity.class,
     StageSelect.class};
 
   /********************************************************************
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     events = findViewById(R.id.events);
     events.setOnClickListener(v -> {
-      final Intent toEvents = new Intent(MainActivity.this, Events_Activity.class);
+      final Intent toEvents = new Intent(MainActivity.this, EventsActivity.class);
       startActivity(toEvents);
     });
   }
