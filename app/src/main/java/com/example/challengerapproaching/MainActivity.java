@@ -1,4 +1,5 @@
 package com.example.challengerapproaching;
+
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
   /** Array of Classes for each character. */
   Class [] charClasses = {CharacterSelect.class, Events_Activity.class,
-          StageSelect.class};
+    StageSelect.class};
 
   /********************************************************************
    * Upon app start up this method sets the content view to main
