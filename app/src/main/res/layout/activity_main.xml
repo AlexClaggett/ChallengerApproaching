@@ -22,42 +22,60 @@
             android:scaleType="centerCrop"
             android:src="@drawable/menu_background" />
 
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+            >
+
+
         <ImageButton
             android:id="@+id/characters"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginTop="350dp"
-            android:background="#00654F4F"
+            android:layout_width="225dp"
+            android:layout_height="52dp"
+            android:foreground="?android:attr/selectableItemBackground"
             android:scaleType="fitCenter"
-            android:src="@drawable/menu_button_characterselect"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/menu_button_characterselect"
+            android:layout_marginTop="350dp"
             app:layout_constraintBottom_toTopOf="@id/events"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/events"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="225dp"
+            android:layout_height="52dp"
             android:background="#00654F4F"
             android:scaleType="fitCenter"
             android:src="@drawable/menu_button_event"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/characters"
             app:layout_constraintBottom_toTopOf="@id/stages"
+            android:layout_centerHorizontal="true"
             />
 
         <ImageButton
             android:id="@+id/stages"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="80dp"
+            android:layout_width="225dp"
+            android:layout_height="52dp"
             android:background="#00654F4F"
             android:scaleType="fitCenter"
             android:src="@drawable/menu_button_stages"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/events"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_centerHorizontal="true"
+            />
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

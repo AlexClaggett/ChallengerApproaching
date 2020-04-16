@@ -30,7 +30,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/banjo_kazooie_btn"
-                    android:text="Banjo and Kazooie" />
+                    android:text="Banjo and Kazooie"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/bayonetta"
@@ -41,7 +43,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/bayonetta_btn"
-                    android:text="Bayonetta" />
+                    android:text="Bayonetta"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -55,7 +59,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/bowser_btn"
-                    android:text="Bowser" />
+                    android:text="Bowser"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/bowserJr"
@@ -66,7 +72,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/bowserjr_btn"
-                    android:text="Bowser Jr." />
+                    android:text="Bowser Jr."
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -80,7 +88,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/byleth_btn"
-                    android:text="Bylthe" />
+                    android:text="Bylthe"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/captainFalcon"
@@ -91,7 +101,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/captainfalcon_btn"
-                    android:text="Captain Falcon" />
+                    android:text="Captain Falcon"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -105,7 +117,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/chrom_btn"
-                    android:text="Chrom" />
+                    android:text="Chrom"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/cloud"
@@ -116,7 +130,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/cloud_btn"
-                    android:text="Cloud" />
+                    android:text="Cloud"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -130,7 +146,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/corrin_btn"
-                    android:text="Corrin" />
+                    android:text="Corrin"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/daisy"
@@ -141,7 +159,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/daisy_btn"
-                    android:text="Daisy" />
+                    android:text="Daisy"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -155,7 +175,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/darkpit_btn"
-                    android:text="Dark Pit" />
+                    android:text="Dark Pit"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/darkSamus"
@@ -166,7 +188,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/darksamus_btn"
-                    android:text="Dark Samus" />
+                    android:text="Dark Samus"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -180,7 +204,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/diddykong_btn"
-                    android:text="Diddy Kong" />
+                    android:text="Diddy Kong"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/donkeyKong"
@@ -191,7 +217,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/donkeykong_btn"
-                    android:text="Donkey Kong" />
+                    android:text="Donkey Kong"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -205,7 +233,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/drmario_btn"
-                    android:text="Dr.Mario" />
+                    android:text="Dr.Mario"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/duckHunt"
@@ -216,7 +246,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/duckhunt_btn"
-                    android:text="Duck Hunt" />
+                    android:text="Duck Hunt"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -230,7 +262,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/falco_btn"
-                    android:text="Falco" />
+                    android:text="Falco"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/fox"
@@ -241,7 +275,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/fox_btn"
-                    android:text="Fox" />
+                    android:text="Fox"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -255,7 +291,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ganondorf_btn"
-                    android:text="Ganondorf" />
+                    android:text="Ganondorf"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/greninja"
@@ -266,7 +304,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/greninja_btn"
-                    android:text="greninja" />
+                    android:text="greninja"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -280,7 +320,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/hero_btn"
-                    android:text="Hero" />
+                    android:text="Hero"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/iceClimbers"
@@ -291,7 +333,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/iceclimbers_btn"
-                    android:text="Ice Climbers" />
+                    android:text="Ice Climbers"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -305,7 +349,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ike_btn"
-                    android:text="Ike" />
+                    android:text="Ike"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/incineroar"
@@ -316,7 +362,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/incineroar_btn"
-                    android:text="Incineroar" />
+                    android:text="Incineroar"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -330,7 +378,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/inkling_btn"
-                    android:text="Inkling" />
+                    android:text="Inkling"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/isabelle"
@@ -341,7 +391,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/isabelle_btn"
-                    android:text="Isabelle" />
+                    android:text="Isabelle"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -355,7 +407,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/jigglypuff_btn"
-                    android:text="Jigglypuff" />
+                    android:text="Jigglypuff"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/joker"
@@ -366,7 +420,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/joker_btn"
-                    android:text="Joker" />
+                    android:text="Joker"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -380,7 +436,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ken_btn"
-                    android:text="Ken" />
+                    android:text="Ken"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/kingDedede"
@@ -391,7 +449,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/kingdedede_btn"
-                    android:text="King Dedede" />
+                    android:text="King Dedede"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -405,7 +465,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/kingkrool_btn"
-                    android:text="King K. Rool" />
+                    android:text="King K. Rool"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/kirby"
@@ -416,7 +478,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/kirby_btn"
-                    android:text="Kirby" />
+                    android:text="Kirby"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -430,7 +494,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/link_btn"
-                    android:text="Link" />
+                    android:text="Link"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/littleMac"
@@ -441,7 +507,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/littlemac_btn"
-                    android:text="Little Mac" />
+                    android:text="Little Mac"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -455,7 +523,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/lucario_btn"
-                    android:text="Lucario" />
+                    android:text="Lucario"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/lucas"
@@ -466,7 +536,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/lucas_btn"
-                    android:text="Lucas" />
+                    android:text="Lucas"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -480,7 +552,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/lucina_btn"
-                    android:text="Lucina" />
+                    android:text="Lucina"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/Luigi"
@@ -491,7 +565,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/luigi_btn"
-                    android:text="Luigi" />
+                    android:text="Luigi"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -505,7 +581,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/mario_btn"
-                    android:text="Mario" />
+                    android:text="Mario"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/marth"
@@ -516,7 +594,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/marth_btn"
-                    android:text="Marth" />
+                    android:text="Marth"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -530,7 +610,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/megaman_btn"
-                    android:text="Mega Man" />
+                    android:text="Mega Man"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <!--            </LinearLayout>-->
                 <!--            <LinearLayout-->
@@ -548,7 +630,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/metaknight_btn"
-                    android:text="Meta Knight" />
+                    android:text="Meta Knight"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -562,7 +646,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/mewtwo_btn"
-                    android:text="Mewtwo" />
+                    android:text="Mewtwo"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/miiBrawler"
@@ -573,7 +659,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/miibrawler_btn"
-                    android:text="Mii Brawler" />
+                    android:text="Mii Brawler"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -587,7 +675,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/miifighter_btn"
-                    android:text="Mii Swordfighter" />
+                    android:text="Mii Swordfighter"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/miiGunner"
@@ -598,7 +688,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/miigunner_btn"
-                    android:text="Mii Gunner" />
+                    android:text="Mii Gunner"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -612,7 +704,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/mrgameandwatch_btn"
-                    android:text="Mr.Game and Watch" />
+                    android:text="Mr.Game and Watch"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/ness"
@@ -623,7 +717,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ness_btn"
-                    android:text="Ness" />
+                    android:text="Ness"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -637,7 +733,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/olimar_btn"
-                    android:text="Olimar" />
+                    android:text="Olimar"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/pacMan"
@@ -648,7 +746,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/pacman_btn"
-                    android:text="Pac Man" />
+                    android:text="Pac Man"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -662,7 +762,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/palutena_btn"
-                    android:text="Palutena" />
+                    android:text="Palutena"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/peach"
@@ -673,7 +775,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/peach_btn"
-                    android:text="Peach" />
+                    android:text="Peach"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -687,7 +791,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/pichu_btn"
-                    android:text="Pichu" />
+                    android:text="Pichu"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/pikachu"
@@ -698,7 +804,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/pikachu_btn"
-                    android:text="Pikachu" />
+                    android:text="Pikachu"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -712,7 +820,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/piranhaplant_btn"
-                    android:text="Piranha Plant" />
+                    android:text="Piranha Plant"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/pit"
@@ -723,7 +833,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/pit_btn"
-                    android:text="Pit" />
+                    android:text="Pit"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -737,7 +849,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ptcharizard_btn"
-                    android:text="Charizard" />
+                    android:text="Charizard"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/ivysaur"
@@ -748,7 +862,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ptivysaur_btn"
-                    android:text="Ivysaur" />
+                    android:text="Ivysaur"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -762,7 +878,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ptsquirtle_btn"
-                    android:text="Squirtle" />
+                    android:text="Squirtle"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/richter"
@@ -773,7 +891,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/richter_btn"
-                    android:text="Richter" />
+                    android:text="Richter"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -787,7 +907,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ridley_btn"
-                    android:text="Ridley" />
+                    android:text="Ridley"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/r.o.b."
@@ -798,7 +920,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/rob_btn"
-                    android:text="R.O.B." />
+                    android:text="R.O.B."
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -812,7 +936,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/robin_btn"
-                    android:text="Robin" />
+                    android:text="Robin"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/rosalinaAndLuma"
@@ -823,7 +949,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/rosalinaandluma_btn"
-                    android:text="Rosalina and Luma" />
+                    android:text="Rosalina and Luma"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -837,7 +965,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/roy_btn"
-                    android:text="Roy" />
+                    android:text="Roy"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/ryu"
@@ -848,7 +978,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ryu_btn"
-                    android:text="Ryu" />
+                    android:text="Ryu"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -862,7 +994,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/samus_btn"
-                    android:text="Samus" />
+                    android:text="Samus"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/sheik"
@@ -873,7 +1007,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/sheik_btn"
-                    android:text="Sheik" />
+                    android:text="Sheik"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -887,7 +1023,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/shulk_btn"
-                    android:text="Shulk" />
+                    android:text="Shulk"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/simon"
@@ -898,7 +1036,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/simon_btn"
-                    android:text="Simon" />
+                    android:text="Simon"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -912,7 +1052,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/snake_btn"
-                    android:text="Snake" />
+                    android:text="Snake"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/sonic"
@@ -923,7 +1065,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/sonic_btn"
-                    android:text="Sonic" />
+                    android:text="Sonic"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -937,7 +1081,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/terry_btn"
-                    android:text="Terry" />
+                    android:text="Terry"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/toonLink"
@@ -948,7 +1094,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/toonlink_btn"
-                    android:text="Toon Link" />
+                    android:text="Toon Link"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -962,7 +1110,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/villager_btn"
-                    android:text="Villager" />
+                    android:text="Villager"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/wario"
@@ -973,7 +1123,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/wario_btn"
-                    android:text="Wario" />
+                    android:text="Wario"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -987,7 +1139,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/wiifittrainer_btn"
-                    android:text="Wii Fit Trainer" />
+                    android:text="Wii Fit Trainer"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/wolf"
@@ -998,7 +1152,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/wolf_btn"
-                    android:text="Wolf" />
+                    android:text="Wolf"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -1012,7 +1168,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/yoshi_btn"
-                    android:text="Yoshi" />
+                    android:text="Yoshi"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/youngLink"
@@ -1023,7 +1181,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/younglink_btn"
-                    android:text="Young Link" />
+                    android:text="Young Link"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
 
             <TableRow>
@@ -1037,7 +1197,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/zelda_btn"
-                    android:text="Zelda" />
+                    android:text="Zelda"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
 
                 <ImageButton
                     android:id="@+id/zeroSuitSamus"
@@ -1048,7 +1210,9 @@
                     android:background="@android:color/darker_gray"
                     android:scaleType="fitCenter"
                     android:src="@drawable/zss_btn"
-                    android:text="Zero Suit Samus" />
+                    android:text="Zero Suit Samus"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
             </TableRow>
         </TableLayout>
     </ScrollView>
