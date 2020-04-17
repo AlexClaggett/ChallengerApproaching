@@ -57,7 +57,6 @@ public class CharacterSelectScreenTest {
                                 0),
                         isDisplayed()));
         imageButton.check(matches(isDisplayed()));
-        String toTest = Integer.toString(R.drawable.banjo_kazooie);
 
         ViewInteraction imageButton2 = onView(
                 allOf(withId(R.id.bayonetta),
