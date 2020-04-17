@@ -51,7 +51,7 @@ public class GifImageView extends View {
   }
 
   /********************************************************************
-   * This method is called when new measurements are needed for a gif
+   * This method is called when new measurements are needed for a gif.
    * @param widthMeasureSpec the new width of the gif
    * @param heightMeasureSpec the new height of the gif
    *******************************************************************/
