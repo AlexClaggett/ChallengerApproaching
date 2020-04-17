@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class MiiSwordfighter extends AppCompatActivity {
 
-  String [] miiSwordfighterMoves = {
+  String [] miiFightMoves = {
       "MiiSwordfighterAirborneAssault.gif",
       "MiiSwordfighterAirborneAssaultHit.gif",
       "MiiSwordfighterBAir.gif",
@@ -62,8 +62,8 @@ public class MiiSwordfighter extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_mii__swordfighter);
 
     ArrayAdapter<String> adapter = new ArrayAdapter<>(
@@ -79,7 +79,7 @@ public class MiiSwordfighter extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toUrl = "https://ultimateframedata.com/hitboxes/mii_swordfighte/" + miiSwordfighterMoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/mii_swordfighte/" + miiFightMoves[position];
         ImageView imageView = findViewById(R.id.imageView3);
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);

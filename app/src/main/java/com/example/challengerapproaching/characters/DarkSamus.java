@@ -55,8 +55,8 @@ public class DarkSamus extends AppCompatActivity {
 
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_dark_samus);
 
     ArrayAdapter<String> adapter = new ArrayAdapter<>(

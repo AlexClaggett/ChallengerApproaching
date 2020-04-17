@@ -68,12 +68,12 @@ public class EventsActivity extends AppCompatActivity
   /********************************************************************
    * OnCreate method to initialize the Events screen to be presented
    * to the user.
-   * @param savedInstanceState standard state parameter needed for
+   * @param savedInstance standard state parameter needed for
    *                           define a specific state.
    *******************************************************************/
-  protected void onCreate(Bundle savedInstanceState) {
+  protected void onCreate(Bundle savedInstance) {
 
-    super.onCreate(savedInstanceState);
+    super.onCreate(savedInstance);
 
     // Change the view of the app to events.
     setContentView(R.layout.events);

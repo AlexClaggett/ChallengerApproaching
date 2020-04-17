@@ -43,7 +43,7 @@ public class Smashville {
 
     @Test
     public void smashville() {
-        ViewInteraction appCompatImageButton = onView(
+        ViewInteraction appCompatImgBtn = onView(
                 allOf(withId(R.id.stages),
                         childAtPosition(
                                 childAtPosition(
@@ -51,16 +51,16 @@ public class Smashville {
                                         0),
                                 3),
                         isDisplayed()));
-        appCompatImageButton.perform(click());
+        appCompatImgBtn.perform(click());
 
-        ViewInteraction appCompatImageButton2 = onView(
+        ViewInteraction appCompatImgBtn2 = onView(
                 allOf(withId(R.id.Smashville),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.TableLayout")),
                                         6),
                                 0)));
-        appCompatImageButton2.perform(scrollTo(), click());
+        appCompatImgBtn2.perform(scrollTo(), click());
 
         ViewInteraction textView = onView(
                 allOf(withId(R.id.BF_SW_Value), withText(" 139.298"),

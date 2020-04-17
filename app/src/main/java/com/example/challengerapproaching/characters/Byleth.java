@@ -60,8 +60,8 @@ public class Byleth extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_bylthe);
 
     ArrayAdapter<String> adapter = new ArrayAdapter<>(

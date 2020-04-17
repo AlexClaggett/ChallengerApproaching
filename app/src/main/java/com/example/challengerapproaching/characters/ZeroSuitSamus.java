@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class ZeroSuitSamus extends AppCompatActivity {
 
-  String [] zeroSuitSamusMoves = {
+  String [] zzsMoves = {
       "ZeroSuitSamusBAir.gif",
       "ZeroSuitSamusBoostKickA.gif",
       "ZeroSuitSamusBoostKickG.gif",
@@ -50,8 +50,8 @@ public class ZeroSuitSamus extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_zero__suit__samus);
 
 
@@ -68,7 +68,7 @@ public class ZeroSuitSamus extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toUrl = "https://ultimateframedata.com/hitboxes/zero_suit_samus/" + zeroSuitSamusMoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/zero_suit_samus/" + zzsMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

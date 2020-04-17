@@ -56,8 +56,8 @@ public class DrMario extends AppCompatActivity {
 
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_dr_mario);
 
     ArrayAdapter<String> adapter = new ArrayAdapter<>(

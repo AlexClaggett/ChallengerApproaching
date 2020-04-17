@@ -46,12 +46,12 @@ public class ListDataActivity extends AppCompatActivity {
   /******************************************************************
    * onCreate method for ListDataActivity. Holds the logic for
    * everything that happens within the activity.
-   * @param savedInstanceState Required parameter for the
+   * @param savedInstance Required parameter for the
    *                          instance state.
    *****************************************************************/
   @Override
-  protected void onCreate(@Nullable Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(@Nullable Bundle savedInstance) {
+    super.onCreate(savedInstance);
 
     // Sets the current view to the list_layout.
     setContentView(R.layout.list_layout);

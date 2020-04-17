@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class WiiFitTrainer extends AppCompatActivity {
 
-  String [] wiiFitTrainermoves = {
+  String [] wiiFitmoves = {
       "WiiFitTrainerBAir.gif",
       "WiiFitTrainerBThrow.gif",
       "WiiFitTrainerDAir.gif",
@@ -51,8 +51,8 @@ public class WiiFitTrainer extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_wii__fit__trainer);
 
     ArrayAdapter<String> adapter = new ArrayAdapter<>(
@@ -69,7 +69,7 @@ public class WiiFitTrainer extends AppCompatActivity {
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
         ImageView imageView = findViewById(R.id.imageView3);
-        String toUrl = "https://ultimateframedata.com/hitboxes/wii_fit_trainer/" + wiiFitTrainermoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/wii_fit_trainer/" + wiiFitmoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

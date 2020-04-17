@@ -46,12 +46,12 @@ public class EventDialog extends AppCompatDialogFragment {
    * onCreate method for Dialog uses a builder to create the view and
    * populate the inside of the dialog. Handles the logic for
    * everything inside the dialog box.
-   * @param savedInstanceState saved instance required for onCreate.
+   * @param savedInstance saved instance required for onCreate.
    * @return Dialog that can be used for creating an Event.
    *******************************************************************/
   @NonNull
   @Override
-  public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+  public Dialog onCreateDialog(@Nullable Bundle savedInstance) {
     /* Inflater for populating the layout with views. */
     LayoutInflater inflater = getActivity().getLayoutInflater();
 

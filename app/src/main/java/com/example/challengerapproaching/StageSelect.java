@@ -33,7 +33,7 @@ public class StageSelect extends AppCompatActivity {
   ImageButton finalDestination;
 
   /** Button For Kalos Pokemon League. */
-  ImageButton kalosPokemonLeague;
+  ImageButton kalosPL;
 
   /** Button For Lylat Cruise. */
   ImageButton lylatCruise;
@@ -51,7 +51,7 @@ public class StageSelect extends AppCompatActivity {
   ImageButton townAndCity;
 
   /** Button For Unova Pokemon League. */
-  ImageButton unovaPokemonLeague;
+  ImageButton unovaPL;
 
   /** Button For Yoshi's Island.*/
   ImageButton yoshiIsland;
@@ -60,9 +60,9 @@ public class StageSelect extends AppCompatActivity {
   ImageButton yoshisStory;
 
   /** Button array of the stage buttons. */
-  ImageButton [] buttons = {battleField, finalDestination, kalosPokemonLeague,
+  ImageButton [] buttons = {battleField, finalDestination, kalosPL,
       lylatCruise, pokemonStadium, pokemonStadium2,
-      smashville, townAndCity, unovaPokemonLeague,
+      smashville, townAndCity, unovaPL,
       yoshiIsland, yoshisStory};
 
   /** Array of integers of the stage ids found in the XML. */
@@ -84,8 +84,8 @@ public class StageSelect extends AppCompatActivity {
    *******************************************************************/
   @RequiresApi(api = Build.VERSION_CODES.M)
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_stages);
 
     int i = 0;

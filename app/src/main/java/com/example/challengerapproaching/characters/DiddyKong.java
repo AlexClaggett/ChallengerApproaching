@@ -56,8 +56,8 @@ public class DiddyKong extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_diddy_kong);
 
     ArrayAdapter<String> adapter = new ArrayAdapter<>(

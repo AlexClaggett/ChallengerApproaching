@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class CaptainFalcon extends AppCompatActivity {
 
-  String [] captainFalconMoves = {
+  String [] cptnFalconMoves = {
       "CaptainFalconBAir.gif",
       "CaptainFalconBThrow.gif",
       "CaptainFalconDAir.gif",
@@ -60,8 +60,8 @@ public class CaptainFalcon extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_captain_falcon);
 
 
@@ -78,7 +78,7 @@ public class CaptainFalcon extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toUrl = "https://ultimateframedata.com/hitboxes/captain_falcon/" + captainFalconMoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/captain_falcon/" + cptnFalconMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

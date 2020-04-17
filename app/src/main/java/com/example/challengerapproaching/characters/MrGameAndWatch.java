@@ -63,8 +63,8 @@ public class MrGameAndWatch extends AppCompatActivity {
 
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_mr__game_and__watch);
 
     ArrayAdapter<String> adapter = new ArrayAdapter<>(

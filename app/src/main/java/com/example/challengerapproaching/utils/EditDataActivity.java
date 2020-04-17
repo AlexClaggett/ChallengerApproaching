@@ -85,12 +85,12 @@ public class EditDataActivity extends AppCompatActivity {
   /********************************************************************
    * onCreate method for determining what happens when starting the
    * editDataActivity.
-   * @param savedInstanceState required variable for android activity.
+   * @param savedInstance required variable for android activity.
    *******************************************************************/
   @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
   @Override
-  protected void onCreate(@Nullable Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(@Nullable Bundle savedInstance) {
+    super.onCreate(savedInstance);
 
     // Set the content view to the edit data layout.
     setContentView(R.layout.edit_data_layout);

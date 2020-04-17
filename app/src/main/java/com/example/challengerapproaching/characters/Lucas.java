@@ -51,8 +51,8 @@ public class Lucas extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_lucas);
 
     ArrayAdapter<String> adapter = new ArrayAdapter<>(
