@@ -91,7 +91,7 @@ public class Terry extends AppCompatActivity {
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
-          e.printStackTrace();
+          gifImageView.setVisibility(View.INVISIBLE);
         }
       }
 

@@ -88,8 +88,8 @@ public class ListDataActivity extends AppCompatActivity {
 
     /* Loop through event list to add the name and dates to the
      *  event title array list. */
-    for (int i = 0; i < eventList.size(); i++) {
-      eventTitle.add(eventList.get(i).getName() + "\n" + eventList.get(i).getDate());
+    for (Event event: eventList) {
+      eventTitle.add(event.getName() + "\n" + event.getDate());
     }
 
     // Create and initialize an adapter to set content of the list.
