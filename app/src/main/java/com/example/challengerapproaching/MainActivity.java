@@ -10,26 +10,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-  /** Image Button for characters. */
+  /** Image Button for Characters. */
   ImageButton characters;
 
-  /** Image Button for stages. */
+  /** Image Button for Stages. */
   ImageButton stages;
 
-  /** Image Button for events. */
+  /** Image Button for Events. */
   ImageButton events;
-
-  /** Array of integers of the button ids found in the XML. */
-  int [] ids = {R.id.characters, R.id.events, R.id.stages};
-
-  /** Array of Classes for each button's activity. */
-  Class [] charClasses = {CharacterSelect.class, EventsActivity.class,
-    StageSelect.class};
 
   /********************************************************************
    * Upon app start up this method sets the content view to main
    * activity which is then used to create all the buttons for the
-   * main menu.
+   * characters and the button for events.
    *******************************************************************/
   @RequiresApi(api = Build.VERSION_CODES.M)
   @Override
