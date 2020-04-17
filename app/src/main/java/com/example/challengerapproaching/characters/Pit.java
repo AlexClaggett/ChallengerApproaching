@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class Pit extends AppCompatActivity {
 
-
-  String [] pitMoves = {
+  /** Array of Pit's Framedata files */
+  transient String [] pitMoves = {
       "PitBAir.gif",
       "PitBThrow.gif",
       "PitDAir.gif",
@@ -50,33 +50,33 @@ public class Pit extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(final Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_pit);
 
-    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+    final ArrayAdapter<String> adapter = new ArrayAdapter<>(
             this,
             R.layout.selectmove_spinner_design,
             getResources().getStringArray(R.array.Pitmoves)
     );
     adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
 
-    Spinner spnLocale = findViewById(R.id.spinner2);
+    final Spinner spnLocale = findViewById(R.id.spinner2);
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toUrl = "https://ultimateframedata.com/hitboxes/pit/" + pitMoves[position];
+      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        final String toUrl = "https://ultimateframedata.com/hitboxes/pit/" + pitMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
-          e.printStackTrace();
+          gifImageView.setVisibility(View.INVISIBLE);
         }
       }
 
       @Override
-      public void onNothingSelected(AdapterView<?> parent) {
+      public void onNothingSelected(final AdapterView<?> parent) {
 
       }
     });

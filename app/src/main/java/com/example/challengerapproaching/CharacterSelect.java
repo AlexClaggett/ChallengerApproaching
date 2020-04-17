@@ -3,7 +3,6 @@ package com.example.challengerapproaching;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -98,10 +97,10 @@ import com.example.challengerapproaching.characters.ZeroSuitSamus;
 public class CharacterSelect extends AppCompatActivity {
 
   /** Image Button array of the character buttons. */
-  ImageButton [] buttons = new ImageButton[82];
+  private transient ImageButton [] buttons = new ImageButton[82];
 
   /** Array of integers of the character ids found in the XML. */
-  int [] ids = {R.id.banjoKazooie, R.id.bayonetta, R.id.bowser,
+  private transient int [] ids = {R.id.banjoKazooie, R.id.bayonetta, R.id.bowser,
     R.id.bowserJr, R.id.bylthe, R.id.captainFalcon, R.id.chrom,
     R.id.cloud, R.id.corrin, R.id.daisy, R.id.darkPit,
     R.id.darkSamus, R.id.diddyKong, R.id.donkeyKong,
@@ -125,7 +124,7 @@ public class CharacterSelect extends AppCompatActivity {
     R.id.zeroSuitSamus};
 
   /** Array of Classes for each character. */
-  Class [] charClasses = {BanjoKazooie.class, Bayonetta.class,
+  private transient Class [] charClasses = {BanjoKazooie.class, Bayonetta.class,
     Bowser.class, BowserJr.class, Byleth.class,
     CaptainFalcon.class, Chrom.class, Cloud.class, Corrin.class,
     Daisy.class, DarkPit.class, DarkSamus.class, DiddyKong.class,
@@ -156,18 +155,18 @@ public class CharacterSelect extends AppCompatActivity {
    *******************************************************************/
   @RequiresApi(api = Build.VERSION_CODES.M)
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(final Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_character_select);
 
-    int i = 0;
+    int count = 0;
 
     for (ImageButton b: buttons) {
-      b = findViewById(ids[i]);
+      b = findViewById(ids[count]);
       final Intent tosend = new Intent(CharacterSelect.this,
-              charClasses[i]);
+              charClasses[count]);
       b.setOnClickListener(v -> startActivity(tosend));
-      i++;
+      count++;
     }
   }
 }

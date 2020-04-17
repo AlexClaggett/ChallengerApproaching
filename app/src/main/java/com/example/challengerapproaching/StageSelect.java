@@ -27,52 +27,52 @@ import com.example.challengerapproaching.stages.YoshisStory;
 public class StageSelect extends AppCompatActivity {
 
   /** Button For Battle Field. */
-  ImageButton battleField;
+  public transient ImageButton battleField;
 
   /** Button For Final Destination. */
-  ImageButton finalDestination;
+  public transient ImageButton finalDestination;
 
   /** Button For Kalos Pokemon League. */
-  ImageButton kalosPokemonLeague;
+  public transient ImageButton kalosPL;
 
   /** Button For Lylat Cruise. */
-  ImageButton lylatCruise;
+  public transient ImageButton lylatCruise;
 
   /** Button For Pokemon Stadium. */
-  ImageButton pokemonStadium;
+  public transient ImageButton pokemonStadium;
 
   /** Button For Pokemon Stadium 2. */
-  ImageButton pokemonStadium2;
+  public transient ImageButton pokemonStadium2;
 
   /** Button For Smashville. */
-  ImageButton smashville;
+  public transient ImageButton smashville;
 
   /** Button For Town and City. */
-  ImageButton townAndCity;
+  public transient ImageButton townAndCity;
 
   /** Button For Unova Pokemon League. */
-  ImageButton unovaPokemonLeague;
+  public transient ImageButton unovaPL;
 
   /** Button For Yoshi's Island.*/
-  ImageButton yoshiIsland;
+  public transient ImageButton yoshiIsland;
 
   /** Button For Yoshi's Story. */
-  ImageButton yoshisStory;
+  public transient ImageButton yoshisStory;
 
   /** Button array of the stage buttons. */
-  ImageButton [] buttons = {battleField, finalDestination, kalosPokemonLeague,
+  transient ImageButton [] buttons = {battleField, finalDestination, kalosPL,
       lylatCruise, pokemonStadium, pokemonStadium2,
-      smashville, townAndCity, unovaPokemonLeague,
+      smashville, townAndCity, unovaPL,
       yoshiIsland, yoshisStory};
 
   /** Array of integers of the stage ids found in the XML. */
-  int [] ids = {R.id.BattleField, R.id.FinalDestination, R.id.KalosPokemonStadium,
+  private transient int [] ids = {R.id.BattleField, R.id.FinalDestination, R.id.KalosPokemonStadium,
     R.id.LylatCruise, R.id.PokemonStadium, R.id.PokemonStadium2,
     R.id.Smashville, R.id.TownAndCity, R.id.UnovaPokemonLeague,
     R.id.YoshiIsland, R.id.YoshisStory};
 
   /** Array of Classes for each stage. */
-  Class [] charClasses = {BattleField.class, FinalDestination.class,
+  private transient Class [] charClasses = {BattleField.class, FinalDestination.class,
     KalosPokemonLeague.class, LylatCruise.class, PokemonStadium.class,
     PokemonStadium2.class, Smashville.class, TownAndCity.class,
     UnovaPokemonLeague.class, YoshiIsland.class, YoshisStory.class};
@@ -84,18 +84,18 @@ public class StageSelect extends AppCompatActivity {
    *******************************************************************/
   @RequiresApi(api = Build.VERSION_CODES.M)
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(final Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_stages);
 
-    int i = 0;
+    int count = 0;
 
     for (ImageButton b: buttons) {
-      b = findViewById(ids[i]);
+      b = findViewById(ids[count]);
       final Intent tosend = new Intent(StageSelect.this,
-              charClasses[i]);
+              charClasses[count]);
       b.setOnClickListener(v -> startActivity(tosend));
-      i++;
+      count++;
     }
   }
 }

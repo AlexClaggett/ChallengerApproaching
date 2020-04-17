@@ -3,7 +3,6 @@ package com.example.challengerapproaching;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,12 +27,12 @@ public class EventsActivity extends AppCompatActivity
   /**
    * Database Helper for creating a database of saved events.
    * */
-  DatabaseHelper eventDatabase;
+  private transient DatabaseHelper eventDatabase;
 
   /**
    *  Event array to hold the 3 most recent events.
    */
-  Event[] mostRecent = new Event[3];
+  private transient Event[] mostRecent = new Event[3];
 
   /**
    * Static string for sending Log information to the terminal.
@@ -43,43 +42,43 @@ public class EventsActivity extends AppCompatActivity
   /**
    * Text View to show the name for event given.
    */
-  private TextView eventName;
+  private transient TextView eventName;
 
   /**
    * Text View to show the date of the event.
    */
-  private TextView eventDate;
+  private transient TextView eventDate;
 
   /**
    * Text View array that holds the 3 upcoming events.
    */
-  private TextView[] upcomingEvent = new TextView[3];
+  private transient TextView[] upcomingEvent = new TextView[3];
 
   /**
    * Button for creating an event.
    */
-  private Button button;
+  private transient Button createBtn;
 
   /**
    * Button for viewing the list of created events.
    */
-  private Button viewEvent;
+  private transient Button viewEvent;
 
   /********************************************************************
    * OnCreate method to initialize the Events screen to be presented
    * to the user.
-   * @param savedInstanceState standard state parameter needed for
+   * @param savedInstance standard state parameter needed for
    *                           define a specific state.
    *******************************************************************/
-  protected void onCreate(Bundle savedInstanceState) {
+  protected void onCreate(final Bundle savedInstance) {
 
-    super.onCreate(savedInstanceState);
+    super.onCreate(savedInstance);
 
     // Change the view of the app to events.
     setContentView(R.layout.events);
 
     // Initialize variables to their respective views.
-    button = findViewById(R.id.eventCreation);
+    createBtn = findViewById(R.id.eventCreation);
     eventName = findViewById(R.id.tView);
     eventDate = findViewById(R.id.dView);
     viewEvent = findViewById(R.id.viewevent);
@@ -92,25 +91,17 @@ public class EventsActivity extends AppCompatActivity
     mostRecent[2] = eventDatabase.nextMostRecent(mostRecent[1]);
 
     // Set onClick Listener for event creation.
-    button.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        openDialog();
-      }
-    });
+    createBtn.setOnClickListener(v -> openDialog());
 
     // On click listener for viewing events.
-    viewEvent.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        // If there are no events inform the user.
-        if (eventDatabase.getNumEvents() == 0) {
-          toastMessage("Currently No Events Are Scheduled.");
-        } else {
-          Intent intent = new Intent(EventsActivity.this,
-              ListDataActivity.class);
-          startActivityForResult(intent, 1);
-        }
+    viewEvent.setOnClickListener(v -> {
+      // If there are no events inform the user.
+      if (eventDatabase.getNumEvents() == 0) {
+        toastMessage("Currently No Events Are Scheduled.");
+      } else {
+        final Intent intent = new Intent(EventsActivity.this,
+            ListDataActivity.class);
+        startActivityForResult(intent, 1);
       }
     });
 
@@ -134,7 +125,7 @@ public class EventsActivity extends AppCompatActivity
    * openDialog method to explain what happens upon dialog call.
    *******************************************************************/
   public void openDialog() {
-    EventDialog newEvent = new EventDialog();
+    final EventDialog newEvent = new EventDialog();
     newEvent.show(getSupportFragmentManager(), "create event");
   }
 
@@ -145,7 +136,7 @@ public class EventsActivity extends AppCompatActivity
    * @param date the date of the event.
    *******************************************************************/
   @Override
-  public void applyText(String name, String date) {
+  public void applyText(final String name, final String date) {
     // Set Event Name and Date.
     eventName.setText(name);
     eventDate.setText(date);
@@ -181,8 +172,8 @@ public class EventsActivity extends AppCompatActivity
    * @param newName The name of the event
    * @param newDate The date of the event
    *******************************************************************/
-  public void addData(String newName, String newDate) {
-    boolean insertData = eventDatabase.addData(newName, newDate);
+  public void addData(final String newName, final String newDate) {
+    final boolean insertData = eventDatabase.addData(newName, newDate);
   }
 
   /********************************************************************
@@ -190,7 +181,7 @@ public class EventsActivity extends AppCompatActivity
    * error messages.
    * @param message the message to be displayed to the user.
    *******************************************************************/
-  private void toastMessage(String message) {
+  private void toastMessage(final String message) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }
 
@@ -203,9 +194,9 @@ public class EventsActivity extends AppCompatActivity
    * @param data the data from the intent.
    *******************************************************************/
   @Override
-  protected void onActivityResult(int requestCode,
-                                  int resultCode,
-                                  @Nullable Intent data) {
+  protected void onActivityResult(final int requestCode,
+                                  final int resultCode,
+                                  final @Nullable Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
     // If the code is 0 empty text.
     if (resultCode == 0) {

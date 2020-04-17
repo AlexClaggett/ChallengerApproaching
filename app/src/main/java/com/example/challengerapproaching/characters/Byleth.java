@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Byleth extends AppCompatActivity {
 
-  String [] bylethMoves = {
+  /** Array of Byleth's Framedata files */
+  transient String [] bylethMoves = {
       "BylethAreadbharAerial.gif",
       "BylethAreadbharGrounded.gif",
       "BylethAymr.gif",
@@ -60,34 +61,34 @@ public class Byleth extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(final Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_bylthe);
 
-    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+    final ArrayAdapter<String> adapter = new ArrayAdapter<>(
             this,
             R.layout.selectmove_spinner_design,
             getResources().getStringArray(R.array.Bylethmoves)
     );
     adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
 
-    Spinner spnLocale = findViewById(R.id.spinner2);
+    final Spinner spnLocale = findViewById(R.id.spinner2);
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        GifImageView gifImageView = findViewById(R.id.GifImageView);
-        ImageView imageView = findViewById(R.id.imageView3);
-        String toUrl = "https://ultimateframedata.com/hitboxes/byleth/" + bylethMoves[position];
+      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        final ImageView imageView = findViewById(R.id.imageView3);
+        final String toUrl = "https://ultimateframedata.com/hitboxes/byleth/" + bylethMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
-            InputStream inputStream = new java.net.URL(toUrl).openStream();
-            Bitmap bm = BitmapFactory.decodeStream(inputStream);
-            imageView.setImageBitmap(bm);
+            final InputStream inputStream = new java.net.URL(toUrl).openStream();
+            final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
+            imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e) {
-            e.printStackTrace();
+          } catch (IOException e){
+            imageView.setVisibility(View.INVISIBLE);
           }
         } else {
           imageView.setVisibility(View.INVISIBLE);
@@ -95,13 +96,13 @@ public class Byleth extends AppCompatActivity {
             gifImageView.setGifImageUrl(toUrl);
             gifImageView.setVisibility(View.VISIBLE);
           } catch (IOException e) {
-            e.printStackTrace();
+            gifImageView.setVisibility(View.INVISIBLE);
           }
         }
       }
 
       @Override
-      public void onNothingSelected(AdapterView<?> parent) {
+      public void onNothingSelected(final AdapterView<?> parent) {
 
       }
     });

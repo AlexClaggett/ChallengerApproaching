@@ -17,27 +17,27 @@ import java.io.InputStream;
 
 public class GifImageView extends View {
 
-  //Input stream of the source
-  private InputStream inputStream;
+  /** Input stream of the source */
+  private transient InputStream inputStream;
 
-  //Movie object decoded from input stream
-  private Movie movie;
+  /** Movie object decoded from input stream */
+  private transient Movie movie;
 
-  //Movie object's width
-  private int width;
+  /** Movie object's width */
+  private transient int width;
 
-  //Movie object's height
-  private int height;
+  /** Movie object's height */
+  private transient int height;
 
-  //Keeps track of time to keep movie playing
-  private long start;
+  /** Keeps track of time to keep movie playing */
+  private transient long start;
 
   /********************************************************************
    * This constructor calls the view class constructor.
    * @param context the context it's being set in
    * @param attrs the attribute set applied to the object
    *******************************************************************/
-  public GifImageView(Context context, AttributeSet attrs) {
+  public GifImageView(final Context context, final AttributeSet attrs) {
     super(context, attrs, 0);
   }
 
@@ -56,7 +56,7 @@ public class GifImageView extends View {
    * @param heightMeasureSpec the new height of the gif
    *******************************************************************/
   @Override
-  protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+  protected void onMeasure(final int widthMeasureSpec, final int heightMeasureSpec) {
     setMeasuredDimension(width, height);
   }
 
@@ -66,8 +66,8 @@ public class GifImageView extends View {
    * @param canvas Canvas object the gif will be displayed on
    *******************************************************************/
   @Override
-  protected void onDraw(Canvas canvas) {
-    long now = SystemClock.uptimeMillis();
+  protected void onDraw(final Canvas canvas) {
+    final long now = SystemClock.uptimeMillis();
 
     if (start == 0) {
       start = now;
@@ -80,7 +80,7 @@ public class GifImageView extends View {
         duration = 1000;
       }
 
-      int relTime = (int) ((now - start) % duration);
+      final int relTime = (int) ((now - start) % duration);
 
       movie.setTime(relTime);
 
@@ -95,7 +95,7 @@ public class GifImageView extends View {
    * the gif from the beginning.
    * @param url string of the url of the gif to be displayed
    *******************************************************************/
-  public void setGifImageUrl(String url) throws IOException {
+  public void setGifImageUrl(final String url) throws IOException {
     inputStream = new java.net.URL(url).openStream();
     init();
   }

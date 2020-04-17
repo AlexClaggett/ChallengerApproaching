@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class KingKRool extends AppCompatActivity {
 
-  String [] kingKRoolMoves = {
+  /** Array of K Rool's Framedata files */
+  transient String [] kingKRoolMoves = {
       "KingKRoolBAir.gif",
       "KingKRoolBlunderbuss.gif",
       "KingKRoolBlunderbussKannonballDetection.gif",
@@ -60,34 +61,34 @@ public class KingKRool extends AppCompatActivity {
 
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(final Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_king__k__rool);
 
-    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+    final ArrayAdapter<String> adapter = new ArrayAdapter<>(
             this,
             R.layout.selectmove_spinner_design,
             getResources().getStringArray(R.array.KingKRoolmoves)
     );
     adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
 
-    Spinner spnLocale = findViewById(R.id.spinner2);
+    final Spinner spnLocale = findViewById(R.id.spinner2);
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toUrl = "https://ultimateframedata.com/hitboxes/king_k_rool/" + kingKRoolMoves[position];
-        ImageView imageView = findViewById(R.id.imageView3);
+      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        final String toUrl = "https://ultimateframedata.com/hitboxes/king_k_rool/" + kingKRoolMoves[position];
+        final ImageView imageView = findViewById(R.id.imageView3);
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
-            InputStream inputStream = new java.net.URL(toUrl).openStream();
-            Bitmap bm = BitmapFactory.decodeStream(inputStream);
-            imageView.setImageBitmap(bm);
+            final InputStream inputStream = new java.net.URL(toUrl).openStream();
+            final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
+            imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e) {
-            e.printStackTrace();
+          } catch (IOException e){
+            imageView.setVisibility(View.INVISIBLE);
           }
         } else {
           imageView.setVisibility(View.INVISIBLE);
@@ -95,14 +96,14 @@ public class KingKRool extends AppCompatActivity {
             gifImageView.setGifImageUrl(toUrl);
             gifImageView.setVisibility(View.VISIBLE);
           } catch (IOException e) {
-            e.printStackTrace();
+            gifImageView.setVisibility(View.INVISIBLE);
           }
         }
       }
 
 
       @Override
-      public void onNothingSelected(AdapterView<?> parent) {
+      public void onNothingSelected(final AdapterView<?> parent) {
 
       }
     });

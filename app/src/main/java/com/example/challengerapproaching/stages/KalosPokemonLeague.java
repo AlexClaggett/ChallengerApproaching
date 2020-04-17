@@ -10,8 +10,8 @@ import com.example.challengerapproaching.R;
 public class KalosPokemonLeague extends AppCompatActivity {
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(final Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_kalos_pokemon_league);
   }
 }

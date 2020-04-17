@@ -15,7 +15,8 @@ import java.io.IOException;
 
 public class PacMan extends AppCompatActivity {
 
-  String [] pacManMoves = {
+  /** Array of PacMan's Framedata files */
+  transient String [] pacManMoves = {
       "PacManBAir.gif",
       "PacManBThrow.gif",
       "PacManDAir.gif",
@@ -46,33 +47,33 @@ public class PacMan extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(final Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_pac__man);
 
-    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+    final ArrayAdapter<String> adapter = new ArrayAdapter<>(
             this,
             R.layout.selectmove_spinner_design,
             getResources().getStringArray(R.array.PacManmoves)
     );
     adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
 
-    Spinner spnLocale = findViewById(R.id.spinner2);
+    final Spinner spnLocale = findViewById(R.id.spinner2);
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toUrl = "https://ultimateframedata.com/hitboxes/pac_man/" + pacManMoves[position];
+      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        final String toUrl = "https://ultimateframedata.com/hitboxes/pac_man/" + pacManMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
-          e.printStackTrace();
+          gifImageView.setVisibility(View.INVISIBLE);
         }
       }
 
       @Override
-      public void onNothingSelected(AdapterView<?> parent) {
+      public void onNothingSelected(final AdapterView<?> parent) {
 
       }
     });

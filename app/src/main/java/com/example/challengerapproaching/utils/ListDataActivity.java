@@ -36,22 +36,22 @@ public class ListDataActivity extends AppCompatActivity {
   /**
    * The database that the events are contained within.
    */
-  DatabaseHelper eventDatabase;
+  private transient DatabaseHelper eventDatabase;
 
   /**
    * A ListView for the displaying the events to the screen.
    */
-  private ListView eventsList;
+  private transient ListView eventsList;
 
   /******************************************************************
    * onCreate method for ListDataActivity. Holds the logic for
    * everything that happens within the activity.
-   * @param savedInstanceState Required parameter for the
+   * @param savedInstance Required parameter for the
    *                          instance state.
    *****************************************************************/
   @Override
-  protected void onCreate(@Nullable Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(final @Nullable Bundle savedInstance) {
+    super.onCreate(savedInstance);
 
     // Sets the current view to the list_layout.
     setContentView(R.layout.list_layout);
@@ -84,16 +84,16 @@ public class ListDataActivity extends AppCompatActivity {
 
     /* Make another array list to hold the event name as a
      *  combination of the name and date. */
-    ArrayList<String> eventTitle = new ArrayList<>();
+    final ArrayList<String> eventTitle = new ArrayList<>();
 
     /* Loop through event list to add the name and dates to the
      *  event title array list. */
-    for (int i = 0; i < eventList.size(); i++) {
-      eventTitle.add(eventList.get(i).getName() + "\n" + eventList.get(i).getDate());
+    for (Event event: eventList) {
+      eventTitle.add(event.getName() + "\n" + event.getDate());
     }
 
     // Create and initialize an adapter to set content of the list.
-    ListAdapter adapter = new ArrayAdapter<String>(this,
+    final ListAdapter adapter = new ArrayAdapter<String>(this,
         android.R.layout.simple_list_item_1, eventTitle) {
       /**********************************************************
        * Method that formats the contents of the list with a
@@ -105,9 +105,9 @@ public class ListDataActivity extends AppCompatActivity {
        *********************************************************/
       @NonNull
       @Override
-      public View getView(int position,
-                          @Nullable View convertView,
-                          @NonNull ViewGroup parent) {
+      public View getView(final int position,
+                          final @Nullable View convertView,
+                          final @NonNull ViewGroup parent) {
         View view = super.getView(position, convertView,
             parent);
 
@@ -130,7 +130,7 @@ public class ListDataActivity extends AppCompatActivity {
     eventsList.setAdapter(adapter);
 
     // Make a constant event list for reference within onItemClick.
-    ArrayList<Event> finalEventList = eventList;
+    final ArrayList<Event> finalEventList = eventList;
 
     // Set an on item click listener for the event list
     eventsList.setOnItemClickListener(
@@ -140,25 +140,25 @@ public class ListDataActivity extends AppCompatActivity {
            * is selected within the event list.
            * @param adapterView the adapter the view is from.
            * @param view the view selected.
-           * @param i the index within the ArrayAdapter.
+           * @param index the index within the ArrayAdapter.
            * @param l some other needed parameter.
            *************************************************/
-          public void onItemClick(AdapterView<?> adapterView,
-                                  View view, int i, long l) {
+          public void onItemClick(final AdapterView<?> adapterView,
+                                  final View view, final int index, final long l) {
             // Set name to the event at the same index as view.
-            String name = (finalEventList.get(i).getName());
+            final String name = (finalEventList.get(index).getName());
 
             // Set date to the event at the same index as view.
-            String date = (finalEventList.get(i).getDate());
+            final String date = (finalEventList.get(index).getDate());
 
             /* Log to check the item selected is the correct
                 event. */
             Log.d(TAG, "onItemClick: You Clicked on "
-                + eventTitle.get(i));
+                + eventTitle.get(index));
 
             /* Cursor to retrieve the event at the ID of the events
                date from the database. */
-            Cursor data = eventDatabase.getDateID(date);
+            final Cursor data = eventDatabase.getDateID(date);
 
             // Initialize the itemID
             int itemID = -1;
@@ -173,7 +173,7 @@ public class ListDataActivity extends AppCompatActivity {
               Log.d(TAG, "onItemClick: The ID is: " + itemID);
 
               // Create the intent for editing the data.
-              Intent editScreenIntent = new Intent(
+              final Intent editScreenIntent = new Intent(
                   ListDataActivity.this,
                   EditDataActivity.class);
 
@@ -203,8 +203,8 @@ public class ListDataActivity extends AppCompatActivity {
    * @param data the data from the intent.
    *****************************************************************/
   @Override
-  protected void onActivityResult(int requestCode, int resultCode,
-                                  @Nullable Intent data) {
+  protected void onActivityResult(final int requestCode, final int resultCode,
+                                  final @Nullable Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
     if (resultCode == 0) {
       finish();
@@ -216,7 +216,7 @@ public class ListDataActivity extends AppCompatActivity {
    * Method for displaying a message to the user if an error occurs.
    * @param message the message to be displayed.
    *****************************************************************/
-  private void toastMessage(String message) {
+  private void toastMessage(final String message) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }
 }
