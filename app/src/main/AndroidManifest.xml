@@ -55,7 +55,8 @@
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".CharacterSelect"
             android:label="Character Select"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".characters.Corrin"
             android:label="Corrin"
