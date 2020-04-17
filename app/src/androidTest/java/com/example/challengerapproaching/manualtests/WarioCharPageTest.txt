@@ -1,0 +1,115 @@
+Manual test for Wario character activity page
+
+Pressed Wario button from the character select screen. Initial: AC
+Page changed from character select screen to Wario's page. Initial AC
+
+Navigation bar is labeled Wario. Initial: AC
+Above the portrait is also labeled Wario. Initial: AC
+Portrait displayed is a picture of Wario. Initial: AC
+Select a move is under the portrait. Initial AC
+
+Graphic was initially set to BAir. Initial: AC
+
+Opened spinner to select BikeDrive option. Initial: AC
+Graphic loaded: BikeDrive. Initial: AC
+
+Opened spinner to select BikeTurn option. Initial: AC
+Graphic loaded: BikeTurn. Initial: AC
+
+Opened spinner to select BikeWheelie option. Initial: AC
+Graphic loaded: BikeWheelie. Initial: AC
+
+Opened spinner to select BThrow option. Initial: AC
+Graphic loaded: BThrow. Initial: AC
+
+Opened spinner to select Chomp option. Initial: AC
+Graphic loaded: Chomp. Initial: AC
+
+Opened spinner to select ChompBite option. Initial: AC
+Graphic loaded: ChompBite. Initial: AC
+
+Opened spinner to select ChompBomb option. Initial: AC
+Graphic loaded: ChompBomb. Initial: AC
+
+Opened spinner to select Corkscrew option. Initial: AC
+Graphic loaded: Corkscrew. Initial: AC
+
+Opened spinner to select DAir option. Initial: AC
+Graphic loaded: DAir. Initial: AC
+
+Opened spinner to select DashAttack option. Initial: AC
+Graphic loaded: DashAttack. Initial: AC
+
+Opened spinner to select DashGrab option. Initial: AC
+Graphic loaded: DashGrab. Initial: AC
+
+Opened spinner to select DSmash option. Initial: AC
+Graphic loaded: DSmash. Initial: AC
+
+Opened spinner to select DThrow option. Initial: AC
+Graphic loaded: DThrow. Initial: AC
+
+Opened spinner to select DTilt option. Initial: AC
+Graphic loaded: DTilt. Initial: AC
+
+Opened spinner to select FAir option. Initial: AC
+Graphic loaded: FAir. Initial: AC
+
+Opened spinner to select FSmash option. Initial: AC
+Graphic loaded: FSmash. Initial: AC
+
+Opened spinner to select FThrow option. Initial: AC
+Graphic loaded: FThrow. Initial: AC
+
+Opened spinner to select FTilt option. Initial: AC
+Graphic loaded: FTilt. Initial: AC
+
+Opened spinner to select FTiltDown option. Initial: AC
+Graphic loaded: FTiltDown. Initial: AC
+
+Opened spinner to select FTiltUp option. Initial: AC
+Graphic loaded: FTiltUp. Initial: AC
+
+Opened spinner to select Grab option. Initial: AC
+Graphic loaded: Grab. Initial: AC
+
+Opened spinner to select Jab1 option. Initial: AC
+Graphic loaded: Jab1. Initial: AC
+
+Opened spinner to select Jab2 option. Initial: AC
+Graphic loaded: Jab2. Initial: AC
+
+Opened spinner to select NAir option. Initial: AC
+Graphic loaded: NAir. Initial: AC
+
+Opened spinner to select PivotGrab option. Initial: AC
+Graphic loaded: PivotGrab. Initial: AC
+
+Opened spinner to select Pummel option. Initial: AC
+Graphic loaded: Pummel. Initial: AC
+
+Opened spinner to select UAir option. Initial: AC
+Graphic loaded: UAir. Initial: AC
+
+Opened spinner to select USmash option. Initial: AC
+Graphic loaded: USmash. Initial: AC
+
+Opened spinner to select UThrow option. Initial: AC
+Graphic loaded: UThrow. Initial: AC
+
+Opened spinner to select UTilt option. Initial: AC
+Graphic loaded: UTilt. Initial: AC
+
+Opened spinner to select WarioWaftFull option. Initial: AC
+Graphic loaded: WarioWaftFull. Initial: AC
+
+Opened spinner to select WarioWaftHalf option. Initial: AC
+Graphic loaded: WarioWaftHalf. Initial: AC
+
+Opened spinner to select WarioWaftLow option. Initial: AC
+Graphic loaded: WarioWaftLow. Initial: AC
+
+Opened spinner to select WarioWaftToot option. Initial: AC
+Graphic loaded: WarioWaftToot. Initial: AC
+
+Completed by: Alex Claggett
