@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class DiddyKong extends AppCompatActivity {
 
-  String [] diddyKongMoves = {
+  //Array of Diddy Kong's Framedata files
+  transient String [] diddyKongMoves = {
       "DiddyKongBAir.gif",
       "DiddyKongBThrow.gif",
       "DiddyKongDAir.gif",

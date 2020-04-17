@@ -28,19 +28,19 @@ import java.util.Calendar;
 public class EventDialog extends AppCompatDialogFragment {
 
   /** Edit Text View That holds the Name of the Event being created. */
-  private EditText editTextEventName;
+  private transient EditText editTextEventName;
 
   /** Text View that holds the contents of the Event date. */
-  private TextView textEventDate;
+  private transient TextView textEventDate;
 
   /** Event Dialog Listener that waits for the user to select a date.*/
-  private EventDialogListener listener;
+  private transient EventDialogListener listener;
 
   /** OnDateSetListener that Is used to set the date. */
-  private DatePickerDialog.OnDateSetListener onDateSetListener;
+  private transient DatePickerDialog.OnDateSetListener onDateSetListener;
 
   /** Calendar for holding the new given date. */
-  public Calendar newDate;
+  public transient Calendar newDate;
 
   /********************************************************************
    * onCreate method for Dialog uses a builder to create the view and

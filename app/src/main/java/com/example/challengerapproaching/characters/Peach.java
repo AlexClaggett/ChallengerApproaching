@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Peach extends AppCompatActivity {
 
-  String [] peachMoves = {
+  //Array of Peach's Framedata files
+  transient String [] peachMoves = {
       "PeachBAir.gif",
       "PeachBThrow.gif",
       "PeachDAir.gif",

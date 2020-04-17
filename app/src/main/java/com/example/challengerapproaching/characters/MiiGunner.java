@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class MiiGunner extends AppCompatActivity {
 
-  String [] miiGunnerMoves = {
+  //Array of MiiGunner's Framedata files
+  transient String [] miiGunnerMoves = {
       "MiiGunnerBombDrop.png",
       "MiiGunnerBombDropExplosion.png",
       "MiiGunnerGrenadeLauncher.png",

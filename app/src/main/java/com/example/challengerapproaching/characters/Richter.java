@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Richter extends AppCompatActivity {
 
-  String [] richterMoves = {
+  //Array of Richter's Framedata files
+  transient String [] richterMoves = {
       "RichterAxe.gif",
       "RichterBAir.gif",
       "RichterBAirDown.gif",

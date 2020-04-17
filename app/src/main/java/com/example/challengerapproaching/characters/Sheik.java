@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Sheik extends AppCompatActivity {
 
-  String [] sheikMoves = {
+  //Array of Sheik's Framedata files
+  transient String [] sheikMoves = {
       "SheikBAir.gif",
       "SheikBouncingFish.gif",
       "SheikBThrow.gif",

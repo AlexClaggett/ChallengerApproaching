@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Inkling extends AppCompatActivity {
 
-  String [] inklingMoves = {
+  //Array of Inkling's Framedata files
+  transient String [] inklingMoves = {
       "InklingBAir.gif",
       "InklingBThrow.gif",
       "InklingDAir.gif",

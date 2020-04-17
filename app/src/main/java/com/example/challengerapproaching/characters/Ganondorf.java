@@ -15,7 +15,8 @@ import java.io.IOException;
 
 public class Ganondorf extends AppCompatActivity {
 
-  String [] ganondorfMoves = {
+  //Array of Ganondorf's Framedata files
+  transient String [] ganondorfMoves = {
       "GanondorfBAir.gif",
       "GanondorfBThrow.gif",
       "GanondorfDAir.gif",

@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Luigi extends AppCompatActivity {
 
-  String [] luigimMves = {
+  //Array of Luigi's Framedata files
+  transient String [] luigiMoves = {
       "LuigiBAir.gif",
       "LuigiBThrow.gif",
       "LuigiCycloneA.gif",
@@ -77,7 +78,7 @@ public class Luigi extends AppCompatActivity {
       public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long id) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/luigi/" + luigimMves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/luigi/" + luigiMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

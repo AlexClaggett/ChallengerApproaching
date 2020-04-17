@@ -15,7 +15,8 @@ import java.io.IOException;
 
 public class Terry extends AppCompatActivity {
 
-  String [] terryMoves = {
+  //Array of Terry's Framedata files
+  transient String [] terryMoves = {
       "TerryBAir.gif",
       "TerryBThrow.gif",
       "TerryBurningKnuckleAirStrong.gif",

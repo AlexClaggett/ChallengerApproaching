@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class DarkSamus extends AppCompatActivity {
 
-  String [] darkSamusMoves = {
+  //Array of Dark Samus's Framedata files
+  transient String [] darkSamusMoves = {
       "DarkSamusBAir.gif",
       "DarkSamusBomb.png",
       "DarkSamusBombExplosion.png",

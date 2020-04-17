@@ -15,7 +15,8 @@ import java.io.IOException;
 
 public class Ridley extends AppCompatActivity {
 
-  String [] ridleyMoves = {
+  //Array of Ridley's Framedata files
+  transient String [] ridleyMoves = {
       "RidleyBAir.gif",
       "RidleyBThrow.gif",
       "RidleyDAir.gif",

@@ -14,21 +14,6 @@ import java.io.IOException;
  */
 public class ExampleUnitTest {
 
-    DonkeyKong donkeyKong = new DonkeyKong();
-    GifImageView gifImageView = donkeyKong.findViewById(R.id.GifImageView);
-
-    @Test(expected = IOException.class)
-    public void gifViewSource() throws IOException {
-        gifImageView.setGifImageUrl("fries");
-    }
-
-    @Test
-    public void gifViewGoodSource() throws IOException {
-        DonkeyKong donkeyKong = new DonkeyKong();
-        GifImageView gifImageView = donkeyKong.findViewById(R.id.GifImageView);
-        gifImageView.setGifImageUrl("https://ultimateframedata.com/hitboxes/luigi/LuigiFTiltDown.gif");
-    }
-
 
 
 }

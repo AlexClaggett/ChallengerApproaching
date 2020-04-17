@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class MiiSwordfighter extends AppCompatActivity {
 
-  String [] miiFightMoves = {
+  //Array of MiiSwordfighter's Framedata files
+  transient String [] miiFightMoves = {
       "MiiSwordfighterAirborneAssault.gif",
       "MiiSwordfighterAirborneAssaultHit.gif",
       "MiiSwordfighterBAir.gif",

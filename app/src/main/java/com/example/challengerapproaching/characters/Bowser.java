@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Bowser extends AppCompatActivity {
 
-  String [] bowserMoves = {
+  //Array of Bowser's Framedata files
+  transient String [] bowserMoves = {
       "BowserBAir.gif",
       "BowserBowserBomb.png",
       "BowserBowserBombG.gif",

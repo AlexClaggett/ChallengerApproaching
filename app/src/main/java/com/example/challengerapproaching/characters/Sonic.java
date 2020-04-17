@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Sonic extends AppCompatActivity {
 
-  String [] sonicMoves = {
+  //Array of Sonic's Framedata files
+  transient String [] sonicMoves = {
       "SonicBAir.gif",
       "SonicBThrow.gif",
       "SonicDAir.gif",

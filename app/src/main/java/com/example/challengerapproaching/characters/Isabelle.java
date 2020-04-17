@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Isabelle extends AppCompatActivity {
 
-  String [] isabelleMoves = {
+  //Array of Isabelle's Framedata files
+  transient String [] isabelleMoves = {
       "IsabelleBAir.gif",
       "IsabelleBalloonHurtbox.png",
       "IsabelleBThrow.gif",

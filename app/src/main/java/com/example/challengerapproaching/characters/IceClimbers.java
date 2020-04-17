@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class IceClimbers extends AppCompatActivity {
 
-  String [] iceClimbersmoves = {
+  //Array of Ice Climber's Framedata files
+  transient String [] iceClimbersmoves = {
       "IceClimbersIceShot.png",
       "NanaBAir.gif",
       "NanaBelay.gif",

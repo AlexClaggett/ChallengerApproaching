@@ -15,7 +15,8 @@ import java.io.IOException;
 
 public class KingDedede extends AppCompatActivity {
 
-  String [] kingDededeMoves = {
+  //Array of Dedede's Framedata files
+  transient String [] kingDededeMoves = {
       "KingDededeBAir.gif",
       "KingDededeBThrow.gif",
       "KingDededeDAir.gif",

@@ -15,7 +15,8 @@ import java.io.IOException;
 
 public class Greninja extends AppCompatActivity {
 
-  String [] greninjaMoves = {
+  //Array of Greninja's Framedata files
+  transient String [] greninjaMoves = {
       "GreninjaBAir.gif",
       "GreninjaBThrow.gif",
       "GreninjaDAir.gif",

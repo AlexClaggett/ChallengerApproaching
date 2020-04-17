@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Villager extends AppCompatActivity {
 
-  String [] villagerMoves = {
+  //Array of Villager's Framedata files
+  transient String [] villagerMoves = {
       "VillagerBAir.gif",
       "VillagerBalloonHurtbox.png",
       "VillagerBThrow.gif",

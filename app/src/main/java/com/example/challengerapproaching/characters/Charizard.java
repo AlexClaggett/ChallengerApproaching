@@ -15,7 +15,8 @@ import java.io.IOException;
 
 public class Charizard extends AppCompatActivity {
 
-  String [] charizardMoves = {
+  //Array of Charizard's Framedata files
+  transient String [] charizardMoves = {
       "charitardBAir.gif",
       "charitardBThrow.gif",
       "charitardDAir.gif",

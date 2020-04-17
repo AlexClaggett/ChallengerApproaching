@@ -15,7 +15,8 @@ import java.io.IOException;
 
 public class Chrom extends AppCompatActivity {
 
-  String [] chromMoves = {
+  //Array of Chrom's Framedata files
+  transient String [] chromMoves = {
       "ChromBAir.gif",
       "ChromBThrow.gif",
       "ChromCounter.gif",

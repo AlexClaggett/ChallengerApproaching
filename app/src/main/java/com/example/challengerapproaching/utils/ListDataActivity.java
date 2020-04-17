@@ -36,12 +36,12 @@ public class ListDataActivity extends AppCompatActivity {
   /**
    * The database that the events are contained within.
    */
-  private DatabaseHelper eventDatabase;
+  private transient DatabaseHelper eventDatabase;
 
   /**
    * A ListView for the displaying the events to the screen.
    */
-  private ListView eventsList;
+  private transient ListView eventsList;
 
   /******************************************************************
    * onCreate method for ListDataActivity. Holds the logic for

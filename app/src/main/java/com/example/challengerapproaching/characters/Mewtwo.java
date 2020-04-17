@@ -15,7 +15,8 @@ import java.io.IOException;
 
 public class Mewtwo extends AppCompatActivity {
 
-  String [] mewtwoMoves = {
+  //Array of Mewtwo's Framedata files
+  transient String [] mewtwoMoves = {
       "MewtwoBAir.gif",
       "MewtwoBThrow.gif",
       "MewtwoConfusion.gif",

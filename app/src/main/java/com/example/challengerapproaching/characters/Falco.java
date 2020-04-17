@@ -19,7 +19,8 @@ import java.io.InputStream;
 
 public class Falco extends AppCompatActivity {
 
-  String [] falcoMoves = {
+  //Array of Falco's Framedata files
+  transient String [] falcoMoves = {
       "FalcoBAir.gif",
       "FalcoBlaster.gif",
       "FalcoBThrow.gif",

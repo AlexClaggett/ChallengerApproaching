@@ -28,12 +28,12 @@ public class EventsActivity extends AppCompatActivity
   /**
    * Database Helper for creating a database of saved events.
    * */
-  private DatabaseHelper eventDatabase;
+  private transient DatabaseHelper eventDatabase;
 
   /**
    *  Event array to hold the 3 most recent events.
    */
-  private Event[] mostRecent = new Event[3];
+  private transient Event[] mostRecent = new Event[3];
 
   /**
    * Static string for sending Log information to the terminal.
@@ -43,27 +43,27 @@ public class EventsActivity extends AppCompatActivity
   /**
    * Text View to show the name for event given.
    */
-  private TextView eventName;
+  private transient TextView eventName;
 
   /**
    * Text View to show the date of the event.
    */
-  private TextView eventDate;
+  private transient TextView eventDate;
 
   /**
    * Text View array that holds the 3 upcoming events.
    */
-  private TextView[] upcomingEvent = new TextView[3];
+  private transient TextView[] upcomingEvent = new TextView[3];
 
   /**
    * Button for creating an event.
    */
-  private Button createBtn;
+  private transient Button createBtn;
 
   /**
    * Button for viewing the list of created events.
    */
-  private Button viewEvent;
+  private transient Button viewEvent;
 
   /********************************************************************
    * OnCreate method to initialize the Events screen to be presented
