@@ -37,7 +37,7 @@ public class GifImageView extends View {
    * @param context the context it's being set in
    * @param attrs the attribute set applied to the object
    *******************************************************************/
-  public GifImageView(Context context, AttributeSet attrs) {
+  public GifImageView(final Context context, final AttributeSet attrs) {
     super(context, attrs, 0);
   }
 
@@ -56,7 +56,7 @@ public class GifImageView extends View {
    * @param heightMeasureSpec the new height of the gif
    *******************************************************************/
   @Override
-  protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+  protected void onMeasure(final int widthMeasureSpec, final int heightMeasureSpec) {
     setMeasuredDimension(width, height);
   }
 
@@ -66,7 +66,7 @@ public class GifImageView extends View {
    * @param canvas Canvas object the gif will be displayed on
    *******************************************************************/
   @Override
-  protected void onDraw(Canvas canvas) {
+  protected void onDraw(final Canvas canvas) {
     final long now = SystemClock.uptimeMillis();
 
     if (start == 0) {
@@ -95,7 +95,7 @@ public class GifImageView extends View {
    * the gif from the beginning.
    * @param url string of the url of the gif to be displayed
    *******************************************************************/
-  public void setGifImageUrl(String url) throws IOException {
+  public void setGifImageUrl(final String url) throws IOException {
     inputStream = new java.net.URL(url).openStream();
     init();
   }

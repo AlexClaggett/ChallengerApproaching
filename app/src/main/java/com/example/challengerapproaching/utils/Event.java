@@ -27,7 +27,7 @@ public class Event {
    * @param name the name of the event.
    * @param date the date of the event.
    *******************************************************************/
-  public Event(String name, String date) {
+  public Event(final String name, final String date) {
     this.id = -1;
     this.name = name;
     this.date = date;
@@ -39,7 +39,7 @@ public class Event {
    * @param name the name of the event.
    * @param date the date of the event.
    *******************************************************************/
-  public Event(int id, String name, String date) {
+  public Event(final int id, final String name, final String date) {
     this.id = id;
     this.name = name;
     this.date = date;
@@ -57,7 +57,7 @@ public class Event {
    * Method for setting the event's ID.
    * @param id the ID to give the event.
    *******************************************************************/
-  public void setId(int id) {
+  public void setId(final int id) {
     this.id = id;
   }
 
@@ -73,7 +73,7 @@ public class Event {
    * Method for setting the name of the event.
    * @param name the NAME to give the event.
    *******************************************************************/
-  public void setName(String name) {
+  public void setName(final String name) {
     this.name = name;
   }
 
@@ -89,7 +89,7 @@ public class Event {
    * Method for setting the date of the event.
    * @param date the date to set the event to.
    *******************************************************************/
-  public void setDate(String date) {
+  public void setDate(final String date) {
     this.date = date;
   }
 }

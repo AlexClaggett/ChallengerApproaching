@@ -52,7 +52,7 @@ public class Daisy extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstance) {
+  protected void onCreate(final Bundle savedInstance) {
     super.onCreate(savedInstance);
     setContentView(R.layout.activity_daisy);
 
@@ -67,7 +67,7 @@ public class Daisy extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long id) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/daisy/" + daisyMoves[position];

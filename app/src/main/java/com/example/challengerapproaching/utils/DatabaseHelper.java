@@ -46,7 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * Constructor for creating the database.
    * @param context the context the database is created for.
    *******************************************************************/
-  public DatabaseHelper(Context context) {
+  public DatabaseHelper(final Context context) {
     super(context, TABLE_NAME, null, 1);
   }
 
@@ -58,9 +58,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @param newVersion the current version of the database.
    *******************************************************************/
   @Override
-  public void onUpgrade(SQLiteDatabase db,
-                        int oldVersion,
-                        int newVersion) {
+  public void onUpgrade(final SQLiteDatabase db,
+                        final int oldVersion,
+                        final int newVersion) {
     db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
     onCreate(db);
   }
@@ -71,7 +71,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @param db the instance of data base to be created for.
    *******************************************************************/
   @Override
-  public void onCreate(SQLiteDatabase db) {
+  public void onCreate(final SQLiteDatabase db) {
     // String to represent the SQL code for creating a table.
     final String createTable = "CREATE Table " + TABLE_NAME
             + "(\n" + COL1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -86,7 +86,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @param item2 the date of the event to be added.
    * @return whether or not the data was inserted.
    *******************************************************************/
-  public boolean addData(String item1, String item2) {
+  public boolean addData(final String item1, final String item2) {
     // Values to be inserted within the database.
     final ContentValues contentValues = new ContentValues();
     contentValues.put(COL2, item1);
@@ -161,7 +161,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @param date The date whose ID is wanted to be obtained.
    * @return What data was found.
    *******************************************************************/
-  public Cursor getDateID(String date) {
+  public Cursor getDateID(final String date) {
     final SQLiteDatabase db = this.getWritableDatabase();
     final String query = "SELECT " + COL1 + " FROM " + TABLE_NAME
             + " WHERE " + COL3 + " = '" + date + "'";
@@ -175,7 +175,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @param id the id that this event is at.
    * @param oldName the current name of the event in the database.
    *******************************************************************/
-  public void updateName(String newName, int id, String oldName) {
+  public void updateName(final String newName, final int id, final String oldName) {
     final SQLiteDatabase db = this.getWritableDatabase();
     final String query = "UPDATE " + TABLE_NAME + " SET " + COL2
             + " = '" + newName + "' Where " + COL1 + " = '" + id + "'"
@@ -191,7 +191,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @param id the id that this event is at.
    * @param oldDate the current date of the event in the database.
    *******************************************************************/
-  public void updateDate(String newDate, int id, String oldDate) {
+  public void updateDate(final String newDate, final int id, final String oldDate) {
     final SQLiteDatabase db = this.getWritableDatabase();
     final String query = "UPDATE " + TABLE_NAME + " SET " + COL3
             + " = '" + newDate + "' Where " + COL1 + " = '" + id + "'"
@@ -207,7 +207,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @param name the name of the event.
    * @param date the date of the event.
    *******************************************************************/
-  public void deleteEvent(int id, String name, String date) {
+  public void deleteEvent(final int id, final String name, final String date) {
     final SQLiteDatabase db = this.getWritableDatabase();
     final String query = "DELETE FROM " + TABLE_NAME + " WHERE "
             + COL1 + " = '" + id + "'" + " AND " + COL3
@@ -329,7 +329,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @param mostRecent an event to be compared against.
    * @return an event that is next earliest from the passed in event.
    *******************************************************************/
-  public Event nextMostRecent(Event mostRecent) {
+  public Event nextMostRecent(final Event mostRecent) {
     // Variable for the next earliest event.
     final Event nextMost = new Event("", "");
 

@@ -89,7 +89,7 @@ public class EditDataActivity extends AppCompatActivity {
    *******************************************************************/
   @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
   @Override
-  protected void onCreate(@Nullable Bundle savedInstance) {
+  protected void onCreate(final @Nullable Bundle savedInstance) {
     super.onCreate(savedInstance);
 
     // Set the content view to the edit data layout.
@@ -162,8 +162,8 @@ public class EditDataActivity extends AppCompatActivity {
        * @param dayOfMonth the day of the month selected
        ***************************************************************/
       @Override
-      public void onDateSet(DatePicker view, int year, int month,
-                            int dayOfMonth) {
+      public void onDateSet(final DatePicker view, final int year, int month,
+                            final int dayOfMonth) {
         // Adds one to the month because the calendar starts at 0
         month = month + 1;
         String date = "";
@@ -300,7 +300,7 @@ public class EditDataActivity extends AppCompatActivity {
    * Method for sending error, or content messages to the user.
    * @param message the message to be sent to the user.
    *******************************************************************/
-  private void toastMessage(String message) {
+  private void toastMessage(final String message) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }
 }

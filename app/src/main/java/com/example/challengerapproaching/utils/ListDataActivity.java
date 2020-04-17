@@ -50,7 +50,7 @@ public class ListDataActivity extends AppCompatActivity {
    *                          instance state.
    *****************************************************************/
   @Override
-  protected void onCreate(@Nullable Bundle savedInstance) {
+  protected void onCreate(final @Nullable Bundle savedInstance) {
     super.onCreate(savedInstance);
 
     // Sets the current view to the list_layout.
@@ -105,9 +105,9 @@ public class ListDataActivity extends AppCompatActivity {
        *********************************************************/
       @NonNull
       @Override
-      public View getView(int position,
-                          @Nullable View convertView,
-                          @NonNull ViewGroup parent) {
+      public View getView(final int position,
+                          final @Nullable View convertView,
+                          final @NonNull ViewGroup parent) {
         View view = super.getView(position, convertView,
             parent);
 
@@ -143,8 +143,8 @@ public class ListDataActivity extends AppCompatActivity {
            * @param i the index within the ArrayAdapter.
            * @param l some other needed parameter.
            *************************************************/
-          public void onItemClick(AdapterView<?> adapterView,
-                                  View view, int i, long l) {
+          public void onItemClick(final AdapterView<?> adapterView,
+                                  final View view, final int i, final long l) {
             // Set name to the event at the same index as view.
             final String name = (finalEventList.get(i).getName());
 
@@ -203,8 +203,8 @@ public class ListDataActivity extends AppCompatActivity {
    * @param data the data from the intent.
    *****************************************************************/
   @Override
-  protected void onActivityResult(int requestCode, int resultCode,
-                                  @Nullable Intent data) {
+  protected void onActivityResult(final int requestCode, final int resultCode,
+                                  final @Nullable Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
     if (resultCode == 0) {
       finish();
@@ -216,7 +216,7 @@ public class ListDataActivity extends AppCompatActivity {
    * Method for displaying a message to the user if an error occurs.
    * @param message the message to be displayed.
    *****************************************************************/
-  private void toastMessage(String message) {
+  private void toastMessage(final String message) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }
 }

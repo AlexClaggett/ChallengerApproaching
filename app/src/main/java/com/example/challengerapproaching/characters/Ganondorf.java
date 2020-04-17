@@ -52,7 +52,7 @@ public class Ganondorf extends AppCompatActivity {
   };
 
   @Override
-  protected void onCreate(Bundle savedInstance) {
+  protected void onCreate(final Bundle savedInstance) {
     super.onCreate(savedInstance);
     setContentView(R.layout.activity_ganondorf);
 
@@ -67,7 +67,7 @@ public class Ganondorf extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long id) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/ganondorf/" + ganondorfMoves[position];
         try {
@@ -78,7 +78,7 @@ public class Ganondorf extends AppCompatActivity {
       }
 
       @Override
-      public void onNothingSelected(AdapterView<?> parent) {
+      public void onNothingSelected(final AdapterView<?> parent) {
 
       }
     });

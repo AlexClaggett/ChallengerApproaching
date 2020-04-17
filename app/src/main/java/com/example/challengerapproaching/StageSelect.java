@@ -84,7 +84,7 @@ public class StageSelect extends AppCompatActivity {
    *******************************************************************/
   @RequiresApi(api = Build.VERSION_CODES.M)
   @Override
-  protected void onCreate(Bundle savedInstance) {
+  protected void onCreate(final Bundle savedInstance) {
     super.onCreate(savedInstance);
     setContentView(R.layout.activity_stages);
 

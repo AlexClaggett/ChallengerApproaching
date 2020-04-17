@@ -51,7 +51,7 @@ public class EventDialog extends AppCompatDialogFragment {
    *******************************************************************/
   @NonNull
   @Override
-  public Dialog onCreateDialog(@Nullable Bundle savedInstance) {
+  public Dialog onCreateDialog(final @Nullable Bundle savedInstance) {
     /* Inflater for populating the layout with views. */
     final LayoutInflater inflater = getActivity().getLayoutInflater();
 
@@ -109,8 +109,8 @@ public class EventDialog extends AppCompatDialogFragment {
        * @param dayOfMonth the day of the month selected
        ***************************************************************/
       @Override
-      public void onDateSet(DatePicker view, int year, int month,
-                            int dayOfMonth) {
+      public void onDateSet(final DatePicker view, final int year, int month,
+                            final int dayOfMonth) {
         // Adds one to the month because the calendar starts at 0.
         month = month + 1;
         String date = "";
@@ -161,7 +161,7 @@ public class EventDialog extends AppCompatDialogFragment {
    * @param context where the dialog is being called.
    *******************************************************************/
   @Override
-  public void onAttach(@NonNull Context context) {
+  public void onAttach(final @NonNull Context context) {
     super.onAttach(context);
 
     try {

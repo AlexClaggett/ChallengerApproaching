@@ -71,7 +71,7 @@ public class EventsActivity extends AppCompatActivity
    * @param savedInstance standard state parameter needed for
    *                           define a specific state.
    *******************************************************************/
-  protected void onCreate(Bundle savedInstance) {
+  protected void onCreate(final Bundle savedInstance) {
 
     super.onCreate(savedInstance);
 
@@ -137,7 +137,7 @@ public class EventsActivity extends AppCompatActivity
    * @param date the date of the event.
    *******************************************************************/
   @Override
-  public void applyText(String name, String date) {
+  public void applyText(final String name, final String date) {
     // Set Event Name and Date.
     eventName.setText(name);
     eventDate.setText(date);
@@ -173,7 +173,7 @@ public class EventsActivity extends AppCompatActivity
    * @param newName The name of the event
    * @param newDate The date of the event
    *******************************************************************/
-  public void addData(String newName, String newDate) {
+  public void addData(final String newName, final String newDate) {
     final boolean insertData = eventDatabase.addData(newName, newDate);
   }
 
@@ -182,7 +182,7 @@ public class EventsActivity extends AppCompatActivity
    * error messages.
    * @param message the message to be displayed to the user.
    *******************************************************************/
-  private void toastMessage(String message) {
+  private void toastMessage(final String message) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }
 
@@ -195,9 +195,9 @@ public class EventsActivity extends AppCompatActivity
    * @param data the data from the intent.
    *******************************************************************/
   @Override
-  protected void onActivityResult(int requestCode,
-                                  int resultCode,
-                                  @Nullable Intent data) {
+  protected void onActivityResult(final int requestCode,
+                                  final int resultCode,
+                                  final @Nullable Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
     // If the code is 0 empty text.
     if (resultCode == 0) {
