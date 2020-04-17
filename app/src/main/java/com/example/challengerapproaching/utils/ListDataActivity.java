@@ -146,10 +146,10 @@ public class ListDataActivity extends AppCompatActivity {
           public void onItemClick(final AdapterView<?> adapterView,
                                   final View view, final int index, final long l) {
             // Set name to the event at the same index as view.
-            final String name = (finalEventList.get(index).getName());
+            final String name = finalEventList.get(index).getName();
 
             // Set date to the event at the same index as view.
-            final String date = (finalEventList.get(index).getDate());
+            final String date = finalEventList.get(index).getDate();
 
             /* Log to check the item selected is the correct
                 event. */
