@@ -75,7 +75,7 @@
             android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Yoshi"
-            android:label="Falco"
+            android:label="Yoshi"
             android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.YoungLink"
