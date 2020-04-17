@@ -60,7 +60,7 @@ public class Pichu extends AppCompatActivity {
     );
     adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
 
-    Spinner spnLocale = findViewById(R.id.spinner2);
+    final Spinner spnLocale = findViewById(R.id.spinner2);
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
