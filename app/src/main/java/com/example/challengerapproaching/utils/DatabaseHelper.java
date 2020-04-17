@@ -25,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
   /**
    * String for the name of the Events database table.
    */
-  private static final String TABLE_NAME = "Events_table";
+  private static final String TABLE_NAME = "Events_Table";
 
   /**
    * Variable for the column that Event ID's will be stored.
