@@ -101,10 +101,13 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginRight="114dp"
         android:hint="Top 3 Days show here"
         android:textColor="#FAFAFA"
         android:textColorHint="#FBFBFB"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upcoming" />
 
@@ -115,9 +118,12 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="361dp"
+        android:layout_marginRight="361dp"
         android:textColor="#FAFAFA"
         android:textColorHint="#FBFBFB"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mostRecent" />
 
@@ -128,9 +134,12 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="361dp"
+        android:layout_marginRight="361dp"
         android:textColor="#FAFAFA"
         android:textColorHint="#FBFBFB"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mostRecent2" />
 

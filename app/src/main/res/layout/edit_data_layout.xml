@@ -13,8 +13,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="#FAFAFA"
-            android:singleLine="true" />
+            android:maxLength="50"
+            android:singleLine="true"
+            android:textColor="#FAFAFA" />
 
         <TextView
             android:id="@+id/editable_date"

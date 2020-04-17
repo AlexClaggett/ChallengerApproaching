@@ -10,30 +10,69 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import java.util.ArrayList;
 
-
-
-
+/**********************************************************************
+ * Class that handles database logic and managing the data within.
+ * Used for updating what events exist, adding data, removing data,
+ * changing data, and querying on that data.
+ *********************************************************************/
 public class DatabaseHelper extends SQLiteOpenHelper {
 
+  /**
+   * TAG variable for Logged messages.
+   */
   private static final String TAG = "DatabaseHelper";
+
+  /**
+   * String for the name of the Events database table.
+   */
   private static final String TABLE_NAME = "Events_table";
+
+  /**
+   * Variable for the column that Event ID's will be stored.
+   */
   private static final String COL1 = "ID";
+
+  /**
+   * Variable for the column that Event Name's will be stored.
+   */
   private static final String COL2 = "NAME";
+
+  /**
+   * Variable for the column that Event Date's will be stored.
+   */
   private static final String COL3 = "DATE";
 
-
+  /********************************************************************
+   * Constructor for creating the database.
+   * @param context the context the database is created for.
+   *******************************************************************/
   public DatabaseHelper(Context context) {
-    super(context, TABLE_NAME,null, 1);
+    super(context, TABLE_NAME, null, 1);
   }
 
+  /********************************************************************
+   * Method for determining what happens when upgrading the table to
+   * a newer version, and when changes are made to the table.
+   * @param db The instance of the database to be changed.
+   * @param oldVersion the previous version of the database.
+   * @param newVersion the current version of the database.
+   *******************************************************************/
   @Override
-  public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-    db.execSQL("DROP TABLE IF EXISTS" + TABLE_NAME);
+  public void onUpgrade(SQLiteDatabase db,
+                        int oldVersion,
+                        int newVersion) {
+    db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
     onCreate(db);
   }
 
+  /********************************************************************
+   * Method for creation of the database. Details the table key as
+   * well as the values that should be within each column.
+   * @param db the instance of data base to be created for.
+   *******************************************************************/
   @Override
   public void onCreate(SQLiteDatabase db) {
+    // String to represent the SQL code for creating a table.
     String createTable = "CREATE Table " + TABLE_NAME
             + "(\n" + COL1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COL2 + " CHAR(255) NOT NULL, "
@@ -41,55 +80,87 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     db.execSQL(createTable);
   }
 
+  /********************************************************************
+   * method that appends or "adds" data to the database.
+   * @param item1 the name of the event to be added.
+   * @param item2 the date of the event to be added.
+   * @return whether or not the data was inserted.
+   *******************************************************************/
   public boolean addData(String item1, String item2) {
-    SQLiteDatabase db = this.getWritableDatabase();
+    // Values to be inserted within the database.
     ContentValues contentValues = new ContentValues();
     contentValues.put(COL2, item1);
     contentValues.put(COL3, item2);
 
+    // Logger information for what is being inserted into the database.
     Log.d(TAG, "addData: Adding " + item1 + " to " + TABLE_NAME);
     Log.d(TAG, "addData: Adding " + item2 + " to " + TABLE_NAME);
 
-    long result = db.insert(TABLE_NAME,null,contentValues);
+    // Gets a writable database
+    SQLiteDatabase db = this.getWritableDatabase();
+
+    // method call to insert the data into the table.
+    long result = db.insert(TABLE_NAME, null, contentValues);
 
     if (result == -1) {
-      return  false;
+      return false;
     } else {
       return true;
     }
   }
 
+  /********************************************************************
+   * Method to return all a list of events inside the database.
+   * Essentially just queries for the entire table.
+   * @return an Array List of all the events in the database.
+   *******************************************************************/
   public ArrayList<Event> getAllData() {
-    ArrayList<Event> events = new ArrayList<Event>();
+    // Variable for the array of events.
+    ArrayList<Event> events = new ArrayList<>();
+
+    // Writable version of the database.
     SQLiteDatabase db = this.getWritableDatabase();
+
+    // String to represent the query.
     String query = "SELECT * FROM " + TABLE_NAME;
+
+    // Cursor which points to the data queried.
     Cursor data = db.rawQuery(query, null);
 
+    // Check if the database has any events.
     if (data.moveToFirst()) {
+      // While there are events add them tp the event list.
       do {
+
         Event ev = new Event();
         ev.setId(data.getInt(data.getColumnIndex(COL1)));
         ev.setName(data.getString(data.getColumnIndex(COL2)));
         ev.setDate(data.getString(data.getColumnIndex(COL3)));
         events.add(ev);
+
       } while (data.moveToNext());
     }
+
+    /* Loop through the event list and display logged data of each
+    event within the event list. */
     for (int i = 0; i < events.size(); i++) {
-      Log.d(TAG, "Events List Id: " + i + " " + events.get(i).getId());
-      Log.d(TAG, "Events List Name: " + i + " " + events.get(i).getName());
-      Log.d(TAG, "Events List Date: " + i + " " + events.get(i).getDate());
+      Log.d(TAG, "Events List Id: " + i + " "
+              + events.get(i).getId());
+      Log.d(TAG, "Events List Name: " + i + " "
+              + events.get(i).getName());
+      Log.d(TAG, "Events List Date: " + i + " "
+              + events.get(i).getDate());
     }
+
+    // Return the event list.
     return events;
   }
 
-//    public Cursor getNameID(String name){
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        String query = "SELECT " + COL1 + " FROM " + TABLE_NAME +
-//                " WHERE " + COL3 + " = '" + name + "'";
-//        Cursor data = db.rawQuery(query, null);
-//        return data;
-//    }
-
+  /********************************************************************
+   * Method to retrieve the ID of a given event date from the database.
+   * @param date The date whose ID is wanted to be obtained.
+   * @return What data was found.
+   *******************************************************************/
   public Cursor getDateID(String date) {
     SQLiteDatabase db = this.getWritableDatabase();
     String query = "SELECT " + COL1 + " FROM " + TABLE_NAME
@@ -98,6 +169,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     return data;
   }
 
+  /********************************************************************
+   * Method for updating the events name within the database.
+   * @param newName the new name to set for the event.
+   * @param id the id that this event is at.
+   * @param oldName the current name of the event in the database.
+   *******************************************************************/
   public void updateName(String newName, int id, String oldName) {
     SQLiteDatabase db = this.getWritableDatabase();
     String query = "UPDATE " + TABLE_NAME + " SET " + COL2
@@ -108,6 +185,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     db.execSQL(query);
   }
 
+  /********************************************************************
+   * Method for updating the events date within the database.
+   * @param newDate the new date to set for the event.
+   * @param id the id that this event is at.
+   * @param oldDate the current date of the event in the database.
+   *******************************************************************/
   public void updateDate(String newDate, int id, String oldDate) {
     SQLiteDatabase db = this.getWritableDatabase();
     String query = "UPDATE " + TABLE_NAME + " SET " + COL3
@@ -118,57 +201,106 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     db.execSQL(query);
   }
 
+  /********************************************************************
+   * Method for removing an event from the database.
+   * @param id the id of the event to be removed.
+   * @param name the name of the event.
+   * @param date the date of the event.
+   *******************************************************************/
   public void deleteEvent(int id, String name, String date) {
     SQLiteDatabase db = this.getWritableDatabase();
     String query = "DELETE FROM " + TABLE_NAME + " WHERE "
             + COL1 + " = '" + id + "'" + " AND " + COL3
             + " = '" + date + "'";
     Log.d(TAG, "deleteName: query: " + query);
-    Log.d(TAG, "deleteName: Deleting Event: " + name + " on " +  date);
+    Log.d(TAG, "deleteName: Deleting Event: " + name + " on " + date);
     db.execSQL(query);
 
   }
 
+  /********************************************************************
+   * Mehtod for getting the earliest date inside the
+   * database.
+   * @return the earliest event.
+   *******************************************************************/
   public Event getMostRecent() {
+    // Variable that will hold the most recent date.
     Event mostRecent = new Event("", "");
+
+    // Variable for the current event being looked at.
     Event curEvent = new Event();
+
+    // String for parsing the date for comparison.
     String dateParts;
+
+    // The current events month.
     int curMonth;
+
+    // The current events day.
     int curDay;
+
+    // The current events year.
     int curYear;
+
+    // The most recent month.
     int month;
+
+    // The most recent day.
     int day;
+
+    // The most recent year.
     int year;
+
+    // Get the writable database.
     SQLiteDatabase db = this.getWritableDatabase();
+
+    // Query the entire table.
     String query = "SELECT * FROM " + TABLE_NAME;
+
+    // Set the cursor to point at the data.
     Cursor data = db.rawQuery(query, null);
+
+    // Log that query was ran.
     Log.d(TAG, "Query Ran");
+
+    // Check if any events exist within the database.
     if (data.moveToFirst()) {
       do {
+        // set the current event to the event pointed at by cursor.
         curEvent.setId(data.getInt(data.getColumnIndex(COL1)));
         curEvent.setName(data.getString(data.getColumnIndex(COL2)));
         curEvent.setDate(data.getString(data.getColumnIndex(COL3)));
+
+        // Set the date parse to the current event date.
         dateParts = curEvent.getDate();
-        Log.d(TAG,"Database Current Date: " + dateParts);
-        curMonth = parseInt(dateParts.substring(0,dateParts.indexOf("/")));
+        // Log the Parsed date and assign the date values.
+        Log.d(TAG, "Database Current Date: " + dateParts);
+        curMonth = parseInt(dateParts.substring(0,
+                dateParts.indexOf("/")));
         dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-        Log.d(TAG,"Database Current Date minus month: " + dateParts);
-        curDay = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+        Log.d(TAG, "Database Current Date minus month: " + dateParts);
+        curDay = parseInt(dateParts.substring(0,
+                dateParts.indexOf("/")));
         dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-        Log.d(TAG,"Database Current Year: " + dateParts);
+        Log.d(TAG, "Database Current Year: " + dateParts);
         curYear = parseInt(dateParts);
 
+        // Check if there isn't a most recent date amd assign it.
         if (mostRecent.getDate().equals("")) {
           mostRecent.setName(curEvent.getName());
           mostRecent.setDate(curEvent.getDate());
         } else {
+          // Now reassign the int parser to the most recent event.
           dateParts = mostRecent.getDate();
-          month = parseInt(dateParts.substring(0,dateParts.indexOf("/")));
+          month = parseInt(dateParts.substring(0,
+                  dateParts.indexOf("/")));
           dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-          day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+          day = parseInt(dateParts.substring(0,
+                  dateParts.indexOf("/")));
           dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
           year = parseInt(dateParts);
 
+          // Compare the Two dates and see which one is earlier..
           if (curYear < year) {
             mostRecent.setId(curEvent.getId());
             mostRecent.setName(curEvent.getName());
@@ -177,21 +309,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             mostRecent.setId(curEvent.getId());
             mostRecent.setName(curEvent.getName());
             mostRecent.setDate(curEvent.getDate());
-          } else if (curYear == year && curMonth == month && curDay < day) {
+          } else if (curYear == year && curMonth == month
+                  && curDay < day) {
             mostRecent.setId(curEvent.getId());
             mostRecent.setName(curEvent.getName());
             mostRecent.setDate(curEvent.getDate());
           }
         }
+        // log most recent at each step in the loop.
         Log.d(TAG, "Most Recent Date: " + mostRecent.getDate());
       } while (data.moveToNext());
     }
+
+    // Return the earliest event.
     return mostRecent;
   }
 
+  /********************************************************************
+   * Method for determining what the next earliest event is from a
+   * given date.
+   * @param mostRecent an event to be compared against.
+   * @return an event that is next earliest from the passed in event.
+   *******************************************************************/
   public Event nextMostRecent(Event mostRecent) {
+    // Variable for the next earliest event.
     Event nextMost = new Event("", "");
+
+    // An array list to hold all the events in the database.
     ArrayList<Event> eventList = getAllData();
+
+    // Data parse and date format same as mostRecent
     String dateParts;
     int curMonth;
     int curDay;
@@ -200,48 +347,66 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     int day;
     int year;
 
+    // For each loop to compare the events in the database.
     for (Event e : eventList) {
+
+      // Parse current event and set month, day, year.
       dateParts = e.getDate();
-      curMonth = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+      curMonth = parseInt(dateParts.substring(0,
+              dateParts.indexOf("/")));
       dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-      curDay = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+      curDay = parseInt(dateParts.substring(0,
+              dateParts.indexOf("/")));
       dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
       curYear = parseInt(dateParts);
+
+      // Log the event that was just parsed.
       Log.d(TAG, "Event: " + e.getDate() + " " + e.getName());
-      if (e.getDate().equals(mostRecent.getDate()) || mostRecent.getDate().equals("")) {
+
+      /* Check if the current event is also the most recent date.
+         Or if the most recent date does not exist. */
+      if (e.getDate().equals(mostRecent.getDate())
+              || mostRecent.getDate().equals("")) {
         continue;
-      }
-      else if (nextMost.getDate().equals("")) {
+      } else if (nextMost.getDate().equals("")) {
+        // Parse the most recent date.
         dateParts = mostRecent.getDate();
         month = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
         dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
         day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
         dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
         year = parseInt(dateParts);
-        if(curYear <= year && curMonth <= month && curDay <= day){
+
+        /* check that the current event is not earlier than the most
+           recent date passed into the method. */
+        if (curYear <= year && curMonth <= month && curDay <= day) {
           continue;
+        } else {
+          nextMost.setId(e.getId());
+          nextMost.setDate(e.getDate());
+          nextMost.setName(e.getName());
         }
-        nextMost.setId(e.getId());
-        nextMost.setDate(e.getDate());
-        nextMost.setName(e.getName());
-      }
-      else {
+      } else {  // Compare dates.
+        // Parse most recent again.
         dateParts = mostRecent.getDate();
         month = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
         dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
         day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
         dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
         year = parseInt(dateParts);
-        if(curYear <= year && curMonth <= month && curDay <= day){
+        // Check that current event isn't before this date again.
+        if (curYear <= year && curMonth <= month && curDay <= day) {
           continue;
-        }
-        else {
+        } else {
+          // Now Parse the current earliest date value.
           dateParts = nextMost.getDate();
           month = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
           dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
           day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
           dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
           year = parseInt(dateParts);
+
+          // Compare date to current event.
           if (curYear < year) {
             nextMost.setId(e.getId());
             nextMost.setName(e.getName());
@@ -258,21 +423,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
       }
     }
-        return nextMost;
+
+    // return the next earliest date from most recent.
+    return nextMost;
   }
 
+  /********************************************************************
+   * Method for getting the number of events that are currently in the
+   * database.
+   * @return the number of events within the database.
+   *******************************************************************/
   public int getNumEvents() {
+    // Number of events.
     int count = 0;
+
+    // Writable database.
     SQLiteDatabase db = this.getWritableDatabase();
+
+    // Query to get the entire table.
     String query = "SELECT * FROM " + TABLE_NAME;
+
+    // Point at it.
     Cursor data = db.rawQuery(query, null);
+
+    // Check that it's not empty.
     if (data.moveToFirst()) {
+      // Loop and increase count as long as there is another event.
       do {
         count++;
       } while (data.moveToNext());
     } else {
       return count;
     }
+
     return count;
   }
 }
