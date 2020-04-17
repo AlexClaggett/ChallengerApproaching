@@ -74,7 +74,7 @@ public class LittleMac extends AppCompatActivity {
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
-          e.printStackTrace();
+          gifImageView.setVisibility(View.INVISIBLE);
         }
       }
 

@@ -27,11 +27,6 @@ import java.util.Calendar;
 public class EditDataActivity extends AppCompatActivity {
 
   /**
-   * TAG for specifying where the logged content came from.
-   */
-  private static final String TAG = "EditDataActivity";
-
-  /**
    * Button that represents the Save button for saving the event.
    */
   private transient Button btnSave;

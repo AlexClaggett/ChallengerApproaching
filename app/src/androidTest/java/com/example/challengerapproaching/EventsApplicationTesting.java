@@ -4,6 +4,7 @@ import android.content.Context;
 import androidx.test.core.app.ApplicationProvider;
 
 import android.database.Cursor;
+import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
@@ -54,7 +55,6 @@ public class EventsApplicationTesting {
         Assert.assertFalse(db.addData("EVENT!",null));
         db.close();
     }
-
     @Test
     public void DatabaseHelper_getAllData() {
         DatabaseHelper db = new DatabaseHelper(context);
@@ -73,6 +73,7 @@ public class EventsApplicationTesting {
             assert(e.getDate().equals(dates[i-1]));
             i++;
         }
+        db.close();
     }
 
     @Test
@@ -95,6 +96,7 @@ public class EventsApplicationTesting {
         assert(ev.get(0).getName().equals("smash a bash"));
         db.updateName("abc",id,"1");
         assert(ev.get(0).getName().equals("abc"));
+        db.close();
     }
 
     @Test
@@ -117,6 +119,7 @@ public class EventsApplicationTesting {
         assert(ev.get(0).getName().equals("9/20/3030"));
         db.updateDate("1/20/1996",id,"9/20/3030");
         assert(ev.get(0).getName().equals("1/20/1996"));
+        db.close();
     }
 
     @Test
@@ -143,6 +146,7 @@ public class EventsApplicationTesting {
         Log.d(TAG, "Date ID: " + id);
 
         Assert.assertTrue(id == -1);
+        db.close();
     }
 
     @Test
@@ -156,6 +160,7 @@ public class EventsApplicationTesting {
         e = db.getMostRecent();
         assert(e.getName().equals(testNames[0]));
         assert(e.getDate().equals(testDates[0]));
+        db.close();
     }
 
     @Test
@@ -170,6 +175,7 @@ public class EventsApplicationTesting {
         e = db.nextMostRecent(e);
         assert(e.getName().equals(testNames[1]));
         assert(e.getDate().equals(testDates[1]));
+        db.close();
     }
 
     @Test
@@ -181,6 +187,7 @@ public class EventsApplicationTesting {
         }
         total = db.getNumEvents();
         assert(total == 4);
+        db.close();
     }
 
 

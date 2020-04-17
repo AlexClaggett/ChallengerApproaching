@@ -90,8 +90,8 @@ public class MrGameAndWatch extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e) {
-            e.printStackTrace();
+          } catch (IOException e){
+            imageView.setVisibility(View.INVISIBLE);
           }
         } else {
           imageView.setVisibility(View.INVISIBLE);
@@ -99,7 +99,7 @@ public class MrGameAndWatch extends AppCompatActivity {
             gifImageView.setGifImageUrl(toUrl);
             gifImageView.setVisibility(View.VISIBLE);
           } catch (IOException e) {
-            e.printStackTrace();
+            gifImageView.setVisibility(View.INVISIBLE);
           }
         }
       }

@@ -79,8 +79,8 @@ public class Sheik extends AppCompatActivity {
             final Bitmap bmMap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmMap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e) {
-            e.printStackTrace();
+          } catch (IOException e){
+            imageView.setVisibility(View.INVISIBLE);
           }
         } else {
           imageView.setVisibility(View.INVISIBLE);
@@ -88,7 +88,7 @@ public class Sheik extends AppCompatActivity {
             gifImageView.setGifImageUrl(toUrl);
             gifImageView.setVisibility(View.VISIBLE);
           } catch (IOException e) {
-            e.printStackTrace();
+            gifImageView.setVisibility(View.INVISIBLE);
           }
         }
       }
