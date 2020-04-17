@@ -1,0 +1,127 @@
+Manual test for Cloud character activity page
+
+Pressed Cloud button from the character select screen. Initial: AC
+Page changed from character select screen to Cloud's page. Initial AC
+
+Navigation bar is labeled Cloud. Initial: AC
+Above the portrait is also labeled Cloud. Initial: AC
+Portrait displayed is a picture of Cloud. Initial: AC
+Select a move is under the portrait. Initial AC
+
+Graphic was initially set to BAir. Initial: AC
+
+Opened spinner to select BladeBeam option. Initial: AC
+Graphic loaded: BladeBeam. Initial: AC
+
+Opened spinner to select BladeBeamLimit option. Initial: AC
+Graphic loaded: BladeBeamLimit. Initial: AC
+
+Opened spinner to select BThrow option. Initial: AC
+Graphic loaded: BThrow. Initial: AC
+
+Opened spinner to select Climhazzard option. Initial: AC
+Graphic loaded: Climhazzard. Initial: AC
+
+Opened spinner to select ClimhazzardFall option. Initial: AC
+Graphic loaded: ClimhazzardFall. Initial: AC
+
+Opened spinner to select ClimhazzardLanding option. Initial: AC
+Graphic loaded: ClimhazzardLanding. Initial: AC
+
+Opened spinner to select ClimhazzardLimit option. Initial: AC
+Graphic loaded: ClimhazzardLimit. Initial: AC
+
+Opened spinner to select CrossSlash1Left option. Initial: AC
+Graphic loaded: CrossSlash1Left. Initial: AC
+
+Opened spinner to select CrossSlash1Right option. Initial: AC
+Graphic loaded: CrossSlash1Right. Initial: AC
+
+Opened spinner to select CrossSlash2Left option. Initial: AC
+Graphic loaded: CrossSlash2Left. Initial: AC
+
+Opened spinner to select CrossSlash2Right option. Initial: AC
+Graphic loaded: CrossSlash2Right. Initial: AC
+
+Opened spinner to select CrossSlash3Left option. Initial: AC
+Graphic loaded: CrossSlash3Left. Initial: AC
+
+Opened spinner to select CrossSlash3Right option. Initial: AC
+Graphic loaded: CrossSlash3Right. Initial: AC
+
+Opened spinner to select CrossSlashLimitLeft option. Initial: AC
+Graphic loaded: CrossSlashLimitLeft. Initial: AC
+
+Opened spinner to select CrossSlashLimitRight option. Initial: AC
+Graphic loaded: CrossSlashLimitRight. Initial: AC
+
+Opened spinner to select DAir option. Initial: AC
+Graphic loaded: DAir. Initial: AC
+
+Opened spinner to select DashAttack option. Initial: AC
+Graphic loaded: DashAttack. Initial: AC
+
+Opened spinner to select DashGrab option. Initial: AC
+Graphic loaded: DashGrab. Initial: AC
+
+Opened spinner to select DSmash option. Initial: AC
+Graphic loaded: DSmash. Initial: AC
+
+Opened spinner to select DThrow option. Initial: AC
+Graphic loaded: DThrow. Initial: AC
+
+Opened spinner to select DTilt option. Initial: AC
+Graphic loaded: DTilt. Initial: AC
+
+Opened spinner to select FAir option. Initial: AC
+Graphic loaded: FAir. Initial: AC
+
+Opened spinner to select FinishingTouchA option. Initial: AC
+Graphic loaded: FinishingTouchA. Initial: AC
+
+Opened spinner to select FinishingTouchG option. Initial: AC
+Graphic loaded: FinishingTouchG. Initial: AC
+
+Opened spinner to select FSmash option. Initial: AC
+Graphic loaded: FSmash. Initial: AC
+
+Opened spinner to select FThrow option. Initial: AC
+Graphic loaded: FThrow. Initial: AC
+
+Opened spinner to select FTilt option. Initial: AC
+Graphic loaded: FTilt. Initial: AC
+
+Opened spinner to select Grab option. Initial: AC
+Graphic loaded: Grab. Initial: AC
+
+Opened spinner to select Jab1 option. Initial: AC
+Graphic loaded: Jab1. Initial: AC
+
+Opened spinner to select Jab2 option. Initial: AC
+Graphic loaded: Jab2. Initial: AC
+
+Opened spinner to select Jab3 option. Initial: AC
+Graphic loaded: Jab3. Initial: AC
+
+Opened spinner to select NAir option. Initial: AC
+Graphic loaded: NAir. Initial: AC
+
+Opened spinner to select PivotGrab option. Initial: AC
+Graphic loaded: PivotGrab. Initial: AC
+
+Opened spinner to select Pummel option. Initial: AC
+Graphic loaded: Pummel. Initial: AC
+
+Opened spinner to select UAir option. Initial: AC
+Graphic loaded: UAir. Initial: AC
+
+Opened spinner to select USmash option. Initial: AC
+Graphic loaded: USmash. Initial: AC
+
+Opened spinner to select UThrow option. Initial: AC
+Graphic loaded: UThrow. Initial: AC
+
+Opened spinner to select UTilt option. Initial: AC
+Graphic loaded: UTilt. Initial: AC
+
+Completed by: Alex Claggett
