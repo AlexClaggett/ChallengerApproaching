@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class Kirby extends AppCompatActivity {
 
   /** Array of Kirby's Framedata files */
-  transient String [] kirbyMoves = {
+  /* default */ transient String [] kirbyMoves = {
       "KirbyBAir.gif",
       "KirbyBThrow.gif",
       "KirbyDAir.gif",

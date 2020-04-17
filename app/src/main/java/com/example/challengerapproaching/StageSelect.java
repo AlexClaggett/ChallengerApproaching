@@ -60,7 +60,7 @@ public class StageSelect extends AppCompatActivity {
   public transient ImageButton yoshisStory;
 
   /** Button array of the stage buttons. */
-  transient ImageButton [] buttons = {battleField, finalDestination, kalosPL,
+  /* default */ transient ImageButton [] buttons = {battleField, finalDestination, kalosPL,
       lylatCruise, pokemonStadium, pokemonStadium2,
       smashville, townAndCity, unovaPL,
       yoshiIsland, yoshisStory};
@@ -92,7 +92,7 @@ public class StageSelect extends AppCompatActivity {
 
     for (ImageButton b: buttons) {
       b = findViewById(ids[count]);
-      final Intent tosend = new Intent(StageSelect.this,
+      final Intent tosend = new Intent(this,
               charClasses[count]);
       b.setOnClickListener(v -> startActivity(tosend));
       count++;

@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class MiiSwordfighter extends AppCompatActivity {
 
   /** Array of MiiSwordfighter's Framedata files */
-  transient String [] miiFightMoves = {
+  /* default */ transient String [] miiFightMoves = {
       "MiiSwordfighterAirborneAssault.gif",
       "MiiSwordfighterAirborneAssaultHit.gif",
       "MiiSwordfighterBAir.gif",

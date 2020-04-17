@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class Samus extends AppCompatActivity {
 
   /** Array of Samus's Framedata files */
-  transient String [] samusMoves = {
+  /* default */ transient String [] samusMoves = {
       "SamusBAir.gif",
       "SamusBomb.png",
       "SamusBombExplosion.png",

@@ -164,7 +164,7 @@ public class CharacterSelect extends AppCompatActivity {
 
     for (ImageButton b: buttons) {
       b = findViewById(ids[count]);
-      final Intent tosend = new Intent(CharacterSelect.this,
+      final Intent tosend = new Intent(this,
               charClasses[count]);
       b.setOnClickListener(v -> startActivity(tosend));
       count++;

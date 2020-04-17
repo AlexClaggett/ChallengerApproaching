@@ -16,7 +16,7 @@ import java.io.IOException;
 public class DarkPit extends AppCompatActivity {
 
   /** Array of Dark Pit's Framedata files */
-  transient String [] darkPitMoves = {
+  /* default */ transient String [] darkPitMoves = {
       "DarkPitBAir.gif",
       "DarkPitBThrow.gif",
       "DarkPitDAir.gif",

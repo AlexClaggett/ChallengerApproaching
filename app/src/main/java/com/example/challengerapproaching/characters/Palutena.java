@@ -16,7 +16,7 @@ import java.io.IOException;
 public class Palutena extends AppCompatActivity {
 
   /** Array of Palutena's Framedata files */
-  transient String [] palutenaMoves = {
+  /* default */ transient String [] palutenaMoves = {
       "PalutenaAutoreticle.gif",
       "PalutenaBAir.gif",
       "PalutenaBThrow.gif",

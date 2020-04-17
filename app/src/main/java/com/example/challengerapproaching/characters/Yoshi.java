@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class Yoshi extends AppCompatActivity {
 
   /** Array of Yoshi's Framedata files */
-  transient String [] yoshiMoves = {
+  /* default */ transient String [] yoshiMoves = {
       "YoshiBAir.gif",
       "YoshiBThrow.gif",
       "YoshiDAir.gif",

@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class DiddyKong extends AppCompatActivity {
 
   /** Array of Diddy Kong's Framedata files */
-  transient String [] diddyKongMoves = {
+  /* default */ transient String [] diddyKongMoves = {
       "DiddyKongBAir.gif",
       "DiddyKongBThrow.gif",
       "DiddyKongDAir.gif",

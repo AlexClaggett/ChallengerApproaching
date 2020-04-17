@@ -16,7 +16,7 @@ import java.io.IOException;
 public class Pit extends AppCompatActivity {
 
   /** Array of Pit's Framedata files */
-  transient String [] pitMoves = {
+  /* default */ transient String [] pitMoves = {
       "PitBAir.gif",
       "PitBThrow.gif",
       "PitDAir.gif",

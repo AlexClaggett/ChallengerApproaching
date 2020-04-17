@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class MrGameAndWatch extends AppCompatActivity {
 
   /** Array of Mr Game and Watch's Framedata files */
-  transient String [] mrGameWatchmoves = {
+  /* default */ transient String [] mrGameWatchmoves = {
       "MrGame_WatchBair.gif",
       "MrGame_WatchBairLanding.gif",
       "MrGame_WatchBThrow.gif",

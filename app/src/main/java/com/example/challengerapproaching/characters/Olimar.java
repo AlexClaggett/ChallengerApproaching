@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class Olimar extends AppCompatActivity {
 
   /** Array of Olimar's Framedata files */
-  transient String [] olimarMoves = {
+  /* default */ transient String [] olimarMoves = {
       "OlimarBThrow.gif",
       "OlimarDashAttack.gif",
       "OlimarDThrow.gif",

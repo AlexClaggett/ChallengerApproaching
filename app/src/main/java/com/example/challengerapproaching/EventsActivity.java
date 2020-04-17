@@ -99,7 +99,7 @@ public class EventsActivity extends AppCompatActivity
       if (eventDatabase.getNumEvents() == 0) {
         toastMessage("Currently No Events Are Scheduled.");
       } else {
-        final Intent intent = new Intent(EventsActivity.this,
+        final Intent intent = new Intent(this,
             ListDataActivity.class);
         startActivityForResult(intent, 1);
       }

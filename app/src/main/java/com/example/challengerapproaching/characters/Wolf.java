@@ -16,7 +16,7 @@ import java.io.IOException;
 public class Wolf extends AppCompatActivity {
 
   /** Array of Wolf's Framedata files */
-  transient String [] wolfMoves = {
+  /* default */ transient String [] wolfMoves = {
       "WolfBAir.gif",
       "WolfBlaster.gif",
       "WolfBThrow.gif",

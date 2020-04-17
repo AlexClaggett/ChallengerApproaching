@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class Daisy extends AppCompatActivity {
 
   /** Array of Daisy's Framedata files */
-  transient String [] daisyMoves = {
+  /* default */ transient String [] daisyMoves = {
       "DaisyBAir.gif",
       "DaisyBThrow.gif",
       "DaisyDAir.gif",

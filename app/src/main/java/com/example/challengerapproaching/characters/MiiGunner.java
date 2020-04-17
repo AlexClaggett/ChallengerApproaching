@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class MiiGunner extends AppCompatActivity {
 
   /** Array of MiiGunner's Framedata files */
-  transient String [] miiGunnerMoves = {
+  /* default */ transient String [] miiGunnerMoves = {
       "MiiGunnerBombDrop.png",
       "MiiGunnerBombDropExplosion.png",
       "MiiGunnerGrenadeLauncher.png",

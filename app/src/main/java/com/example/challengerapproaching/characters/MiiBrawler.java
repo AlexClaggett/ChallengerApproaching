@@ -16,7 +16,7 @@ import java.io.IOException;
 public class MiiBrawler extends AppCompatActivity {
 
   /** Array of MiiBrawler's Framedata files */
-  transient String [] miiBrawlerMoves = {
+  /* default */ transient String [] miiBrawlerMoves = {
       "MiiBrawlerBAir.gif",
       "MiiBrawlerBThrow.gif",
       "MiiBrawlerBurningDropkick.gif",

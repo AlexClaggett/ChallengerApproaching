@@ -87,7 +87,7 @@ public class EventDialog extends AppCompatDialogFragment {
 
       //Create DatePickerDialog object and initializes it.
       final DatePickerDialog dialog = new DatePickerDialog(
-          EventDialog.this.getActivity(),
+          this.getActivity(),
           android.R.style.Theme_Holo_Dialog_MinWidth,
           onDateSetListener, year, month, day);
       // Set the windows background

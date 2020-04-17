@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class Hero extends AppCompatActivity {
 
   /** Array of Hero's Framedata files */
-  transient String [] heroMoves = {
+  /* default */ transient String [] heroMoves = {
       "HeroBAir.gif",
       "HeroBThrow.gif",
       "HeroDAir.gif",

@@ -16,7 +16,7 @@ import java.io.IOException;
 public class Marth extends AppCompatActivity {
 
   /** Array of Marth's Framedata files */
-  transient String [] marthMoves = {
+  /* default */ transient String [] marthMoves = {
       "MarthBAir.gif",
       "MarthBThrow.gif",
       "MarthCounter.gif",
