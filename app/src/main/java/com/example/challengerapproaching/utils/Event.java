@@ -34,6 +34,17 @@ public class Event {
   }
 
   /********************************************************************
+   * Constructor for initializing an event with an id, name, and date.
+   * @param id the id of the event.
+   * @param name the name of the event.
+   * @param date the date of the event.
+   *******************************************************************/
+  public Event(int id, String name, String date) {
+    this.id = id;
+    this.name = name;
+    this.date = date;
+  }
+  /********************************************************************
    * Method for retrieving the event's ID.
    * @return the events ID.
    *******************************************************************/
