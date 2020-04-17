@@ -78,6 +78,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + COL2 + " CHAR(255) NOT NULL, "
             + COL3 + " CHAR(255) NOT NULL );";
     db.execSQL(createTable);
+    db.close();
   }
 
   /********************************************************************
@@ -102,6 +103,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // method call to insert the data into the table.
     long result = db.insert(TABLE_NAME, null, contentValues);
 
+    db.close();
     if (result == -1) {
       return false;
     } else {
@@ -139,6 +141,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         events.add(ev);
 
       } while (data.moveToNext());
+
     }
 
     /* Loop through the event list and display logged data of each
@@ -151,8 +154,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
       Log.d(TAG, "Events List Date: " + i + " "
               + events.get(i).getDate());
     }
-
     // Return the event list.
+    db.close();
     return events;
   }
 
@@ -183,6 +186,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     Log.d(TAG, "updateName: query: " + query);
     Log.d(TAG, "updateName: Setting name to " + newName);
     db.execSQL(query);
+    db.close();
   }
 
   /********************************************************************
@@ -199,6 +203,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     Log.d(TAG, "updateName: query: " + query);
     Log.d(TAG, "updateName: Setting name to " + newDate);
     db.execSQL(query);
+    db.close();
   }
 
   /********************************************************************
@@ -215,7 +220,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     Log.d(TAG, "deleteName: query: " + query);
     Log.d(TAG, "deleteName: Deleting Event: " + name + " on " + date);
     db.execSQL(query);
-
+    db.close();
   }
 
   /********************************************************************
@@ -320,7 +325,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Log.d(TAG, "Most Recent Date: " + mostRecent.getDate());
       } while (data.moveToNext());
     }
-
+    db.close();
     // Return the earliest event.
     return mostRecent;
   }
@@ -453,9 +458,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         count++;
       } while (data.moveToNext());
     } else {
+      data.close();
       return count;
     }
-
+    data.close();
     return count;
   }
 }

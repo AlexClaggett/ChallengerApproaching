@@ -190,6 +190,7 @@ public class ListDataActivity extends AppCompatActivity {
             } else {
               toastMessage("No ID associated with that name");
             }
+            data.close();
           }
         });
   }

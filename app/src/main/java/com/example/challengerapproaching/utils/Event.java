@@ -44,6 +44,7 @@ public class Event {
     this.name = name;
     this.date = date;
   }
+
   /********************************************************************
    * Method for retrieving the event's ID.
    * @return the events ID.
