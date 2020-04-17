@@ -10,21 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-  /** Image Button for Young Link. */
+  /** Image Button for Characters. */
   ImageButton characters;
 
-  /** Image Button for Zelda. */
+  /** Image Button for Stages. */
   ImageButton stages;
 
-  /** Image Button for Zero Suit Samus. */
+  /** Image Button for Events. */
   ImageButton events;
-
-  /** Array of integers of the character ids found in the XML. */
-  int [] ids = {R.id.characters, R.id.events, R.id.stages};
-
-  /** Array of Classes for each character. */
-  Class [] charClasses = {CharacterSelect.class, EventsActivity.class,
-    StageSelect.class};
 
   /********************************************************************
    * Upon app start up this method sets the content view to main

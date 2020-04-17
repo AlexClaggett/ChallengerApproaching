@@ -27,37 +27,37 @@ import com.example.challengerapproaching.stages.YoshisStory;
 public class StageSelect extends AppCompatActivity {
 
   /** Button For Battle Field. */
-  ImageButton battleField;
+  public ImageButton battleField;
 
   /** Button For Final Destination. */
-  ImageButton finalDestination;
+  public ImageButton finalDestination;
 
   /** Button For Kalos Pokemon League. */
-  ImageButton kalosPL;
+  public ImageButton kalosPL;
 
   /** Button For Lylat Cruise. */
-  ImageButton lylatCruise;
+  public ImageButton lylatCruise;
 
   /** Button For Pokemon Stadium. */
-  ImageButton pokemonStadium;
+  public ImageButton pokemonStadium;
 
   /** Button For Pokemon Stadium 2. */
-  ImageButton pokemonStadium2;
+  public ImageButton pokemonStadium2;
 
   /** Button For Smashville. */
-  ImageButton smashville;
+  public ImageButton smashville;
 
   /** Button For Town and City. */
-  ImageButton townAndCity;
+  public ImageButton townAndCity;
 
   /** Button For Unova Pokemon League. */
-  ImageButton unovaPL;
+  public ImageButton unovaPL;
 
   /** Button For Yoshi's Island.*/
-  ImageButton yoshiIsland;
+  public ImageButton yoshiIsland;
 
   /** Button For Yoshi's Story. */
-  ImageButton yoshisStory;
+  public ImageButton yoshisStory;
 
   /** Button array of the stage buttons. */
   ImageButton [] buttons = {battleField, finalDestination, kalosPL,
@@ -66,13 +66,13 @@ public class StageSelect extends AppCompatActivity {
       yoshiIsland, yoshisStory};
 
   /** Array of integers of the stage ids found in the XML. */
-  int [] ids = {R.id.BattleField, R.id.FinalDestination, R.id.KalosPokemonStadium,
+  private int [] ids = {R.id.BattleField, R.id.FinalDestination, R.id.KalosPokemonStadium,
     R.id.LylatCruise, R.id.PokemonStadium, R.id.PokemonStadium2,
     R.id.Smashville, R.id.TownAndCity, R.id.UnovaPokemonLeague,
     R.id.YoshiIsland, R.id.YoshisStory};
 
   /** Array of Classes for each stage. */
-  Class [] charClasses = {BattleField.class, FinalDestination.class,
+  private Class [] charClasses = {BattleField.class, FinalDestination.class,
     KalosPokemonLeague.class, LylatCruise.class, PokemonStadium.class,
     PokemonStadium2.class, Smashville.class, TownAndCity.class,
     UnovaPokemonLeague.class, YoshiIsland.class, YoshisStory.class};
