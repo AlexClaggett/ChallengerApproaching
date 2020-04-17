@@ -140,21 +140,21 @@ public class ListDataActivity extends AppCompatActivity {
            * is selected within the event list.
            * @param adapterView the adapter the view is from.
            * @param view the view selected.
-           * @param i the index within the ArrayAdapter.
+           * @param index the index within the ArrayAdapter.
            * @param l some other needed parameter.
            *************************************************/
           public void onItemClick(final AdapterView<?> adapterView,
-                                  final View view, final int i, final long l) {
+                                  final View view, final int index, final long l) {
             // Set name to the event at the same index as view.
-            final String name = (finalEventList.get(i).getName());
+            final String name = (finalEventList.get(index).getName());
 
             // Set date to the event at the same index as view.
-            final String date = (finalEventList.get(i).getDate());
+            final String date = (finalEventList.get(index).getDate());
 
             /* Log to check the item selected is the correct
                 event. */
             Log.d(TAG, "onItemClick: You Clicked on "
-                + eventTitle.get(i));
+                + eventTitle.get(index));
 
             /* Cursor to retrieve the event at the ID of the events
                date from the database. */

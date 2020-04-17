@@ -88,14 +88,14 @@ public class StageSelect extends AppCompatActivity {
     super.onCreate(savedInstance);
     setContentView(R.layout.activity_stages);
 
-    int i = 0;
+    int count = 0;
 
     for (ImageButton b: buttons) {
-      b = findViewById(ids[i]);
+      b = findViewById(ids[count]);
       final Intent tosend = new Intent(StageSelect.this,
-              charClasses[i]);
+              charClasses[count]);
       b.setOnClickListener(v -> startActivity(tosend));
-      i++;
+      count++;
     }
   }
 }

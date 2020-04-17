@@ -5,7 +5,7 @@ package com.example.challengerapproaching.utils;
  *********************************************************************/
 public class Event {
   /** The ID of the Event. */
-  private int id;
+  private int idName;
 
   /** The NAME of the Event. */
   private String name;
@@ -17,7 +17,7 @@ public class Event {
    * Constructor for initializing an empty event.
    *******************************************************************/
   public Event() {
-    id = -1;
+    idName = -1;
     name = "None";
     date = "None";
   }
@@ -28,19 +28,19 @@ public class Event {
    * @param date the date of the event.
    *******************************************************************/
   public Event(final String name, final String date) {
-    this.id = -1;
+    this.idName = -1;
     this.name = name;
     this.date = date;
   }
 
   /********************************************************************
    * Constructor for initializing an event with an id, name, and date.
-   * @param id the id of the event.
+   * @param idName the id of the event.
    * @param name the name of the event.
    * @param date the date of the event.
    *******************************************************************/
-  public Event(final int id, final String name, final String date) {
-    this.id = id;
+  public Event(final int idName, final String name, final String date) {
+    this.idName = idName;
     this.name = name;
     this.date = date;
   }
@@ -49,16 +49,16 @@ public class Event {
    * Method for retrieving the event's ID.
    * @return the events ID.
    *******************************************************************/
-  public int getId() {
-    return id;
+  public int getIdName() {
+    return idName;
   }
 
   /********************************************************************
    * Method for setting the event's ID.
-   * @param id the ID to give the event.
+   * @param idName the ID to give the event.
    *******************************************************************/
-  public void setId(final int id) {
-    this.id = id;
+  public void setIdName(final int idName) {
+    this.idName = idName;
   }
 
   /********************************************************************

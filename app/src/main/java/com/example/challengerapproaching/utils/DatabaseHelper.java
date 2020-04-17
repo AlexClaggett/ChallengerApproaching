@@ -53,31 +53,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
   /********************************************************************
    * Method for determining what happens when upgrading the table to
    * a newer version, and when changes are made to the table.
-   * @param db The instance of the database to be changed.
+   * @param dbEvents The instance of the database to be changed.
    * @param oldVersion the previous version of the database.
    * @param newVersion the current version of the database.
    *******************************************************************/
   @Override
-  public void onUpgrade(final SQLiteDatabase db,
+  public void onUpgrade(final SQLiteDatabase dbEvents,
                         final int oldVersion,
                         final int newVersion) {
-    db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
-    onCreate(db);
+    dbEvents.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+    onCreate(dbEvents);
   }
 
   /********************************************************************
    * Method for creation of the database. Details the table key as
    * well as the values that should be within each column.
-   * @param db the instance of data base to be created for.
+   * @param dbName the instance of data base to be created for.
    *******************************************************************/
   @Override
-  public void onCreate(final SQLiteDatabase db) {
+  public void onCreate(final SQLiteDatabase dbName) {
     // String to represent the SQL code for creating a table.
     final String createTable = "CREATE Table " + TABLE_NAME
             + "(\n" + COL1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COL2 + " CHAR(255) NOT NULL, "
             + COL3 + " CHAR(255) NOT NULL );";
-    db.execSQL(createTable);
+    dbName.execSQL(createTable);
   }
 
   /********************************************************************
@@ -97,10 +97,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     Log.d(TAG, "addData: Adding " + item2 + " to " + TABLE_NAME);
 
     // Gets a writable database
-    final SQLiteDatabase db = this.getWritableDatabase();
+    final SQLiteDatabase dbName = this.getWritableDatabase();
 
     // method call to insert the data into the table.
-    final long result = db.insert(TABLE_NAME, null, contentValues);
+    final long result = dbName.insert(TABLE_NAME, null, contentValues);
 
     if (result == -1) {
       return false;
@@ -119,24 +119,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final ArrayList<Event> events = new ArrayList<>();
 
     // Writable version of the database.
-    final SQLiteDatabase db = this.getWritableDatabase();
+    final SQLiteDatabase dbName = this.getWritableDatabase();
 
     // String to represent the query.
     final String query = "SELECT * FROM " + TABLE_NAME;
 
     // Cursor which points to the data queried.
-    final Cursor data = db.rawQuery(query, null);
+    final Cursor data = dbName.rawQuery(query, null);
 
     // Check if the database has any events.
     if (data.moveToFirst()) {
       // While there are events add them tp the event list.
       do {
 
-        final Event ev = new Event();
-        ev.setId(data.getInt(data.getColumnIndex(COL1)));
-        ev.setName(data.getString(data.getColumnIndex(COL2)));
-        ev.setDate(data.getString(data.getColumnIndex(COL3)));
-        events.add(ev);
+        final Event eventInput = new Event();
+        eventInput.setIdName(data.getInt(data.getColumnIndex(COL1)));
+        eventInput.setName(data.getString(data.getColumnIndex(COL2)));
+        eventInput.setDate(data.getString(data.getColumnIndex(COL3)));
+        events.add(eventInput);
 
       } while (data.moveToNext());
 
@@ -146,7 +146,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     event within the event list. */
     for (int i = 0; i < events.size(); i++) {
       Log.d(TAG, "Events List Id: " + i + " "
-              + events.get(i).getId());
+              + events.get(i).getIdName());
       Log.d(TAG, "Events List Name: " + i + " "
               + events.get(i).getName());
       Log.d(TAG, "Events List Date: " + i + " "
@@ -162,59 +162,59 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @return What data was found.
    *******************************************************************/
   public Cursor getDateID(final String date) {
-    final SQLiteDatabase db = this.getWritableDatabase();
+    final SQLiteDatabase dbName = this.getWritableDatabase();
     final String query = "SELECT " + COL1 + " FROM " + TABLE_NAME
             + " WHERE " + COL3 + " = '" + date + "'";
-    final Cursor data = db.rawQuery(query, null);
+    final Cursor data = dbName.rawQuery(query, null);
     return data;
   }
 
   /********************************************************************
    * Method for updating the events name within the database.
    * @param newName the new name to set for the event.
-   * @param id the id that this event is at.
+   * @param idName the id that this event is at.
    * @param oldName the current name of the event in the database.
    *******************************************************************/
-  public void updateName(final String newName, final int id, final String oldName) {
-    final SQLiteDatabase db = this.getWritableDatabase();
+  public void updateName(final String newName, final int idName, final String oldName) {
+    final SQLiteDatabase dbName = this.getWritableDatabase();
     final String query = "UPDATE " + TABLE_NAME + " SET " + COL2
-            + " = '" + newName + "' Where " + COL1 + " = '" + id + "'"
+            + " = '" + newName + "' Where " + COL1 + " = '" + idName + "'"
             + " AND " + COL2 + " = '" + oldName + "'";
     Log.d(TAG, "updateName: query: " + query);
     Log.d(TAG, "updateName: Setting name to " + newName);
-    db.execSQL(query);
+    dbName.execSQL(query);
   }
 
   /********************************************************************
    * Method for updating the events date within the database.
    * @param newDate the new date to set for the event.
-   * @param id the id that this event is at.
+   * @param idName the id that this event is at.
    * @param oldDate the current date of the event in the database.
    *******************************************************************/
-  public void updateDate(final String newDate, final int id, final String oldDate) {
-    final SQLiteDatabase db = this.getWritableDatabase();
+  public void updateDate(final String newDate, final int idName, final String oldDate) {
+    final SQLiteDatabase dbName = this.getWritableDatabase();
     final String query = "UPDATE " + TABLE_NAME + " SET " + COL3
-            + " = '" + newDate + "' Where " + COL1 + " = '" + id + "'"
+            + " = '" + newDate + "' Where " + COL1 + " = '" + idName + "'"
             + " AND " + COL3 + " = '" + oldDate + "'";
     Log.d(TAG, "updateName: query: " + query);
     Log.d(TAG, "updateName: Setting name to " + newDate);
-    db.execSQL(query);
+    dbName.execSQL(query);
   }
 
   /********************************************************************
    * Method for removing an event from the database.
-   * @param id the id of the event to be removed.
+   * @param idName the idName of the event to be removed.
    * @param name the name of the event.
    * @param date the date of the event.
    *******************************************************************/
-  public void deleteEvent(final int id, final String name, final String date) {
-    final SQLiteDatabase db = this.getWritableDatabase();
+  public void deleteEvent(final int idName, final String name, final String date) {
+    final SQLiteDatabase dbName = this.getWritableDatabase();
     final String query = "DELETE FROM " + TABLE_NAME + " WHERE "
-            + COL1 + " = '" + id + "'" + " AND " + COL3
+            + COL1 + " = '" + idName + "'" + " AND " + COL3
             + " = '" + date + "'";
     Log.d(TAG, "deleteName: query: " + query);
     Log.d(TAG, "deleteName: Deleting Event: " + name + " on " + date);
-    db.execSQL(query);
+    dbName.execSQL(query);
   }
 
   /********************************************************************
@@ -251,13 +251,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     int year;
 
     // Get the writable database.
-    final SQLiteDatabase db = this.getWritableDatabase();
+    final SQLiteDatabase dbName = this.getWritableDatabase();
 
     // Query the entire table.
     final String query = "SELECT * FROM " + TABLE_NAME;
 
     // Set the cursor to point at the data.
-    final Cursor data = db.rawQuery(query, null);
+    final Cursor data = dbName.rawQuery(query, null);
 
     // Log that query was ran.
     Log.d(TAG, "Query Ran");
@@ -266,7 +266,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     if (data.moveToFirst()) {
       do {
         // set the current event to the event pointed at by cursor.
-        curEvent.setId(data.getInt(data.getColumnIndex(COL1)));
+        curEvent.setIdName(data.getInt(data.getColumnIndex(COL1)));
         curEvent.setName(data.getString(data.getColumnIndex(COL2)));
         curEvent.setDate(data.getString(data.getColumnIndex(COL3)));
 
@@ -301,16 +301,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
           // Compare the Two dates and see which one is earlier..
           if (curYear < year) {
-            mostRecent.setId(curEvent.getId());
+            mostRecent.setIdName(curEvent.getIdName());
             mostRecent.setName(curEvent.getName());
             mostRecent.setDate(curEvent.getDate());
           } else if (curYear == year && curMonth < month) {
-            mostRecent.setId(curEvent.getId());
+            mostRecent.setIdName(curEvent.getIdName());
             mostRecent.setName(curEvent.getName());
             mostRecent.setDate(curEvent.getDate());
           } else if (curYear == year && curMonth == month
                   && curDay < day) {
-            mostRecent.setId(curEvent.getId());
+            mostRecent.setIdName(curEvent.getIdName());
             mostRecent.setName(curEvent.getName());
             mostRecent.setDate(curEvent.getDate());
           }
@@ -380,7 +380,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (curYear <= year && curMonth <= month && curDay <= day) {
           continue;
         } else {
-          nextMost.setId(e.getId());
+          nextMost.setIdName(e.getIdName());
           nextMost.setDate(e.getDate());
           nextMost.setName(e.getName());
         }
@@ -406,15 +406,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
           // Compare date to current event.
           if (curYear < year) {
-            nextMost.setId(e.getId());
+            nextMost.setIdName(e.getIdName());
             nextMost.setName(e.getName());
             nextMost.setDate(e.getDate());
           } else if (curYear == year && curMonth < month) {
-            nextMost.setId(e.getId());
+            nextMost.setIdName(e.getIdName());
             nextMost.setName(e.getName());
             nextMost.setDate(e.getDate());
           } else if (curYear == year && curMonth == month && curDay < day) {
-            nextMost.setId(e.getId());
+            nextMost.setIdName(e.getIdName());
             nextMost.setName(e.getName());
             nextMost.setDate(e.getDate());
           }
@@ -436,13 +436,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     int count = 0;
 
     // Writable database.
-    final SQLiteDatabase db = this.getWritableDatabase();
+    final SQLiteDatabase dbName = this.getWritableDatabase();
 
     // Query to get the entire table.
     final String query = "SELECT * FROM " + TABLE_NAME;
 
     // Point at it.
-    final Cursor data = db.rawQuery(query, null);
+    final Cursor data = dbName.rawQuery(query, null);
 
     // Check that it's not empty.
     if (data.moveToFirst()) {

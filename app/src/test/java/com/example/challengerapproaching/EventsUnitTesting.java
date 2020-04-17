@@ -15,7 +15,7 @@ public class EventsUnitTesting {
         Event e = new Event();
         Assert.assertEquals("None", e.getName());
         Assert.assertEquals("None",e.getDate());
-        Assert.assertEquals(-1, e.getId());
+        Assert.assertEquals(-1, e.getIdName());
     }
     @Test
     public void Event_NO_ID_Constructor (){
@@ -24,7 +24,7 @@ public class EventsUnitTesting {
         Event e = new Event(name, date);
         Assert.assertEquals(name, e.getName());
         Assert.assertEquals(date,e.getDate());
-        Assert.assertEquals(-1, e.getId());
+        Assert.assertEquals(-1, e.getIdName());
     }
     @Test
     public void Event_WITH_ID_Constructor (){
@@ -34,7 +34,7 @@ public class EventsUnitTesting {
         Event e = new Event(id, name, date);
         Assert.assertEquals(name, e.getName());
         Assert.assertEquals(date,e.getDate());
-        Assert.assertEquals(id, e.getId());
+        Assert.assertEquals(id, e.getIdName());
     }
     @Test
     public void Event_Setters (){
@@ -43,7 +43,7 @@ public class EventsUnitTesting {
         Assert.assertEquals("S", e.getName());
         e.setDate("4/31/2020");
         Assert.assertEquals("4/31/2020", e.getDate());
-        e.setId(123);
-        Assert.assertEquals(123, e.getId());
+        e.setIdName(123);
+        Assert.assertEquals(123, e.getIdName());
     }
 }

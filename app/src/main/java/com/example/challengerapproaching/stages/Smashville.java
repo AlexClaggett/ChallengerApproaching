@@ -10,7 +10,7 @@ import com.example.challengerapproaching.R;
 public class Smashville extends AppCompatActivity {
 
   @Override
-  protected void onCreate(Bundle savedInstance) {
+  protected void onCreate(final Bundle savedInstance) {
     super.onCreate(savedInstance);
     setContentView(R.layout.activity_smashville);
   }

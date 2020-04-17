@@ -79,7 +79,7 @@ public class MrGameAndWatch extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long id) {
+      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/mr_game_and_watch/" + mrGameWatchmoves[position];
@@ -87,8 +87,8 @@ public class MrGameAndWatch extends AppCompatActivity {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
             final InputStream inputStream = new java.net.URL(toUrl).openStream();
-            final Bitmap bm = BitmapFactory.decodeStream(inputStream);
-            imageView.setImageBitmap(bm);
+            final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
+            imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
           } catch (IOException e) {
             e.printStackTrace();
