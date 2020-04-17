@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Jigglypuff extends AppCompatActivity {
 
-  String [] jigglypuffMoves = {
+  transient String [] jigglypuffMoves = {
       "JigglypuffBAir.gif",
       "JigglypuffBThrow.gif",
       "JigglypuffDAir.gif",

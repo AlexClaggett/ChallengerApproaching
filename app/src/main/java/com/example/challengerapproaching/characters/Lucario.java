@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Lucario extends AppCompatActivity {
 
-  String [] lucarioMoves = {
+  transient String [] lucarioMoves = {
       "LucarioBAir.gif",
       "LucarioBThrow.gif",
       "LucarioDAir.gif",

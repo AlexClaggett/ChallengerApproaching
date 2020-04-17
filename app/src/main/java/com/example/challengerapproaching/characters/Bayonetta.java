@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class Bayonetta extends AppCompatActivity {
 
-  String [] bayonettaMoves = {
+  transient String [] bayonettaMoves = {
       "BayonettaAfterburnerKickDown.gif",
       "BayonettaAfterburnerKickLanding.gif",
       "BayonettaAfterburnerKickUp.gif",

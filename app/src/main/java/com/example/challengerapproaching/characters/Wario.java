@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Wario extends AppCompatActivity {
 
-  String [] warioMoves = {
+  transient String [] warioMoves = {
       "WarioBAir.gif",
       "WarioBikeDrive.gif",
       "WarioBikeTurn.gif",

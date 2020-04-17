@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class CaptainFalcon extends AppCompatActivity {
 
-  String [] cptnFalconMoves = {
+  transient String [] cptnFalconMoves = {
       "CaptainFalconBAir.gif",
       "CaptainFalconBThrow.gif",
       "CaptainFalconDAir.gif",

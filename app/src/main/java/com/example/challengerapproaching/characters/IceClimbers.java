@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class IceClimbers extends AppCompatActivity {
 
-  String [] iceClimbersmoves = {
+  transient String [] iceClimbersmoves = {
       "IceClimbersIceShot.png",
       "NanaBAir.gif",
       "NanaBelay.gif",

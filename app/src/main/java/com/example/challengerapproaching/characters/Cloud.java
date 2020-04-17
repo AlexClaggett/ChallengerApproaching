@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Cloud extends AppCompatActivity {
 
-  String [] cloudMoves = {
+  transient String [] cloudMoves = {
       "CloudBAir.gif",
       "CloudBladeBeam.gif",
       "CloudBladeBeamLimit.gif",

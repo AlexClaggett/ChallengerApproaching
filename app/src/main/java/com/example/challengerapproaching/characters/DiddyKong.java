@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class DiddyKong extends AppCompatActivity {
 
-  String [] diddyKongMoves = {
+  transient String [] diddyKongMoves = {
       "DiddyKongBAir.gif",
       "DiddyKongBThrow.gif",
       "DiddyKongDAir.gif",

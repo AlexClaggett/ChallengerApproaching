@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Ivysaur extends AppCompatActivity {
 
-  String [] ivysaurMoves = {
+  transient String [] ivysaurMoves = {
       "IvysaurBAir.gif",
       "IvysaurBThrow.gif",
       "IvysaurBulletSeedA.gif",

@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Isabelle extends AppCompatActivity {
 
-  String [] isabelleMoves = {
+  transient String [] isabelleMoves = {
       "IsabelleBAir.gif",
       "IsabelleBalloonHurtbox.png",
       "IsabelleBThrow.gif",

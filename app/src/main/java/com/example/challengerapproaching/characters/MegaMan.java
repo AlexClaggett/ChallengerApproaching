@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class MegaMan extends AppCompatActivity {
 
-  String [] megaManMoves = {
+  transient String [] megaManMoves = {
       "MegaManBAir.gif",
       "MegaManBThrow.gif",
       "MegaManCrashBomber.png",

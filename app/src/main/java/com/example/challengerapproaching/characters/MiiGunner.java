@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class MiiGunner extends AppCompatActivity {
 
-  String [] miiGunnerMoves = {
+  transient String [] miiGunnerMoves = {
       "MiiGunnerBombDrop.png",
       "MiiGunnerBombDropExplosion.png",
       "MiiGunnerGrenadeLauncher.png",

@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Joker extends AppCompatActivity {
 
-  String [] jokerMoves = {
+  transient String [] jokerMoves = {
       "JokerBAir.gif",
       "JokerBAirArsene.gif",
       "JokerBThrow.gif",

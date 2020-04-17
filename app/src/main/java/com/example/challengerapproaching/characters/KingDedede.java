@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class KingDedede extends AppCompatActivity {
 
-  String [] kingDededeMoves = {
+  transient String [] kingDededeMoves = {
       "KingDededeBAir.gif",
       "KingDededeBThrow.gif",
       "KingDededeDAir.gif",

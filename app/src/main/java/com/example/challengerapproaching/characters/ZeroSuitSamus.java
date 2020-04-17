@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class ZeroSuitSamus extends AppCompatActivity {
 
-  String [] zzsMoves = {
+  transient String [] zzsMoves = {
       "ZeroSuitSamusBAir.gif",
       "ZeroSuitSamusBoostKickA.gif",
       "ZeroSuitSamusBoostKickG.gif",

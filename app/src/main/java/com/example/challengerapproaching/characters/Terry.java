@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Terry extends AppCompatActivity {
 
-  String [] terryMoves = {
+  transient String [] terryMoves = {
       "TerryBAir.gif",
       "TerryBThrow.gif",
       "TerryBurningKnuckleAirStrong.gif",

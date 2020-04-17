@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Pikachu extends AppCompatActivity {
 
-  String [] pikachuMoves = {
+  transient String [] pikachuMoves = {
       "PikachuBAir.gif",
       "PikachuBThrow.gif",
       "PikachuDAir.gif",

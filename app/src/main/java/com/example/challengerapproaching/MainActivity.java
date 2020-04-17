@@ -8,16 +8,21 @@ import android.widget.ImageButton;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+/********************************************************************
+ * This class creates the main page of the app displaying buttons to
+ * navigate to the events menu, character or stage pages.
+ *******************************************************************/
+
 public class MainActivity extends AppCompatActivity {
 
   /** Image Button for Characters. */
-  ImageButton characters;
+  transient ImageButton characters;
 
   /** Image Button for Stages. */
-  ImageButton stages;
+  transient ImageButton stages;
 
   /** Image Button for Events. */
-  ImageButton events;
+  transient ImageButton events;
 
   /********************************************************************
    * Upon app start up this method sets the content view to main

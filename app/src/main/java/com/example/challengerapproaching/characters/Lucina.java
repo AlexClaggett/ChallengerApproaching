@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Lucina extends AppCompatActivity {
 
-  String [] lucinaMoves = {
+  transient String [] lucinaMoves = {
       "LucinaBAir.gif",
       "LucinaBThrow.gif",
       "LucinaCounter.gif",

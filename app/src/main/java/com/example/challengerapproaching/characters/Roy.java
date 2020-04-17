@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Roy extends AppCompatActivity {
 
-  String [] royMoves = {
+  transient String [] royMoves = {
       "RoyBAir.gif",
       "RoyBlazerA.gif",
       "RoyBlazerG.gif",

@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class DrMario extends AppCompatActivity {
 
-  String [] drMarioMoves = {
+  transient String [] drMarioMoves = {
       "DrMarioBAir.gif",
       "DrMarioBThrow.gif",
       "DrMarioDAir.gif",

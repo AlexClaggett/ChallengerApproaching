@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class PiranhaPlant extends AppCompatActivity {
 
-  String [] piranhaPlantMoves = {
+  transient String [] piranhaPlantMoves = {
       "PiranhaPlantBAir.gif",
       "PiranhaPlantBThrow.gif",
       "PiranhaPlantDAir.gif",

@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Sheik extends AppCompatActivity {
 
-  String [] sheikMoves = {
+  transient String [] sheikMoves = {
       "SheikBAir.gif",
       "SheikBouncingFish.gif",
       "SheikBThrow.gif",

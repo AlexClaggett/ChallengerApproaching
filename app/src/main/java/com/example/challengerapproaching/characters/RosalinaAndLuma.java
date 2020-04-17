@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class RosalinaAndLuma extends AppCompatActivity {
 
-  String [] rosalinaMoves = {
+  transient String [] rosalinaMoves = {
       "RosalinaBAir.gif",
       "RosalinaBThrow.gif",
       "RosalinaDAir.gif",

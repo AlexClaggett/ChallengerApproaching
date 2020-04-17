@@ -34,53 +34,53 @@ public class EditDataActivity extends AppCompatActivity {
   /**
    * Button that represents the Save button for saving the event.
    */
-  private Button btnSave;
+  private transient Button btnSave;
 
   /**
    * Button that represents the Delete button to remove events.
    */
-  private Button btnDelete;
+  private transient Button btnDelete;
 
   /**
    * Button that represents sending the event to the default calendar
    * app.
    */
-  private Button calendarSave;
+  private transient Button calendarSave;
 
   /**
    * EditText that represents the name of the event.
    */
-  private EditText editableName;
+  private transient EditText editableName;
 
   /**
    * TextView that represents the date of the event.
    */
-  private TextView editableDate;
+  private transient TextView editableDate;
 
   /**
    * Date Picker Dialog for event selection.
    */
-  private DatePickerDialog.OnDateSetListener onDateSetListener;
+  private transient DatePickerDialog.OnDateSetListener onDateSetListener;
 
   /**
    * Database that hold the events.
    */
-  private DatabaseHelper eventDatabase;
+  private transient DatabaseHelper eventDatabase;
 
   /**
    * String to represent the event name that was selected.
    */
-  private String selectedName;
+  private transient String selectedName;
 
   /**
    * String to represent the event date that was selected.
    */
-  private String selectedDate;
+  private transient String selectedDate;
 
   /**
    * Int to represent the selected event ID.
    */
-  private int selectedId;
+  private transient int selectedId;
 
   /********************************************************************
    * onCreate method for determining what happens when starting the
@@ -292,8 +292,8 @@ public class EditDataActivity extends AppCompatActivity {
    * Returns a result value to the parent activity.
    *******************************************************************/
   public void onDestroy() {
-    super.onDestroy();
     this.setResult(0);
+    super.onDestroy();
   }
 
   /********************************************************************

@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Simon extends AppCompatActivity {
 
-  String [] simonMoves = {
+  transient String [] simonMoves = {
       "SimonAxe.gif",
       "SimonBAir.gif",
       "SimonBAirDown.gif",

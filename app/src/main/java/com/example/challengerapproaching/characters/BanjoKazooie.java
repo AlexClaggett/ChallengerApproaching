@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class BanjoKazooie extends AppCompatActivity {
 
-  String [] banjoKazooiemoves = {
+  transient String [] banjoKazooiemoves = {
       "Banjo_KazooieBAir.gif",
       "Banjo_KazooieBThrow.gif",
       "Banjo_KazooieDAir.gif",

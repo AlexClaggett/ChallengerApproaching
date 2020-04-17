@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Shulk extends AppCompatActivity {
 
-  String [] shulkMoves = {
+  transient String [] shulkMoves = {
       "ShulkAirSlash1.gif",
       "ShulkAirSlash2.gif",
       "ShulkBackSlash.gif",

@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Daisy extends AppCompatActivity {
 
-  String [] daisyMoves = {
+  transient String [] daisyMoves = {
       "DaisyBAir.gif",
       "DaisyBThrow.gif",
       "DaisyDAir.gif",

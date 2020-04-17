@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Robin extends AppCompatActivity {
 
-  String [] robinMoves = {
+  transient String [] robinMoves = {
       "RobinBAirBronze.gif",
       "RobinBAirLevin.gif",
       "RobinBThrow.gif",

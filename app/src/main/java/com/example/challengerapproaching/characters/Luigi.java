@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Luigi extends AppCompatActivity {
 
-  String [] luigimMves = {
+  transient String [] luigimMves = {
       "LuigiBAir.gif",
       "LuigiBThrow.gif",
       "LuigiCycloneA.gif",

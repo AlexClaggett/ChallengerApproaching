@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class DonkeyKong extends AppCompatActivity {
 
-  String [] donkeyKongMoves = {
+  transient String [] donkeyKongMoves = {
       "DonkeyKongBAir.gif",
       "DonkeyKongBThrow.gif",
       "DonkeyKongCargoBThrow.gif",

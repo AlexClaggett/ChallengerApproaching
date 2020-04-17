@@ -16,7 +16,7 @@ import java.io.IOException;
 public class Pit extends AppCompatActivity {
 
 
-  String [] pitMoves = {
+  transient String [] pitMoves = {
       "PitBAir.gif",
       "PitBThrow.gif",
       "PitDAir.gif",

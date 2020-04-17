@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Ryu extends AppCompatActivity {
 
-  String [] ryuMoves = {
+  transient String [] ryuMoves = {
       "RyuBAir.gif",
       "RyuBThrow.gif",
       "RyuDAir.gif",

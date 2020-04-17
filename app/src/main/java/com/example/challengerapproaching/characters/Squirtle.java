@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Squirtle extends AppCompatActivity {
 
-  String [] squirtleMoves = {
+  transient String [] squirtleMoves = {
       "SquirtleBAir.gif",
       "SquirtleBAirLanding.gif",
       "SquirtleBThrow.gif",

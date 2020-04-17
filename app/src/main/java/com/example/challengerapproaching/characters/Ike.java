@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Ike extends AppCompatActivity {
 
-  String [] ikeMoves = {
+  transient String [] ikeMoves = {
       "IkeAetherA.gif",
       "IkeAetherFall.gif",
       "IkeAetherG.gif",

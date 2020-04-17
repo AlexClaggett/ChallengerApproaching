@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Villager extends AppCompatActivity {
 
-  String [] villagerMoves = {
+  transient String [] villagerMoves = {
       "VillagerBAir.gif",
       "VillagerBalloonHurtbox.png",
       "VillagerBThrow.gif",

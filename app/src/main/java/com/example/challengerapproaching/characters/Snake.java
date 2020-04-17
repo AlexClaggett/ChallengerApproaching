@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Snake extends AppCompatActivity {
 
-  String [] snakeMoves = {
+  transient String [] snakeMoves = {
       "SnakeBAir.gif",
       "SnakeBThrow.gif",
       "SnakeC4.png",

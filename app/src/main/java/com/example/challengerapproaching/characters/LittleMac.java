@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class LittleMac extends AppCompatActivity {
 
-  String [] littleMacMoves = {
+  transient String [] littleMacMoves = {
       "LittleMacBAir.gif",
       "LittleMacBThrow.gif",
       "LittleMacDAir.gif",

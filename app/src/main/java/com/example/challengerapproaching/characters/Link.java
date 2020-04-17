@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Link extends AppCompatActivity {
 
-  String [] linkMoves = {
+  transient String [] linkMoves = {
       "LinkArrow.png",
       "LinkBAir.gif",
       "LinkBoomerang.png",

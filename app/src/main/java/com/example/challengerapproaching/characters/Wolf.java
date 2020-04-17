@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Wolf extends AppCompatActivity {
 
-  String [] wolfMoves = {
+  transient String [] wolfMoves = {
       "WolfBAir.gif",
       "WolfBlaster.gif",
       "WolfBThrow.gif",

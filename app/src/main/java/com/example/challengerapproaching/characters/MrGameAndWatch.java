@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class MrGameAndWatch extends AppCompatActivity {
 
-  String [] mrGameWatchmoves = {
+  transient String [] mrGameWatchmoves = {
       "MrGame_WatchBair.gif",
       "MrGame_WatchBairLanding.gif",
       "MrGame_WatchBThrow.gif",

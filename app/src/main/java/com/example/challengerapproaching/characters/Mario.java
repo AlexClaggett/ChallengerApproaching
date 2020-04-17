@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Mario extends AppCompatActivity {
 
-  String [] marioMoves = {
+  transient String [] marioMoves = {
       "MarioBAir.gif",
       "MarioBThrow.gif",
       "MarioCape.gif",

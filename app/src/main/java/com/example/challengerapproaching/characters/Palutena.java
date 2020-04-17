@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Palutena extends AppCompatActivity {
 
-  String [] palutenaMoves = {
+  transient String [] palutenaMoves = {
       "PalutenaAutoreticle.gif",
       "PalutenaBAir.gif",
       "PalutenaBThrow.gif",

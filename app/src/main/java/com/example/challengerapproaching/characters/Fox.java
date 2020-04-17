@@ -20,7 +20,7 @@ import java.io.InputStream;
 public class Fox extends AppCompatActivity {
 
 
-  String [] foxMoves = {
+  transient String [] foxMoves = {
       "FoxBAir.gif",
       "FoxBlaster.gif",
       "FoxBThrow.gif",

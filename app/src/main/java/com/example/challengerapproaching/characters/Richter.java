@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Richter extends AppCompatActivity {
 
-  String [] richterMoves = {
+  transient String [] richterMoves = {
       "RichterAxe.gif",
       "RichterBAir.gif",
       "RichterBAirDown.gif",

@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Hero extends AppCompatActivity {
 
-  String [] heroMoves = {
+  transient String [] heroMoves = {
       "HeroBAir.gif",
       "HeroBThrow.gif",
       "HeroDAir.gif",

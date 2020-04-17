@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Incineroar extends AppCompatActivity {
 
-  String [] incineroarMoves = {
+  transient String [] incineroarMoves = {
       "IncineroarAlolanWhipA.gif",
       "IncineroarAlolanWhipEarly.gif",
       "IncineroarAlolanWhipFailure.gif",

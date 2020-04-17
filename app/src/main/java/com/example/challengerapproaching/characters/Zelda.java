@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Zelda extends AppCompatActivity {
 
-  String [] zeldaMoves = {
+  transient String [] zeldaMoves = {
       "ZeldaBAir.gif",
       "ZeldaBThrow.gif",
       "ZeldaDAir.gif",

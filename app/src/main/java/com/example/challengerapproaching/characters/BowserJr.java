@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class BowserJr extends AppCompatActivity {
 
-  String [] bowserJrMoves = {
+  transient String [] bowserJrMoves = {
       "BowserJrAbandonShip.gif",
       "BowserJrAbandonShipExplosion.png",
       "BowserJrAbandonShipHammer.gif",

@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Inkling extends AppCompatActivity {
 
-  String [] inklingMoves = {
+  transient String [] inklingMoves = {
       "InklingBAir.gif",
       "InklingBThrow.gif",
       "InklingDAir.gif",

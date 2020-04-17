@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class DarkSamus extends AppCompatActivity {
 
-  String [] darkSamusMoves = {
+  transient String [] darkSamusMoves = {
       "DarkSamusBAir.gif",
       "DarkSamusBomb.png",
       "DarkSamusBombExplosion.png",

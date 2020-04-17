@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Peach extends AppCompatActivity {
 
-  String [] peachMoves = {
+  transient String [] peachMoves = {
       "PeachBAir.gif",
       "PeachBThrow.gif",
       "PeachDAir.gif",

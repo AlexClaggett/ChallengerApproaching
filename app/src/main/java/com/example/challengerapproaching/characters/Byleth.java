@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Byleth extends AppCompatActivity {
 
-  String [] bylethMoves = {
+  transient String [] bylethMoves = {
       "BylethAreadbharAerial.gif",
       "BylethAreadbharGrounded.gif",
       "BylethAymr.gif",

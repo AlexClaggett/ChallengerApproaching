@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Ken extends AppCompatActivity {
 
-  String [] kenMoves = {
+  transient String [] kenMoves = {
       "KenBAir.gif",
       "KenBThrow.gif",
       "KenDAir.gif",

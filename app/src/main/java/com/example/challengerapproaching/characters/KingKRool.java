@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class KingKRool extends AppCompatActivity {
 
-  String [] kingKRoolMoves = {
+  transient String [] kingKRoolMoves = {
       "KingKRoolBAir.gif",
       "KingKRoolBlunderbuss.gif",
       "KingKRoolBlunderbussKannonballDetection.gif",

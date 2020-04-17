@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Falco extends AppCompatActivity {
 
-  String [] falcoMoves = {
+  transient String [] falcoMoves = {
       "FalcoBAir.gif",
       "FalcoBlaster.gif",
       "FalcoBThrow.gif",

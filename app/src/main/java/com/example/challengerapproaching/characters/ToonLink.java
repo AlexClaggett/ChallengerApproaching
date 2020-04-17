@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class ToonLink extends AppCompatActivity {
 
-  String [] toonLinkMoves = {
+  transient String [] toonLinkMoves = {
       "ToonLinkArrow.png",
       "ToonLinkBAir.gif",
       "ToonLinkBoomerang.png",

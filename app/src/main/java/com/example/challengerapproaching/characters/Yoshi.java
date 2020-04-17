@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Yoshi extends AppCompatActivity {
 
-  String [] yoshiMoves = {
+  transient String [] yoshiMoves = {
       "YoshiBAir.gif",
       "YoshiBThrow.gif",
       "YoshiDAir.gif",

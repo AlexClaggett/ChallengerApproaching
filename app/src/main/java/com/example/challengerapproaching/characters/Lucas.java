@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Lucas extends AppCompatActivity {
 
-  String [] lucasMoves = {
+  transient String [] lucasMoves = {
       "LucasBAir.gif",
       "LucasBThrow.gif",
       "LucasDAir.gif",

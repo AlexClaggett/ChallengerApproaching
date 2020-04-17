@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Kirby extends AppCompatActivity {
 
-  String [] kirbyMoves = {
+  transient String [] kirbyMoves = {
       "KirbyBAir.gif",
       "KirbyBThrow.gif",
       "KirbyDAir.gif",
