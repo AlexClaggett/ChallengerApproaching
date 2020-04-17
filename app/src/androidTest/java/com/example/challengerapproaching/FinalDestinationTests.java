@@ -29,6 +29,11 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+/** This test checks all of the Final Destination's page values
+ *  by navigating to the stage select screen and then to
+ *  Final Destination's page
+ *  */
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class FinalDestinationTests {

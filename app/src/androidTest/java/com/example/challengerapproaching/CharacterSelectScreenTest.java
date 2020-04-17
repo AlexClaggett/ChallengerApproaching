@@ -29,6 +29,10 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+/** This test checks the character select screen to make sure
+ *  all buttons are in the right place
+ *  */
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class CharacterSelectScreenTest {

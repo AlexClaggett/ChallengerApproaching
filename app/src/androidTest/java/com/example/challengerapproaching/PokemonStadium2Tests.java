@@ -29,6 +29,11 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+/** This test checks all of the Pokemon Stadium 2's page values
+ *  by navigating to the stage select screen and then to
+ *  Pokemon Stadium 2's page
+ *  */
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class PokemonStadium2Tests {

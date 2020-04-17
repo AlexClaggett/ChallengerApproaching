@@ -1,0 +1,199 @@
+Manual test for Olimar character activity page
+
+Pressed Olimar button from the character select screen. Initial: TK
+Page changed from character select screen to Olimar's page. Initial TK
+
+Navigation bar is labeled Olimar. Initial: TK
+Above the portrait is also labeled Olimar. Initial: TK
+Portrait displayed is a picture of Olimar. Initial: TK
+Select a move is under the portrait. Initial TK
+
+Graphic was initially set to BThrow. Initial: TK
+
+Opened spinner to select DashAttack option. Initial: TK
+Graphic loaded: DashAttack. Initial: TK
+
+Opened spinner to select DThrow option. Initial: TK
+Graphic loaded: DThrow. Initial: TK
+
+Opened spinner to select DTilt option. Initial: TK
+Graphic loaded: DTilt. Initial: TK
+
+Opened spinner to select FThrow option. Initial: TK
+Graphic loaded: FThrow. Initial: TK
+
+Opened spinner to select FTilt option. Initial: TK
+Graphic loaded: FTilt. Initial: TK
+
+Opened spinner to select Jab1 option. Initial: TK
+Graphic loaded: Jab1. Initial: TK
+
+Opened spinner to select Jab2 option. Initial: TK
+Graphic loaded: Jab2. Initial: TK
+
+Opened spinner to select NAir option. Initial: TK
+Graphic loaded: NAir. Initial: TK
+
+Opened spinner to select PikminOrder option. Initial: TK
+Graphic loaded: PikminOrder. Initial: TK
+
+Opened spinner to select Pummel option. Initial: TK
+Graphic loaded: Pummel. Initial: TK
+
+Opened spinner to select UThrow option. Initial: TK
+Graphic loaded: UThrow. Initial: TK
+
+Opened spinner to select UTilt option. Initial: TK
+Graphic loaded: UTilt. Initial: TK
+
+Opened spinner to select BlueBAir option. Initial: TK
+Graphic loaded: BlueBAir. Initial: TK
+
+Opened spinner to select BlueDAir option. Initial: TK
+Graphic loaded: BlueDAir. Initial: TK
+
+Opened spinner to select BlueDSmash option. Initial: TK
+Graphic loaded: BlueDSmash. Initial: TK
+
+Opened spinner to select BlueFAir option. Initial: TK
+Graphic loaded: BlueFAir. Initial: TK
+
+Opened spinner to select BlueFSmash option. Initial: TK
+Graphic loaded: BlueFSmash. Initial: TK
+
+Opened spinner to select BlueGrab option. Initial: TK
+Graphic loaded: BlueGrab. Initial: TK
+
+Opened spinner to select BluePikminThrow option. Initial: TK
+Graphic loaded: BluePikminThrow. Initial: TK
+
+Opened spinner to select BlueUAir option. Initial: TK
+Graphic loaded: BlueUAir. Initial: TK
+
+Opened spinner to select BlueUSmash option. Initial: TK
+Graphic loaded: BlueUSmash. Initial: TK
+
+Opened spinner to select BlueUThrow option. Initial: TK
+Graphic loaded: BlueUThrow. Initial: TK
+
+Opened spinner to select PurpleBAir option. Initial: TK
+Graphic loaded: PurpleBAir. Initial: TK
+
+Opened spinner to select PurpleDAir option. Initial: TK
+Graphic loaded: PurpleDAir. Initial: TK
+
+Opened spinner to select PurpleDSmash option. Initial: TK
+Graphic loaded: PurpleDSmash. Initial: TK
+
+Opened spinner to select PurpleFAir option. Initial: TK
+Graphic loaded: PurpleFAir. Initial: TK
+
+Opened spinner to select PurpleFSmash option. Initial: TK
+Graphic loaded: PurpleFSmash. Initial: TK
+
+Opened spinner to select PurpleGrab option. Initial: TK
+Graphic loaded: PurpleGrab. Initial: TK
+
+Opened spinner to select PurplePikminThrow option. Initial: TK
+Graphic loaded: PurplePikminThrow. Initial: TK
+
+Opened spinner to select PurpleUAir option. Initial: TK
+Graphic loaded: PurpleUAir. Initial: TK
+
+Opened spinner to select PurpleUSmash option. Initial: TK
+Graphic loaded: PurpleUSmash. Initial: TK
+
+Opened spinner to select PurpleUThrow option. Initial: TK
+Graphic loaded: PurpleUThrow. Initial: TK
+
+Opened spinner to select RedBAir option. Initial: TK
+Graphic loaded: RedBAir. Initial: TK
+
+Opened spinner to select RedDAir option. Initial: TK
+Graphic loaded: RedDAir. Initial: TK
+
+Opened spinner to select RedDSmash option. Initial: TK
+Graphic loaded: RedDSmash. Initial: TK
+
+Opened spinner to select RedFAir option. Initial: TK
+Graphic loaded: RedFAir. Initial: TK
+
+Opened spinner to select RedFSmash option. Initial: TK
+Graphic loaded: RedFSmash. Initial: TK
+
+Opened spinner to select RedGrab option. Initial: TK
+Graphic loaded: RedGrab. Initial: TK
+
+Opened spinner to select RedPikminThrow option. Initial: TK
+Graphic loaded: RedPikminThrow. Initial: TK
+
+Opened spinner to select RedUAir option. Initial: TK
+Graphic loaded: RedUAir. Initial: TK
+
+Opened spinner to select RedUSmash option. Initial: TK
+Graphic loaded: RedUSmash. Initial: TK
+
+Opened spinner to select RedUThrow option. Initial: TK
+Graphic loaded: RedUThrow. Initial: TK
+
+Opened spinner to select WhiteBAir option. Initial: TK
+Graphic loaded: WhiteBAir. Initial: TK
+
+Opened spinner to select WhiteDAir option. Initial: TK
+Graphic loaded: WhiteDAir. Initial: TK
+
+Opened spinner to select WhiteDSmash option. Initial: TK
+Graphic loaded: WhiteDSmash. Initial: TK
+
+Opened spinner to select WhiteFAir option. Initial: TK
+Graphic loaded: WhiteFAir. Initial: TK
+
+Opened spinner to select WhiteFSmash option. Initial: TK
+Graphic loaded: WhiteFSmash. Initial: TK
+
+Opened spinner to select WhiteGrab option. Initial: TK
+Graphic loaded: WhiteGrab. Initial: TK
+
+Opened spinner to select WhitePikminThrow option. Initial: TK
+Graphic loaded: WhitePikminThrow. Initial: TK
+
+Opened spinner to select WhiteUAir option. Initial: TK
+Graphic loaded: WhiteUAir. Initial: TK
+
+Opened spinner to select WhiteUSmash option. Initial: TK
+Graphic loaded: WhiteUSmash. Initial: TK
+
+Opened spinner to select WhiteUThrow option. Initial: TK
+Graphic loaded: WhiteUThrow. Initial: TK
+
+Opened spinner to select YellowBAir option. Initial: TK
+Graphic loaded: YellowBAir. Initial: TK
+
+Opened spinner to select YellowDAir option. Initial: TK
+Graphic loaded: YellowDAir. Initial: TK
+
+Opened spinner to select YellowDSmash option. Initial: TK
+Graphic loaded: YellowDSmash. Initial: TK
+
+Opened spinner to select YellowFAir option. Initial: TK
+Graphic loaded: YellowFAir. Initial: TK
+
+Opened spinner to select YellowFSmash option. Initial: TK
+Graphic loaded: YellowFSmash. Initial: TK
+
+Opened spinner to select YellowGrab option. Initial: TK
+Graphic loaded: YellowGrab. Initial: TK
+
+Opened spinner to select YellowPikminThrow option. Initial: TK
+Graphic loaded: YellowPikminThrow. Initial: TK
+
+Opened spinner to select YellowUAir option. Initial: TK
+Graphic loaded: YellowUAir. Initial: TK
+
+Opened spinner to select YellowUSmash option. Initial: TK
+Graphic loaded: YellowUSmash. Initial: TK
+
+Opened spinner to select YellowUThrow option. Initial: TK
+Graphic loaded: YellowUThrow. Initial: TK
+
+Completed by: Tristan Kingsley

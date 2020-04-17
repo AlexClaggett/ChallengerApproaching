@@ -29,6 +29,11 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+/** This test checks all of the Unova Pokemon League's page values
+ *  by navigating to the stage select screen and then to
+ *  Unova Pokemon League's page
+ *  */
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class UnovaPokemonLeague {
