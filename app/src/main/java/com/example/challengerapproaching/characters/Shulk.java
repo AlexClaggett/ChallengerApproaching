@@ -19,6 +19,7 @@ import java.io.InputStream;
 
 public class Shulk extends AppCompatActivity {
 
+  //Array of Shulk's Framedata files
   transient String [] shulkMoves = {
       "ShulkAirSlash1.gif",
       "ShulkAirSlash2.gif",

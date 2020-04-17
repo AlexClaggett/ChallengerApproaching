@@ -19,6 +19,7 @@ import java.io.InputStream;
 
 public class ToonLink extends AppCompatActivity {
 
+  //Array of ToonLink's Framedata files
   transient String [] toonLinkMoves = {
       "ToonLinkArrow.png",
       "ToonLinkBAir.gif",

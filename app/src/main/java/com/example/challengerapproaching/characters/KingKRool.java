@@ -19,6 +19,7 @@ import java.io.InputStream;
 
 public class KingKRool extends AppCompatActivity {
 
+  //Array of K Rool's Framedata files
   transient String [] kingKRoolMoves = {
       "KingKRoolBAir.gif",
       "KingKRoolBlunderbuss.gif",

@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Fox extends AppCompatActivity {
 
-
+  //Array of Fox's Framedata files
   transient String [] foxMoves = {
       "FoxBAir.gif",
       "FoxBlaster.gif",

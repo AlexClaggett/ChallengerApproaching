@@ -15,6 +15,7 @@ import java.io.IOException;
 
 public class PiranhaPlant extends AppCompatActivity {
 
+  //Array of Piranha Plant's Framedata files
   transient String [] piranhaPlantMoves = {
       "PiranhaPlantBAir.gif",
       "PiranhaPlantBThrow.gif",

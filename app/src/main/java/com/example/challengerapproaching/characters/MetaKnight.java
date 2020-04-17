@@ -15,6 +15,7 @@ import java.io.IOException;
 
 public class MetaKnight extends AppCompatActivity {
 
+  //Array of MetaKnight's Framedata files
   transient String [] metaKnightMoves = {
       "MetaKnightBAir.gif",
       "MetaKnightBThrow.gif",

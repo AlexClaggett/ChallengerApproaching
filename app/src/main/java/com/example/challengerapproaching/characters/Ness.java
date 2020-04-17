@@ -19,6 +19,7 @@ import java.io.InputStream;
 
 public class Ness extends AppCompatActivity {
 
+  //Array of Ness's Framedata files
   transient String [] nessMoves = {
       "NessBAir.gif",
       "NessBThrow.gif",

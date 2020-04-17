@@ -19,6 +19,7 @@ import java.io.InputStream;
 
 public class Byleth extends AppCompatActivity {
 
+  //Array of Byleth's Framedata files
   transient String [] bylethMoves = {
       "BylethAreadbharAerial.gif",
       "BylethAreadbharGrounded.gif",

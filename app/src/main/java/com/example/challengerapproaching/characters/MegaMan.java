@@ -19,6 +19,7 @@ import java.io.InputStream;
 
 public class MegaMan extends AppCompatActivity {
 
+  //Array of MegaMan's Framedata files
   transient String [] megaManMoves = {
       "MegaManBAir.gif",
       "MegaManBThrow.gif",
