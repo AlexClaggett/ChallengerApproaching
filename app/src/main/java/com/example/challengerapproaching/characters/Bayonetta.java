@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class Bayonetta extends AppCompatActivity {
 
-  //Array of Bayonetta's Framedata files
+  /**Array of Bayonetta's Framedata files*/
   transient String [] bayonettaMoves = {
       "BayonettaAfterburnerKickDown.gif",
       "BayonettaAfterburnerKickLanding.gif",

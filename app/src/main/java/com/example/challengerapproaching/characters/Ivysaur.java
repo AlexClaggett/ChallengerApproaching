@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Ivysaur extends AppCompatActivity {
 
-  //Array of Ivysaur's Framedata files
+  /** Array of Ivysaur's Framedata files */
   transient String [] ivysaurMoves = {
       "IvysaurBAir.gif",
       "IvysaurBThrow.gif",

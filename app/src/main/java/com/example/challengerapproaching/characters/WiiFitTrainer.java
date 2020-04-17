@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class WiiFitTrainer extends AppCompatActivity {
 
-  //Array of WiiFitTrainer's Framedata files
+  /** Array of WiiFitTrainer's Framedata files */
   transient String [] wiiFitmoves = {
       "WiiFitTrainerBAir.gif",
       "WiiFitTrainerBThrow.gif",

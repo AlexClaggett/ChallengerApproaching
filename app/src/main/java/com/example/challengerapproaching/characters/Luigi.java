@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Luigi extends AppCompatActivity {
 
-  //Array of Luigi's Framedata files
+  /** Array of Luigi's Framedata files */
   transient String [] luigiMoves = {
       "LuigiBAir.gif",
       "LuigiBThrow.gif",

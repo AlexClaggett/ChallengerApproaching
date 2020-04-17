@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class DrMario extends AppCompatActivity {
 
-  //Array of Dr Mario's Framedata files
+  /** Array of Dr Mario's Framedata files */
   transient String [] drMarioMoves = {
       "DrMarioBAir.gif",
       "DrMarioBThrow.gif",

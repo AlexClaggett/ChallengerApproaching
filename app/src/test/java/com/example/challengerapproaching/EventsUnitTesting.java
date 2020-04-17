@@ -10,6 +10,8 @@ import org.junit.Test;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class EventsUnitTesting {
+
+    /** Event Default Constructor*/
     @Test
     public void Event_Default_Constructor (){
         Event e = new Event();
@@ -17,6 +19,8 @@ public class EventsUnitTesting {
         Assert.assertEquals("None",e.getDate());
         Assert.assertEquals(-1, e.getId());
     }
+
+    /**Event Constructor for No ID*/
     @Test
     public void Event_NO_ID_Constructor (){
         String name = "Smash";
@@ -26,6 +30,8 @@ public class EventsUnitTesting {
         Assert.assertEquals(date,e.getDate());
         Assert.assertEquals(-1, e.getId());
     }
+
+    /**Event Constructor with ID*/
     @Test
     public void Event_WITH_ID_Constructor (){
         int id = 5;
@@ -36,6 +42,8 @@ public class EventsUnitTesting {
         Assert.assertEquals(date,e.getDate());
         Assert.assertEquals(id, e.getId());
     }
+
+    /**Setter of Events*/
     @Test
     public void Event_Setters (){
         Event e = new Event(5,"Smash", "4/15/2020");

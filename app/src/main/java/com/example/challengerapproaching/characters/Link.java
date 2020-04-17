@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Link extends AppCompatActivity {
 
-  //Array of Link's Framedata files
+  /** Array of Link's Framedata files */
   transient String [] linkMoves = {
       "LinkArrow.png",
       "LinkBAir.gif",
