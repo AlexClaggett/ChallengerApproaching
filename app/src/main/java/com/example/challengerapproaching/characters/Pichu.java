@@ -91,7 +91,7 @@ public class Pichu extends AppCompatActivity {
       }
 
       @Override
-      public void onNothingSelected(AdapterView<?> parent) {
+      public void onNothingSelected(final AdapterView<?> parent) {
 
       }
     });
