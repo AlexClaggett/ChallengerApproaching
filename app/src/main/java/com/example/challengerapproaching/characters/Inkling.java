@@ -1,55 +1,57 @@
 package com.example.challengerapproaching.characters;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
+import java.io.InputStream;
 
 /** This class sets the content view to Inkling's xml
  * file when the respective button is pushed.*/
 
 public class Inkling extends AppCompatActivity {
 
-  String [] Inklingmoves = {
-          "InklingBAir.gif",
-          "InklingBThrow.gif",
-          "InklingDAir.gif",
-          "InklingDashAttack.gif",
-          "InklingDashGrab.gif",
-          "InklingDSmash.gif",
-          "InklingDThrow.gif",
-          "InklingDTilt.gif",
-          "InklingFAir.gif",
-          "InklingFSmash.gif",
-          "InklingFThrow.gif",
-          "InklingFTilt.gif",
-          "InklingGrab.gif",
-          "InklingJab1.gif",
-          "InklingJab2.gif",
-          "InklingJab3.gif",
-          "InklingJabRapid.gif",
-          "InklingJabRapidEnd.gif",
-          "InklingNAir.gif",
-          "InklingPivotGrab.gif",
-          "InklingPummel.gif",
-          "InklingSplatBomb.gif",
-          "InklingSplatBombExplosion.gif",
-//          "InklingSplatRollerA.png",
-//          "InklingSplatRollerG.png",
-//          "InklingSplatRollerNoInk.png",
-          "InklingSuperJump.gif",
-          "InklingUAir.gif",
-          "InklingUSmash.gif",
-          "InklingUSmashNoInk.gif",
-          "InklingUThrow.gif",
-          "InklingUTilt_.gif"
+  String [] inklingMoves = {
+      "InklingBAir.gif",
+      "InklingBThrow.gif",
+      "InklingDAir.gif",
+      "InklingDashAttack.gif",
+      "InklingDashGrab.gif",
+      "InklingDSmash.gif",
+      "InklingDThrow.gif",
+      "InklingDTilt.gif",
+      "InklingFAir.gif",
+      "InklingFSmash.gif",
+      "InklingFThrow.gif",
+      "InklingFTilt.gif",
+      "InklingGrab.gif",
+      "InklingJab1.gif",
+      "InklingJab2.gif",
+      "InklingJab3.gif",
+      "InklingJabRapid.gif",
+      "InklingJabRapidEnd.gif",
+      "InklingNAir.gif",
+      "InklingPivotGrab.gif",
+      "InklingPummel.gif",
+      "InklingSplatBomb.gif",
+      "InklingSplatBombExplosion.gif",
+      "InklingSplatRollerA.png",
+      "InklingSplatRollerG.png",
+      "InklingSplatRollerNoInk.png",
+      "InklingSuperJump.gif",
+      "InklingUAir.gif",
+      "InklingUSmash.gif",
+      "InklingUSmashNoInk.gif",
+      "InklingUThrow.gif",
+      "InklingUTilt_.gif"
   };
 
   @Override
@@ -70,13 +72,29 @@ public class Inkling extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/inkling/" + Inklingmoves[position];
-        try {
-          gifImageView.setGifImageURL(toURL);
-        } catch (IOException e) {
-          e.printStackTrace();
+        ImageView imageView = findViewById(R.id.imageView3);
+        String toUrl = "https://ultimateframedata.com/hitboxes/inkling/" + inklingMoves[position];
+        if (toUrl.endsWith("png")) {
+          gifImageView.setVisibility(View.INVISIBLE);
+          try {
+            InputStream inputStream = new java.net.URL(toUrl).openStream();
+            Bitmap bm = BitmapFactory.decodeStream(inputStream);
+            imageView.setImageBitmap(bm);
+            imageView.setVisibility(View.VISIBLE);
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
+        } else {
+          imageView.setVisibility(View.INVISIBLE);
+          try {
+            gifImageView.setGifImageUrl(toUrl);
+            gifImageView.setVisibility(View.VISIBLE);
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
         }
       }
+
 
       @Override
       public void onNothingSelected(AdapterView<?> parent) {

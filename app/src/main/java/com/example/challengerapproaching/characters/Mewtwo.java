@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Mewtwo's xml
@@ -17,36 +15,36 @@ import java.io.IOException;
 
 public class Mewtwo extends AppCompatActivity {
 
-  String [] Mewtwomoves = {
-          "MewtwoBAir.gif",
-          "MewtwoBThrow.gif",
-          "MewtwoConfusion.gif",
-          "MewtwoDAir.gif",
-          "MewtwoDashAttack.gif",
-          "MewtwoDashGrab.gif",
-          "MewtwoDisable.gif",
-          "MewtwoDSmash.gif",
-          "MewtwoDThrow.gif",
-          "MewtwoDTilt.gif",
-          "MewtwoFAir.gif",
-          "MewtwoFSmash.gif",
-          "MewtwoFSmashDown.gif",
-          "MewtwoFSmashUp.gif",
-          "MewtwoFThrow.gif",
-          "MewtwoFTilt.gif",
-          "MewtwoFTiltDown.gif",
-          "MewtwoFTiltUp.gif",
-          "MewtwoGrab.gif",
-          "MewtwoJab.gif",
-          "MewtwoJabRapid.gif",
-          "MewtwoJabRapidEnd.gif",
-          "MewtwoNAir.gif",
-          "MewtwoPivotGrab.gif",
-          "MewtwoPummel.gif",
-          "MewtwoUAir.gif",
-          "MewtwoUSmash.gif",
-          "MewtwoUThrow.gif",
-          "MewtwoUTilt.gif"
+  String [] mewtwoMoves = {
+      "MewtwoBAir.gif",
+      "MewtwoBThrow.gif",
+      "MewtwoConfusion.gif",
+      "MewtwoDAir.gif",
+      "MewtwoDashAttack.gif",
+      "MewtwoDashGrab.gif",
+      "MewtwoDisable.gif",
+      "MewtwoDSmash.gif",
+      "MewtwoDThrow.gif",
+      "MewtwoDTilt.gif",
+      "MewtwoFAir.gif",
+      "MewtwoFSmash.gif",
+      "MewtwoFSmashDown.gif",
+      "MewtwoFSmashUp.gif",
+      "MewtwoFThrow.gif",
+      "MewtwoFTilt.gif",
+      "MewtwoFTiltDown.gif",
+      "MewtwoFTiltUp.gif",
+      "MewtwoGrab.gif",
+      "MewtwoJab.gif",
+      "MewtwoJabRapid.gif",
+      "MewtwoJabRapidEnd.gif",
+      "MewtwoNAir.gif",
+      "MewtwoPivotGrab.gif",
+      "MewtwoPummel.gif",
+      "MewtwoUAir.gif",
+      "MewtwoUSmash.gif",
+      "MewtwoUThrow.gif",
+      "MewtwoUTilt.gif"
   };
 
   @Override
@@ -67,9 +65,9 @@ public class Mewtwo extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/mewtwo/" + Mewtwomoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/mewtwo/" + mewtwoMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

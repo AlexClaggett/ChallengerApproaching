@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Little Mac's xml
@@ -17,40 +15,40 @@ import java.io.IOException;
 
 public class LittleMac extends AppCompatActivity {
 
-  String [] LittleMacmoves = {
-          "LittleMacBAir.gif",
-          "LittleMacBThrow.gif",
-          "LittleMacDAir.gif",
-          "LittleMacDashAttack.gif",
-          "LittleMacDashGrab.gif",
-          "LittleMacDSmash.gif",
-          "LittleMacDThrow.gif",
-          "LittleMacDTilt.gif",
-          "LittleMacFAir.gif",
-          "LittleMacFSmash.gif",
-          "LittleMacFSmashDown.gif",
-          "LittleMacFSmashUp.gif",
-          "LittleMacFThrow.gif",
-          "LittleMacFTilt.gif",
-          "LittleMacGrab.gif",
-          "LittleMacJab1.gif",
-          "LittleMacJab2.gif",
-          "LittleMacJab3.gif",
-          "LittleMacJabRapid.gif",
-          "LittleMacJabRapidEnd.gif",
-          "LittleMacJoltHaymakerA.gif",
-          "LittleMacJoltHaymakerG.gif",
-          "LittleMacKOPunchA.gif",
-          "LittleMacKOPunchG.gif",
-          "LittleMacNAir.gif",
-          "LittleMacPivotGrab.gif",
-          "LittleMacPummel.gif",
-          "LittleMacRisingUppercut.gif",
-          "LittleMacSlipCounter.gif",
-          "LittleMacSlipCounterHitA.gif",
-          "LittleMacSlipCounterHitG.gif",
-          "LittleMacStraightLungeA.gif",
-          "LittleMacStraightLungeMaxA.gif"
+  String [] littleMacMoves = {
+      "LittleMacBAir.gif",
+      "LittleMacBThrow.gif",
+      "LittleMacDAir.gif",
+      "LittleMacDashAttack.gif",
+      "LittleMacDashGrab.gif",
+      "LittleMacDSmash.gif",
+      "LittleMacDThrow.gif",
+      "LittleMacDTilt.gif",
+      "LittleMacFAir.gif",
+      "LittleMacFSmash.gif",
+      "LittleMacFSmashDown.gif",
+      "LittleMacFSmashUp.gif",
+      "LittleMacFThrow.gif",
+      "LittleMacFTilt.gif",
+      "LittleMacGrab.gif",
+      "LittleMacJab1.gif",
+      "LittleMacJab2.gif",
+      "LittleMacJab3.gif",
+      "LittleMacJabRapid.gif",
+      "LittleMacJabRapidEnd.gif",
+      "LittleMacJoltHaymakerA.gif",
+      "LittleMacJoltHaymakerG.gif",
+      "LittleMacKOPunchA.gif",
+      "LittleMacKOPunchG.gif",
+      "LittleMacNAir.gif",
+      "LittleMacPivotGrab.gif",
+      "LittleMacPummel.gif",
+      "LittleMacRisingUppercut.gif",
+      "LittleMacSlipCounter.gif",
+      "LittleMacSlipCounterHitA.gif",
+      "LittleMacSlipCounterHitG.gif",
+      "LittleMacStraightLungeA.gif",
+      "LittleMacStraightLungeMaxA.gif"
   };
 
   @Override
@@ -71,9 +69,9 @@ public class LittleMac extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/little_mac/" + LittleMacmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/little_mac/" + littleMacMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

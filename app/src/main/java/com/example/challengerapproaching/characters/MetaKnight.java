@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to MetaKnight's xml
@@ -17,40 +15,40 @@ import java.io.IOException;
 
 public class MetaKnight extends AppCompatActivity {
 
-  String [] MetaKnightmoves = {
-          "MetaKnightBAir.gif",
-          "MetaKnightBThrow.gif",
-          "MetaKnightDAir.gif",
-          "MetaKnightDashAttack.gif",
-          "MetaKnightDashGrab.gif",
-          "MetaKnightDimensionalCapeAirBack.gif",
-          "MetaKnightDimensionalCapeAirForward.gif",
-          "MetaKnightDimensionalCapeGroundBack.gif",
-          "MetaKnightDimensionalCapeGroundForward.gif",
-          "MetaKnightDrillRush.gif",
-          "MetaKnightDrillRushEnd.gif",
-          "MetaKnightDSmash.gif",
-          "MetaKnightDThrow.gif",
-          "MetaKnightDTilt.gif",
-          "MetaKnightFAir.gif",
-          "MetaKnightFSmash.gif",
-          "MetaKnightFThrow.gif",
-          "MetaKnightFTilt1.gif",
-          "MetaKnightFTilt2.gif",
-          "MetaKnightFTilt3.gif",
-          "MetaKnightGrab.gif",
-          "MetaKnightJabRapid.gif",
-          "MetaKnightJabRapidEnd.gif",
-          "MetaKnightMachTornado.gif",
-          "MetaKnightNAir.gif",
-          "MetaKnightPivotGrab.gif",
-          "MetaKnightPummel.gif",
-          "MetaKnightShuttleLoopA.gif",
-          "MetaKnightShuttleLoopG.gif",
-          "MetaKnightUAir.gif",
-          "MetaKnightUSmash.gif",
-          "MetaKnightUThrow.gif",
-          "MetaKnightUTilt.gif"
+  String [] metaKnightMoves = {
+      "MetaKnightBAir.gif",
+      "MetaKnightBThrow.gif",
+      "MetaKnightDAir.gif",
+      "MetaKnightDashAttack.gif",
+      "MetaKnightDashGrab.gif",
+      "MetaKnightDimensionalCapeAirBack.gif",
+      "MetaKnightDimensionalCapeAirForward.gif",
+      "MetaKnightDimensionalCapeGroundBack.gif",
+      "MetaKnightDimensionalCapeGroundForward.gif",
+      "MetaKnightDrillRush.gif",
+      "MetaKnightDrillRushEnd.gif",
+      "MetaKnightDSmash.gif",
+      "MetaKnightDThrow.gif",
+      "MetaKnightDTilt.gif",
+      "MetaKnightFAir.gif",
+      "MetaKnightFSmash.gif",
+      "MetaKnightFThrow.gif",
+      "MetaKnightFTilt1.gif",
+      "MetaKnightFTilt2.gif",
+      "MetaKnightFTilt3.gif",
+      "MetaKnightGrab.gif",
+      "MetaKnightJabRapid.gif",
+      "MetaKnightJabRapidEnd.gif",
+      "MetaKnightMachTornado.gif",
+      "MetaKnightNAir.gif",
+      "MetaKnightPivotGrab.gif",
+      "MetaKnightPummel.gif",
+      "MetaKnightShuttleLoopA.gif",
+      "MetaKnightShuttleLoopG.gif",
+      "MetaKnightUAir.gif",
+      "MetaKnightUSmash.gif",
+      "MetaKnightUThrow.gif",
+      "MetaKnightUTilt.gif"
   };
 
   @Override
@@ -71,9 +69,9 @@ public class MetaKnight extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/meta_knight/" + MetaKnightmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/meta_knight/" + metaKnightMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

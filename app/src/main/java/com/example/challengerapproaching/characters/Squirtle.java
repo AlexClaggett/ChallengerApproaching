@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Squirtle's xml
@@ -17,37 +15,37 @@ import java.io.IOException;
 
 public class Squirtle extends AppCompatActivity {
 
-  String [] Squirtlemoves = {
-          "SquirtleBAir.gif",
-          "SquirtleBAirLanding.gif",
-          "SquirtleBThrow.gif",
-          "SquirtleDAir.gif",
-          "SquirtleDashAttack.gif",
-          "SquirtleDashGrab.gif",
-          "SquirtleDSmash.gif",
-          "SquirtleDThrow.gif",
-          "SquirtleDTilt.gif",
-          "SquirtleFAir.gif",
-          "SquirtleFSmash.gif",
-          "SquirtleFSmashDown.gif",
-          "SquirtleFSmashUp.gif",
-          "SquirtleFThrow.gif",
-          "SquirtleFTilt.gif",
-          "SquirtleFTiltDown.gif",
-          "SquirtleFTiltUp.gif",
-          "SquirtleGrab.gif",
-          "SquirtleJab1.gif",
-          "SquirtleJab2.gif",
-          "SquirtleJab3.gif",
-          "SquirtleNAir.gif",
-          "SquirtlePivotGrab.gif",
-          "SquirtlePummel.gif",
-          "SquirtleUAir.gif",
-          "SquirtleUSmash.gif",
-          "SquirtleUThrow.gif",
-          "SquirtleUTilt.gif",
-          "SquirtleWaterfall.gif",
-          "SquirtleWithdraw.gif"
+  String [] squirtleMoves = {
+      "SquirtleBAir.gif",
+      "SquirtleBAirLanding.gif",
+      "SquirtleBThrow.gif",
+      "SquirtleDAir.gif",
+      "SquirtleDashAttack.gif",
+      "SquirtleDashGrab.gif",
+      "SquirtleDSmash.gif",
+      "SquirtleDThrow.gif",
+      "SquirtleDTilt.gif",
+      "SquirtleFAir.gif",
+      "SquirtleFSmash.gif",
+      "SquirtleFSmashDown.gif",
+      "SquirtleFSmashUp.gif",
+      "SquirtleFThrow.gif",
+      "SquirtleFTilt.gif",
+      "SquirtleFTiltDown.gif",
+      "SquirtleFTiltUp.gif",
+      "SquirtleGrab.gif",
+      "SquirtleJab1.gif",
+      "SquirtleJab2.gif",
+      "SquirtleJab3.gif",
+      "SquirtleNAir.gif",
+      "SquirtlePivotGrab.gif",
+      "SquirtlePummel.gif",
+      "SquirtleUAir.gif",
+      "SquirtleUSmash.gif",
+      "SquirtleUThrow.gif",
+      "SquirtleUTilt.gif",
+      "SquirtleWaterfall.gif",
+      "SquirtleWithdraw.gif"
   };
 
   @Override
@@ -68,9 +66,9 @@ public class Squirtle extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/pt_squirtle/" + Squirtlemoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/pt_squirtle/" + squirtleMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

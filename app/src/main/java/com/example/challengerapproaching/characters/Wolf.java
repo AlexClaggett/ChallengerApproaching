@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Wolf's xml
@@ -17,37 +15,37 @@ import java.io.IOException;
 
 public class Wolf extends AppCompatActivity {
 
-  String [] Wolfmoves = {
-          "WolfBAir.gif",
-          "WolfBlaster.gif",
-          "WolfBThrow.gif",
-          "WolfDAir.gif",
-          "WolfDashAttack.gif",
-          "WolfDashGrab.gif",
-          "WolfDSmash.gif",
-          "WolfDThrow.gif",
-          "WolfDTilt.gif",
-          "WolfFAir.gif",
-          "WolfFireWolf.gif",
-          "WolfFSmash.gif",
-          "WolfFThrow.gif",
-          "WolfFTilt.gif",
-          "WolfFTiltDown.gif",
-          "WolfFTiltUp.gif",
-          "WolfGrab.gif",
-          "WolfJab1.gif",
-          "WolfJab2.gif",
-          "WolfJab3.gif",
-          "WolfNAir.gif",
-          "WolfPivotGrab.gif",
-          "WolfPummel.gif",
-          "WolfReflector.gif",
-          "WolfReflectorStart.gif",
-          "WolfUAir.gif",
-          "WolfUSmash.gif",
-          "WolfUThrow.gif",
-          "WolfUTilt.gif",
-          "WolfWolfFlash.gif",
+  String [] wolfMoves = {
+      "WolfBAir.gif",
+      "WolfBlaster.gif",
+      "WolfBThrow.gif",
+      "WolfDAir.gif",
+      "WolfDashAttack.gif",
+      "WolfDashGrab.gif",
+      "WolfDSmash.gif",
+      "WolfDThrow.gif",
+      "WolfDTilt.gif",
+      "WolfFAir.gif",
+      "WolfFireWolf.gif",
+      "WolfFSmash.gif",
+      "WolfFThrow.gif",
+      "WolfFTilt.gif",
+      "WolfFTiltDown.gif",
+      "WolfFTiltUp.gif",
+      "WolfGrab.gif",
+      "WolfJab1.gif",
+      "WolfJab2.gif",
+      "WolfJab3.gif",
+      "WolfNAir.gif",
+      "WolfPivotGrab.gif",
+      "WolfPummel.gif",
+      "WolfReflector.gif",
+      "WolfReflectorStart.gif",
+      "WolfUAir.gif",
+      "WolfUSmash.gif",
+      "WolfUThrow.gif",
+      "WolfUTilt.gif",
+      "WolfWolfFlash.gif",
   };
 
   @Override
@@ -68,9 +66,9 @@ public class Wolf extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/wolf/" + Wolfmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/wolf/" + wolfMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

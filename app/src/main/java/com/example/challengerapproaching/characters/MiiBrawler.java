@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Mii Brawler's xml
@@ -17,62 +15,62 @@ import java.io.IOException;
 
 public class MiiBrawler extends AppCompatActivity {
 
-  String [] MiiBrawlermoves = {
-          "MiiBrawlerBAir.gif",
-          "MiiBrawlerBThrow.gif",
-          "MiiBrawlerBurningDropkick.gif",
-          "MiiBrawlerCounterThrow.gif",
-          "MiiBrawlerCounterThrowGrabA.gif",
-          "MiiBrawlerCounterThrowGrabG.gif",
-          "MiiBrawlerCounterThrowThrow.gif",
-          "MiiBrawlerDAir.gif",
-          "MiiBrawlerDashAttack.gif",
-          "MiiBrawlerDashGrab.gif",
-          "MiiBrawlerDSmash.gif",
-          "MiiBrawlerDThrow.gif",
-          "MiiBrawlerDTilt.gif",
-          "MiiBrawlerExplodingSideKick.gif",
-          "MiiBrawlerFAir.gif",
-          "MiiBrawlerFeintJump.gif",
-          "MiiBrawlerFeintJumpAutoKick.gif",
-          "MiiBrawlerFeintJumpKick.gif",
-          "MiiBrawlerFlashingMachPunch.gif",
-          "MiiBrawlerFlashingMachPunchMiss.gif",
-          "MiiBrawlerFSmash.gif",
-          "MiiBrawlerFSmashDown.gif",
-          "MiiBrawlerFSmashUp.gif",
-          "MiiBrawlerFThrow.gif",
-          "MiiBrawlerFTilt.gif",
-          "MiiBrawlerFTiltDown.gif",
-          "MiiBrawlerFTiltUp.gif",
-          "MiiBrawlerGrab.gif",
-          "MiiBrawlerHead-OnAssault.gif",
-          "MiiBrawlerHead-OnAssaultFall.gif",
-          "MiiBrawlerHead-OnAssaultLanding.gif",
-          "MiiBrawlerHelicopterKickA.gif",
-          "MiiBrawlerHelicopterKickG.gif",
-          "MiiBrawlerJab1.gif",
-          "MiiBrawlerJab2.gif",
-          "MiiBrawlerJabRapid.gif",
-          "MiiBrawlerJabRapidEnd.gif",
-          "MiiBrawlerNAir.gif",
-          "MiiBrawlerOnslaughtA.gif",
-          "MiiBrawlerOnslaughtG.gif",
-          "MiiBrawlerOnslaughtHitA.gif",
-          "MiiBrawlerOnslaughtHitG.gif",
-          "MiiBrawlerPivotGrab.gif",
-          "MiiBrawlerPummel.gif",
-          "MiiBrawlerSoaringAxeKickFall.png",
-          "MiiBrawlerSoaringAxeKickLanding.gif",
-          "MiiBrawlerSoaringAxeKickRise.gif",
-          "MiiBrawlerSuplexA.gif",
-          "MiiBrawlerSuplexG.gif",
-          "MiiBrawlerSuplexHit.gif",
-          "MiiBrawlerThrustUppercut.gif",
-          "MiiBrawlerUAir.gif",
-          "MiiBrawlerUSmash.gif",
-          "MiiBrawlerUThrow.gif",
-          "MiiBrawlerUTilt.gif"
+  String [] miiBrawlerMoves = {
+      "MiiBrawlerBAir.gif",
+      "MiiBrawlerBThrow.gif",
+      "MiiBrawlerBurningDropkick.gif",
+      "MiiBrawlerCounterThrow.gif",
+      "MiiBrawlerCounterThrowGrabA.gif",
+      "MiiBrawlerCounterThrowGrabG.gif",
+      "MiiBrawlerCounterThrowThrow.gif",
+      "MiiBrawlerDAir.gif",
+      "MiiBrawlerDashAttack.gif",
+      "MiiBrawlerDashGrab.gif",
+      "MiiBrawlerDSmash.gif",
+      "MiiBrawlerDThrow.gif",
+      "MiiBrawlerDTilt.gif",
+      "MiiBrawlerExplodingSideKick.gif",
+      "MiiBrawlerFAir.gif",
+      "MiiBrawlerFeintJump.gif",
+      "MiiBrawlerFeintJumpAutoKick.gif",
+      "MiiBrawlerFeintJumpKick.gif",
+      "MiiBrawlerFlashingMachPunch.gif",
+      "MiiBrawlerFlashingMachPunchMiss.gif",
+      "MiiBrawlerFSmash.gif",
+      "MiiBrawlerFSmashDown.gif",
+      "MiiBrawlerFSmashUp.gif",
+      "MiiBrawlerFThrow.gif",
+      "MiiBrawlerFTilt.gif",
+      "MiiBrawlerFTiltDown.gif",
+      "MiiBrawlerFTiltUp.gif",
+      "MiiBrawlerGrab.gif",
+      "MiiBrawlerHead-OnAssault.gif",
+      "MiiBrawlerHead-OnAssaultFall.gif",
+      "MiiBrawlerHead-OnAssaultLanding.gif",
+      "MiiBrawlerHelicopterKickA.gif",
+      "MiiBrawlerHelicopterKickG.gif",
+      "MiiBrawlerJab1.gif",
+      "MiiBrawlerJab2.gif",
+      "MiiBrawlerJabRapid.gif",
+      "MiiBrawlerJabRapidEnd.gif",
+      "MiiBrawlerNAir.gif",
+      "MiiBrawlerOnslaughtA.gif",
+      "MiiBrawlerOnslaughtG.gif",
+      "MiiBrawlerOnslaughtHitA.gif",
+      "MiiBrawlerOnslaughtHitG.gif",
+      "MiiBrawlerPivotGrab.gif",
+      "MiiBrawlerPummel.gif",
+      "MiiBrawlerSoaringAxeKickFall.png",
+      "MiiBrawlerSoaringAxeKickLanding.gif",
+      "MiiBrawlerSoaringAxeKickRise.gif",
+      "MiiBrawlerSuplexA.gif",
+      "MiiBrawlerSuplexG.gif",
+      "MiiBrawlerSuplexHit.gif",
+      "MiiBrawlerThrustUppercut.gif",
+      "MiiBrawlerUAir.gif",
+      "MiiBrawlerUSmash.gif",
+      "MiiBrawlerUThrow.gif",
+      "MiiBrawlerUTilt.gif"
   };
 
   @Override
@@ -93,9 +91,9 @@ public class MiiBrawler extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/mii_brawler/" + MiiBrawlermoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/mii_brawler/" + miiBrawlerMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

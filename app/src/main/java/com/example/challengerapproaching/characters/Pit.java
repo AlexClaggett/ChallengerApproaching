@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Pit's xml
@@ -18,37 +16,37 @@ import java.io.IOException;
 public class Pit extends AppCompatActivity {
 
 
-  String [] Pitmoves = {
-          "PitBAir.gif",
-          "PitBThrow.gif",
-          "PitDAir.gif",
-          "PitDashAttack.gif",
-          "PitDashGrab.gif",
-          "PitDSmash.gif",
-          "PitDThrow.gif",
-          "PitDTilt.gif",
-          "PitFAir.gif",
-          "PitFSmash.gif",
-          "PitFThrow.gif",
-          "PitFTilt.gif",
-          "PitGrab.gif",
-          "PitGuardianOrbitars.gif",
-          "PitJab1.gif",
-          "PitJab2.gif",
-          "PitJab3.gif",
-          "PitJabRapid.gif",
-          "PitJabRapidEnd.gif",
-          "PitNAir.gif",
-          "PitPivotGrab.gif",
-          "PitPummel.gif",
-          "PitUAir.gif",
-          "PitUpperdashArmA.gif",
-          "PitUpperdashArmHitA.gif",
-          "PitUpperdashArmHitG.gif",
-          "PitUpperdashkArmG.gif",
-          "PitUSmash.gif",
-          "PitUThrow.gif",
-          "PitUTilt.gif",
+  String [] pitMoves = {
+      "PitBAir.gif",
+      "PitBThrow.gif",
+      "PitDAir.gif",
+      "PitDashAttack.gif",
+      "PitDashGrab.gif",
+      "PitDSmash.gif",
+      "PitDThrow.gif",
+      "PitDTilt.gif",
+      "PitFAir.gif",
+      "PitFSmash.gif",
+      "PitFThrow.gif",
+      "PitFTilt.gif",
+      "PitGrab.gif",
+      "PitGuardianOrbitars.gif",
+      "PitJab1.gif",
+      "PitJab2.gif",
+      "PitJab3.gif",
+      "PitJabRapid.gif",
+      "PitJabRapidEnd.gif",
+      "PitNAir.gif",
+      "PitPivotGrab.gif",
+      "PitPummel.gif",
+      "PitUAir.gif",
+      "PitUpperdashArmA.gif",
+      "PitUpperdashArmHitA.gif",
+      "PitUpperdashArmHitG.gif",
+      "PitUpperdashkArmG.gif",
+      "PitUSmash.gif",
+      "PitUThrow.gif",
+      "PitUTilt.gif",
   };
 
   @Override
@@ -69,9 +67,9 @@ public class Pit extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/pit/" + Pitmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/pit/" + pitMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

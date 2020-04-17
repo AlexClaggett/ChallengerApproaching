@@ -7,14 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.challengerapproaching.utils.DatabaseHelper;
+import com.example.challengerapproaching.utils.Event;
 import com.example.challengerapproaching.utils.ListDataActivity;
-import com.example.challengerapproaching.utils.databaseHelper;
-import com.example.challengerapproaching.utils.event;
-import com.example.challengerapproaching.utils.eventDialog;
-
+import com.example.challengerapproaching.utils.EventDialog;
 import java.util.Calendar;
 
 /**********************************************************************
@@ -25,11 +22,11 @@ import java.util.Calendar;
 
  @authors Alex Clagget, Brad Samack, Katie Cussans, Tristan Kingsley
  @version v1.0 First Release
- *********************************************************************/
-public class Events_Activity extends AppCompatActivity implements eventDialog.EventDialogListener {
+*********************************************************************/
+public class EventsActivity extends AppCompatActivity implements EventDialog.EventDialogListener {
 
-  databaseHelper eventDatabase;
-  event mostRecent = new event();
+  DatabaseHelper eventDatabase;
+  Event mostRecent = new Event();
   /**
    * Static string for sending Log information to the terminal.
    */
@@ -71,7 +68,7 @@ public class Events_Activity extends AppCompatActivity implements eventDialog.Ev
     eventDate = findViewById(R.id.dView);
     viewEvent = findViewById(R.id.viewevent);
     upcomingEvent = findViewById(R.id.mostRecent);
-    eventDatabase = new databaseHelper(this);
+    eventDatabase = new DatabaseHelper(this);
     mostRecent = eventDatabase.getMostRecent();
     // Set onClick Listener for event creation
     button.setOnClickListener(new View.OnClickListener() {
@@ -84,11 +81,10 @@ public class Events_Activity extends AppCompatActivity implements eventDialog.Ev
     viewEvent.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        if(eventDatabase.getNumEvents() == 0){
+        if (eventDatabase.getNumEvents() == 0) {
           toastMessage("Currently No Events Are Scheduled.");
-        }
-        else {
-          Intent intent = new Intent(Events_Activity.this, ListDataActivity.class);
+        } else {
+          Intent intent = new Intent(EventsActivity.this, ListDataActivity.class);
           startActivity(intent);
         }
       }
@@ -99,7 +95,7 @@ public class Events_Activity extends AppCompatActivity implements eventDialog.Ev
   }
 
   public void openDialog() {
-    eventDialog newEvent = new eventDialog();
+    EventDialog newEvent = new EventDialog();
     newEvent.show(getSupportFragmentManager(), "create event");
   }
 
@@ -107,7 +103,7 @@ public class Events_Activity extends AppCompatActivity implements eventDialog.Ev
   public void applyText(String name, String date, Calendar actDate) {
     eventName.setText(name);
     eventDate.setText(date);
-    if (eventName.length() != 0 && eventDate.length() != 0){
+    if (eventName.length() != 0 && eventDate.length() != 0) {
 //        Intent intent = new Intent(Intent.ACTION_EDIT);
 //        intent.setType("vnd.android.cursor.item/event");
 //        intent.putExtra("beginTime", actDate.getTimeInMillis());
@@ -116,16 +112,15 @@ public class Events_Activity extends AppCompatActivity implements eventDialog.Ev
 //       // intent.putExtra("endTime", eventDate.getText()+60*60*1000);
 //        intent.putExtra("title", eventName.getText());
 //      startActivity(intent);
-          AddData(name, date);
+      addData(name, date);
       mostRecent = eventDatabase.getMostRecent();
       upcomingEvent.setText(mostRecent.getName() + "\n" + mostRecent.getDate());
-    }
-    else{
-        toastMessage("You must put something for the date and name");
+    } else {
+      toastMessage("You must put something for the date and name");
     }
   }
 
-  public void AddData(String newName, String newDate){
+  public void addData(String newName, String newDate) {
     boolean insertData = eventDatabase.addData(newName, newDate);
   }
 

@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Palutena's xml
@@ -17,35 +15,35 @@ import java.io.IOException;
 
 public class Palutena extends AppCompatActivity {
 
-  String [] Palutenamoves = {
-          "PalutenaAutoreticle.gif",
-          "PalutenaBAir.gif",
-          "PalutenaBThrow.gif",
-          "PalutenaCounter.gif",
-          "PalutenaCounterHit.gif",
-          "PalutenaDAir.gif",
-          "PalutenaDashAttack.gif",
-          "PalutenaDashGrab.gif",
-          "PalutenaDSmash.gif",
-          "PalutenaDThrow.gif",
-          "PalutenaDTilt.gif",
-          "PalutenaExplosiveFlame.gif",
-          "PalutenaFAir.gif",
-          "PalutenaFSmash.gif",
-          "PalutenaFThrow.gif",
-          "PalutenaFTilt.gif",
-          "PalutenaGrab.gif",
-          "PalutenaJab1.gif",
-          "PalutenaJabRapid.gif",
-          "PalutenaJabRapidEnd.gif",
-          "PalutenaNAir.gif",
-          "PalutenaPivotGrab.gif",
-          "PalutenaPummel.gif",
-          "PalutenaReflectBarrier.gif",
-          "PalutenaUAir.gif",
-          "PalutenaUSmash.gif",
-          "PalutenaUThrow.gif",
-          "PalutenaUTilt.gif"
+  String [] palutenaMoves = {
+      "PalutenaAutoreticle.gif",
+      "PalutenaBAir.gif",
+      "PalutenaBThrow.gif",
+      "PalutenaCounter.gif",
+      "PalutenaCounterHit.gif",
+      "PalutenaDAir.gif",
+      "PalutenaDashAttack.gif",
+      "PalutenaDashGrab.gif",
+      "PalutenaDSmash.gif",
+      "PalutenaDThrow.gif",
+      "PalutenaDTilt.gif",
+      "PalutenaExplosiveFlame.gif",
+      "PalutenaFAir.gif",
+      "PalutenaFSmash.gif",
+      "PalutenaFThrow.gif",
+      "PalutenaFTilt.gif",
+      "PalutenaGrab.gif",
+      "PalutenaJab1.gif",
+      "PalutenaJabRapid.gif",
+      "PalutenaJabRapidEnd.gif",
+      "PalutenaNAir.gif",
+      "PalutenaPivotGrab.gif",
+      "PalutenaPummel.gif",
+      "PalutenaReflectBarrier.gif",
+      "PalutenaUAir.gif",
+      "PalutenaUSmash.gif",
+      "PalutenaUThrow.gif",
+      "PalutenaUTilt.gif"
   };
 
   @Override
@@ -66,9 +64,9 @@ public class Palutena extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/palutena/" + Palutenamoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/palutena/" + palutenaMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

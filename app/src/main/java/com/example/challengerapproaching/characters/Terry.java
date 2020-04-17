@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Terry's xml
@@ -17,57 +15,57 @@ import java.io.IOException;
 
 public class Terry extends AppCompatActivity {
 
-  String [] Terrymoves = {
-          "TerryBAir.gif",
-          "TerryBThrow.gif",
-          "TerryBurningKnuckleAirStrong.gif",
-          "TerryBurningKnuckleAirStrongInput.gif",
-          "TerryBurningKnuckleAirWeak.gif",
-          "TerryBurningKnuckleAirWeakInput.gif",
-          "TerryBurningKnuckleGroundStrong.gif",
-          "TerryBurningKnuckleGroundStrongInput.gif",
-          "TerryBurningKnuckleGroundWeak.gif",
-          "TerryBurningKnuckleGroundWeakInput.gif",
-          "TerryBusterWolf.gif",
-          "TerryBusterWolfThrow.gif",
-          "TerryCrackShootStrong.gif",
-          "TerryCrackShootWeak.gif",
-          "TerryDAir.gif",
-          "TerryDashAttack.gif",
-          "TerryDashGrab.gif",
-          "TerryDSmash.gif",
-          "TerryDThrow.gif",
-          "TerryDTilt.gif",
-          "TerryFAir.gif",
-          "TerryFSmash.gif",
-          "TerryFThrow.gif",
-          "TerryFTilt.gif",
-          "TerryGrab.gif",
-          "TerryJab1.gif",
-          "TerryJab2.gif",
-          "TerryJab3.gif",
-          "TerryNAir.gif",
-          "TerryPivotGrab.gif",
-          "TerryPowerDunkRiseStrong.gif",
-          "TerryPowerDunkRiseStrongInput.gif",
-          "TerryPowerDunkRiseWeak.gif",
-          "TerryPowerDunkRiseWeakInput.gif",
-          "TerryPowerDunkSpike.gif",
-          "TerryPowerDunkStrong.gif",
-          "TerryPowerDunkWeak.gif",
-          "TerryPowerGeyser.gif",
-          "TerryPowerWaveAStrong.gif",
-          "TerryPowerWaveAWeak.gif",
-          "TerryPowerWaveGStrong.gif",
-          "TerryPowerWaveGWeak.gif",
-          "TerryPummel.gif",
-          "TerryRisingTackle.gif",
-          "TerryRisingTackleCharged.gif",
-          "TerryUAir.gif",
-          "TerryUSmash.gif",
-          "TerryUThrow.gif",
-          "TerryUTilt.gif",
-          "TerryUTiltBullshit.gif"
+  String [] terryMoves = {
+      "TerryBAir.gif",
+      "TerryBThrow.gif",
+      "TerryBurningKnuckleAirStrong.gif",
+      "TerryBurningKnuckleAirStrongInput.gif",
+      "TerryBurningKnuckleAirWeak.gif",
+      "TerryBurningKnuckleAirWeakInput.gif",
+      "TerryBurningKnuckleGroundStrong.gif",
+      "TerryBurningKnuckleGroundStrongInput.gif",
+      "TerryBurningKnuckleGroundWeak.gif",
+      "TerryBurningKnuckleGroundWeakInput.gif",
+      "TerryBusterWolf.gif",
+      "TerryBusterWolfThrow.gif",
+      "TerryCrackShootStrong.gif",
+      "TerryCrackShootWeak.gif",
+      "TerryDAir.gif",
+      "TerryDashAttack.gif",
+      "TerryDashGrab.gif",
+      "TerryDSmash.gif",
+      "TerryDThrow.gif",
+      "TerryDTilt.gif",
+      "TerryFAir.gif",
+      "TerryFSmash.gif",
+      "TerryFThrow.gif",
+      "TerryFTilt.gif",
+      "TerryGrab.gif",
+      "TerryJab1.gif",
+      "TerryJab2.gif",
+      "TerryJab3.gif",
+      "TerryNAir.gif",
+      "TerryPivotGrab.gif",
+      "TerryPowerDunkRiseStrong.gif",
+      "TerryPowerDunkRiseStrongInput.gif",
+      "TerryPowerDunkRiseWeak.gif",
+      "TerryPowerDunkRiseWeakInput.gif",
+      "TerryPowerDunkSpike.gif",
+      "TerryPowerDunkStrong.gif",
+      "TerryPowerDunkWeak.gif",
+      "TerryPowerGeyser.gif",
+      "TerryPowerWaveAStrong.gif",
+      "TerryPowerWaveAWeak.gif",
+      "TerryPowerWaveGStrong.gif",
+      "TerryPowerWaveGWeak.gif",
+      "TerryPummel.gif",
+      "TerryRisingTackle.gif",
+      "TerryRisingTackleCharged.gif",
+      "TerryUAir.gif",
+      "TerryUSmash.gif",
+      "TerryUThrow.gif",
+      "TerryUTilt.gif",
+      "TerryUTiltBullshit.gif"
   };
 
   @Override
@@ -88,9 +86,9 @@ public class Terry extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/terry/" + Terrymoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/terry/" + terryMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

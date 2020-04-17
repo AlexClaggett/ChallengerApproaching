@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Ganondorf's xml
@@ -17,40 +15,40 @@ import java.io.IOException;
 
 public class Ganondorf extends AppCompatActivity {
 
-  String [] Ganondorfmoves = {
-          "GanondorfBAir.gif",
-          "GanondorfBThrow.gif",
-          "GanondorfDAir.gif",
-          "GanondorfDarkDive.gif",
-          "GanondorfDarkDiveCatch.gif",
-          "GanondorfDashAttack.gif",
-          "GanondorfDashGrab.gif",
-          "GanondorfDSmash.gif",
-          "GanondorfDThrow.gif",
-          "GanondorfDTilt.gif",
-          "GanondorfFAir.gif",
-          "GanondorfFlameChoke.gif",
-          "GanondorfFlameChokeA.gif",
-          "GanondorfFlameChokeG.gif",
-          "GanondorfFSmash.gif",
-          "GanondorfFThrow.gif",
-          "GanondorfFTilt.gif",
-          "GanondorfGrab.gif",
-          "GanondorfJab.gif",
-          "GanondorfNAir.gif",
-          "GanondorfPivotGrab.gif",
-          "GanondorfPummel.gif",
-          "GanondorfUAir.gif",
-          "GanondorfUSmash.gif",
-          "GanondorfUThrow.gif",
-          "GanondorfUTilt.gif",
-          "GanondorfWarlockPunchA.gif",
-          "GanondorfWarlockPunchG.gif",
-          "GanondorfWarlockPunchRA.gif",
-          "GanondorfWarlockPunchRG.gif",
-          "GanondorfWizardsFootA.gif",
-          "GanondorfWizardsFootALand.gif",
-          "GanondorfWizardsFootG.gif"
+  String [] ganondorfMoves = {
+      "GanondorfBAir.gif",
+      "GanondorfBThrow.gif",
+      "GanondorfDAir.gif",
+      "GanondorfDarkDive.gif",
+      "GanondorfDarkDiveCatch.gif",
+      "GanondorfDashAttack.gif",
+      "GanondorfDashGrab.gif",
+      "GanondorfDSmash.gif",
+      "GanondorfDThrow.gif",
+      "GanondorfDTilt.gif",
+      "GanondorfFAir.gif",
+      "GanondorfFlameChoke.gif",
+      "GanondorfFlameChokeA.gif",
+      "GanondorfFlameChokeG.gif",
+      "GanondorfFSmash.gif",
+      "GanondorfFThrow.gif",
+      "GanondorfFTilt.gif",
+      "GanondorfGrab.gif",
+      "GanondorfJab.gif",
+      "GanondorfNAir.gif",
+      "GanondorfPivotGrab.gif",
+      "GanondorfPummel.gif",
+      "GanondorfUAir.gif",
+      "GanondorfUSmash.gif",
+      "GanondorfUThrow.gif",
+      "GanondorfUTilt.gif",
+      "GanondorfWarlockPunchA.gif",
+      "GanondorfWarlockPunchG.gif",
+      "GanondorfWarlockPunchRA.gif",
+      "GanondorfWarlockPunchRG.gif",
+      "GanondorfWizardsFootA.gif",
+      "GanondorfWizardsFootALand.gif",
+      "GanondorfWizardsFootG.gif"
   };
 
   @Override
@@ -66,13 +64,14 @@ public class Ganondorf extends AppCompatActivity {
     adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
 
     Spinner spnLocale = findViewById(R.id.spinner2);
-    spnLocale.setAdapter(adapter);    spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+    spnLocale.setAdapter(adapter);
+    spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/ganondorf/" + Ganondorfmoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/ganondorf/" + ganondorfMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
 
 /** This class sets the content view to Dr Mario's xml
@@ -17,39 +15,39 @@ import java.io.IOException;
 
 public class DrMario extends AppCompatActivity {
 
-  String [] DrMariomoves = {
-          "DrMarioBAir.gif",
-          "DrMarioBThrow.gif",
-          "DrMarioDAir.gif",
-          "DrMarioDashAttack.gif",
-          "DrMarioDashGrab.gif",
-          "DrMarioDrTornadoA.gif",
-          "DrMarioDrTornadoG.gif",
-          "DrMarioDSmash.gif",
-          "DrMarioDThrow.gif",
-          "DrMarioDTilt.gif",
-          "DrMarioFAir.gif",
-          "DrMarioFSmash.gif",
-          "DrMarioFSmashDown.gif",
-          "DrMarioFSmashUp.gif",
-          "DrMarioFThrow.gif",
-          "DrMarioFTilt.gif",
-          "DrMarioFTiltDown.gif",
-          "DrMarioFTiltUp.gif",
-          "DrMarioGrab.gif",
-          "DrMarioJab1.gif",
-          "DrMarioJab2.gif",
-          "DrMarioJab3.gif",
-          "DrMarioMegavitamin.png",
-          "DrMarioNAir.gif",
-          "DrMarioPivotGrab.gif",
-          "DrMarioPummel.gif",
-          "DrMarioSuperJumpPunch.gif",
-          "DrMarioSuperSheet.gif",
-          "DrMarioUAir.gif",
-          "DrMarioUSmash.gif",
-          "DrMarioUThrow.gif",
-          "DrMarioUTilt.gif"
+  String [] drMarioMoves = {
+      "DrMarioBAir.gif",
+      "DrMarioBThrow.gif",
+      "DrMarioDAir.gif",
+      "DrMarioDashAttack.gif",
+      "DrMarioDashGrab.gif",
+      "DrMarioDrTornadoA.gif",
+      "DrMarioDrTornadoG.gif",
+      "DrMarioDSmash.gif",
+      "DrMarioDThrow.gif",
+      "DrMarioDTilt.gif",
+      "DrMarioFAir.gif",
+      "DrMarioFSmash.gif",
+      "DrMarioFSmashDown.gif",
+      "DrMarioFSmashUp.gif",
+      "DrMarioFThrow.gif",
+      "DrMarioFTilt.gif",
+      "DrMarioFTiltDown.gif",
+      "DrMarioFTiltUp.gif",
+      "DrMarioGrab.gif",
+      "DrMarioJab1.gif",
+      "DrMarioJab2.gif",
+      "DrMarioJab3.gif",
+      "DrMarioMegavitamin.png",
+      "DrMarioNAir.gif",
+      "DrMarioPivotGrab.gif",
+      "DrMarioPummel.gif",
+      "DrMarioSuperJumpPunch.gif",
+      "DrMarioSuperSheet.gif",
+      "DrMarioUAir.gif",
+      "DrMarioUSmash.gif",
+      "DrMarioUThrow.gif",
+      "DrMarioUTilt.gif"
   };
 
 
@@ -71,9 +69,9 @@ public class DrMario extends AppCompatActivity {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/dr_mario/" + DrMariomoves[position];
+        String toUrl = "https://ultimateframedata.com/hitboxes/dr_mario/" + drMarioMoves[position];
         try {
-          gifImageView.setGifImageURL(toURL);
+          gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
           e.printStackTrace();
         }

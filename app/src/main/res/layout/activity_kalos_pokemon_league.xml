@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/character_background"
 
-    tools:context="com.example.challengerapproaching.Stages.KalosPokemonLeague">
+    tools:context="com.example.challengerapproaching.stages.KalosPokemonLeague">
 
     <ImageView
         android:id="@+id/imageView"

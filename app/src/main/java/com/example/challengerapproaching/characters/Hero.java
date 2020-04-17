@@ -1,63 +1,62 @@
 package com.example.challengerapproaching.characters;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.R;
 import com.example.challengerapproaching.utils.GifImageView;
-
 import java.io.IOException;
+import java.io.InputStream;
 
 /** This class sets the content view to Hero's xml
  * file when the respective button is pushed.*/
 
 public class Hero extends AppCompatActivity {
 
-  String [] Heromoves = {
-          "HeroBAir.gif",
-          "HeroBThrow.gif",
-          "HeroDAir.gif",
-          "HeroDashAttack.gif",
-          "HeroDashGrab.gif",
-          "HeroDSmash.gif",
-          "HeroDThrow.gif",
-          "HeroDTilt.gif",
-          "HeroFAir.gif",
-          "HeroFlameSlash.gif",
-          "HeroFSmash.gif",
-          "HeroFThrow.gif",
-          "HeroFTilt1.gif",
-          "HeroFTilt2.gif",
-          "HeroGrab.gif",
-          "HeroHatchetMan.gif",
-          "HeroJab1.gif",
-          "HeroJab2.gif",
-          "HeroJab3.gif",
-          "Kaboom.gif",
-//          "HeroKaclang.png",
-          "Kamikazee.gif",
-          "HeroKacrackleSlash.gif",
-          "HeroKazap.gif",
-          "Magic20Burst.gif",
-          "HeroMetalSlash.gif",
-          "HeroNAir.gif",
-          "HeroPivotGrab.gif",
-          "HeroPummel.gif",
-          "Sizzle.gif",
-          //          "Thwack.png",
-          "HeroUAir.gif",
-          "HeroUSmash.gif",
-          "HeroUThrow.gif",
-          "HeroUTilt.gif",
-          "HeroZap.gif",
-          "HeroZapple.gif",
-
-
-
+  String [] heroMoves = {
+      "HeroBAir.gif",
+      "HeroBThrow.gif",
+      "HeroDAir.gif",
+      "HeroDashAttack.gif",
+      "HeroDashGrab.gif",
+      "HeroDSmash.gif",
+      "HeroDThrow.gif",
+      "HeroDTilt.gif",
+      "HeroFAir.gif",
+      "HeroFlameSlash.gif",
+      "HeroFSmash.gif",
+      "HeroFThrow.gif",
+      "HeroFTilt1.gif",
+      "HeroFTilt2.gif",
+      "HeroGrab.gif",
+      "HeroHatchetMan.gif",
+      "HeroJab1.gif",
+      "HeroJab2.gif",
+      "HeroJab3.gif",
+      "Kaboom.gif",
+      "HeroKaclang.png",
+      "Kamikazee.gif",
+      "HeroKacrackleSlash.gif",
+      "HeroKazap.gif",
+      "Magic20Burst.gif",
+      "HeroMetalSlash.gif",
+      "HeroNAir.gif",
+      "HeroPivotGrab.gif",
+      "HeroPummel.gif",
+      "Sizzle.gif",
+      "Thwack.png",
+      "HeroUAir.gif",
+      "HeroUSmash.gif",
+      "HeroUThrow.gif",
+      "HeroUTilt.gif",
+      "HeroZap.gif",
+      "HeroZapple.gif",
   };
 
   @Override
@@ -73,15 +72,31 @@ public class Hero extends AppCompatActivity {
     adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
 
     Spinner spnLocale = findViewById(R.id.spinner2);
-    spnLocale.setAdapter(adapter);    spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+    spnLocale.setAdapter(adapter);
+    spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toURL = "https://ultimateframedata.com/hitboxes/hero/" + Heromoves[position];
-        try {
-          gifImageView.setGifImageURL(toURL);
-        } catch (IOException e) {
-          e.printStackTrace();
+        ImageView imageView = findViewById(R.id.imageView3);
+        String toUrl = "https://ultimateframedata.com/hitboxes/hero/" + heroMoves[position];
+        if (toUrl.endsWith("png")) {
+          gifImageView.setVisibility(View.INVISIBLE);
+          try {
+            InputStream inputStream = new java.net.URL(toUrl).openStream();
+            Bitmap bm = BitmapFactory.decodeStream(inputStream);
+            imageView.setImageBitmap(bm);
+            imageView.setVisibility(View.VISIBLE);
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
+        } else {
+          imageView.setVisibility(View.INVISIBLE);
+          try {
+            gifImageView.setGifImageUrl(toUrl);
+            gifImageView.setVisibility(View.VISIBLE);
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
         }
       }
 
