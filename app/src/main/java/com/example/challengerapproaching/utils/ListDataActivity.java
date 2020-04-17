@@ -2,16 +2,25 @@ package com.example.challengerapproaching.utils;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.challengerapproaching.EventsActivity;
 import com.example.challengerapproaching.R;
 import java.util.ArrayList;
 
@@ -44,7 +53,18 @@ public class ListDataActivity extends AppCompatActivity {
     if (eventList.size() != 0) {
       Log.d(TAG, "Peek at array list: " + eventList.toString());
     }
-    ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, eventTitle);
+    ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, eventTitle){
+        @NonNull
+        @Override
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+            View view = super.getView(position, convertView, parent);
+            TextView textView = (TextView) view.findViewById(android.R.id.text1);
+
+            textView.setTextColor(Color.WHITE);
+            textView.setTextSize(30);
+            return view;
+        }
+    };
     eventsList.setAdapter(adapter);
     ArrayList<Event> finalEventList = eventList;
     eventsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -66,7 +86,7 @@ public class ListDataActivity extends AppCompatActivity {
             editScreenIntent.putExtra("date", date);
             Log.d(TAG, "attempting to start edit screen");
             Intent intent = getIntent();
-            startActivity(editScreenIntent);
+            startActivityForResult(editScreenIntent, 1);
             } else {
             toastMessage("No ID associated with that name");
             }
@@ -74,7 +94,16 @@ public class ListDataActivity extends AppCompatActivity {
     });
   }
 
-  private void toastMessage(String message) {
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == 0){
+            finish();
+            this.setResult(0);
+        }
+    }
+
+    private void toastMessage(String message) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }
 }

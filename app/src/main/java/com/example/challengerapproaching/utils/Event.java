@@ -11,13 +11,9 @@ public class Event {
     date = "None";
   }
 
-  public Event(int id, String name, String date) {
-    this.id = id;
-    this.name = name;
-    this.date = date;
-  }
 
   public Event(String name, String date) {
+    this.id = -1;
     this.name = name;
     this.date = date;
   }

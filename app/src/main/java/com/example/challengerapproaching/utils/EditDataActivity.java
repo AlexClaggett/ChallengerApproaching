@@ -4,7 +4,9 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -12,15 +14,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.challengerapproaching.R;
 import java.util.Calendar;
+
+import static java.lang.Integer.parseInt;
+
 
 public class EditDataActivity extends AppCompatActivity {
 
   private static final String TAG = "EditDataActivity";
   private Button btnSave;
   private Button btnDelete;
+  private Button calendarSave;
   private EditText editableName;
   private TextView editableDate;
   private DatePickerDialog.OnDateSetListener onDateSetListener;
@@ -36,6 +44,7 @@ public class EditDataActivity extends AppCompatActivity {
     setContentView(R.layout.edit_data_layout);
     btnSave = findViewById(R.id.savebtn);
     btnDelete = findViewById(R.id.delbtn);
+    calendarSave = findViewById(R.id.calendar_Save);
     editableName = findViewById(R.id.editable_name);
     editableDate = findViewById(R.id.editable_date);
     eventDatabase = new DatabaseHelper(this);
@@ -74,7 +83,6 @@ public class EditDataActivity extends AppCompatActivity {
       * @param month the month selected
       * @param dayOfMonth the day of the month selected
       ***************************************************************/
-
       @Override
             public void onDateSet(DatePicker view, int year, int month,
                                   int dayOfMonth) {
@@ -90,18 +98,20 @@ public class EditDataActivity extends AppCompatActivity {
 
     btnSave.setOnClickListener(new View.OnClickListener() {
 
+        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
         @Override
         public void onClick(View v) {
         String newName = editableName.getText().toString();
         String newDate = editableDate.getText().toString();
         if (newName.equals(selectedName) && newDate.equals(selectedDate)) {
             finish();
+            startActivity(getParentActivityIntent());
         } else if (!newName.equals("") && !newDate.equals("")) {
           if (!newName.equals(selectedName) && !newDate.equals(selectedDate)) {
                 eventDatabase.updateName(newName,selectedId,selectedName);
                 eventDatabase.updateDate(newDate,selectedId,selectedDate);
                 finish();
-                startActivity(getParentActivityIntent());
+            startActivity(getParentActivityIntent());
           } else if (!newName.equals(selectedName)) {
             eventDatabase.updateName(newName,selectedId,selectedName);
             finish();
@@ -118,6 +128,7 @@ public class EditDataActivity extends AppCompatActivity {
     });
 
     btnDelete.setOnClickListener(new View.OnClickListener() {
+      @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
       @Override
       public void onClick(View v) {
         eventDatabase.deleteEvent(selectedId,selectedName,selectedDate);
@@ -126,10 +137,41 @@ public class EditDataActivity extends AppCompatActivity {
         toastMessage("removed from database");
 
         finish();
+        if(eventDatabase.getNumEvents() > 0)
+        startActivity(getParentActivityIntent());
+        else if(eventDatabase.getNumEvents() == 0){
+        }
+      }
+    });
+
+    calendarSave.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        String dateParts = selectedDate;
+        int month = parseInt(dateParts.substring(0,dateParts.indexOf("/")));
+        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+        int day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+        int year = parseInt(dateParts);
+        Calendar cal = Calendar.getInstance();
+        cal.set(year, month, day);
+        Intent intent = new Intent(Intent.ACTION_EDIT);
+        intent.setType("vnd.android.cursor.item/event");
+        intent.putExtra("beginTime", cal.getTimeInMillis());
+        intent.putExtra("endTime", cal.getTimeInMillis() + 1000);
+        intent.putExtra("allDay", true);
+        intent.putExtra("rrule", "FREQ=YEARLY");
+       // intent.putExtra("endTime", eventDate.getText()+60*60*1000);
+        intent.putExtra("title", selectedName);
+      startActivity(intent);
       }
     });
   }
 
+  public void onDestroy(){
+    super.onDestroy();
+    this.setResult(0);
+  }
   private void toastMessage(String message) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }

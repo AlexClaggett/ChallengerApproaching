@@ -130,7 +130,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
   }
 
   public Event getMostRecent() {
-    Event mostRecent = new Event("None", "None");
+    Event mostRecent = new Event("", "");
     Event curEvent = new Event();
     String dateParts;
     int curMonth;
@@ -158,7 +158,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Log.d(TAG,"Database Current Year: " + dateParts);
         curYear = parseInt(dateParts);
 
-        if (mostRecent.getDate().equals("None")) {
+        if (mostRecent.getDate().equals("")) {
           mostRecent.setName(curEvent.getName());
           mostRecent.setDate(curEvent.getDate());
         } else {
@@ -187,6 +187,78 @@ public class DatabaseHelper extends SQLiteOpenHelper {
       } while (data.moveToNext());
     }
     return mostRecent;
+  }
+
+  public Event nextMostRecent(Event mostRecent) {
+    Event nextMost = new Event("", "");
+    ArrayList<Event> eventList = getAllData();
+    String dateParts;
+    int curMonth;
+    int curDay;
+    int curYear;
+    int month;
+    int day;
+    int year;
+
+    for (Event e : eventList) {
+      dateParts = e.getDate();
+      curMonth = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+      dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+      curDay = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+      dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+      curYear = parseInt(dateParts);
+      Log.d(TAG, "Event: " + e.getDate() + " " + e.getName());
+      if (e.getDate().equals(mostRecent.getDate()) || mostRecent.getDate().equals("")) {
+        continue;
+      }
+      else if (nextMost.getDate().equals("")) {
+        dateParts = mostRecent.getDate();
+        month = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+        day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+        year = parseInt(dateParts);
+        if(curYear <= year && curMonth <= month && curDay <= day){
+          continue;
+        }
+        nextMost.setId(e.getId());
+        nextMost.setDate(e.getDate());
+        nextMost.setName(e.getName());
+      }
+      else {
+        dateParts = mostRecent.getDate();
+        month = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+        day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+        year = parseInt(dateParts);
+        if(curYear <= year && curMonth <= month && curDay <= day){
+          continue;
+        }
+        else {
+          dateParts = nextMost.getDate();
+          month = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+          dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+          day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+          dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+          year = parseInt(dateParts);
+          if (curYear < year) {
+            nextMost.setId(e.getId());
+            nextMost.setName(e.getName());
+            nextMost.setDate(e.getDate());
+          } else if (curYear == year && curMonth < month) {
+            nextMost.setId(e.getId());
+            nextMost.setName(e.getName());
+            nextMost.setDate(e.getDate());
+          } else if (curYear == year && curMonth == month && curDay < day) {
+            nextMost.setId(e.getId());
+            nextMost.setName(e.getName());
+            nextMost.setDate(e.getDate());
+          }
+        }
+      }
+    }
+        return nextMost;
   }
 
   public int getNumEvents() {

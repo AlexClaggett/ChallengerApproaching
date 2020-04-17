@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.challengerapproaching.utils.DatabaseHelper;
 import com.example.challengerapproaching.utils.Event;
@@ -26,7 +28,7 @@ import java.util.Calendar;
 public class EventsActivity extends AppCompatActivity implements EventDialog.EventDialogListener {
 
   DatabaseHelper eventDatabase;
-  Event mostRecent = new Event();
+  Event mostRecent[] = new Event[3];
   /**
    * Static string for sending Log information to the terminal.
    */
@@ -41,7 +43,7 @@ public class EventsActivity extends AppCompatActivity implements EventDialog.Eve
    * Text View to show the date of the event.
    */
   private TextView eventDate;
-  private TextView upcomingEvent;
+  private TextView upcomingEvent[] = new TextView[3];
   /**
    * Button for creating an event.
    */
@@ -67,9 +69,13 @@ public class EventsActivity extends AppCompatActivity implements EventDialog.Eve
     eventName = findViewById(R.id.tView);
     eventDate = findViewById(R.id.dView);
     viewEvent = findViewById(R.id.viewevent);
-    upcomingEvent = findViewById(R.id.mostRecent);
+    upcomingEvent[0] = findViewById(R.id.mostRecent);
+    upcomingEvent[1] = findViewById(R.id.mostRecent2);
+    upcomingEvent[2] = findViewById(R.id.mostRecent3);
     eventDatabase = new DatabaseHelper(this);
-    mostRecent = eventDatabase.getMostRecent();
+    mostRecent[0] = eventDatabase.getMostRecent();
+    mostRecent[1] = eventDatabase.nextMostRecent(mostRecent[0]);
+    mostRecent[2] = eventDatabase.nextMostRecent(mostRecent[1]);
     // Set onClick Listener for event creation
     button.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -85,13 +91,20 @@ public class EventsActivity extends AppCompatActivity implements EventDialog.Eve
           toastMessage("Currently No Events Are Scheduled.");
         } else {
           Intent intent = new Intent(EventsActivity.this, ListDataActivity.class);
-          startActivity(intent);
+          startActivityForResult(intent, 1);
         }
       }
-    });
-    Log.d(TAG, "Most recent?: " + mostRecent.getDate());
-    upcomingEvent.setText(mostRecent.getName() + "\n" + mostRecent.getDate());
 
+    });
+    Log.d(TAG, "Most recent?: " + mostRecent[0].getDate());
+    if (mostRecent[0].getName().equals("")){
+      upcomingEvent[0].setText("");
+    }
+    else {
+      upcomingEvent[0].setText(mostRecent[0].getName() + "\n" + mostRecent[0].getDate());
+      upcomingEvent[1].setText(mostRecent[1].getName() + "\n" + mostRecent[1].getDate());
+      upcomingEvent[2].setText(mostRecent[2].getName() + "\n" + mostRecent[2].getDate());
+    }
   }
 
   public void openDialog() {
@@ -104,17 +117,16 @@ public class EventsActivity extends AppCompatActivity implements EventDialog.Eve
     eventName.setText(name);
     eventDate.setText(date);
     if (eventName.length() != 0 && eventDate.length() != 0) {
-//        Intent intent = new Intent(Intent.ACTION_EDIT);
-//        intent.setType("vnd.android.cursor.item/event");
-//        intent.putExtra("beginTime", actDate.getTimeInMillis());
-//        intent.putExtra("allDay", true);
-//        intent.putExtra("rrule", "FREQ=YEARLY");
-//       // intent.putExtra("endTime", eventDate.getText()+60*60*1000);
-//        intent.putExtra("title", eventName.getText());
-//      startActivity(intent);
       addData(name, date);
-      mostRecent = eventDatabase.getMostRecent();
-      upcomingEvent.setText(mostRecent.getName() + "\n" + mostRecent.getDate());
+      mostRecent[0] = eventDatabase.getMostRecent();
+      Log.d(TAG, "NextMost 1");
+      mostRecent[1] = eventDatabase.nextMostRecent(mostRecent[0]);
+      Log.d(TAG, "NextMost 2");
+      mostRecent[2] = eventDatabase.nextMostRecent(mostRecent[1]);
+      upcomingEvent[0].setText(mostRecent[0].getName() + "\n" + mostRecent[0].getDate());
+
+      upcomingEvent[1].setText(mostRecent[1].getName() + "\n" + mostRecent[1].getDate());
+      upcomingEvent[2].setText(mostRecent[2].getName() + "\n" + mostRecent[2].getDate());
     } else {
       toastMessage("You must put something for the date and name");
     }
@@ -126,5 +138,17 @@ public class EventsActivity extends AppCompatActivity implements EventDialog.Eve
 
   private void toastMessage(String message) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+  }
+
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+    if(resultCode == 0){
+      eventDate.setText("");
+      eventName.setText("");
+      upcomingEvent[0].setText("");
+      upcomingEvent[1].setText("");
+      upcomingEvent[2].setText("");
+    }
   }
 }

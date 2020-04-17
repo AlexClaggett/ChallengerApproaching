@@ -14,6 +14,7 @@
         android:layout_marginTop="10dp"
         android:padding="5dp"
         android:text="Title:"
+
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +28,7 @@
         android:layout_marginTop="15dp"
         android:padding="5dp"
         android:text="Start Date:"
+
         android:textSize="20sp"
         android:textStyle="bold"
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_menu_blank">
 
     <TableRow
         android:layout_width="match_parent"
@@ -12,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#FAFAFA"
             android:singleLine="true" />
 
         <TextView
@@ -19,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:textColor="#FAFAFA"
             android:textSize="18sp" />
 
     </TableRow>
@@ -27,27 +30,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        >
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <Button
             android:id="@+id/savebtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="SAVE" />
+            android:background="@color/colorPrimary"
+            android:text="SAVE"
+            android:textColor="#FDFDFD" />
 
         <Button
             android:id="@+id/delbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="DELETE" />
+            android:background="@color/colorPrimary"
+            android:text="DELETE"
+            android:textColor="#FDFDFD" />
     </LinearLayout>
 
     <Button
         android:id="@+id/calendar_Save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Event To Calendar" />
+        android:background="@color/colorPrimary"
+        android:text="Save Event To Calendar"
+        android:textColor="#FDFDFD" />
 
 </LinearLayout>

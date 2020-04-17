@@ -26,27 +26,42 @@
         android:id="@+id/tView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:hint="Event Name"
+        android:textColor="#FAFAFA"
+        android:textColorHint="#FBFBFB"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventCreation" />
+        app:layout_constraintTop_toBottomOf="@+id/Eventtext" />
 
     <TextView
         android:id="@+id/dView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
-        android:hint="Event Date"
+        android:textColor="#FAFAFA"
+        android:textColorHint="#FBFBFB"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tView" />
+
+    <TextView
+        android:id="@+id/Eventtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Current Event"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventCreation" />
 
     <Button
         android:id="@+id/viewevent"
@@ -66,14 +81,16 @@
         android:id="@+id/upcoming"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-
         android:layout_marginStart="10dp"
+
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="250dp"
-        android:textStyle="bold"
+        android:gravity="center_horizontal"
         android:text="Upcoming Events"
+        android:textColor="#FAFAFA"
+        android:textColorHint="#FBFBFB"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -81,12 +98,40 @@
         android:id="@+id/mostRecent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:hint="upcoming events appear here "
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:hint="Top 3 Days show here"
+        android:textColor="#FAFAFA"
+        android:textColorHint="#FBFBFB"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upcoming" />
+
+    <TextView
+        android:id="@+id/mostRecent2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#FAFAFA"
+        android:textColorHint="#FBFBFB"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mostRecent" />
+
+    <TextView
+        android:id="@+id/mostRecent3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#FAFAFA"
+        android:textColorHint="#FBFBFB"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mostRecent2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
