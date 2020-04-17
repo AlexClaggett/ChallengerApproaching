@@ -67,4 +67,6 @@ public class EventsApplicationTesting {
         Assert.assertEquals("Events_Table",db.getDatabaseName());
     }
 
+
+
 }
