@@ -10,26 +10,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-  /** Image Button for Young Link. */
+  /** Image Button for characters. */
   ImageButton characters;
 
-  /** Image Button for Zelda. */
+  /** Image Button for stages. */
   ImageButton stages;
 
-  /** Image Button for Zero Suit Samus. */
+  /** Image Button for events. */
   ImageButton events;
 
-  /** Array of integers of the character ids found in the XML. */
+  /** Array of integers of the button ids found in the XML. */
   int [] ids = {R.id.characters, R.id.events, R.id.stages};
 
-  /** Array of Classes for each character. */
+  /** Array of Classes for each button's activity. */
   Class [] charClasses = {CharacterSelect.class, EventsActivity.class,
     StageSelect.class};
 
   /********************************************************************
    * Upon app start up this method sets the content view to main
    * activity which is then used to create all the buttons for the
-   * characters and the button for events.
+   * main menu.
    *******************************************************************/
   @RequiresApi(api = Build.VERSION_CODES.M)
   @Override

@@ -80,7 +80,7 @@ public class StageSelect extends AppCompatActivity {
   /********************************************************************
    * Upon app start up this method sets the content view to main
    * activity which is then used to create all the buttons for the
-   * characters and the button for events.
+   * stages and the button for events.
    *******************************************************************/
   @RequiresApi(api = Build.VERSION_CODES.M)
   @Override
