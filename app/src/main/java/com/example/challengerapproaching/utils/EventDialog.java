@@ -53,10 +53,10 @@ public class EventDialog extends AppCompatDialogFragment {
   @Override
   public Dialog onCreateDialog(@Nullable Bundle savedInstance) {
     /* Inflater for populating the layout with views. */
-    LayoutInflater inflater = getActivity().getLayoutInflater();
+    final LayoutInflater inflater = getActivity().getLayoutInflater();
 
     /* View to add to the inflater. */
-    View view = inflater.inflate(R.layout.layout_eventcreation, null);
+    final View view = inflater.inflate(R.layout.layout_eventcreation, null);
 
     /* Initialize the Event name Edit Text View to the correct view. */
     editTextEventName = view.findViewById(R.id.edit_eventname);
@@ -68,25 +68,25 @@ public class EventDialog extends AppCompatDialogFragment {
     newDate = Calendar.getInstance();
 
     /* Builder for creating the dialog within the current activity. */
-    AlertDialog.Builder builder =
+    final AlertDialog.Builder builder =
         new AlertDialog.Builder(getActivity());
 
     // Defines what happens when eventSetup is selected.
     textEventDate.setOnClickListener(v -> {
       // Create calendar object equal to today's date.
-      Calendar cal = Calendar.getInstance();
+      final Calendar cal = Calendar.getInstance();
 
       // Create year int to hold the calendar year.
-      int year = cal.get(Calendar.YEAR);
+      final int year = cal.get(Calendar.YEAR);
 
       // Create month int to hold the calendar month.
-      int month = cal.get(Calendar.MONTH);
+      final int month = cal.get(Calendar.MONTH);
 
       // Create day int to hold the calendar day.
-      int day = cal.get(Calendar.DAY_OF_MONTH);
+      final int day = cal.get(Calendar.DAY_OF_MONTH);
 
       //Create DatePickerDialog object and initializes it.
-      DatePickerDialog dialog = new DatePickerDialog(
+      final DatePickerDialog dialog = new DatePickerDialog(
           EventDialog.this.getActivity(),
           android.R.style.Theme_Holo_Dialog_MinWidth,
           onDateSetListener, year, month, day);
@@ -136,11 +136,11 @@ public class EventDialog extends AppCompatDialogFragment {
         .setPositiveButton("Create", (dialog, which) -> {
 
           // Set the event name once created.
-          String eventName =
+          final String eventName =
               editTextEventName.getText().toString();
 
           // Set the event date once created.
-          String eventDate =
+          final String eventDate =
               textEventDate.getText().toString();
 
           // Log to check date is correct.

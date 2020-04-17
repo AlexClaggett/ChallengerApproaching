@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstance) {
     super.onCreate(savedInstance);
 
-    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+    final StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
     StrictMode.setThreadPolicy(policy);
 
     setContentView(R.layout.activity_main);

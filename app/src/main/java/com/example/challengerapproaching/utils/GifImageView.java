@@ -67,7 +67,7 @@ public class GifImageView extends View {
    *******************************************************************/
   @Override
   protected void onDraw(Canvas canvas) {
-    long now = SystemClock.uptimeMillis();
+    final long now = SystemClock.uptimeMillis();
 
     if (start == 0) {
       start = now;

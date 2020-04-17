@@ -107,7 +107,7 @@ public class EventsActivity extends AppCompatActivity
         if (eventDatabase.getNumEvents() == 0) {
           toastMessage("Currently No Events Are Scheduled.");
         } else {
-          Intent intent = new Intent(EventsActivity.this,
+          final Intent intent = new Intent(EventsActivity.this,
               ListDataActivity.class);
           startActivityForResult(intent, 1);
         }
@@ -134,7 +134,7 @@ public class EventsActivity extends AppCompatActivity
    * openDialog method to explain what happens upon dialog call.
    *******************************************************************/
   public void openDialog() {
-    EventDialog newEvent = new EventDialog();
+    final EventDialog newEvent = new EventDialog();
     newEvent.show(getSupportFragmentManager(), "create event");
   }
 
@@ -182,7 +182,7 @@ public class EventsActivity extends AppCompatActivity
    * @param newDate The date of the event
    *******************************************************************/
   public void addData(String newName, String newDate) {
-    boolean insertData = eventDatabase.addData(newName, newDate);
+    final boolean insertData = eventDatabase.addData(newName, newDate);
   }
 
   /********************************************************************

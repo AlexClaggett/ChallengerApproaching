@@ -55,20 +55,20 @@ public class ZeroSuitSamus extends AppCompatActivity {
     setContentView(R.layout.activity_zero__suit__samus);
 
 
-    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+    final ArrayAdapter<String> adapter = new ArrayAdapter<>(
             this,
             R.layout.selectmove_spinner_design,
             getResources().getStringArray(R.array.ZeroSuitSamusmoves)
     );
     adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
 
-    Spinner spnLocale = findViewById(R.id.spinner2);
+    final Spinner spnLocale = findViewById(R.id.spinner2);
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toUrl = "https://ultimateframedata.com/hitboxes/zero_suit_samus/" + zzsMoves[position];
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        final String toUrl = "https://ultimateframedata.com/hitboxes/zero_suit_samus/" + zzsMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

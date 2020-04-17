@@ -43,7 +43,7 @@ public class Smashville {
 
     @Test
     public void smashville() {
-        ViewInteraction appCompatImgBtn = onView(
+        final ViewInteraction appCompatImgBtn = onView(
                 allOf(withId(R.id.stages),
                         childAtPosition(
                                 childAtPosition(
@@ -53,7 +53,7 @@ public class Smashville {
                         isDisplayed()));
         appCompatImgBtn.perform(click());
 
-        ViewInteraction appCompatImgBtn2 = onView(
+        final ViewInteraction appCompatImgBtn2 = onView(
                 allOf(withId(R.id.Smashville),
                         childAtPosition(
                                 childAtPosition(
@@ -62,7 +62,7 @@ public class Smashville {
                                 0)));
         appCompatImgBtn2.perform(scrollTo(), click());
 
-        ViewInteraction textView = onView(
+        final ViewInteraction textView = onView(
                 allOf(withId(R.id.BF_SW_Value), withText(" 139.298"),
                         childAtPosition(
                                 childAtPosition(
@@ -72,7 +72,7 @@ public class Smashville {
                         isDisplayed()));
         textView.check(matches(withText(" 139.298")));
 
-        ViewInteraction textView2 = onView(
+        final ViewInteraction textView2 = onView(
                 allOf(withId(R.id.BF_PC_Value), withText(" 1"),
                         childAtPosition(
                                 childAtPosition(
@@ -82,7 +82,7 @@ public class Smashville {
                         isDisplayed()));
         textView2.check(matches(withText(" 1")));
 
-        ViewInteraction textView3 = onView(
+        final ViewInteraction textView3 = onView(
                 allOf(withId(R.id.BF_PBZT3_Value), withText(" 28.698"),
                         childAtPosition(
                                 childAtPosition(
@@ -92,7 +92,7 @@ public class Smashville {
                         isDisplayed()));
         textView3.check(matches(withText(" 28.698")));
 
-        ViewInteraction textView4 = onView(
+        final ViewInteraction textView4 = onView(
                 allOf(withId(R.id.BF_BZT_Value), withText(" 189.9"),
                         childAtPosition(
                                 childAtPosition(
@@ -102,7 +102,7 @@ public class Smashville {
                         isDisplayed()));
         textView4.check(matches(withText(" 189.9")));
 
-        ViewInteraction textView5 = onView(
+        final ViewInteraction textView5 = onView(
                 allOf(withId(R.id.BF_BZR_Value), withText(" 159.754"),
                         childAtPosition(
                                 childAtPosition(
@@ -112,7 +112,7 @@ public class Smashville {
                         isDisplayed()));
         textView5.check(matches(withText(" 159.754")));
 
-        ViewInteraction textView6 = onView(
+        final ViewInteraction textView6 = onView(
                 allOf(withId(R.id.BF_BZL_Value), withText(" 159.949"),
                         childAtPosition(
                                 childAtPosition(
@@ -122,7 +122,7 @@ public class Smashville {
                         isDisplayed()));
         textView6.check(matches(withText(" 159.949")));
 
-        ViewInteraction textView7 = onView(
+        final ViewInteraction textView7 = onView(
                 allOf(withId(R.id.BF_BZB_Value), withText(" 115.1"),
                         childAtPosition(
                                 childAtPosition(
@@ -132,7 +132,7 @@ public class Smashville {
                         isDisplayed()));
         textView7.check(matches(withText(" 115.1")));
 
-        ViewInteraction textView8 = onView(
+        final ViewInteraction textView8 = onView(
                 allOf(withId(R.id.BF_BZC_Value), withText(" 50.1"),
                         childAtPosition(
                                 childAtPosition(
@@ -155,7 +155,7 @@ public class Smashville {
 
             @Override
             public boolean matchesSafely(View view) {
-                ViewParent parent = view.getParent();
+                final ViewParent parent = view.getParent();
                 return parent instanceof ViewGroup && parentMatcher.matches(parent)
                         && view.equals(((ViewGroup) parent).getChildAt(position));
             }

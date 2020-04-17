@@ -58,20 +58,20 @@ public class Greninja extends AppCompatActivity {
     super.onCreate(savedInstance);
     setContentView(R.layout.activity_greninja);
 
-    ArrayAdapter<String> adapter = new ArrayAdapter<>(
+    final ArrayAdapter<String> adapter = new ArrayAdapter<>(
             this,
             R.layout.selectmove_spinner_design,
             getResources().getStringArray(R.array.Greninjamoves)
     );
     adapter.setDropDownViewResource(R.layout.selectmove_spinner_dropdown);
 
-    Spinner spnLocale = findViewById(R.id.spinner2);
+    final Spinner spnLocale = findViewById(R.id.spinner2);
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        GifImageView gifImageView = findViewById(R.id.GifImageView);
-        String toUrl = "https://ultimateframedata.com/hitboxes/greninja/" + greninjaMoves[position];
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        final String toUrl = "https://ultimateframedata.com/hitboxes/greninja/" + greninjaMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

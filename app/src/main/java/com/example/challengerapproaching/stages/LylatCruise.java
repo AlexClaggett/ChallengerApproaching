@@ -10,8 +10,8 @@ import com.example.challengerapproaching.R;
 public class LylatCruise extends AppCompatActivity {
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  protected void onCreate(Bundle savedInstance) {
+    super.onCreate(savedInstance);
     setContentView(R.layout.activity_lylat_cruise);
   }
 }

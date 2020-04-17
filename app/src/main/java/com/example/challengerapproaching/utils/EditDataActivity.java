@@ -114,7 +114,7 @@ public class EditDataActivity extends AppCompatActivity {
     eventDatabase = new DatabaseHelper(this);
 
     // Retrieve the contents passed from ListDataActivity.
-    Intent receivedIntent = getIntent();
+    final Intent receivedIntent = getIntent();
 
     // Set the Selected Variables to the values passed by ListData.
     selectedId = receivedIntent.getIntExtra("id", -1);
@@ -130,15 +130,15 @@ public class EditDataActivity extends AppCompatActivity {
     editableDate.setOnClickListener(v -> {
 
       // Get today's date on the calendar..
-      Calendar cal = Calendar.getInstance();
+      final Calendar cal = Calendar.getInstance();
 
       // Set the parts of the date to today's date.
-      int year = cal.get(Calendar.YEAR);
-      int month = cal.get(Calendar.MONTH);
-      int day = cal.get(Calendar.DAY_OF_MONTH);
+      final int year = cal.get(Calendar.YEAR);
+      final int month = cal.get(Calendar.MONTH);
+      final int day = cal.get(Calendar.DAY_OF_MONTH);
 
       // Create and initialize the date picker dialog.
-      DatePickerDialog dialog = new DatePickerDialog(
+      final DatePickerDialog dialog = new DatePickerDialog(
           this,
           android.R.style.Theme_Holo_Dialog_MinWidth,
           onDateSetListener, year, month, day);
@@ -178,8 +178,8 @@ public class EditDataActivity extends AppCompatActivity {
        used lambda function to reduce code redundancy. */
     btnSave.setOnClickListener(v -> {
       // Get the Event name and date current on the screen.
-      String newName = editableName.getText().toString();
-      String newDate = editableDate.getText().toString();
+      final String newName = editableName.getText().toString();
+      final String newDate = editableDate.getText().toString();
 
       // Check if name or date changed.
       if (newName.equals(selectedName)
@@ -244,30 +244,30 @@ public class EditDataActivity extends AppCompatActivity {
       String dateParts = selectedDate;
 
       // Parse the month from the date.
-      int month =
+      final int month =
           parseInt(dateParts.substring(0, dateParts.indexOf("/")));
 
       // Shrink the string.
       dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
 
       // Parse the day.
-      int day =
+      final int day =
           parseInt(dateParts.substring(0, dateParts.indexOf("/")));
 
       // Shrink the string again.
       dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
 
       // Parse the yest.
-      int year = parseInt(dateParts);
+      final int year = parseInt(dateParts);
 
       // Setup a calendar of today's date.
-      Calendar cal = Calendar.getInstance();
+      final Calendar cal = Calendar.getInstance();
 
       // Set the date to the events date.
       cal.set(year, month, day);
 
       // Create an intent for calendar events.
-      Intent intent = new Intent(Intent.ACTION_EDIT);
+      final Intent intent = new Intent(Intent.ACTION_EDIT);
 
       // Detail the type of intent.
       intent.setType("vnd.android.cursor.item/event");

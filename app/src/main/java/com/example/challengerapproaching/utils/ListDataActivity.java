@@ -84,7 +84,7 @@ public class ListDataActivity extends AppCompatActivity {
 
     /* Make another array list to hold the event name as a
      *  combination of the name and date. */
-    ArrayList<String> eventTitle = new ArrayList<>();
+    final ArrayList<String> eventTitle = new ArrayList<>();
 
     /* Loop through event list to add the name and dates to the
      *  event title array list. */
@@ -93,7 +93,7 @@ public class ListDataActivity extends AppCompatActivity {
     }
 
     // Create and initialize an adapter to set content of the list.
-    ListAdapter adapter = new ArrayAdapter<String>(this,
+    final ListAdapter adapter = new ArrayAdapter<String>(this,
         android.R.layout.simple_list_item_1, eventTitle) {
       /**********************************************************
        * Method that formats the contents of the list with a
@@ -130,7 +130,7 @@ public class ListDataActivity extends AppCompatActivity {
     eventsList.setAdapter(adapter);
 
     // Make a constant event list for reference within onItemClick.
-    ArrayList<Event> finalEventList = eventList;
+    final ArrayList<Event> finalEventList = eventList;
 
     // Set an on item click listener for the event list
     eventsList.setOnItemClickListener(
@@ -146,10 +146,10 @@ public class ListDataActivity extends AppCompatActivity {
           public void onItemClick(AdapterView<?> adapterView,
                                   View view, int i, long l) {
             // Set name to the event at the same index as view.
-            String name = (finalEventList.get(i).getName());
+            final String name = (finalEventList.get(i).getName());
 
             // Set date to the event at the same index as view.
-            String date = (finalEventList.get(i).getDate());
+            final String date = (finalEventList.get(i).getDate());
 
             /* Log to check the item selected is the correct
                 event. */
@@ -158,7 +158,7 @@ public class ListDataActivity extends AppCompatActivity {
 
             /* Cursor to retrieve the event at the ID of the events
                date from the database. */
-            Cursor data = eventDatabase.getDateID(date);
+            final Cursor data = eventDatabase.getDateID(date);
 
             // Initialize the itemID
             int itemID = -1;
@@ -173,7 +173,7 @@ public class ListDataActivity extends AppCompatActivity {
               Log.d(TAG, "onItemClick: The ID is: " + itemID);
 
               // Create the intent for editing the data.
-              Intent editScreenIntent = new Intent(
+              final Intent editScreenIntent = new Intent(
                   ListDataActivity.this,
                   EditDataActivity.class);
 
