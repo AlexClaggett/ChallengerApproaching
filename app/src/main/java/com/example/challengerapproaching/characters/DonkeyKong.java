@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class DonkeyKong extends AppCompatActivity {
 
-  //Array of Donkey Kong's Framedata files
+  /** Array of Donkey Kong's Framedata files */
   transient String [] donkeyKongMoves = {
       "DonkeyKongBAir.gif",
       "DonkeyKongBThrow.gif",

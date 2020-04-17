@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Rob extends AppCompatActivity {
 
-  //Array of Rob's Framedata files
+  /** Array of Rob's Framedata files */
   transient String [] robMoves = {
       "ROBArmRotor.gif",
       "ROBArmRotorEnd.gif",

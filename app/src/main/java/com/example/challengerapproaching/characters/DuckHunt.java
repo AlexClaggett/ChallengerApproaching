@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class DuckHunt extends AppCompatActivity {
 
-  //Array of Duck Hunt's Framedata files
+  /** Array of Duck Hunt's Framedata files */
   transient String [] duckHuntMoves = {
       "DuckHuntBAir.gif",
       "DuckHuntBThrow.gif",

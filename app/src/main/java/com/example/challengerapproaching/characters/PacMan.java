@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class PacMan extends AppCompatActivity {
 
-  //Array of PacMan's Framedata files
+  /** Array of PacMan's Framedata files */
   transient String [] pacManMoves = {
       "PacManBAir.gif",
       "PacManBThrow.gif",

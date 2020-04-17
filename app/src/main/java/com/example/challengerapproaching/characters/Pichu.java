@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Pichu extends AppCompatActivity {
 
-  //Array of Pichu's Framedata files
+  /** Array of Pichu's Framedata files */
   transient String [] pichuMoves = {
       "PichuBAir.gif",
       "PichuBThrow.gif",

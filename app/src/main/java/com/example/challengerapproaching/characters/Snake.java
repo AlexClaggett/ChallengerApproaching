@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Snake extends AppCompatActivity {
 
-  //Array of Snake's Framedata files
+  /** Array of Snake's Framedata files */
   transient String [] snakeMoves = {
       "SnakeBAir.gif",
       "SnakeBThrow.gif",

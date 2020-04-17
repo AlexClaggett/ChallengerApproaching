@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class YoungLink extends AppCompatActivity {
 
-  //Array of Young Link's Framedata files
+  /** Array of Young Link's Framedata files */
   transient String [] youngLinkMoves = {
       "YoungLinkArrow.png",
       "YoungLinkBAir.gif",

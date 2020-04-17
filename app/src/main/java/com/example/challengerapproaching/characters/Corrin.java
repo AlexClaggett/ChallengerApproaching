@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Corrin extends AppCompatActivity {
 
-  //Array of Corrin's Framedata files
+  /** Array of Corrin's Framedata files */
   transient String [] corrinMoves = {
       "CorrinBAir.gif",
       "CorrinBThrow.gif",

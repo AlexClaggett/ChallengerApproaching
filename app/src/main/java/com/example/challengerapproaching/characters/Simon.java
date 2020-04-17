@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Simon extends AppCompatActivity {
 
-  //Array of Simon's Framedata files
+  /** Array of Simon's Framedata files */
   transient String [] simonMoves = {
       "SimonAxe.gif",
       "SimonBAir.gif",

@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Lucario extends AppCompatActivity {
 
-  //Array of Lucario's Framedata files
+  /** Array of Lucario's Framedata files */
   transient String [] lucarioMoves = {
       "LucarioBAir.gif",
       "LucarioBThrow.gif",

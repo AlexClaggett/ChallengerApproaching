@@ -17,19 +17,19 @@ import java.io.InputStream;
 
 public class GifImageView extends View {
 
-  //Input stream of the source
+  /** Input stream of the source */
   private transient InputStream inputStream;
 
-  //Movie object decoded from input stream
+  /** Movie object decoded from input stream */
   private transient Movie movie;
 
-  //Movie object's width
+  /** Movie object's width */
   private transient int width;
 
-  //Movie object's height
+  /** Movie object's height */
   private transient int height;
 
-  //Keeps track of time to keep movie playing
+  /** Keeps track of time to keep movie playing */
   private transient long start;
 
   /********************************************************************

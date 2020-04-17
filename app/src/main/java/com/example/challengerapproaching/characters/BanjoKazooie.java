@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class BanjoKazooie extends AppCompatActivity {
 
-  //Array of BanjoKazooie's Framedata files
+  /**Array of BanjoKazooie's Framedata files*/
   transient String [] banjoKazooiemoves = {
       "Banjo_KazooieBAir.gif",
       "Banjo_KazooieBThrow.gif",

@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Robin extends AppCompatActivity {
 
-  //Array of Robin's Framedata files
+  /** Array of Robin's Framedata files */
   transient String [] robinMoves = {
       "RobinBAirBronze.gif",
       "RobinBAirLevin.gif",
