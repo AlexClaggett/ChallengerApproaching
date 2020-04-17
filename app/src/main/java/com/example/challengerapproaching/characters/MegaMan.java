@@ -64,9 +64,9 @@ public class MegaMan extends AppCompatActivity {
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        GifImageView gifImageView = findViewById(R.id.GifImageView);
-        ImageView imageView = findViewById(R.id.imageView3);
-        String toUrl = "https://ultimateframedata.com/hitboxes/mega_man/" + megaManMoves[position];
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        final ImageView imageView = findViewById(R.id.imageView3);
+        final String toUrl = "https://ultimateframedata.com/hitboxes/mega_man/" + megaManMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

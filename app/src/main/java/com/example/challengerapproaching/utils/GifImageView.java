@@ -80,7 +80,7 @@ public class GifImageView extends View {
         duration = 1000;
       }
 
-      int relTime = (int) ((now - start) % duration);
+      final int relTime = (int) ((now - start) % duration);
 
       movie.setTime(relTime);
 
