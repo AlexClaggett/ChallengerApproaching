@@ -51,7 +51,11 @@ public class KingKRool extends AppCompatActivity {
       "KingKRoolNAir.gif",
       "KingKRoolPivotGrab.gif",
       "KingKRoolPropellerpack.gif",
-      "KingKRoolPummel.gif"
+      "KingKRoolPummel.gif",
+      "KingKRoolUAir.gif",
+      "KingKRoolUSmash.gif",
+      "KingKRoolUThrow.gif",
+      "KingKRoolUTilt.gif"
   };
 
 

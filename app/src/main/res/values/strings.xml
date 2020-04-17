@@ -769,6 +769,10 @@
         <item>PivotGrab</item>
         <item>Propellerpack</item>
         <item>Pummel</item>
+        <item>UAir</item>
+        <item>USmash</item>
+        <item>UThrow</item>
+        <item>Utilt</item>
     </string-array>
 
     <string-array name="LittleMacmoves">
@@ -2537,7 +2541,7 @@
         <item>USmash</item>
         <item>UThrow</item>
         <item>UTilt</item>
-        <item>UTiltBullshit</item>
+        <item>UTiltStrong</item>
     </string-array>
 
     <string-array name="Wariomoves">
