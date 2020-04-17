@@ -227,7 +227,7 @@
             android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.MetaKnight"
-            android:label="MetaKnight"
+            android:label="Meta-Knight"
             android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.MegaMan"
@@ -259,7 +259,7 @@
             android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.LittleMac"
-            android:label="LittleMac"
+            android:label="Little Mac"
             android:parentActivityName=".CharacterSelect" />
         <activity
             android:name=".characters.Link"
