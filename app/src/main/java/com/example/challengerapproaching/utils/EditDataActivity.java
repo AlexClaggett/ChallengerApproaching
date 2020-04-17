@@ -65,7 +65,7 @@ public class EditDataActivity extends AppCompatActivity {
   /**
    * Database that hold the events.
    */
-  DatabaseHelper eventDatabase;
+  private DatabaseHelper eventDatabase;
 
   /**
    * String to represent the event name that was selected.

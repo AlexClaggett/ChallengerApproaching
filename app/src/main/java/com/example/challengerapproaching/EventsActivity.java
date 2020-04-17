@@ -28,12 +28,12 @@ public class EventsActivity extends AppCompatActivity
   /**
    * Database Helper for creating a database of saved events.
    * */
-  DatabaseHelper eventDatabase;
+  private DatabaseHelper eventDatabase;
 
   /**
    *  Event array to hold the 3 most recent events.
    */
-  Event[] mostRecent = new Event[3];
+  private Event[] mostRecent = new Event[3];
 
   /**
    * Static string for sending Log information to the terminal.
@@ -58,7 +58,7 @@ public class EventsActivity extends AppCompatActivity
   /**
    * Button for creating an event.
    */
-  private Button button;
+  private Button createBtn;
 
   /**
    * Button for viewing the list of created events.
@@ -79,7 +79,7 @@ public class EventsActivity extends AppCompatActivity
     setContentView(R.layout.events);
 
     // Initialize variables to their respective views.
-    button = findViewById(R.id.eventCreation);
+    createBtn = findViewById(R.id.eventCreation);
     eventName = findViewById(R.id.tView);
     eventDate = findViewById(R.id.dView);
     viewEvent = findViewById(R.id.viewevent);
@@ -92,25 +92,17 @@ public class EventsActivity extends AppCompatActivity
     mostRecent[2] = eventDatabase.nextMostRecent(mostRecent[1]);
 
     // Set onClick Listener for event creation.
-    button.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        openDialog();
-      }
-    });
+    createBtn.setOnClickListener(v -> openDialog());
 
     // On click listener for viewing events.
-    viewEvent.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        // If there are no events inform the user.
-        if (eventDatabase.getNumEvents() == 0) {
-          toastMessage("Currently No Events Are Scheduled.");
-        } else {
-          Intent intent = new Intent(EventsActivity.this,
-              ListDataActivity.class);
-          startActivityForResult(intent, 1);
-        }
+    viewEvent.setOnClickListener(v -> {
+      // If there are no events inform the user.
+      if (eventDatabase.getNumEvents() == 0) {
+        toastMessage("Currently No Events Are Scheduled.");
+      } else {
+        Intent intent = new Intent(EventsActivity.this,
+            ListDataActivity.class);
+        startActivityForResult(intent, 1);
       }
     });
 
