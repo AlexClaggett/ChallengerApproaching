@@ -1,0 +1,118 @@
+Manual test for Roy character activity page
+
+Pressed Roy button from the character select screen. Initial: TK
+Page changed from character select screen to Roy's page. Initial TK
+
+Navigation bar is labeled Roy. Initial: TK
+Above the portrait is also labeled Roy. Initial: TK
+Portrait displayed is a picture of Roy. Initial: TK
+Select a move is under the portrait. Initial TK
+
+Graphic was initially set to BAir. Initial: TK
+
+Opened spinner to select BlazerA option. Initial: TK
+Graphic loaded: BlazerA. Initial: TK
+
+Opened spinner to select BlazerG option. Initial: TK
+Graphic loaded: BlazerG. Initial: TK
+
+Opened spinner to select BThrow option. Initial: TK
+Graphic loaded: BThrow. Initial: TK
+
+Opened spinner to select Counter option. Initial: TK
+Graphic loaded: Counter. Initial: TK
+
+Opened spinner to select CounterHit option. Initial: TK
+Graphic loaded: CounterHit. Initial: TK
+
+Opened spinner to select DAir option. Initial: TK
+Graphic loaded: DAir. Initial: TK
+
+Opened spinner to select DashAttack option. Initial: TK
+Graphic loaded: DashAttack. Initial: TK
+
+Opened spinner to select DashGrab option. Initial: TK
+Graphic loaded: DashGrab. Initial: TK
+
+Opened spinner to select DoubledEdgeDance4Side option. Initial: TK
+Graphic loaded: DoubledEdgeDance4Side. Initial: TK
+
+Opened spinner to select DoubleEdgedDance1 option. Initial: TK
+Graphic loaded: DoubleEdgedDance1. Initial: TK
+
+Opened spinner to select DoubleEdgedDance2Side option. Initial: TK
+Graphic loaded: DoubleEdgedDance2Side. Initial: TK
+
+Opened spinner to select DoubleEdgedDance2Up option. Initial: TK
+Graphic loaded: DoubleEdgedDance2Up. Initial: TK
+
+Opened spinner to select DoubleEdgedDance3Down option. Initial: TK
+Graphic loaded: DoubleEdgedDance3Down. Initial: TK
+
+Opened spinner to select DoubleEdgedDance3Side option. Initial: TK
+Graphic loaded: DoubleEdgedDance3Side. Initial: TK
+
+Opened spinner to select DoubleEdgedDance3Up option. Initial: TK
+Graphic loaded: DoubleEdgedDance3Up. Initial: TK
+
+Opened spinner to select DoubleEdgedDance4Down option. Initial: TK
+Graphic loaded: DoubleEdgedDance4Down. Initial: TK
+
+Opened spinner to select DoubleEdgedDance4Up option. Initial: TK
+Graphic loaded: DoubleEdgedDance4Up. Initial: TK
+
+Opened spinner to select DSmash option. Initial: TK
+Graphic loaded: DSmash. Initial: TK
+
+Opened spinner to select DThrow option. Initial: TK
+Graphic loaded: DThrow. Initial: TK
+
+Opened spinner to select DTilt option. Initial: TK
+Graphic loaded: DTilt. Initial: TK
+
+Opened spinner to select FAir option. Initial: TK
+Graphic loaded: FAir. Initial: TK
+
+Opened spinner to select FlareBlade option. Initial: TK
+Graphic loaded: FlareBlade. Initial: TK
+
+Opened spinner to select FlareBladeMax option. Initial: TK
+Graphic loaded: FlareBladeMax. Initial: TK
+
+Opened spinner to select FSmash option. Initial: TK
+Graphic loaded: FSmash. Initial: TK
+
+Opened spinner to select FThrow option. Initial: TK
+Graphic loaded: FThrow. Initial: TK
+
+Opened spinner to select FTilt option. Initial: TK
+Graphic loaded: FTilt. Initial: TK
+
+Opened spinner to select Grab option. Initial: TK
+Graphic loaded: Grab. Initial: TK
+
+Opened spinner to select Jab option. Initial: TK
+Graphic loaded: Jab. Initial: TK
+
+Opened spinner to select NAir option. Initial: TK
+Graphic loaded: NAir. Initial: TK
+
+Opened spinner to select PivotGrab option. Initial: TK
+Graphic loaded: PivotGrab. Initial: TK
+
+Opened spinner to select Pummel option. Initial: TK
+Graphic loaded: Pummel. Initial: TK
+
+Opened spinner to select UAir option. Initial: TK
+Graphic loaded: UAir. Initial: TK
+
+Opened spinner to select USmash option. Initial: TK
+Graphic loaded: USmash. Initial: TK
+
+Opened spinner to select UThrow option. Initial: TK
+Graphic loaded: UThrow. Initial: TK
+
+Opened spinner to select UTilt option. Initial: TK
+Graphic loaded: UTilt. Initial: TK
+
+Completed by: Tristan Kingsley

@@ -1,0 +1,112 @@
+Manual test for Richter character activity page
+
+Pressed Richter button from the character select screen. Initial: AC
+Page changed from character select screen to Richter's page. Initial AC
+
+Navigation bar is labeled Richter. Initial: AC
+Above the portrait is also labeled Richter. Initial: AC
+Portrait displayed is a picture of Richter. Initial: AC
+Select a move is under the portrait. Initial AC
+
+Graphic was initially set to Axe. Initial: AC
+
+Opened spinner to select BAir option. Initial: AC
+Graphic loaded: BAir. Initial: AC
+
+Opened spinner to select BAirDown option. Initial: AC
+Graphic loaded: BAirDown. Initial: AC
+
+Opened spinner to select BAirUp option. Initial: AC
+Graphic loaded: BAirUp. Initial: AC
+
+Opened spinner to select BThrow option. Initial: AC
+Graphic loaded: BThrow. Initial: AC
+
+Opened spinner to select Cross option. Initial: AC
+Graphic loaded: Cross. Initial: AC
+
+Opened spinner to select DAir option. Initial: AC
+Graphic loaded: DAir. Initial: AC
+
+Opened spinner to select DashAttack option. Initial: AC
+Graphic loaded: DashAttack. Initial: AC
+
+Opened spinner to select DashGrab option. Initial: AC
+Graphic loaded: DashGrab. Initial: AC
+
+Opened spinner to select DSmash option. Initial: AC
+Graphic loaded: DSmash. Initial: AC
+
+Opened spinner to select DThrow option. Initial: AC
+Graphic loaded: DThrow. Initial: AC
+
+Opened spinner to select DTilt1 option. Initial: AC
+Graphic loaded: DTilt1. Initial: AC
+
+Opened spinner to select DTilt2 option. Initial: AC
+Graphic loaded: DTilt2. Initial: AC
+
+Opened spinner to select FAir option. Initial: AC
+Graphic loaded: FAir. Initial: AC
+
+Opened spinner to select FAirDown option. Initial: AC
+Graphic loaded: FAirDown. Initial: AC
+
+Opened spinner to select FAirUp option. Initial: AC
+Graphic loaded: FAirUp. Initial: AC
+
+Opened spinner to select FSmash option. Initial: AC
+Graphic loaded: FSmash. Initial: AC
+
+Opened spinner to select FSmashDown option. Initial: AC
+Graphic loaded: FSmashDown. Initial: AC
+
+Opened spinner to select FSmashUp option. Initial: AC
+Graphic loaded: FSmashUp. Initial: AC
+
+Opened spinner to select FThrow option. Initial: AC
+Graphic loaded: FThrow. Initial: AC
+
+Opened spinner to select FTilt option. Initial: AC
+Graphic loaded: FTilt. Initial: AC
+
+Opened spinner to select Grab option. Initial: AC
+Graphic loaded: Grab. Initial: AC
+
+Opened spinner to select Jab1 option. Initial: AC
+Graphic loaded: Jab1. Initial: AC
+
+Opened spinner to select Jab2 option. Initial: AC
+Graphic loaded: Jab2. Initial: AC
+
+Opened spinner to select JabRapid option. Initial: AC
+Graphic loaded: JabRapid. Initial: AC
+
+Opened spinner to select JabRapidEnd option. Initial: AC
+Graphic loaded: JabRapidEnd. Initial: AC
+
+Opened spinner to select NAir option. Initial: AC
+Graphic loaded: NAir. Initial: AC
+
+Opened spinner to select PivotGrab option. Initial: AC
+Graphic loaded: PivotGrab. Initial: AC
+
+Opened spinner to select Pummel option. Initial: AC
+Graphic loaded: Pummel. Initial: AC
+
+Opened spinner to select UAir option. Initial: AC
+Graphic loaded: UAir. Initial: AC
+
+Opened spinner to select Uppercut option. Initial: AC
+Graphic loaded: Uppercut. Initial: AC
+
+Opened spinner to select USmash option. Initial: AC
+Graphic loaded: USmash. Initial: AC
+
+Opened spinner to select UThrow option. Initial: AC
+Graphic loaded: UThrow. Initial: AC
+
+Opened spinner to select UTilt option. Initial: AC
+Graphic loaded: UTilt. Initial: AC
+
+Completed by: Alex Claggett
