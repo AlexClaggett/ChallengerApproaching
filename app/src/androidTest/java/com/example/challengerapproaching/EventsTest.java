@@ -14,19 +14,16 @@ import androidx.test.runner.AndroidJUnit4;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
-import org.hamcrest.core.IsInstanceOf;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.Espresso.pressBack;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.action.ViewActions.scrollTo;
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
@@ -38,13 +35,13 @@ import static org.hamcrest.Matchers.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class EventsTests {
+public class EventsTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void eventsTests() {
+    public void eventsTest() {
         ViewInteraction appCompatImageButton = onView(
                 allOf(withId(R.id.events),
                         childAtPosition(
@@ -75,7 +72,7 @@ public class EventsTests {
                                                 0)),
                                 2),
                         isDisplayed()));
-        appCompatEditText.perform(replaceText("Event 1"), closeSoftKeyboard());
+        appCompatEditText.perform(replaceText("event1"), closeSoftKeyboard());
 
         ViewInteraction appCompatTextView = onView(
                 allOf(withId(R.id.edit_eventDate),
@@ -108,57 +105,6 @@ public class EventsTests {
         appCompatButton3.perform(scrollTo(), click());
 
         ViewInteraction appCompatButton4 = onView(
-                allOf(withId(R.id.eventCreation), withText("Create Event"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                0),
-                        isDisplayed()));
-        appCompatButton4.perform(click());
-
-        ViewInteraction appCompatEditText2 = onView(
-                allOf(withId(R.id.edit_eventname),
-                        childAtPosition(
-                                allOf(withId(R.id.layout_eventcreation),
-                                        childAtPosition(
-                                                withId(android.R.id.custom),
-                                                0)),
-                                2),
-                        isDisplayed()));
-        appCompatEditText2.perform(replaceText("Event 2"), closeSoftKeyboard());
-
-        ViewInteraction appCompatTextView2 = onView(
-                allOf(withId(R.id.edit_eventDate),
-                        childAtPosition(
-                                allOf(withId(R.id.layout_eventcreation),
-                                        childAtPosition(
-                                                withId(android.R.id.custom),
-                                                0)),
-                                3),
-                        isDisplayed()));
-        appCompatTextView2.perform(click());
-
-        ViewInteraction appCompatButton5 = onView(
-                allOf(withId(android.R.id.button1), withText("OK"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.LinearLayout")),
-                                        0),
-                                2),
-                        isDisplayed()));
-        appCompatButton5.perform(click());
-
-        ViewInteraction appCompatButton6 = onView(
-                allOf(withId(android.R.id.button1), withText("Create"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.ScrollView")),
-                                        0),
-                                3)));
-        appCompatButton6.perform(scrollTo(), click());
-
-        ViewInteraction appCompatButton7 = onView(
                 allOf(withId(R.id.viewevent), withText("View Events"),
                         childAtPosition(
                                 childAtPosition(
@@ -166,43 +112,25 @@ public class EventsTests {
                                         0),
                                 4),
                         isDisplayed()));
-        appCompatButton7.perform(click());
+        appCompatButton4.perform(click());
 
-        DataInteraction appCompatTextView3 = onData(anything())
+        DataInteraction appCompatTextView2 = onData(anything())
                 .inAdapterView(allOf(withId(R.id.list_view),
                         childAtPosition(
                                 withClassName(is("android.widget.LinearLayout")),
                                 0)))
                 .atPosition(0);
-        appCompatTextView3.perform(click());
+        appCompatTextView2.perform(click());
 
-        ViewInteraction appCompatButton8 = onView(
-                allOf(withId(R.id.savebtn), withText("SAVE"),
+        ViewInteraction appCompatButton5 = onView(
+                allOf(withId(R.id.delbtn), withText("DELETE"),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
                                         1),
-                                0),
+                                1),
                         isDisplayed()));
-        appCompatButton8.perform(click());
-
-        DataInteraction appCompatTextView4 = onData(anything())
-                .inAdapterView(allOf(withId(R.id.list_view),
-                        childAtPosition(
-                                withClassName(is("android.widget.LinearLayout")),
-                                0)))
-                .atPosition(0);
-        appCompatTextView4.perform(click());
-
-        ViewInteraction appCompatButton9 = onView(
-                allOf(withId(R.id.calendar_Save), withText("Save Event To Calendar"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                2),
-                        isDisplayed()));
-        appCompatButton9.perform(click());
+        appCompatButton5.perform(click());
 
         ViewInteraction appCompatImageButton2 = onView(
                 allOf(withContentDescription("Navigate up"),
@@ -214,39 +142,6 @@ public class EventsTests {
                                 1),
                         isDisplayed()));
         appCompatImageButton2.perform(click());
-
-        DataInteraction appCompatTextView5 = onData(anything())
-                .inAdapterView(allOf(withId(R.id.list_view),
-                        childAtPosition(
-                                withClassName(is("android.widget.LinearLayout")),
-                                0)))
-                .atPosition(1);
-        appCompatTextView5.perform(click());
-
-        ViewInteraction appCompatButton10 = onView(
-                allOf(withId(R.id.delbtn), withText("DELETE"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.LinearLayout")),
-                                        1),
-                                1),
-                        isDisplayed()));
-        appCompatButton10.perform(click());
-
-        pressBack();
-
-        pressBack();
-
-        ViewInteraction imageButton = onView(
-                allOf(withId(R.id.stages),
-                        childAtPosition(
-                                allOf(withId(R.id.LinearLayout1),
-                                        childAtPosition(
-                                                IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class),
-                                                1)),
-                                2),
-                        isDisplayed()));
-        imageButton.check(matches(isDisplayed()));
     }
 
     private static Matcher<View> childAtPosition(
