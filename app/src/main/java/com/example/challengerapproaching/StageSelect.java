@@ -24,7 +24,7 @@ import com.example.challengerapproaching.stages.YoshisStory;
  * their listeners to their respective classes.
  *********************************************************************/
 
-public class StageSelect extends AppCompatActivity {
+public class StageSelect extends AppCompatActivity {//NOPMD
 
   /** Button For Battle Field. */
   public transient ImageButton battleField;
@@ -60,7 +60,7 @@ public class StageSelect extends AppCompatActivity {
   public transient ImageButton yoshisStory;
 
   /** Button array of the stage buttons. */
-  /* default */ transient ImageButton [] buttons = {battleField, finalDestination, kalosPL,
+  /* default */ transient ImageButton [] buttons = {battleField, finalDestination, kalosPL,//NOPMD
       lylatCruise, pokemonStadium, pokemonStadium2,
       smashville, townAndCity, unovaPL,
       yoshiIsland, yoshisStory};

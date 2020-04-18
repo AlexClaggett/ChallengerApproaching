@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Joker's xml
  * file when the respective button is pushed.*/
 
-public class Joker extends AppCompatActivity {
+public class Joker extends AppCompatActivity {//NOPMD
 
   /** Array of Joker's Framedata files */
-  /* default */ transient String [] jokerMoves = {
+  /* default */ transient String [] jokerMoves = {//NOPMD
       "JokerBAir.gif",
       "JokerBAirArsene.gif",
       "JokerBThrow.gif",

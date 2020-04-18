@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Ike's xml
  * file when the respective button is pushed.*/
 
-public class Ike extends AppCompatActivity {
+public class Ike extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Ike's Framedata files */
-  /* default */ transient String [] ikeMoves = {
+  /* default */ transient String [] ikeMoves = {//NOPMD
       "IkeAetherA.gif",
       "IkeAetherFall.gif",
       "IkeAetherG.gif",

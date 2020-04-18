@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to MetaKnight's xml
  * file when the respective button is pushed.*/
 
-public class MetaKnight extends AppCompatActivity {
+public class MetaKnight extends AppCompatActivity {//NOPMD
 
   /** Array of MetaKnight's Framedata files */
-  /* default */ transient String [] metaKnightMoves = {
+  /* default */ transient String [] metaKnightMoves = {//NOPMD
       "MetaKnightBAir.gif",
       "MetaKnightBThrow.gif",
       "MetaKnightDAir.gif",

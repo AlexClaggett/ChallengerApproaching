@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Richter's xml
  * file when the respective button is pushed.*/
 
-public class Richter extends AppCompatActivity {
+public class Richter extends AppCompatActivity {//NOPMD
 
   /** Array of Richter's Framedata files */
-  /* default */ transient String [] richterMoves = {
+  /* default */ transient String [] richterMoves = {//NOPMD
       "RichterAxe.gif",
       "RichterBAir.gif",
       "RichterBAirDown.gif",

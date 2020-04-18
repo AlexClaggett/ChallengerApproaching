@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Hero's xml
  * file when the respective button is pushed.*/
 
-public class Hero extends AppCompatActivity {
+public class Hero extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Hero's Framedata files */
-  /* default */ transient String [] heroMoves = {
+  /* default */ transient String [] heroMoves = {//NOPMD
       "HeroBAir.gif",
       "HeroBThrow.gif",
       "HeroDAir.gif",

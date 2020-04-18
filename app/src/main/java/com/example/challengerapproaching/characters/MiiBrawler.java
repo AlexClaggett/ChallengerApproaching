@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Mii Brawler's xml
  * file when the respective button is pushed.*/
 
-public class MiiBrawler extends AppCompatActivity {
+public class MiiBrawler extends AppCompatActivity {//NOPMD
 
   /** Array of MiiBrawler's Framedata files */
-  /* default */ transient String [] miiBrawlerMoves = {
+  /* default */ transient String [] miiBrawlerMoves = {//NOPMD
       "MiiBrawlerBAir.gif",
       "MiiBrawlerBThrow.gif",
       "MiiBrawlerBurningDropkick.gif",

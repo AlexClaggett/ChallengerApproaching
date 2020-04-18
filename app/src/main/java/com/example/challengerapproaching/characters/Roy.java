@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Roy's xml
  * file when the respective button is pushed.*/
 
-public class Roy extends AppCompatActivity {
+public class Roy extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Roy's Framedata files */
-  /* default */ transient String [] royMoves = {
+  /* default */ transient String [] royMoves = {//NOPMD
       "RoyBAir.gif",
       "RoyBlazerA.gif",
       "RoyBlazerG.gif",

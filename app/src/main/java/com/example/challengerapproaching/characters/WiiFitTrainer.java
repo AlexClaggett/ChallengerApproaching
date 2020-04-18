@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Wii Fit Trainer's xml
  * file when the respective button is pushed.*/
 
-public class WiiFitTrainer extends AppCompatActivity {
+public class WiiFitTrainer extends AppCompatActivity {//NOPMD
 
   /** Array of WiiFitTrainer's Framedata files */
-  /* default */ transient String [] wiiFitmoves = {
+  /* default */ transient String [] wiiFitmoves = {//NOPMD
       "WiiFitTrainerBAir.gif",
       "WiiFitTrainerBThrow.gif",
       "WiiFitTrainerDAir.gif",

@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Toon Link's xml
  * file when the respective button is pushed.*/
 
-public class ToonLink extends AppCompatActivity {
+public class ToonLink extends AppCompatActivity {//NOPMD
 
   /** Array of ToonLink's Framedata files */
-  /* default */ transient String [] toonLinkMoves = {
+  /* default */ transient String [] toonLinkMoves = {//NOPMD
       "ToonLinkArrow.png",
       "ToonLinkBAir.gif",
       "ToonLinkBoomerang.png",

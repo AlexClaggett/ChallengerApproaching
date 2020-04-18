@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Zero Suit Samus's xml
  * file when the respective button is pushed.*/
 
-public class ZeroSuitSamus extends AppCompatActivity {
+public class ZeroSuitSamus extends AppCompatActivity {//NOPMD
 
   /** Array of Zero Suit Samus's Framedata files */
-  /* default */ transient String [] zzsMoves = {
+  /* default */ transient String [] zzsMoves = {//NOPMD
       "ZeroSuitSamusBAir.gif",
       "ZeroSuitSamusBoostKickA.gif",
       "ZeroSuitSamusBoostKickG.gif",

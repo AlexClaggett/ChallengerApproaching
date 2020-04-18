@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Ice Climber's xml
  * file when the respective button is pushed.*/
 
-public class IceClimbers extends AppCompatActivity {
+public class IceClimbers extends AppCompatActivity {//NOPMD
 
   /** Array of Ice Climber's Framedata files */
-  /* default */ transient String [] iceClimbersmoves = {
+  /* default */ transient String [] iceClimbersmoves = {//NOPMD
       "IceClimbersIceShot.png",
       "NanaBAir.gif",
       "NanaBelay.gif",

@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to ROB's xml
  * file when the respective button is pushed.*/
 
-public class Rob extends AppCompatActivity {
+public class Rob extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Rob's Framedata files */
-  /* default */ transient String [] robMoves = {
+  /* default */ transient String [] robMoves = {//NOPMD
       "ROBArmRotor.gif",
       "ROBArmRotorEnd.gif",
       "ROBBAir.gif",

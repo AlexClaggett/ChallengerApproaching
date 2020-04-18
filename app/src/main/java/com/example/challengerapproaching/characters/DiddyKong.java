@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Diddy Kong's xml
  * file when the respective button is pushed.*/
 
-public class DiddyKong extends AppCompatActivity {
+public class DiddyKong extends AppCompatActivity {//NOPMD
 
   /** Array of Diddy Kong's Framedata files */
-  /* default */ transient String [] diddyKongMoves = {
+  /* default */ transient String [] diddyKongMoves = {//NOPMD
       "DiddyKongBAir.gif",
       "DiddyKongBThrow.gif",
       "DiddyKongDAir.gif",

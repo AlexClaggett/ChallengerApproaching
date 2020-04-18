@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Marth's xml
  * file when the respective button is pushed.*/
 
-public class Marth extends AppCompatActivity {
+public class Marth extends AppCompatActivity {//NOPMD
 
   /** Array of Marth's Framedata files */
-  /* default */ transient String [] marthMoves = {
+  /* default */ transient String [] marthMoves = {//NOPMD
       "MarthBAir.gif",
       "MarthBThrow.gif",
       "MarthCounter.gif",

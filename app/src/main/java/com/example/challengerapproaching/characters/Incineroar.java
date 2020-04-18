@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Incineroar's xml
  * file when the respective button is pushed.*/
 
-public class Incineroar extends AppCompatActivity {
+public class Incineroar extends AppCompatActivity {//NOPMD
 
   /** Array of Incineroar's Framedata files */
-  /* default */ transient String [] incineroarMoves = {
+  /* default */ transient String [] incineroarMoves = {//NOPMD
       "IncineroarAlolanWhipA.gif",
       "IncineroarAlolanWhipEarly.gif",
       "IncineroarAlolanWhipFailure.gif",

@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Yoshi's xml
  * file when the respective button is pushed.*/
 
-public class Yoshi extends AppCompatActivity {
+public class Yoshi extends AppCompatActivity {//NOPMD
 
   /** Array of Yoshi's Framedata files */
-  /* default */ transient String [] yoshiMoves = {
+  /* default */ transient String [] yoshiMoves = {//NOPMD
       "YoshiBAir.gif",
       "YoshiBThrow.gif",
       "YoshiDAir.gif",

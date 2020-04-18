@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Mii Swordfighter's xml
  * file when the respective button is pushed.*/
 
-public class MiiSwordfighter extends AppCompatActivity {
+public class MiiSwordfighter extends AppCompatActivity {//NOPMD
 
   /** Array of MiiSwordfighter's Framedata files */
-  /* default */ transient String [] miiFightMoves = {
+  /* default */ transient String [] miiFightMoves = {//NOPMD
       "MiiSwordfighterAirborneAssault.gif",
       "MiiSwordfighterAirborneAssaultHit.gif",
       "MiiSwordfighterBAir.gif",

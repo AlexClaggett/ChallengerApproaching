@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Shulk's xml
  * file when the respective button is pushed.*/
 
-public class Shulk extends AppCompatActivity {
+public class Shulk extends AppCompatActivity {//NOPMD
 
   /** Array of Shulk's Framedata files */
-  /* default */ transient String [] shulkMoves = {
+  /* default */ transient String [] shulkMoves = {//NOPMD
       "ShulkAirSlash1.gif",
       "ShulkAirSlash2.gif",
       "ShulkBackSlash.gif",

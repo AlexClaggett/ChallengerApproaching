@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Link's xml
  * file when the respective button is pushed.*/
 
-public class Link extends AppCompatActivity {
+public class Link extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Link's Framedata files */
-  /* default */ transient String [] linkMoves = {
+  /* default */ transient String [] linkMoves = {//NOPMD
       "LinkArrow.png",
       "LinkBAir.gif",
       "LinkBoomerang.png",

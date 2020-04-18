@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Fox's xml
  * file when the respective button is pushed.*/
 
-public class Fox extends AppCompatActivity {
+public class Fox extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Fox's Framedata files */
-  /* default */ transient String [] foxMoves = {
+  /* default */ transient String [] foxMoves = {//NOPMD
       "FoxBAir.gif",
       "FoxBlaster.gif",
       "FoxBThrow.gif",

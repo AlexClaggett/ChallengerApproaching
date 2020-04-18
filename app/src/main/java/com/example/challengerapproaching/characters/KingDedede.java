@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to King Dedede's xml
  * file when the respective button is pushed.*/
 
-public class KingDedede extends AppCompatActivity {
+public class KingDedede extends AppCompatActivity {//NOPMD
 
   /** Array of Dedede's Framedata files */
-  /* default */ transient String [] kingDededeMoves = {
+  /* default */ transient String [] kingDededeMoves = {//NOPMD
       "KingDededeBAir.gif",
       "KingDededeBThrow.gif",
       "KingDededeDAir.gif",

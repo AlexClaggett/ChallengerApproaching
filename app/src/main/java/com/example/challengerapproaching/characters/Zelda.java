@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Zelda's xml
  * file when the respective button is pushed.*/
 
-public class Zelda extends AppCompatActivity {
+public class Zelda extends AppCompatActivity {//NOPMD
 
   /** Array of Zelda's Framedata files */
-  /* default */ transient String [] zeldaMoves = {
+  /* default */ transient String [] zeldaMoves = {//NOPMD
       "ZeldaBAir.gif",
       "ZeldaBThrow.gif",
       "ZeldaDAir.gif",

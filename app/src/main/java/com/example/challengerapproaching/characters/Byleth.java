@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Byleth's xml
  * file when the respective button is pushed.*/
 
-public class Byleth extends AppCompatActivity {
+public class Byleth extends AppCompatActivity {//NOPMD
 
   /** Array of Byleth's Framedata files */
-  /* default */ transient String [] bylethMoves = {
+  /* default */ transient String [] bylethMoves = {//NOPMD
       "BylethAreadbharAerial.gif",
       "BylethAreadbharGrounded.gif",
       "BylethAymr.gif",

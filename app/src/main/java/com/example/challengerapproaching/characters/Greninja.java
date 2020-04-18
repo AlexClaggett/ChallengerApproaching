@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Greninja's xml
  * file when the respective button is pushed.*/
 
-public class Greninja extends AppCompatActivity {
+public class Greninja extends AppCompatActivity {//NOPMD
 
   /** Array of Greninja's Framedata files */
-  /* default */ transient String [] greninjaMoves = {
+  /* default */ transient String [] greninjaMoves = {//NOPMD
       "GreninjaBAir.gif",
       "GreninjaBThrow.gif",
       "GreninjaDAir.gif",

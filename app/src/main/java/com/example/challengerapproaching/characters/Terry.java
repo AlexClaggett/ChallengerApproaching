@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Terry's xml
  * file when the respective button is pushed.*/
 
-public class Terry extends AppCompatActivity {
+public class Terry extends AppCompatActivity {//NOPMD
 
   /** Array of Terry's Framedata files */
-  /* default */ transient String [] terryMoves = {
+  /* default */ transient String [] terryMoves = {//NOPMD
       "TerryBAir.gif",
       "TerryBThrow.gif",
       "TerryBurningKnuckleAirStrong.gif",

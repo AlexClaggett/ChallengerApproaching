@@ -95,7 +95,7 @@ import com.example.challengerapproaching.characters.ZeroSuitSamus;
  * setting the contentview, instantiating buttons, and setting
  * their listeners to their respective classes.
  *********************************************************************/
-public class CharacterSelect extends AppCompatActivity {
+public class CharacterSelect extends AppCompatActivity {//NOPMD
 
   /** Image Button array of the character buttons. */
   private transient final ImageButton [] buttons = new ImageButton[82];

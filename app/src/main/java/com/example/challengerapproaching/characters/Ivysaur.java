@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Ivysaur's xml
  * file when the respective button is pushed.*/
 
-public class Ivysaur extends AppCompatActivity {
+public class Ivysaur extends AppCompatActivity {//NOPMD
 
   /** Array of Ivysaur's Framedata files */
-  /* default */ transient String [] ivysaurMoves = {
+  /* default */ transient String [] ivysaurMoves = {//NOPMD
       "IvysaurBAir.gif",
       "IvysaurBThrow.gif",
       "IvysaurBulletSeedA.gif",

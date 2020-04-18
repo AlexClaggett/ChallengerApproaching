@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Little Mac's xml
  * file when the respective button is pushed.*/
 
-public class LittleMac extends AppCompatActivity {
+public class LittleMac extends AppCompatActivity {//NOPMD
 
   /** Array of LittleMac's Framedata files */
-  /* default */ transient String [] littleMacMoves = {
+  /* default */ transient String [] littleMacMoves = {//NOPMD
       "LittleMacBAir.gif",
       "LittleMacBThrow.gif",
       "LittleMacDAir.gif",

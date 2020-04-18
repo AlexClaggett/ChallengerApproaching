@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Pit's xml
  * file when the respective button is pushed.*/
 
-public class Pit extends AppCompatActivity {
+public class Pit extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Pit's Framedata files */
-  /* default */ transient String [] pitMoves = {
+  /* default */ transient String [] pitMoves = {//NOPMD
       "PitBAir.gif",
       "PitBThrow.gif",
       "PitDAir.gif",

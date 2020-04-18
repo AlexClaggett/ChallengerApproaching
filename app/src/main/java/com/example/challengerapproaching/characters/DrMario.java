@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Dr Mario's xml
  * file when the respective button is pushed.*/
 
-public class DrMario extends AppCompatActivity {
+public class DrMario extends AppCompatActivity {//NOPMD
 
   /** Array of Dr Mario's Framedata files */
-  /* default */ transient String [] drMarioMoves = {
+  /* default */ transient String [] drMarioMoves = {//NOPMD
       "DrMarioBAir.gif",
       "DrMarioBThrow.gif",
       "DrMarioDAir.gif",

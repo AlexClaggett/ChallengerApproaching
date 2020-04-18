@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Kirby's xml
  * file when the respective button is pushed.*/
 
-public class Kirby extends AppCompatActivity {
+public class Kirby extends AppCompatActivity {//NOPMD
 
   /** Array of Kirby's Framedata files */
-  /* default */ transient String [] kirbyMoves = {
+  /* default */ transient String [] kirbyMoves = {//NOPMD
       "KirbyBAir.gif",
       "KirbyBThrow.gif",
       "KirbyDAir.gif",

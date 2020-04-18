@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Villager's xml
  * file when the respective button is pushed.*/
 
-public class Villager extends AppCompatActivity {
+public class Villager extends AppCompatActivity {//NOPMD
 
   /** Array of Villager's Framedata files */
-  /* default */ transient String [] villagerMoves = {
+  /* default */ transient String [] villagerMoves = {//NOPMD
       "VillagerBAir.gif",
       "VillagerBalloonHurtbox.png",
       "VillagerBThrow.gif",

@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Falco's xml
  * file when the respective button is pushed.*/
 
-public class Falco extends AppCompatActivity {
+public class Falco extends AppCompatActivity {//NOPMD
 
   /** Array of Falco's Framedata files */
-  /* default */ transient String [] falcoMoves = {
+  /* default */ transient String [] falcoMoves = {//NOPMD
       "FalcoBAir.gif",
       "FalcoBlaster.gif",
       "FalcoBThrow.gif",

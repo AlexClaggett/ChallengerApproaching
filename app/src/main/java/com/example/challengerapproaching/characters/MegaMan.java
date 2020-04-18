@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to MegaMan's xml
  * file when the respective button is pushed.*/
 
-public class MegaMan extends AppCompatActivity {
+public class MegaMan extends AppCompatActivity {//NOPMD
 
   /** Array of MegaMan's Framedata files */
-  /* default */ transient String [] megaManMoves = {
+  /* default */ transient String [] megaManMoves = {//NOPMD
       "MegaManBAir.gif",
       "MegaManBThrow.gif",
       "MegaManCrashBomber.png",

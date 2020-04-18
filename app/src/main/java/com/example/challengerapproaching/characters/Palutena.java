@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Palutena's xml
  * file when the respective button is pushed.*/
 
-public class Palutena extends AppCompatActivity {
+public class Palutena extends AppCompatActivity {//NOPMD
 
   /** Array of Palutena's Framedata files */
-  /* default */ transient String [] palutenaMoves = {
+  /* default */ transient String [] palutenaMoves = {//NOPMD
       "PalutenaAutoreticle.gif",
       "PalutenaBAir.gif",
       "PalutenaBThrow.gif",

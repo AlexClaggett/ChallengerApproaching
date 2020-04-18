@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Mii Gunner's xml
  * file when the respective button is pushed.*/
 
-public class MiiGunner extends AppCompatActivity {
+public class MiiGunner extends AppCompatActivity {//NOPMD
 
   /** Array of MiiGunner's Framedata files */
-  /* default */ transient String [] miiGunnerMoves = {
+  /* default */ transient String [] miiGunnerMoves = {//NOPMD
       "MiiGunnerBombDrop.png",
       "MiiGunnerBombDropExplosion.png",
       "MiiGunnerGrenadeLauncher.png",

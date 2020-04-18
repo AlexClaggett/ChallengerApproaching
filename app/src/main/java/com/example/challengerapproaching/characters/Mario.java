@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Mario's xml
  * file when the respective button is pushed.*/
 
-public class Mario extends AppCompatActivity {
+public class Mario extends AppCompatActivity {//NOPMD
 
   /** Array of Mario's Framedata files */
-  /* default */ transient String [] marioMoves = {
+  /* default */ transient String [] marioMoves = {//NOPMD
       "MarioBAir.gif",
       "MarioBThrow.gif",
       "MarioCape.gif",

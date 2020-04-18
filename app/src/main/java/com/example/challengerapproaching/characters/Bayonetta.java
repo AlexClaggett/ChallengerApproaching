@@ -14,10 +14,10 @@ import java.io.IOException;
 /** This class sets the content view to Bayonetta's xml
  * file when the respective button is pushed.*/
 
-public class Bayonetta extends AppCompatActivity {
+public class Bayonetta extends AppCompatActivity {//NOPMD
 
   /**Array of Bayonetta's Framedata files*/
-  /* default */ transient String [] bayonettaMoves = {
+  /* default */ transient String [] bayonettaMoves = {//NOPMD
       "BayonettaAfterburnerKickDown.gif",
       "BayonettaAfterburnerKickLanding.gif",
       "BayonettaAfterburnerKickUp.gif",

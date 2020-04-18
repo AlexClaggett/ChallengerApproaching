@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Rosalina and Luma's xml
  * file when the respective button is pushed.*/
 
-public class RosalinaAndLuma extends AppCompatActivity {
+public class RosalinaAndLuma extends AppCompatActivity {//NOPMD
 
   /** Array of Rosalina's Framedata files */
-  /* default */ transient String [] rosalinaMoves = {
+  /* default */ transient String [] rosalinaMoves = {//NOPMD
       "RosalinaBAir.gif",
       "RosalinaBThrow.gif",
       "RosalinaDAir.gif",

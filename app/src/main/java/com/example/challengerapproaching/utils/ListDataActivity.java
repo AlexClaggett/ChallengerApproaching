@@ -26,7 +26,7 @@ import java.util.ArrayList;
  * @authors Alex Clagget, Brad Samack, Katie Cussans, Tristan Kingsley
  * @version v2.0 Second Release
  *********************************************************************/
-public class ListDataActivity extends AppCompatActivity {
+public class ListDataActivity extends AppCompatActivity {//NOPMD
 
   /**
    * Tag for looking up Logged information in Logcat.

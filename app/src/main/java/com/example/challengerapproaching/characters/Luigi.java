@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Luigi's xml
  * file when the respective button is pushed.*/
 
-public class Luigi extends AppCompatActivity {
+public class Luigi extends AppCompatActivity {//NOPMD
 
   /** Array of Luigi's Framedata files */
-  /* default */ transient String [] luigiMoves = {
+  /* default */ transient String [] luigiMoves = {//NOPMD
       "LuigiBAir.gif",
       "LuigiBThrow.gif",
       "LuigiCycloneA.gif",
