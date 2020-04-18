@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Banjo Kazooie's xml
  * file when the respective button is pushed.*/
 
-public class BanjoKazooie extends AppCompatActivity {
+public class BanjoKazooie extends AppCompatActivity {//NOPMD
 
   /**Array of BanjoKazooie's Framedata files*/
-  /* default */ transient String [] banjoKazooiemoves = {
+  /* default */ transient String [] banjoKazooiemoves = {//NOPMD
       "Banjo_KazooieBAir.gif",
       "Banjo_KazooieBThrow.gif",
       "Banjo_KazooieDAir.gif",

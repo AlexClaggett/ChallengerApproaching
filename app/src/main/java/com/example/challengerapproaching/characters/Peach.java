@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Peach's xml
  * file when the respective button is pushed.*/
 
-public class Peach extends AppCompatActivity {
+public class Peach extends AppCompatActivity {//NOPMD
 
   /** Array of Peach's Framedata files */
-  /* default */ transient String [] peachMoves = {
+  /* default */ transient String [] peachMoves = {//NOPMD
       "PeachBAir.gif",
       "PeachBThrow.gif",
       "PeachDAir.gif",

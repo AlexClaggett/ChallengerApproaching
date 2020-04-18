@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Inkling's xml
  * file when the respective button is pushed.*/
 
-public class Inkling extends AppCompatActivity {
+public class Inkling extends AppCompatActivity {//NOPMD
 
   /** Array of Inkling's Framedata files */
-  /* default */ transient String [] inklingMoves = {
+  /* default */ transient String [] inklingMoves = {//NOPMD
       "InklingBAir.gif",
       "InklingBThrow.gif",
       "InklingDAir.gif",

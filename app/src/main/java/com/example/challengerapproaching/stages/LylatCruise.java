@@ -7,7 +7,7 @@ import com.example.challengerapproaching.R;
 /** This class sets the content view to Lylat Cruise's xml
  * file when the respective button is pushed.*/
 
-public class LylatCruise extends AppCompatActivity {
+public class LylatCruise extends AppCompatActivity {//NOPMD
 
   @Override
   protected void onCreate(final Bundle savedInstance) {

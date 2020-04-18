@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Lucas's xml
  * file when the respective button is pushed.*/
 
-public class Lucas extends AppCompatActivity {
+public class Lucas extends AppCompatActivity {//NOPMD
 
   /** Array of Lucas's Framedata files */
-  /* default */ transient String [] lucasMoves = {
+  /* default */ transient String [] lucasMoves = {//NOPMD
       "LucasBAir.gif",
       "LucasBThrow.gif",
       "LucasDAir.gif",

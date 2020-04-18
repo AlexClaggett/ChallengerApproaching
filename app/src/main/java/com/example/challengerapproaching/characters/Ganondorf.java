@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Ganondorf's xml
  * file when the respective button is pushed.*/
 
-public class Ganondorf extends AppCompatActivity {
+public class Ganondorf extends AppCompatActivity {//NOPMD
 
   /** Array of Ganondorf's Framedata files */
-  /* default */ transient String [] ganondorfMoves = {
+  /* default */ transient String [] ganondorfMoves = {//NOPMD
       "GanondorfBAir.gif",
       "GanondorfBThrow.gif",
       "GanondorfDAir.gif",

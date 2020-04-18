@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Piranha Plant's xml
  * file when the respective button is pushed.*/
 
-public class PiranhaPlant extends AppCompatActivity {
+public class PiranhaPlant extends AppCompatActivity {//NOPMD
 
   /** Array of Piranha Plant's Framedata files */
-  /* default */ transient String [] piranhaPlantMoves = {
+  /* default */ transient String [] piranhaPlantMoves = {//NOPMD
       "PiranhaPlantBAir.gif",
       "PiranhaPlantBThrow.gif",
       "PiranhaPlantDAir.gif",

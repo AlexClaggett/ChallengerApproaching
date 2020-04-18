@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Robin's xml
  * file when the respective button is pushed.*/
 
-public class Robin extends AppCompatActivity {
+public class Robin extends AppCompatActivity {//NOPMD
 
   /** Array of Robin's Framedata files */
-  /* default */ transient String [] robinMoves = {
+  /* default */ transient String [] robinMoves = {//NOPMD
       "RobinBAirBronze.gif",
       "RobinBAirLevin.gif",
       "RobinBThrow.gif",

@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Lucario's xml
  * file when the respective button is pushed.*/
 
-public class Lucario extends AppCompatActivity {
+public class Lucario extends AppCompatActivity {//NOPMD
 
   /** Array of Lucario's Framedata files */
-  /* default */ transient String [] lucarioMoves = {
+  /* default */ transient String [] lucarioMoves = {//NOPMD
       "LucarioBAir.gif",
       "LucarioBThrow.gif",
       "LucarioDAir.gif",

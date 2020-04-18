@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Dark Pit's xml
  * file when the respective button is pushed.*/
 
-public class DarkPit extends AppCompatActivity {
+public class DarkPit extends AppCompatActivity {//NOPMD
 
   /** Array of Dark Pit's Framedata files */
-  /* default */ transient String [] darkPitMoves = {
+  /* default */ transient String [] darkPitMoves = {//NOPMD
       "DarkPitBAir.gif",
       "DarkPitBThrow.gif",
       "DarkPitDAir.gif",

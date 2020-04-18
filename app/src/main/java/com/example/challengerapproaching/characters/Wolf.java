@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Wolf's xml
  * file when the respective button is pushed.*/
 
-public class Wolf extends AppCompatActivity {
+public class Wolf extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Wolf's Framedata files */
-  /* default */ transient String [] wolfMoves = {
+  /* default */ transient String [] wolfMoves = {//NOPMD
       "WolfBAir.gif",
       "WolfBlaster.gif",
       "WolfBThrow.gif",

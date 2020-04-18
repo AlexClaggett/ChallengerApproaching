@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Corrin's xml
  * file when the respective button is pushed.*/
 
-public class Corrin extends AppCompatActivity {
+public class Corrin extends AppCompatActivity {//NOPMD
 
   /** Array of Corrin's Framedata files */
-  /* default */ transient String [] corrinMoves = {
+  /* default */ transient String [] corrinMoves = {//NOPMD
       "CorrinBAir.gif",
       "CorrinBThrow.gif",
       "CorrinCounterSurge.gif",

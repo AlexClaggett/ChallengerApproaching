@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Ryu's xml
  * file when the respective button is pushed.*/
 
-public class Ryu extends AppCompatActivity {
+public class Ryu extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Ryu's Framedata files */
-  /* default */ transient String [] ryuMoves = {
+  /* default */ transient String [] ryuMoves = {//NOPMD
       "RyuBAir.gif",
       "RyuBThrow.gif",
       "RyuDAir.gif",

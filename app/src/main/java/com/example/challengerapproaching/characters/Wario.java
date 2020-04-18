@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Wario's xml
  * file when the respective button is pushed.*/
 
-public class Wario extends AppCompatActivity {
+public class Wario extends AppCompatActivity {//NOPMD
 
   /** Array of Wario's Framedata files */
-  /* default */ transient String [] warioMoves = {
+  /* default */ transient String [] warioMoves = {//NOPMD
       "WarioBAir.gif",
       "WarioBikeDrive.gif",
       "WarioBikeTurn.gif",

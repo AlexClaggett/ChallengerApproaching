@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Samus's xml
  * file when the respective button is pushed.*/
 
-public class Samus extends AppCompatActivity {
+public class Samus extends AppCompatActivity {//NOPMD
 
   /** Array of Samus's Framedata files */
-  /* default */ transient String [] samusMoves = {
+  /* default */ transient String [] samusMoves = {//NOPMD
       "SamusBAir.gif",
       "SamusBomb.png",
       "SamusBombExplosion.png",

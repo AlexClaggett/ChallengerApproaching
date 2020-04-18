@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Cloud's xml
  * file when the respective button is pushed.*/
 
-public class Cloud extends AppCompatActivity {
+public class Cloud extends AppCompatActivity {//NOPMD
 
   /** Array of Cloud's Framedata files */
-  /* default */ transient String [] cloudMoves = {
+  /* default */ transient String [] cloudMoves = {//NOPMD
       "CloudBAir.gif",
       "CloudBladeBeam.gif",
       "CloudBladeBeamLimit.gif",

@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Sonic's xml
  * file when the respective button is pushed.*/
 
-public class Sonic extends AppCompatActivity {
+public class Sonic extends AppCompatActivity {//NOPMD
 
   /** Array of Sonic's Framedata files */
-  /* default */ transient String [] sonicMoves = {
+  /* default */ transient String [] sonicMoves = {//NOPMD
       "SonicBAir.gif",
       "SonicBThrow.gif",
       "SonicDAir.gif",

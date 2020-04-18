@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Ridley's xml
  * file when the respective button is pushed.*/
 
-public class Ridley extends AppCompatActivity {
+public class Ridley extends AppCompatActivity {//NOPMD
 
   /** Array of Ridley's Framedata files */
-  /* default */ transient String [] ridleyMoves = {
+  /* default */ transient String [] ridleyMoves = {//NOPMD
       "RidleyBAir.gif",
       "RidleyBThrow.gif",
       "RidleyDAir.gif",

@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Charizard's xml
  * file when the respective button is pushed.*/
 
-public class Charizard extends AppCompatActivity {
+public class Charizard extends AppCompatActivity {//NOPMD
 
   /** Array of Charizard's Framedata files */
-  /* default */ transient String [] charizardMoves = {
+  /* default */ transient String [] charizardMoves = {//NOPMD
       "charitardBAir.gif",
       "charitardBThrow.gif",
       "charitardDAir.gif",

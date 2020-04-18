@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Pichu's xml
  * file when the respective button is pushed.*/
 
-public class Pichu extends AppCompatActivity {
+public class Pichu extends AppCompatActivity {//NOPMD
 
   /** Array of Pichu's Framedata files */
-  /* default */ transient String [] pichuMoves = {
+  /* default */ transient String [] pichuMoves = {//NOPMD
       "PichuBAir.gif",
       "PichuBThrow.gif",
       "PichuDAir.gif",

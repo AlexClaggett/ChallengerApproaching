@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Daisy's xml
  * file when the respective button is pushed.*/
 
-public class Daisy extends AppCompatActivity {
+public class Daisy extends AppCompatActivity {//NOPMD
 
   /** Array of Daisy's Framedata files */
-  /* default */ transient String [] daisyMoves = {
+  /* default */ transient String [] daisyMoves = {//NOPMD
       "DaisyBAir.gif",
       "DaisyBThrow.gif",
       "DaisyDAir.gif",

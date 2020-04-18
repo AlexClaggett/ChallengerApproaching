@@ -25,7 +25,7 @@ import java.util.Calendar;
  * the user to enter an event name, and select a date from a date
  * picker.
  *********************************************************************/
-public class EventDialog extends AppCompatDialogFragment {
+public class EventDialog extends AppCompatDialogFragment {//NOPMD
 
   /** Edit Text View That holds the Name of the Event being created. */
   private transient EditText editTextEventName;

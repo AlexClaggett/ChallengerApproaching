@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to PacMan's xml
  * file when the respective button is pushed.*/
 
-public class PacMan extends AppCompatActivity {
+public class PacMan extends AppCompatActivity {//NOPMD
 
   /** Array of PacMan's Framedata files */
-  /* default */ transient String [] pacManMoves = {
+  /* default */ transient String [] pacManMoves = {//NOPMD
       "PacManBAir.gif",
       "PacManBThrow.gif",
       "PacManDAir.gif",

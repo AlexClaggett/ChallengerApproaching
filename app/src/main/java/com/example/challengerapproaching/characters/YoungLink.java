@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Young Link's xml
  * file when the respective button is pushed.*/
 
-public class YoungLink extends AppCompatActivity {
+public class YoungLink extends AppCompatActivity {//NOPMD
 
   /** Array of Young Link's Framedata files */
-  /* default */ transient String [] youngLinkMoves = {
+  /* default */ transient String [] youngLinkMoves = {//NOPMD
       "YoungLinkArrow.png",
       "YoungLinkBAir.gif",
       "YoungLinkBoomerang.png",

@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Dark Samus's xml
  * file when the respective button is pushed.*/
 
-public class DarkSamus extends AppCompatActivity {
+public class DarkSamus extends AppCompatActivity {//NOPMD
 
   /** Array of Dark Samus's Framedata files */
-  /* default */ transient String [] darkSamusMoves = {
+  /* default */ transient String [] darkSamusMoves = {//NOPMD
       "DarkSamusBAir.gif",
       "DarkSamusBomb.png",
       "DarkSamusBombExplosion.png",

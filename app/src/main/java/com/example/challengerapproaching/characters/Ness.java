@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Ness's xml
  * file when the respective button is pushed.*/
 
-public class Ness extends AppCompatActivity {
+public class Ness extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Ness's Framedata files */
-  /* default */ transient String [] nessMoves = {
+  /* default */ transient String [] nessMoves = {//NOPMD
       "NessBAir.gif",
       "NessBThrow.gif",
       "NessDAir.gif",

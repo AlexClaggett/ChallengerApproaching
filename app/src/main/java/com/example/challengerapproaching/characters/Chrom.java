@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Chrom's xml
  * file when the respective button is pushed.*/
 
-public class Chrom extends AppCompatActivity {
+public class Chrom extends AppCompatActivity {//NOPMD
 
   /** Array of Chrom's Framedata files */
-  /* default */ transient String [] chromMoves = {
+  /* default */ transient String [] chromMoves = {//NOPMD
       "ChromBAir.gif",
       "ChromBThrow.gif",
       "ChromCounter.gif",

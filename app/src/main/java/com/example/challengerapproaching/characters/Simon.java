@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Simon's xml
  * file when the respective button is pushed.*/
 
-public class Simon extends AppCompatActivity {
+public class Simon extends AppCompatActivity {//NOPMD
 
   /** Array of Simon's Framedata files */
-  /* default */ transient String [] simonMoves = {
+  /* default */ transient String [] simonMoves = {//NOPMD
       "SimonAxe.gif",
       "SimonBAir.gif",
       "SimonBAirDown.gif",

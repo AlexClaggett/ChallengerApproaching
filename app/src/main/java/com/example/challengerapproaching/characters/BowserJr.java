@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Bowser Jr's xml
  * file when the respective button is pushed.*/
 
-public class BowserJr extends AppCompatActivity {
+public class BowserJr extends AppCompatActivity {//NOPMD
 
   /**Array of BowserJr's Framedata files*/
-  /* default */ transient String [] bowserJrMoves = {
+  /* default */ transient String [] bowserJrMoves = {//NOPMD
       "BowserJrAbandonShip.gif",
       "BowserJrAbandonShipExplosion.png",
       "BowserJrAbandonShipHammer.gif",

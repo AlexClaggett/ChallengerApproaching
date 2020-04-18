@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Ken's xml
  * file when the respective button is pushed.*/
 
-public class Ken extends AppCompatActivity {
+public class Ken extends AppCompatActivity {//NOPMD//NOPMD
 
   /** Array of Ken's Framedata files */
-  /* default */ transient String [] kenMoves = {
+  /* default */ transient String [] kenMoves = {//NOPMD
       "KenBAir.gif",
       "KenBThrow.gif",
       "KenDAir.gif",

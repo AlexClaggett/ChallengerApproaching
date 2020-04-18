@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Pikachu's xml
  * file when the respective button is pushed.*/
 
-public class Pikachu extends AppCompatActivity {
+public class Pikachu extends AppCompatActivity {//NOPMD
 
   /** Array of Pikachu's Framedata files */
-  /* default */ transient String [] pikachuMoves = {
+  /* default */ transient String [] pikachuMoves = {//NOPMD
       "PikachuBAir.gif",
       "PikachuBThrow.gif",
       "PikachuDAir.gif",

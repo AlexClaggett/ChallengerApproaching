@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Bowser's xml
  * file when the respective button is pushed.*/
 
-public class Bowser extends AppCompatActivity {
+public class Bowser extends AppCompatActivity {//NOPMD
 
   /**Array of Bowser's Framedata files*/
-  /* default */ transient String [] bowserMoves = {
+  /* default */ transient String [] bowserMoves = {//NOPMD
       "BowserBAir.gif",
       "BowserBowserBomb.png",
       "BowserBowserBombG.gif",

@@ -13,16 +13,16 @@ import androidx.appcompat.app.AppCompatActivity;
  * navigate to the events menu, character or stage pages.
  *******************************************************************/
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {//NOPMD
 
   /** Image Button for Characters. */
-  /* default */ transient ImageButton characters;
+  /* default */ transient ImageButton characters;//NOPMD
 
   /** Image Button for Stages. */
-  /* default */ transient ImageButton stages;
+  /* default */ transient ImageButton stages;//NOPMD
 
   /** Image Button for Events. */
-  /* default */ transient ImageButton events;
+  /* default */ transient ImageButton events;//NOPMD
 
   /********************************************************************
    * Upon app start up this method sets the content view to main
@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(final Bundle savedInstance) {
     super.onCreate(savedInstance);
 
-    final StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+    final StrictMode.ThreadPolicy policy =
+        new StrictMode.ThreadPolicy.Builder().permitAll().build();
     StrictMode.setThreadPolicy(policy);
 
     setContentView(R.layout.activity_main);

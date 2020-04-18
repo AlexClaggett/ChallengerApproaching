@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Snake's xml
  * file when the respective button is pushed.*/
 
-public class Snake extends AppCompatActivity {
+public class Snake extends AppCompatActivity {//NOPMD
 
   /** Array of Snake's Framedata files */
-  /* default */ transient String [] snakeMoves = {
+  /* default */ transient String [] snakeMoves = {//NOPMD
       "SnakeBAir.gif",
       "SnakeBThrow.gif",
       "SnakeC4.png",

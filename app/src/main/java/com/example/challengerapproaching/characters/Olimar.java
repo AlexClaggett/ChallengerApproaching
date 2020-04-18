@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Olimar's xml
  * file when the respective button is pushed.*/
 
-public class Olimar extends AppCompatActivity {
+public class Olimar extends AppCompatActivity {//NOPMD
 
   /** Array of Olimar's Framedata files */
-  /* default */ transient String [] olimarMoves = {
+  /* default */ transient String [] olimarMoves = {//NOPMD
       "OlimarBThrow.gif",
       "OlimarDashAttack.gif",
       "OlimarDThrow.gif",

@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to King K Rool's xml
  * file when the respective button is pushed.*/
 
-public class KingKRool extends AppCompatActivity {
+public class KingKRool extends AppCompatActivity {//NOPMD
 
   /** Array of K Rool's Framedata files */
-  /* default */ transient String [] kingKRoolMoves = {
+  /* default */ transient String [] kingKRoolMoves = {//NOPMD
       "KingKRoolBAir.gif",
       "KingKRoolBlunderbuss.gif",
       "KingKRoolBlunderbussKannonballDetection.gif",

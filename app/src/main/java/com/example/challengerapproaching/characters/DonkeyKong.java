@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Donkey Kong's xml
  * file when the respective button is pushed.*/
 
-public class DonkeyKong extends AppCompatActivity {
+public class DonkeyKong extends AppCompatActivity {//NOPMD
 
   /** Array of Donkey Kong's Framedata files */
-  /* default */ transient String [] donkeyKongMoves = {
+  /* default */ transient String [] donkeyKongMoves = {//NOPMD
       "DonkeyKongBAir.gif",
       "DonkeyKongBThrow.gif",
       "DonkeyKongCargoBThrow.gif",

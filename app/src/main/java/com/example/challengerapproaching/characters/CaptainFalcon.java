@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Captain Falcon's xml
  * file when the respective button is pushed.*/
 
-public class CaptainFalcon extends AppCompatActivity {
+public class CaptainFalcon extends AppCompatActivity {//NOPMD
 
   /** Array of Captain Falcon's Framedata files */
-  /* default */ transient String [] cptnFalconMoves = {
+  /* default */ transient String [] cptnFalconMoves = {//NOPMD
       "CaptainFalconBAir.gif",
       "CaptainFalconBThrow.gif",
       "CaptainFalconDAir.gif",

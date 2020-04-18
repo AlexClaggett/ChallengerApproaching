@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Mr Game and Watch's xml
  * file when the respective button is pushed.*/
 
-public class MrGameAndWatch extends AppCompatActivity {
+public class MrGameAndWatch extends AppCompatActivity {//NOPMD
 
   /** Array of Mr Game and Watch's Framedata files */
-  /* default */ transient String [] mrGameWatchmoves = {
+  /* default */ transient String [] mrGameWatchmoves = {//NOPMD
       "MrGame_WatchBair.gif",
       "MrGame_WatchBairLanding.gif",
       "MrGame_WatchBThrow.gif",

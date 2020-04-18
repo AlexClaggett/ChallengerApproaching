@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Duck Hunt's xml
  * file when the respective button is pushed.*/
 
-public class DuckHunt extends AppCompatActivity {
+public class DuckHunt extends AppCompatActivity {//NOPMD
 
   /** Array of Duck Hunt's Framedata files */
-  /* default */ transient String [] duckHuntMoves = {
+  /* default */ transient String [] duckHuntMoves = {//NOPMD
       "DuckHuntBAir.gif",
       "DuckHuntBThrow.gif",
       "DuckHuntClayShooting.png",

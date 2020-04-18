@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Sheik's xml
  * file when the respective button is pushed.*/
 
-public class Sheik extends AppCompatActivity {
+public class Sheik extends AppCompatActivity {//NOPMD
 
   /** Array of Sheik's Framedata files */
-  /* default */ transient String [] sheikMoves = {
+  /* default */ transient String [] sheikMoves = {//NOPMD
       "SheikBAir.gif",
       "SheikBouncingFish.gif",
       "SheikBThrow.gif",

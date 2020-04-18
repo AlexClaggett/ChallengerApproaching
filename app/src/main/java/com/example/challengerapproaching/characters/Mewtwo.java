@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Mewtwo's xml
  * file when the respective button is pushed.*/
 
-public class Mewtwo extends AppCompatActivity {
+public class Mewtwo extends AppCompatActivity {//NOPMD
 
   /** Array of Mewtwo's Framedata files */
-  /* default */ transient String [] mewtwoMoves = {
+  /* default */ transient String [] mewtwoMoves = {//NOPMD
       "MewtwoBAir.gif",
       "MewtwoBThrow.gif",
       "MewtwoConfusion.gif",

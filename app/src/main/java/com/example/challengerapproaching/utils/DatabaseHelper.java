@@ -162,7 +162,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final String query = "SELECT " + COL1 + " FROM " + TABLE_NAME
             + " WHERE " + COL3 + " = '" + date + "'";
     final Cursor data = dbName.rawQuery(query, null);
-    return data;
+    return data;//NOPMD
   }
 
   /********************************************************************
@@ -226,7 +226,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final Event curEvent = new Event();
 
     // String for parsing the date for comparison.
-    final String dateParts;
+    final String dateParts;//NOPMD//NOPMD
 
     // The current events date.
     final int[] curTime = {0,0,0};
@@ -401,7 +401,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @param date the date in string form.
    * @param time an array for the month day and year.
    *******************************************************************/
-  private void parseDate(String date, int[] time){
+  private void parseDate(String date, int[] time) {
     // Log the Parsed date and assign the date values.
     Log.d(TAG, "Database Current Date: " + date);
     time[0] = parseInt(date.substring(0,

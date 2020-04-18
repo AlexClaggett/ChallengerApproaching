@@ -7,7 +7,7 @@ import com.example.challengerapproaching.R;
 /** This class sets the content view to Unova Pokemon League's xml
  * file when the respective button is pushed.*/
 
-public class UnovaPokemonLeague extends AppCompatActivity {
+public class UnovaPokemonLeague extends AppCompatActivity {//NOPMD
 
   @Override
   protected void onCreate(final Bundle savedInstance) {

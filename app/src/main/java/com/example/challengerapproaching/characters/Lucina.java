@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Lucina's xml
  * file when the respective button is pushed.*/
 
-public class Lucina extends AppCompatActivity {
+public class Lucina extends AppCompatActivity {//NOPMD
 
   /** Array of Lucina's Framedata files */
-  /* default */ transient String [] lucinaMoves = {
+  /* default */ transient String [] lucinaMoves = {//NOPMD
       "LucinaBAir.gif",
       "LucinaBThrow.gif",
       "LucinaCounter.gif",

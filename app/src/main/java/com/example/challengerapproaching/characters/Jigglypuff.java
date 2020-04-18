@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Jigglypuff's xml
  * file when the respective button is pushed.*/
 
-public class Jigglypuff extends AppCompatActivity {
+public class Jigglypuff extends AppCompatActivity {//NOPMD
 
   /** Array of Jigglypuff's Framedata files */
-  /* default */ transient String [] jigglypuffMoves = {
+  /* default */ transient String [] jigglypuffMoves = {//NOPMD
       "JigglypuffBAir.gif",
       "JigglypuffBThrow.gif",
       "JigglypuffDAir.gif",
