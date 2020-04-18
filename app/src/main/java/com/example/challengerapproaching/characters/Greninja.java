@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Greninja's xml
  * file when the respective button is pushed.*/
 
-public class Greninja extends AppCompatActivity {//NOPMD
+public class Greninja extends AppCompatActivity { //NOPMD
 
-  /** Array of Greninja's Framedata files */
-  /* default */ transient String [] greninjaMoves = {//NOPMD
+  /** Array of Greninja's Framedata files. */
+  /* default */ transient String [] greninjaMoves = { //NOPMD
       "GreninjaBAir.gif",
       "GreninjaBThrow.gif",
       "GreninjaDAir.gif",
@@ -70,7 +70,8 @@ public class Greninja extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/greninja/" + greninjaMoves[position];
         try {

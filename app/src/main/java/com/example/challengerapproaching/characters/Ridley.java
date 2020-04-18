@@ -13,9 +13,9 @@ import java.io.IOException;
 /** This class sets the content view to Ridley's xml
  * file when the respective button is pushed.*/
 
-public class Ridley extends AppCompatActivity {//NOPMD
+public class Ridley extends AppCompatActivity { //NOPMD
 
-  /** Array of Ridley's Framedata files */
+  /** Array of Ridley's Framedata files. */
   /* default */ transient String [] ridleyMoves = {//NOPMD
       "RidleyBAir.gif",
       "RidleyBThrow.gif",
@@ -73,7 +73,8 @@ public class Ridley extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/ridley/" + ridleyMoves[position];
         try {

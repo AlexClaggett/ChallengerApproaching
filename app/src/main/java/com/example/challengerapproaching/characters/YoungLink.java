@@ -17,9 +17,9 @@ import java.io.InputStream;
 /** This class sets the content view to Young Link's xml
  * file when the respective button is pushed.*/
 
-public class YoungLink extends AppCompatActivity {//NOPMD
+public class YoungLink extends AppCompatActivity { //NOPMD
 
-  /** Array of Young Link's Framedata files */
+  /** Array of Young Link's Framedata files. */
   /* default */ transient String [] youngLinkMoves = {//NOPMD
       "YoungLinkArrow.png",
       "YoungLinkBAir.gif",
@@ -69,7 +69,8 @@ public class YoungLink extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/young_link/" + youngLinkMoves[position];
         final ImageView imageView = findViewById(R.id.imageView3);
@@ -80,7 +81,7 @@ public class YoungLink extends AppCompatActivity {//NOPMD
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Lucina's xml
  * file when the respective button is pushed.*/
 
-public class Lucina extends AppCompatActivity {//NOPMD
+public class Lucina extends AppCompatActivity { //NOPMD
 
-  /** Array of Lucina's Framedata files */
-  /* default */ transient String [] lucinaMoves = {//NOPMD
+  /** Array of Lucina's Framedata files. */
+  /* default */ transient String [] lucinaMoves = { //NOPMD
       "LucinaBAir.gif",
       "LucinaBThrow.gif",
       "LucinaCounter.gif",
@@ -73,7 +73,8 @@ public class Lucina extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/lucina/" + lucinaMoves[position];
         try {

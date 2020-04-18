@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Falco's xml
  * file when the respective button is pushed.*/
 
-public class Falco extends AppCompatActivity {//NOPMD
+public class Falco extends AppCompatActivity { //NOPMD
 
-  /** Array of Falco's Framedata files */
-  /* default */ transient String [] falcoMoves = {//NOPMD
+  /** Array of Falco's Framedata files. */
+  /* default */ transient String [] falcoMoves = { //NOPMD
       "FalcoBAir.gif",
       "FalcoBlaster.gif",
       "FalcoBThrow.gif",
@@ -71,7 +71,8 @@ public class Falco extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/falco/" + falcoMoves[position];
@@ -82,7 +83,7 @@ public class Falco extends AppCompatActivity {//NOPMD
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

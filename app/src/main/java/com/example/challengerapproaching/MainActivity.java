@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * navigate to the events menu, character or stage pages.
  *******************************************************************/
 
-public class MainActivity extends AppCompatActivity {//NOPMD
+public class MainActivity extends AppCompatActivity { //NOPMD
 
   /** Image Button for Characters. */
   /* default */ transient ImageButton characters;//NOPMD

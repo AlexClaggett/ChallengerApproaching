@@ -17,9 +17,9 @@ import java.io.InputStream;
 /** This class sets the content view to Yoshi's xml
  * file when the respective button is pushed.*/
 
-public class Yoshi extends AppCompatActivity {//NOPMD
+public class Yoshi extends AppCompatActivity { //NOPMD
 
-  /** Array of Yoshi's Framedata files */
+  /** Array of Yoshi's Framedata files. */
   /* default */ transient String [] yoshiMoves = {//NOPMD
       "YoshiBAir.gif",
       "YoshiBThrow.gif",
@@ -71,7 +71,8 @@ public class Yoshi extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/yoshi/" + yoshiMoves[position];
@@ -82,7 +83,7 @@ public class Yoshi extends AppCompatActivity {//NOPMD
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

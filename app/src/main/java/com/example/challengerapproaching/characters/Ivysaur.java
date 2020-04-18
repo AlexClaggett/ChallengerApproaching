@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Ivysaur's xml
  * file when the respective button is pushed.*/
 
-public class Ivysaur extends AppCompatActivity {//NOPMD
+public class Ivysaur extends AppCompatActivity { //NOPMD
 
-  /** Array of Ivysaur's Framedata files */
-  /* default */ transient String [] ivysaurMoves = {//NOPMD
+  /** Array of Ivysaur's Framedata files. */
+  /* default */ transient String [] ivysaurMoves = { //NOPMD
       "IvysaurBAir.gif",
       "IvysaurBThrow.gif",
       "IvysaurBulletSeedA.gif",
@@ -63,7 +63,8 @@ public class Ivysaur extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/pt_ivysaur/" + ivysaurMoves[position];
         try {

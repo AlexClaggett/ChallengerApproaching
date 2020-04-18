@@ -70,15 +70,9 @@ public class EventsActivity extends AppCompatActivity//NOPMD
     setContentView(R.layout.events);
 
     // Initialize variables to their respective views.
-    /**
-     * Button for creating an event.
-     */
-    Button createBtn = findViewById(R.id.eventCreation);//NOPMD
+    Button createBtn = findViewById(R.id.eventCreation); //NOPMD
     eventName = findViewById(R.id.tView);
     eventDate = findViewById(R.id.dView);
-    /**
-     * Button for viewing the list of created events.
-     */
     Button viewEvent = findViewById(R.id.viewevent);//NOPMD
     upcomingEvent[0] = findViewById(R.id.mostRecent);
     upcomingEvent[1] = findViewById(R.id.mostRecent2);
@@ -140,7 +134,7 @@ public class EventsActivity extends AppCompatActivity//NOPMD
     eventDate.setText(date);
 
     // Check that the Name and Date are not empty.
-    if (eventName.length() != 0 && eventDate.length() != 0) {//NOPMD
+    if (eventName.length() != 0 && eventDate.length() != 0) { //NOPMD
       // Add data to database.
       addData(name, date);
       // Get most recent date.

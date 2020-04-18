@@ -7,7 +7,7 @@ import com.example.challengerapproaching.R;
 /** This class sets the content view to Final Destinations's xml
  * file when the respective button is pushed.*/
 
-public class FinalDestination extends AppCompatActivity {//NOPMD
+public class FinalDestination extends AppCompatActivity { //NOPMD
 
   @Override
   protected void onCreate(final Bundle savedInstance) {

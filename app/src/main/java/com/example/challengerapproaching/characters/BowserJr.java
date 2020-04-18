@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Bowser Jr's xml
  * file when the respective button is pushed.*/
 
-public class BowserJr extends AppCompatActivity {//NOPMD
+public class BowserJr extends AppCompatActivity { //NOPMD
 
-  /**Array of BowserJr's Framedata files*/
-  /* default */ transient String [] bowserJrMoves = {//NOPMD
+  /**Array of BowserJr's Framedata files.*/
+  /* default */ transient String [] bowserJrMoves = { //NOPMD
       "BowserJrAbandonShip.gif",
       "BowserJrAbandonShipExplosion.png",
       "BowserJrAbandonShipHammer.gif",
@@ -77,7 +77,8 @@ public class BowserJr extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/bowser_jr/" + bowserJrMoves[position];
@@ -88,7 +89,7 @@ public class BowserJr extends AppCompatActivity {//NOPMD
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

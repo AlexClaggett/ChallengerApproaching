@@ -17,9 +17,9 @@ import java.io.InputStream;
 /** This class sets the content view to Mii Gunner's xml
  * file when the respective button is pushed.*/
 
-public class MiiGunner extends AppCompatActivity {//NOPMD
+public class MiiGunner extends AppCompatActivity { //NOPMD
 
-  /** Array of MiiGunner's Framedata files */
+  /** Array of MiiGunner's Framedata files. */
   /* default */ transient String [] miiGunnerMoves = {//NOPMD
       "MiiGunnerBombDrop.png",
       "MiiGunnerBombDropExplosion.png",
@@ -72,7 +72,8 @@ public class MiiGunner extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/mii_gunner/" + miiGunnerMoves[position];
@@ -83,7 +84,7 @@ public class MiiGunner extends AppCompatActivity {//NOPMD
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

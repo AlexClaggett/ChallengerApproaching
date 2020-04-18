@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Ken's xml
  * file when the respective button is pushed.*/
 
-public class Ken extends AppCompatActivity {//NOPMD//NOPMD
+public class Ken extends AppCompatActivity { //NOPMD
 
-  /** Array of Ken's Framedata files */
-  /* default */ transient String [] kenMoves = {//NOPMD
+  /** Array of Ken's Framedata files. */
+  /* default */ transient String [] kenMoves = { //NOPMD
       "KenBAir.gif",
       "KenBThrow.gif",
       "KenDAir.gif",
@@ -80,7 +80,8 @@ public class Ken extends AppCompatActivity {//NOPMD//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/ken/" + kenMoves[position];
         try {

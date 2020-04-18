@@ -24,7 +24,7 @@ import java.util.Calendar;
  * to be changed, the name to be changed, and allows for the user to
  * send the event details to their calendar and create an event there.
  *********************************************************************/
-public class EditDataActivity extends AppCompatActivity {//NOPMD
+public class EditDataActivity extends AppCompatActivity { //NOPMD
 
   /**
    * EditText that represents the name of the event.
@@ -75,22 +75,12 @@ public class EditDataActivity extends AppCompatActivity {//NOPMD
     setContentView(R.layout.edit_data_layout);
 
     // Initialize the save button.
-    /**
-     * Button that represents the Save button for saving the event.
-     */
     Button btnSave = findViewById(R.id.savebtn);//NOPMD
 
     // Initialize the delete button.
-    /**
-     * Button that represents the Delete button to remove events.
-     */
     Button btnDelete = findViewById(R.id.delbtn);//NOPMD
 
     // Initialize the save calendar button.
-    /**
-     * Button that represents sending the event to the default calendar
-     * app.
-     */
     Button calendarSave = findViewById(R.id.calendar_Save);//NOPMD
 
     // Initialize the editable name view.
@@ -175,15 +165,15 @@ public class EditDataActivity extends AppCompatActivity {//NOPMD
           && newDate.equals(selectedDate)) {
         finish();
         startActivity(getParentActivityIntent());
-      } else if (!newName.equals("") && !newDate.equals("")) {//NOPMD
+      } else if (!newName.equals("") && !newDate.equals("")) { //NOPMD
         // Check that Both name and date were changed.
-        if (!newName.equals(selectedName)//NOPMD
+        if (!newName.equals(selectedName) //NOPMD
             && !newDate.equals(selectedDate)) {
           eventDatabase.updateName(newName, selectedId, selectedName);
           eventDatabase.updateDate(newDate, selectedId, selectedDate);
           finish();
           startActivity(getParentActivityIntent());
-        } else if (!newName.equals(selectedName)) {//NOPMD
+        } else if (!newName.equals(selectedName)) { //NOPMD
           eventDatabase.updateName(newName, selectedId, selectedName);
           finish();
           startActivity(getParentActivityIntent());

@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to King K Rool's xml
  * file when the respective button is pushed.*/
 
-public class KingKRool extends AppCompatActivity {//NOPMD
+public class KingKRool extends AppCompatActivity { //NOPMD
 
-  /** Array of K Rool's Framedata files */
-  /* default */ transient String [] kingKRoolMoves = {//NOPMD
+  /** Array of K Rool's Framedata files. */
+  /* default */ transient String [] kingKRoolMoves = { //NOPMD
       "KingKRoolBAir.gif",
       "KingKRoolBlunderbuss.gif",
       "KingKRoolBlunderbussKannonballDetection.gif",
@@ -76,7 +76,8 @@ public class KingKRool extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/king_k_rool/" + kingKRoolMoves[position];
         final ImageView imageView = findViewById(R.id.imageView3);
@@ -87,7 +88,7 @@ public class KingKRool extends AppCompatActivity {//NOPMD
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

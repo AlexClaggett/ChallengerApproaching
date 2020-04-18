@@ -13,9 +13,9 @@ import java.io.IOException;
 /** This class sets the content view to ROB's xml
  * file when the respective button is pushed.*/
 
-public class Rob extends AppCompatActivity {//NOPMD//NOPMD
+public class Rob extends AppCompatActivity { //NOPMD
 
-  /** Array of Rob's Framedata files */
+  /** Array of Rob's Framedata files. */
   /* default */ transient String [] robMoves = {//NOPMD
       "ROBArmRotor.gif",
       "ROBArmRotorEnd.gif",
@@ -64,7 +64,8 @@ public class Rob extends AppCompatActivity {//NOPMD//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/rob/" + robMoves[position];
         try {

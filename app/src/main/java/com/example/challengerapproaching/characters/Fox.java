@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Fox's xml
  * file when the respective button is pushed.*/
 
-public class Fox extends AppCompatActivity {//NOPMD//NOPMD
+public class Fox extends AppCompatActivity { //NOPMD
 
-  /** Array of Fox's Framedata files */
-  /* default */ transient String [] foxMoves = {//NOPMD
+  /** Array of Fox's Framedata files. */
+  /* default */ transient String [] foxMoves = { //NOPMD
       "FoxBAir.gif",
       "FoxBlaster.gif",
       "FoxBThrow.gif",
@@ -71,7 +71,8 @@ public class Fox extends AppCompatActivity {//NOPMD//NOPMD
 
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/fox/" + foxMoves[position];
@@ -82,7 +83,7 @@ public class Fox extends AppCompatActivity {//NOPMD//NOPMD
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

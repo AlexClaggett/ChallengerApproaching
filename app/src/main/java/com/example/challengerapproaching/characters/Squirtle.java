@@ -13,9 +13,9 @@ import java.io.IOException;
 /** This class sets the content view to Squirtle's xml
  * file when the respective button is pushed.*/
 
-public class Squirtle extends AppCompatActivity {//NOPMD
+public class Squirtle extends AppCompatActivity { //NOPMD
 
-  /** Array of Squirtle's Framedata files */
+  /** Array of Squirtle's Framedata files. */
   /* default */ transient String [] squirtleMoves = {//NOPMD
       "SquirtleBAir.gif",
       "SquirtleBAirLanding.gif",
@@ -65,7 +65,8 @@ public class Squirtle extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/pt_squirtle/" + squirtleMoves[position];
         try {

@@ -13,9 +13,9 @@ import java.io.IOException;
 /** This class sets the content view to Robin's xml
  * file when the respective button is pushed.*/
 
-public class Robin extends AppCompatActivity {//NOPMD
+public class Robin extends AppCompatActivity { //NOPMD
 
-  /** Array of Robin's Framedata files */
+  /** Array of Robin's Framedata files. */
   /* default */ transient String [] robinMoves = {//NOPMD
       "RobinBAirBronze.gif",
       "RobinBAirLevin.gif",
@@ -70,7 +70,8 @@ public class Robin extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/robin/" + robinMoves[position];
         try {

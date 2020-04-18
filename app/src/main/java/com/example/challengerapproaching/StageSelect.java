@@ -24,7 +24,7 @@ import com.example.challengerapproaching.stages.YoshisStory;
  * their listeners to their respective classes.
  *********************************************************************/
 
-public class StageSelect extends AppCompatActivity {//NOPMD
+public class StageSelect extends AppCompatActivity { //NOPMD
 
   /** Button For Battle Field. */
   public transient ImageButton battleField;
@@ -66,8 +66,8 @@ public class StageSelect extends AppCompatActivity {//NOPMD
       yoshiIsland, yoshisStory};
 
   /** Array of integers of the stage ids found in the XML. */
-  private final transient int [] ids = {R.id.BattleField, R.id.FinalDestination, R.id.KalosPokemonStadium,
-    R.id.LylatCruise, R.id.PokemonStadium, R.id.PokemonStadium2,
+  private final transient int [] ids = {R.id.BattleField, R.id.FinalDestination,
+    R.id.KalosPokemonStadium, R.id.LylatCruise, R.id.PokemonStadium, R.id.PokemonStadium2,
     R.id.Smashville, R.id.TownAndCity, R.id.UnovaPokemonLeague,
     R.id.YoshiIsland, R.id.YoshisStory};
 
@@ -88,7 +88,7 @@ public class StageSelect extends AppCompatActivity {//NOPMD
     super.onCreate(savedInstance);
     setContentView(R.layout.activity_stages);
 
-    for (int count = 0; count<buttons.length; count++) {
+    for (int count = 0; count < buttons.length; count++) {
       final Intent tosend = new Intent(this,
               charClasses[count]);
       findViewById(ids[count]).setOnClickListener(v -> startActivity(tosend));

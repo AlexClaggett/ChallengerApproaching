@@ -7,7 +7,7 @@ import com.example.challengerapproaching.R;
 /** This class sets the content view to Town and City's xml
  * file when the respective button is pushed.*/
 
-public class TownAndCity extends AppCompatActivity {//NOPMD
+public class TownAndCity extends AppCompatActivity { //NOPMD
 
   @Override
   protected void onCreate(final Bundle savedInstance) {

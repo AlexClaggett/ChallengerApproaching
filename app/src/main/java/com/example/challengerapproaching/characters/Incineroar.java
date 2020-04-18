@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Incineroar's xml
  * file when the respective button is pushed.*/
 
-public class Incineroar extends AppCompatActivity {//NOPMD
+public class Incineroar extends AppCompatActivity { //NOPMD
 
-  /** Array of Incineroar's Framedata files */
-  /* default */ transient String [] incineroarMoves = {//NOPMD
+  /** Array of Incineroar's Framedata files. */
+  /* default */ transient String [] incineroarMoves = { //NOPMD
       "IncineroarAlolanWhipA.gif",
       "IncineroarAlolanWhipEarly.gif",
       "IncineroarAlolanWhipFailure.gif",
@@ -71,7 +71,8 @@ public class Incineroar extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/incineroar/" + incineroarMoves[position];
         try {

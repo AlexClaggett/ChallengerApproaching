@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Chrom's xml
  * file when the respective button is pushed.*/
 
-public class Chrom extends AppCompatActivity {//NOPMD
+public class Chrom extends AppCompatActivity { //NOPMD
 
-  /** Array of Chrom's Framedata files */
-  /* default */ transient String [] chromMoves = {//NOPMD
+  /** Array of Chrom's Framedata files.*/
+  /* default */ transient String [] chromMoves = { //NOPMD
       "ChromBAir.gif",
       "ChromBThrow.gif",
       "ChromCounter.gif",
@@ -72,7 +72,8 @@ public class Chrom extends AppCompatActivity {//NOPMD
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/chrom/" + chromMoves[position];
         try {
