@@ -1,0 +1,121 @@
+Manual test for Villager character activity page
+
+Pressed Villager button from the character select screen. Initial: TK
+Page changed from character select screen to Villager's page. Initial TK
+
+Navigation bar is labeled Villager. Initial: TK
+Above the portrait is also labeled Villager. Initial: TK
+Portrait displayed is a picture of Villager. Initial: TK
+Select a move is under the portrait. Initial TK
+
+Graphic was initially set to BAir. Initial: TK
+
+Opened spinner to select BalloonHurtbox option. Initial: TK
+Graphic loaded: BalloonHurtbox. Initial: TK
+
+Opened spinner to select BThrow option. Initial: TK
+Graphic loaded: BThrow. Initial: TK
+
+Opened spinner to select DAir1 option. Initial: TK
+Graphic loaded: DAir1. Initial: TK
+
+Opened spinner to select DAir2 option. Initial: TK
+Graphic loaded: DAir2. Initial: TK
+
+Opened spinner to select DAir3 option. Initial: TK
+Graphic loaded: DAir3. Initial: TK
+
+Opened spinner to select DashAttack option. Initial: TK
+Graphic loaded: DashAttack. Initial: TK
+
+Opened spinner to select DashGrab option. Initial: TK
+Graphic loaded: DashGrab. Initial: TK
+
+Opened spinner to select DSmash option. Initial: TK
+Graphic loaded: DSmash. Initial: TK
+
+Opened spinner to select DThrow option. Initial: TK
+Graphic loaded: DThrow. Initial: TK
+
+Opened spinner to select DTilt option. Initial: TK
+Graphic loaded: DTilt. Initial: TK
+
+Opened spinner to select FAir option. Initial: TK
+Graphic loaded: FAir. Initial: TK
+
+Opened spinner to select FSmash option. Initial: TK
+Graphic loaded: FSmash. Initial: TK
+
+Opened spinner to select FThrow option. Initial: TK
+Graphic loaded: FThrow. Initial: TK
+
+Opened spinner to select FTilt option. Initial: TK
+Graphic loaded: FTilt. Initial: TK
+
+Opened spinner to select Grab option. Initial: TK
+Graphic loaded: Grab. Initial: TK
+
+Opened spinner to select Jab1 option. Initial: TK
+Graphic loaded: Jab1. Initial: TK
+
+Opened spinner to select Jab1End option. Initial: TK
+Graphic loaded: Jab1End. Initial: TK
+
+Opened spinner to select Jab2 option. Initial: TK
+Graphic loaded: Jab2. Initial: TK
+
+Opened spinner to select Jab2End option. Initial: TK
+Graphic loaded: Jab2End. Initial: TK
+
+Opened spinner to select LloidRocketExplosion option. Initial: TK
+Graphic loaded: LloidRocketExplosion. Initial: TK
+
+Opened spinner to select LloidRocketFall option. Initial: TK
+Graphic loaded: LloidRocketFall. Initial: TK
+
+Opened spinner to select LloidRocketFly option. Initial: TK
+Graphic loaded: LloidRocketFly. Initial: TK
+
+Opened spinner to select LloidRocketWallExplosion option. Initial: TK
+Graphic loaded: LloidRocketWallExplosion. Initial: TK
+
+Opened spinner to select NAir option. Initial: TK
+Graphic loaded: NAir. Initial: TK
+
+Opened spinner to select PivotGrab option. Initial: TK
+Graphic loaded: PivotGrab. Initial: TK
+
+Opened spinner to select Pocket option. Initial: TK
+Graphic loaded: Pocket. Initial: TK
+
+Opened spinner to select Pummel option. Initial: TK
+Graphic loaded: Pummel. Initial: TK
+
+Opened spinner to select TimberAxe option. Initial: TK
+Graphic loaded: TimberAxe. Initial: TK
+
+Opened spinner to select TimberFall option. Initial: TK
+Graphic loaded: TimberFall. Initial: TK
+
+Opened spinner to select TimberGrowth option. Initial: TK
+Graphic loaded: TimberGrowth. Initial: TK
+
+Opened spinner to select UAir1 option. Initial: TK
+Graphic loaded: UAir1. Initial: TK
+
+Opened spinner to select UAir2 option. Initial: TK
+Graphic loaded: UAir2. Initial: TK
+
+Opened spinner to select UAir3 option. Initial: TK
+Graphic loaded: UAir3. Initial: TK
+
+Opened spinner to select USmash option. Initial: TK
+Graphic loaded: USmash. Initial: TK
+
+Opened spinner to select UThrow option. Initial: TK
+Graphic loaded: UThrow. Initial: TK
+
+Opened spinner to select UTilt option. Initial: TK
+Graphic loaded: UTilt. Initial: TK
+
+Completed by: Tristan Kingsley

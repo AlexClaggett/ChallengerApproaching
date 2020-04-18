@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Diddy Kong's xml
  * file when the respective button is pushed.*/
 
-public class DiddyKong extends AppCompatActivity {
+public class DiddyKong extends AppCompatActivity { //NOPMD
 
   /** Array of Diddy Kong's Framedata files. */
-  /* default */ transient String [] diddyKongMoves = {
+  /* default */ transient String [] diddyKongMoves = { //NOPMD
       "DiddyKongBAir.gif",
       "DiddyKongBThrow.gif",
       "DiddyKongDAir.gif",
@@ -72,11 +72,10 @@ public class DiddyKong extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/diddy_kong/"
-            + diddyKongMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/diddy_kong/" + diddyKongMoves[position];
         final ImageView imageView = findViewById(R.id.imageView3);
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);

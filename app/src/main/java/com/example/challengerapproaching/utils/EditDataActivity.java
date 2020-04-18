@@ -24,7 +24,7 @@ import java.util.Calendar;
  * to be changed, the name to be changed, and allows for the user to
  * send the event details to their calendar and create an event there.
  *********************************************************************/
-public class EditDataActivity extends AppCompatActivity {
+public class EditDataActivity extends AppCompatActivity { //NOPMD
 
   /**
    * EditText that represents the name of the event.
@@ -75,23 +75,13 @@ public class EditDataActivity extends AppCompatActivity {
     setContentView(R.layout.edit_data_layout);
 
     // Initialize the save button.
-    /**
-     * Button that represents the Save button for saving the event.
-     */
-    Button btnSave = findViewById(R.id.savebtn);
+    Button btnSave = findViewById(R.id.savebtn);//NOPMD
 
     // Initialize the delete button.
-    /**
-     * Button that represents the Delete button to remove events.
-     */
-    Button btnDelete = findViewById(R.id.delbtn);
+    Button btnDelete = findViewById(R.id.delbtn);//NOPMD
 
     // Initialize the save calendar button.
-    /**
-     * Button that represents sending the event to the default calendar
-     * app.
-     */
-    Button calendarSave = findViewById(R.id.calendar_Save);
+    Button calendarSave = findViewById(R.id.calendar_Save);//NOPMD
 
     // Initialize the editable name view.
     editableName = findViewById(R.id.editable_name);
@@ -156,9 +146,9 @@ public class EditDataActivity extends AppCompatActivity {
         // Adds one to the month because the calendar starts at 0
         month = month + 1;
         String date = "";
-        date += month + "/";
-        date += dayOfMonth + "/";
-        date += year;
+        date = date.concat(month + "/");
+        date = date.concat(dayOfMonth + "/");
+        date = date.concat(date + year);
         editableDate.setText(date);
       }
     };
@@ -175,15 +165,15 @@ public class EditDataActivity extends AppCompatActivity {
           && newDate.equals(selectedDate)) {
         finish();
         startActivity(getParentActivityIntent());
-      } else if (!newName.equals("") && !newDate.equals("")) {
+      } else if (!newName.equals("") && !newDate.equals("")) { //NOPMD
         // Check that Both name and date were changed.
-        if (!newName.equals(selectedName)
+        if (!newName.equals(selectedName) //NOPMD
             && !newDate.equals(selectedDate)) {
           eventDatabase.updateName(newName, selectedId, selectedName);
           eventDatabase.updateDate(newDate, selectedId, selectedDate);
           finish();
           startActivity(getParentActivityIntent());
-        } else if (!newName.equals(selectedName)) {
+        } else if (!newName.equals(selectedName)) { //NOPMD
           eventDatabase.updateName(newName, selectedId, selectedName);
           finish();
           startActivity(getParentActivityIntent());
@@ -234,17 +224,17 @@ public class EditDataActivity extends AppCompatActivity {
 
       // Parse the month from the date.
       final int month =
-          parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+          parseInt(dateParts.substring(0, dateParts.indexOf('/')));
 
       // Shrink the string.
-      dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+      dateParts = dateParts.substring(dateParts.indexOf('/') + 1);
 
       // Parse the day.
       final int day =
-          parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+          parseInt(dateParts.substring(0, dateParts.indexOf('/')));
 
       // Shrink the string again.
-      dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+      dateParts = dateParts.substring(dateParts.indexOf('/') + 1);
 
       // Parse the yest.
       final int year = parseInt(dateParts);

@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Mii Swordfighter's xml
  * file when the respective button is pushed.*/
 
-public class MiiSwordfighter extends AppCompatActivity {
+public class MiiSwordfighter extends AppCompatActivity { //NOPMD
 
   /** Array of MiiSwordfighter's Framedata files. */
-  /* default */ transient String [] miiFightMoves = {
+  /* default */ transient String [] miiFightMoves = {//NOPMD
       "MiiSwordfighterAirborneAssault.gif",
       "MiiSwordfighterAirborneAssaultHit.gif",
       "MiiSwordfighterBAir.gif",
@@ -78,11 +78,10 @@ public class MiiSwordfighter extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/mii_swordfighte/"
-            + miiFightMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/mii_swordfighte/" + miiFightMoves[position];
         final ImageView imageView = findViewById(R.id.imageView3);
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);

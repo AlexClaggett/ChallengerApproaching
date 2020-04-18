@@ -7,7 +7,7 @@ import com.example.challengerapproaching.R;
 /** This class sets the content view to Kalos Pokemon League's xml
  * file when the respective button is pushed.*/
 
-public class KalosPokemonLeague extends AppCompatActivity {
+public class KalosPokemonLeague extends AppCompatActivity { //NOPMD
 
   @Override
   protected void onCreate(final Bundle savedInstance) {

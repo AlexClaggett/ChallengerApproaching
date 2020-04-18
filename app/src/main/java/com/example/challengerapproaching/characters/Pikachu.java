@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Pikachu's xml
  * file when the respective button is pushed.*/
 
-public class Pikachu extends AppCompatActivity {
+public class Pikachu extends AppCompatActivity { //NOPMD
 
   /** Array of Pikachu's Framedata files. */
-  /* default */ transient String [] pikachuMoves = {
+  /* default */ transient String [] pikachuMoves = {//NOPMD
       "PikachuBAir.gif",
       "PikachuBThrow.gif",
       "PikachuDAir.gif",
@@ -61,11 +61,10 @@ public class Pikachu extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/pikachu/"
-            + pikachuMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/pikachu/" + pikachuMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Isabelle's xml
  * file when the respective button is pushed.*/
 
-public class Isabelle extends AppCompatActivity {
+public class Isabelle extends AppCompatActivity { //NOPMD
 
   /** Array of Isabelle's Framedata files. */
-  /* default */ transient String [] isabelleMoves = {
+  /* default */ transient String [] isabelleMoves = { //NOPMD
       "IsabelleBAir.gif",
       "IsabelleBalloonHurtbox.png",
       "IsabelleBThrow.gif",
@@ -66,12 +66,11 @@ public class Isabelle extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/isabelle/"
-            + isabelleMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/isabelle/" + isabelleMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

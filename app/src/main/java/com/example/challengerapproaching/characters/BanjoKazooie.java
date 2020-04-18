@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Banjo Kazooie's xml
  * file when the respective button is pushed.*/
 
-public class BanjoKazooie extends AppCompatActivity {
+public class BanjoKazooie extends AppCompatActivity { //NOPMD
 
-  /**Array of BanjoKazooie's Framedata files. */
-  /* default */ transient String [] banjoKazooiemoves = {
+  /**Array of BanjoKazooie's Framedata files.*/
+  /* default */ transient String [] banjoKazooiemoves = { //NOPMD
       "Banjo_KazooieBAir.gif",
       "Banjo_KazooieBThrow.gif",
       "Banjo_KazooieDAir.gif",
@@ -79,8 +79,7 @@ public class BanjoKazooie extends AppCompatActivity {
                                  final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/banjo_and_kazooie/"
-            + banjoKazooiemoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/banjo_and_kazooie/" + banjoKazooiemoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

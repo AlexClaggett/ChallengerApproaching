@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Byleth's xml
  * file when the respective button is pushed.*/
 
-public class Byleth extends AppCompatActivity {
+public class Byleth extends AppCompatActivity { //NOPMD
 
-  /** Array of Byleth's Framedata files. */
-  /* default */ transient String [] bylethMoves = {
+  /** Array of Byleth's Framedata files.*/
+  /* default */ transient String [] bylethMoves = { //NOPMD
       "BylethAreadbharAerial.gif",
       "BylethAreadbharGrounded.gif",
       "BylethAymr.gif",
@@ -76,12 +76,11 @@ public class Byleth extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/byleth/"
-            + bylethMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/byleth/" + bylethMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

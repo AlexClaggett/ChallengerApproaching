@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Duck Hunt's xml
  * file when the respective button is pushed.*/
 
-public class DuckHunt extends AppCompatActivity {
+public class DuckHunt extends AppCompatActivity { //NOPMD
 
   /** Array of Duck Hunt's Framedata files. */
-  /* default */ transient String [] duckHuntMoves = {
+  /* default */ transient String [] duckHuntMoves = { //NOPMD
       "DuckHuntBAir.gif",
       "DuckHuntBThrow.gif",
       "DuckHuntClayShooting.png",
@@ -72,12 +72,11 @@ public class DuckHunt extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/duck_hunt/"
-            + duckHuntMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/duck_hunt/" + duckHuntMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

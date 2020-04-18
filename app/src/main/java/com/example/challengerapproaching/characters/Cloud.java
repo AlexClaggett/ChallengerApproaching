@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Cloud's xml
  * file when the respective button is pushed.*/
 
-public class Cloud extends AppCompatActivity {
+public class Cloud extends AppCompatActivity { //NOPMD
 
-  /** Array of Cloud's Framedata files. */
-  /* default */ transient String [] cloudMoves = {
+  /** Array of Cloud's Framedata files.*/
+  /* default */ transient String [] cloudMoves = { //NOPMD
       "CloudBAir.gif",
       "CloudBladeBeam.gif",
       "CloudBladeBeamLimit.gif",
@@ -74,8 +74,8 @@ public class Cloud extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/cloud/" + cloudMoves[position];
         try {

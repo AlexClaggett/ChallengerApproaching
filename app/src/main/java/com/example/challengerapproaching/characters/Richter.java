@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Richter's xml
  * file when the respective button is pushed.*/
 
-public class Richter extends AppCompatActivity {
+public class Richter extends AppCompatActivity { //NOPMD
 
   /** Array of Richter's Framedata files. */
-  /* default */ transient String [] richterMoves = {
+  /* default */ transient String [] richterMoves = {//NOPMD
       "RichterAxe.gif",
       "RichterBAir.gif",
       "RichterBAirDown.gif",
@@ -73,12 +73,11 @@ public class Richter extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/richter/"
-            + richterMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/richter/" + richterMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

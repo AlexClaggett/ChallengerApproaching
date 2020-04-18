@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Little Mac's xml
  * file when the respective button is pushed.*/
 
-public class LittleMac extends AppCompatActivity {
+public class LittleMac extends AppCompatActivity { //NOPMD
 
   /** Array of LittleMac's Framedata files. */
-  /* default */ transient String [] littleMacMoves = {
+  /* default */ transient String [] littleMacMoves = { //NOPMD
       "LittleMacBAir.gif",
       "LittleMacBThrow.gif",
       "LittleMacDAir.gif",
@@ -68,11 +68,10 @@ public class LittleMac extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/little_mac/"
-            + littleMacMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/little_mac/" + littleMacMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

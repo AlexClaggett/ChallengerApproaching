@@ -24,7 +24,7 @@ import com.example.challengerapproaching.stages.YoshisStory;
  * their listeners to their respective classes.
  *********************************************************************/
 
-public class StageSelect extends AppCompatActivity {
+public class StageSelect extends AppCompatActivity { //NOPMD
 
   /** Button For Battle Field. */
   public transient ImageButton battleField;
@@ -60,14 +60,14 @@ public class StageSelect extends AppCompatActivity {
   public transient ImageButton yoshisStory;
 
   /** Button array of the stage buttons. */
-  /* default */ transient ImageButton [] buttons = {battleField, finalDestination, kalosPL,
+  /* default */ transient ImageButton [] buttons = {battleField, finalDestination, kalosPL,//NOPMD
       lylatCruise, pokemonStadium, pokemonStadium2,
       smashville, townAndCity, unovaPL,
       yoshiIsland, yoshisStory};
 
   /** Array of integers of the stage ids found in the XML. */
-  private final transient int [] ids = {R.id.BattleField, R.id.FinalDestination, R.id.KalosPokemonStadium,
-    R.id.LylatCruise, R.id.PokemonStadium, R.id.PokemonStadium2,
+  private final transient int [] ids = {R.id.BattleField, R.id.FinalDestination,
+    R.id.KalosPokemonStadium, R.id.LylatCruise, R.id.PokemonStadium, R.id.PokemonStadium2,
     R.id.Smashville, R.id.TownAndCity, R.id.UnovaPokemonLeague,
     R.id.YoshiIsland, R.id.YoshisStory};
 
@@ -88,14 +88,10 @@ public class StageSelect extends AppCompatActivity {
     super.onCreate(savedInstance);
     setContentView(R.layout.activity_stages);
 
-    int count = 0;
-
-    for (ImageButton b: buttons) {
-      b = findViewById(ids[count]);
+    for (int count = 0; count < buttons.length; count++) {
       final Intent tosend = new Intent(this,
               charClasses[count]);
-      b.setOnClickListener(v -> startActivity(tosend));
-      count++;
+      findViewById(ids[count]).setOnClickListener(v -> startActivity(tosend));
     }
   }
 }

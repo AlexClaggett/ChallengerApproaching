@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Mr Game and Watch's xml
  * file when the respective button is pushed.*/
 
-public class MrGameAndWatch extends AppCompatActivity {
+public class MrGameAndWatch extends AppCompatActivity { //NOPMD
 
   /** Array of Mr Game and Watch's Framedata files. */
-  /* default */ transient String [] mrGameWatchmoves = {
+  /* default */ transient String [] mrGameWatchmoves = {//NOPMD
       "MrGame_WatchBair.gif",
       "MrGame_WatchBairLanding.gif",
       "MrGame_WatchBThrow.gif",
@@ -79,12 +79,11 @@ public class MrGameAndWatch extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/mr_game_and_watch/"
-            + mrGameWatchmoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/mr_game_and_watch/" + mrGameWatchmoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

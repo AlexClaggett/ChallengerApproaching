@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Zelda's xml
  * file when the respective button is pushed.*/
 
-public class Zelda extends AppCompatActivity {
+public class Zelda extends AppCompatActivity { //NOPMD
 
   /** Array of Zelda's Framedata files. */
-  /* default */ transient String [] zeldaMoves = {
+  /* default */ transient String [] zeldaMoves = {//NOPMD
       "ZeldaBAir.gif",
       "ZeldaBThrow.gif",
       "ZeldaDAir.gif",
@@ -73,8 +73,8 @@ public class Zelda extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/zelda/" + zeldaMoves[position];

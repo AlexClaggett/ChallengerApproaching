@@ -15,24 +15,24 @@ import java.util.ArrayList;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class EventsApplicationTesting {
+public class EventsApplicationTesting {//NOPMD
 
     /**Context for testing*/
-    private final Context context = ApplicationProvider.getApplicationContext();
+    private final transient Context context = ApplicationProvider.getApplicationContext();
 
     /**Tag for testing*/
     private static final String TAG = "UNIT_TESTING";
 
     /**Names for testing*/
-    private final String[] testNames = { "a", "b", "c", "d" };
+    private final transient String[] testNames = { "a", "b", "c", "d" };
 
     /**Dates for testing*/
-    private final String[] testDates = { "4/17/2020", "5/17/2020",
+    private final transient String[] testDates = { "4/17/2020", "5/17/2020",
         "6/17/2020", "7/17/2020" };
 
     /** Test that A Database is created. */
     @Test
-    public void DatabaseHelper_onCreate() {
+    public void DatabaseHelper_onCreate() {//NOPMD
         final DatabaseHelper helper = new DatabaseHelper(context);
         Assert.assertEquals("Events_Table",helper.getDatabaseName());
         helper.close();
@@ -40,7 +40,7 @@ public class EventsApplicationTesting {
 
     /** Test adding data into the database and the data inside. */
     @Test
-    public void DatabaseHelper_addData() {
+    public void DatabaseHelper_addData() {//NOPMD
         final DatabaseHelper helper = new DatabaseHelper(context);
 
         Assert.assertTrue(helper.addData("Smash", "4/17/18"));
@@ -49,7 +49,7 @@ public class EventsApplicationTesting {
         final Cursor data = helper.getDateID("4/17/18");
         while(data.moveToNext()){
             dataId = data.getInt(0);
-            boolean check = data.moveToNext();
+            boolean check = data.moveToNext();//NOPMD
         }
         Assert.assertTrue(dataId != -1);
         Assert.assertFalse(helper.addData(null,"4/17/2020"));
@@ -60,7 +60,7 @@ public class EventsApplicationTesting {
 
     /** Test getting the data and the values retrieved. */
     @Test
-    public void DatabaseHelper_getAllData() {
+    public void DatabaseHelper_getAllData() {//NOPMD
         final DatabaseHelper helper = new DatabaseHelper(context);
         helper.addData("1", "5/5/2020");
         helper.addData("2", "5/6/2020");
@@ -82,7 +82,7 @@ public class EventsApplicationTesting {
 
     /** Test changing an event name and if it updated. */
     @Test
-    public void DatabaseHelper_updateName(){
+    public void DatabaseHelper_updateName(){//NOPMD
         final DatabaseHelper helper = new DatabaseHelper(context);
         helper.addData("1", "5/5/2020");
         int dataId = -1;
@@ -107,7 +107,7 @@ public class EventsApplicationTesting {
 
     /** Test changing the event date and if the value changed. */
     @Test
-    public void DatabaseHelper_updateDate(){
+    public void DatabaseHelper_updateDate(){//NOPMD
         final DatabaseHelper helper = new DatabaseHelper(context);
         helper.addData("1", "5/5/2020");
         int dataId = -1;
@@ -131,7 +131,7 @@ public class EventsApplicationTesting {
 
     /** Test Deleting event from the database and verifying its gone.*/
     @Test
-    public void DatabaseHelper_DeleteEvent(){
+    public void DatabaseHelper_DeleteEvent(){//NOPMD
         final DatabaseHelper helper = new DatabaseHelper(context);
 
         helper.addData("1", "55/555/2020");
@@ -159,7 +159,7 @@ public class EventsApplicationTesting {
 
     /** Test Most Recent Date. */
     @Test
-    public void DatabaseHelper_MostRecent(){
+    public void DatabaseHelper_MostRecent(){//NOPMD
         final DatabaseHelper helper = new DatabaseHelper(context);
 
         for(int i = 0; i < 4; i++){
@@ -174,7 +174,7 @@ public class EventsApplicationTesting {
 
     /** Test Next Most Recent in database. */
     @Test
-    public void DatabaseHelper_NextMostRecent(){
+    public void DatabaseHelper_NextMostRecent(){//NOPMD
         final DatabaseHelper helper = new DatabaseHelper(context);
 
         for(int i = 0; i < 4; i++){
@@ -190,7 +190,7 @@ public class EventsApplicationTesting {
 
     /** Test retrieving the number of events in the database. */
     @Test
-    public void DatabaseHelper_getNumEvents(){
+    public void DatabaseHelper_getNumEvents(){//NOPMD
         final DatabaseHelper helper = new DatabaseHelper(context);
         int total;
         for(int i = 0; i < 4; i++){

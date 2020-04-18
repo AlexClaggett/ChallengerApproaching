@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Peach's xml
  * file when the respective button is pushed.*/
 
-public class Peach extends AppCompatActivity {
+public class Peach extends AppCompatActivity { //NOPMD
 
   /** Array of Peach's Framedata files. */
-  /* default */ transient String [] peachMoves = {
+  /* default */ transient String [] peachMoves = {//NOPMD
       "PeachBAir.gif",
       "PeachBThrow.gif",
       "PeachDAir.gif",
@@ -67,8 +67,8 @@ public class Peach extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/peach/" + peachMoves[position];

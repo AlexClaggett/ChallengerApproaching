@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Zero Suit Samus's xml
  * file when the respective button is pushed.*/
 
-public class ZeroSuitSamus extends AppCompatActivity {
+public class ZeroSuitSamus extends AppCompatActivity { //NOPMD
 
   /** Array of Zero Suit Samus's Framedata files. */
-  /* default */ transient String [] zzsMoves = {
+  /* default */ transient String [] zzsMoves = {//NOPMD
       "ZeroSuitSamusBAir.gif",
       "ZeroSuitSamusBoostKickA.gif",
       "ZeroSuitSamusBoostKickG.gif",
@@ -67,11 +67,10 @@ public class ZeroSuitSamus extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/zero_suit_samus/"
-            + zzsMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/zero_suit_samus/" + zzsMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

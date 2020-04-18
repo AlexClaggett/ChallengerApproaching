@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Luigi's xml
  * file when the respective button is pushed.*/
 
-public class Luigi extends AppCompatActivity {
+public class Luigi extends AppCompatActivity { //NOPMD
 
   /** Array of Luigi's Framedata files. */
-  /* default */ transient String [] luigiMoves = {
+  /* default */ transient String [] luigiMoves = { //NOPMD
       "LuigiBAir.gif",
       "LuigiBThrow.gif",
       "LuigiCycloneA.gif",
@@ -75,8 +75,8 @@ public class Luigi extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/luigi/" + luigiMoves[position];

@@ -1,0 +1,103 @@
+Manual test for Fox character activity page
+
+Pressed Fox button from the character select screen. Initial: AC
+Page changed from character select screen to Fox's page. Initial AC
+
+Navigation bar is labeled Fox. Initial: AC
+Above the portrait is also labeled Fox. Initial: AC
+Portrait displayed is a picture of Fox. Initial: AC
+Select a move is under the portrait. Initial AC
+
+Graphic was initially set to BAir. Initial: AC
+
+Opened spinner to select Blaster option. Initial: AC
+Graphic loaded: Blaster. Initial: AC
+
+Opened spinner to select BThrow option. Initial: AC
+Graphic loaded: BThrow. Initial: AC
+
+Opened spinner to select DAir option. Initial: AC
+Graphic loaded: DAir. Initial: AC
+
+Opened spinner to select DashAttack option. Initial: AC
+Graphic loaded: DashAttack. Initial: AC
+
+Opened spinner to select DashGrab option. Initial: AC
+Graphic loaded: DashGrab. Initial: AC
+
+Opened spinner to select DSmash option. Initial: AC
+Graphic loaded: DSmash. Initial: AC
+
+Opened spinner to select DThrow option. Initial: AC
+Graphic loaded: DThrow. Initial: AC
+
+Opened spinner to select DTilt option. Initial: AC
+Graphic loaded: DTilt. Initial: AC
+
+Opened spinner to select FAir option. Initial: AC
+Graphic loaded: FAir. Initial: AC
+
+Opened spinner to select FireFox option. Initial: AC
+Graphic loaded: FireFox. Initial: AC
+
+Opened spinner to select FoxIllusion option. Initial: AC
+Graphic loaded: FoxIllusion. Initial: AC
+
+Opened spinner to select FSmash option. Initial: AC
+Graphic loaded: FSmash. Initial: AC
+
+Opened spinner to select FThrow option. Initial: AC
+Graphic loaded: FThrow. Initial: AC
+
+Opened spinner to select FTilt option. Initial: AC
+Graphic loaded: FTilt. Initial: AC
+
+Opened spinner to select FTiltDown option. Initial: AC
+Graphic loaded: FTiltDown. Initial: AC
+
+Opened spinner to select FTiltUp option. Initial: AC
+Graphic loaded: FTiltUp. Initial: AC
+
+Opened spinner to select Grab option. Initial: AC
+Graphic loaded: Grab. Initial: AC
+
+Opened spinner to select Jab1 option. Initial: AC
+Graphic loaded: Jab1. Initial: AC
+
+Opened spinner to select Jab2 option. Initial: AC
+Graphic loaded: Jab2. Initial: AC
+
+Opened spinner to select JabRapid option. Initial: AC
+Graphic loaded: JabRapid. Initial: AC
+
+Opened spinner to select JabRapidEnd option. Initial: AC
+Graphic loaded: JabRapidEnd. Initial: AC
+
+Opened spinner to select NAir option. Initial: AC
+Graphic loaded: NAir. Initial: AC
+
+Opened spinner to select PivotGrab option. Initial: AC
+Graphic loaded: PivotGrab. Initial: AC
+
+Opened spinner to select Pummel option. Initial: AC
+Graphic loaded: Pummel. Initial: AC
+
+Opened spinner to select Reflector option. Initial: AC
+Graphic loaded: Reflector. Initial: AC
+
+Opened spinner to select ReflectorStart option. Initial: AC
+Graphic loaded: ReflectorStart. Initial: AC
+
+Opened spinner to select UAir option. Initial: AC
+Graphic loaded: UAir. Initial: AC
+
+Opened spinner to select USmash option. Initial: AC
+Graphic loaded: USmash. Initial: AC
+
+Opened spinner to select UTHrow option. Initial: AC
+Graphic loaded: UTHrow. Initial: AC
+
+Opened spinner to select UTilt option. Initial: AC
+Graphic loaded: UTilt. Initial: AC
+
+Completed by: Alex Claggett

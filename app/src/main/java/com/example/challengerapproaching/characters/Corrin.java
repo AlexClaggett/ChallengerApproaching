@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Corrin's xml
  * file when the respective button is pushed.*/
 
-public class Corrin extends AppCompatActivity {
+public class Corrin extends AppCompatActivity { //NOPMD
 
-  /** Array of Corrin's Framedata files. */
-  /* default */ transient String [] corrinMoves = {
+  /** Array of Corrin's Framedata files.*/
+  /* default */ transient String [] corrinMoves = { //NOPMD
       "CorrinBAir.gif",
       "CorrinBThrow.gif",
       "CorrinCounterSurge.gif",
@@ -72,12 +72,11 @@ public class Corrin extends AppCompatActivity {
 
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/corrin/"
-            + corrinMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/corrin/" + corrinMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

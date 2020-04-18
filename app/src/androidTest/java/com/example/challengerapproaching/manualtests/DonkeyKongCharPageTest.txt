@@ -1,0 +1,115 @@
+Manual test for DonkeyKong character activity page
+
+Pressed DonkeyKong button from the character select screen. Initial: AC
+Page changed from character select screen to DonkeyKong's page. Initial AC
+
+Navigation bar is labeled DonkeyKong. Initial: AC
+Above the portrait is also labeled DonkeyKong. Initial: AC
+Portrait displayed is a picture of DonkeyKong. Initial: AC
+Select a move is under the portrait. Initial AC
+
+Graphic was initially set to BAir. Initial: AC
+
+Opened spinner to select BThrow option. Initial: AC
+Graphic loaded: BThrow. Initial: AC
+
+Opened spinner to select CargoBThrow option. Initial: AC
+Graphic loaded: CargoBThrow. Initial: AC
+
+Opened spinner to select CargoDThrow option. Initial: AC
+Graphic loaded: CargoDThrow. Initial: AC
+
+Opened spinner to select CargoFThrow option. Initial: AC
+Graphic loaded: CargoFThrow. Initial: AC
+
+Opened spinner to select CargoUThrow option. Initial: AC
+Graphic loaded: CargoUThrow. Initial: AC
+
+Opened spinner to select DAir option. Initial: AC
+Graphic loaded: DAir. Initial: AC
+
+Opened spinner to select DashAttack option. Initial: AC
+Graphic loaded: DashAttack. Initial: AC
+
+Opened spinner to select DashGrab option. Initial: AC
+Graphic loaded: DashGrab. Initial: AC
+
+Opened spinner to select DSmash option. Initial: AC
+Graphic loaded: DSmash. Initial: AC
+
+Opened spinner to select DThrow option. Initial: AC
+Graphic loaded: DThrow. Initial: AC
+
+Opened spinner to select DTilt option. Initial: AC
+Graphic loaded: DTilt. Initial: AC
+
+Opened spinner to select FAir option. Initial: AC
+Graphic loaded: FAir. Initial: AC
+
+Opened spinner to select FSmash option. Initial: AC
+Graphic loaded: FSmash. Initial: AC
+
+Opened spinner to select FTilt option. Initial: AC
+Graphic loaded: FTilt. Initial: AC
+
+Opened spinner to select GiantPunchA option. Initial: AC
+Graphic loaded: GiantPunchA. Initial: AC
+
+Opened spinner to select GiantPunchAMax option. Initial: AC
+Graphic loaded: GiantPunchAMax. Initial: AC
+
+Opened spinner to select GiantPunchG option. Initial: AC
+Graphic loaded: GiantPunchG. Initial: AC
+
+Opened spinner to select GiantPunchGMax option. Initial: AC
+Graphic loaded: GiantPunchGMax. Initial: AC
+
+Opened spinner to select Grab option. Initial: AC
+Graphic loaded: Grab. Initial: AC
+
+Opened spinner to select HandSlapA option. Initial: AC
+Graphic loaded: HandSlapA. Initial: AC
+
+Opened spinner to select HandSlapG option. Initial: AC
+Graphic loaded: HandSlapG. Initial: AC
+
+Opened spinner to select HeadbuttA option. Initial: AC
+Graphic loaded: HeadbuttA. Initial: AC
+
+Opened spinner to select HeadbuttG option. Initial: AC
+Graphic loaded: HeadbuttG. Initial: AC
+
+Opened spinner to select Jab1 option. Initial: AC
+Graphic loaded: Jab1. Initial: AC
+
+Opened spinner to select Jab2 option. Initial: AC
+Graphic loaded: Jab2. Initial: AC
+
+Opened spinner to select NAir option. Initial: AC
+Graphic loaded: NAir. Initial: AC
+
+Opened spinner to select PivotGrab option. Initial: AC
+Graphic loaded: PivotGrab. Initial: AC
+
+Opened spinner to select Pummel option. Initial: AC
+Graphic loaded: Pummel. Initial: AC
+
+Opened spinner to select SpinningKongA option. Initial: AC
+Graphic loaded: SpinningKongA. Initial: AC
+
+Opened spinner to select SpinningKongG option. Initial: AC
+Graphic loaded: SpinningKongG. Initial: AC
+
+Opened spinner to select UAir option. Initial: AC
+Graphic loaded: UAir. Initial: AC
+
+Opened spinner to select USmash option. Initial: AC
+Graphic loaded: USmash. Initial: AC
+
+Opened spinner to select UThrow option. Initial: AC
+Graphic loaded: UThrow. Initial: AC
+
+Opened spinner to select UTilt option. Initial: AC
+Graphic loaded: UTilt. Initial: AC
+
+Completed by: Alex Claggett

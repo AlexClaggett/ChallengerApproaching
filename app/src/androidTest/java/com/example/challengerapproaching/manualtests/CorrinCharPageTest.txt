@@ -1,0 +1,109 @@
+Manual test for Corrin character activity page
+
+Pressed Corrin button from the character select screen. Initial: TK
+Page changed from character select screen to Corrin's page. Initial TK
+
+Navigation bar is labeled Corrin. Initial: TK
+Above the portrait is also labeled Corrin. Initial: TK
+Portrait displayed is a picture of Corrin. Initial: TK
+Select a move is under the portrait. Initial TK
+
+Graphic was initially set to BAir. Initial: TK
+
+Opened spinner to select BThrow option. Initial: TK
+Graphic loaded: BThrow. Initial: TK
+
+Opened spinner to select CounterSurge option. Initial: TK
+Graphic loaded: CounterSurge. Initial: TK
+
+Opened spinner to select CounterSurgeHit option. Initial: TK
+Graphic loaded: CounterSurgeHit. Initial: TK
+
+Opened spinner to select DAir option. Initial: TK
+Graphic loaded: DAir. Initial: TK
+
+Opened spinner to select DAirLanding option. Initial: TK
+Graphic loaded: DAirLanding. Initial: TK
+
+Opened spinner to select DashAttack option. Initial: TK
+Graphic loaded: DashAttack. Initial: TK
+
+Opened spinner to select DashGrab option. Initial: TK
+Graphic loaded: DashGrab. Initial: TK
+
+Opened spinner to select DragonAscent option. Initial: TK
+Graphic loaded: DragonAscent. Initial: TK
+
+Opened spinner to select DragonLunge option. Initial: TK
+Graphic loaded: DragonLunge. Initial: TK
+
+Opened spinner to select DragonLungeKick option. Initial: TK
+Graphic loaded: DragonLungeKick. Initial: TK
+
+Opened spinner to select DragonLungeKickBack option. Initial: TK
+Graphic loaded: DragonLungeKickBack. Initial: TK
+
+Opened spinner to select DSmash option. Initial: TK
+Graphic loaded: DSmash. Initial: TK
+
+Opened spinner to select DThrow option. Initial: TK
+Graphic loaded: DThrow. Initial: TK
+
+Opened spinner to select DTilt option. Initial: TK
+Graphic loaded: DTilt. Initial: TK
+
+Opened spinner to select FAir option. Initial: TK
+Graphic loaded: FAir. Initial: TK
+
+Opened spinner to select FSmash option. Initial: TK
+Graphic loaded: FSmash. Initial: TK
+
+Opened spinner to select FSmashCharge option. Initial: TK
+Graphic loaded: FSmashCharge. Initial: TK
+
+Opened spinner to select FThrow option. Initial: TK
+Graphic loaded: FThrow. Initial: TK
+
+Opened spinner to select FTilt option. Initial: TK
+Graphic loaded: FTilt. Initial: TK
+
+Opened spinner to select Grab option. Initial: TK
+Graphic loaded: Grab. Initial: TK
+
+Opened spinner to select Jab1 option. Initial: TK
+Graphic loaded: Jab1. Initial: TK
+
+Opened spinner to select Jab2 option. Initial: TK
+Graphic loaded: Jab2. Initial: TK
+
+Opened spinner to select Jab3 option. Initial: TK
+Graphic loaded: Jab3. Initial: TK
+
+Opened spinner to select JabRapid option. Initial: TK
+Graphic loaded: JabRapid. Initial: TK
+
+Opened spinner to select JabRapidEnd option. Initial: TK
+Graphic loaded: JabRapidEnd. Initial: TK
+
+Opened spinner to select NAir option. Initial: TK
+Graphic loaded: NAir. Initial: TK
+
+Opened spinner to select PivotGrab option. Initial: TK
+Graphic loaded: PivotGrab. Initial: TK
+
+Opened spinner to select Pummel option. Initial: TK
+Graphic loaded: Pummel. Initial: TK
+
+Opened spinner to select UAir option. Initial: TK
+Graphic loaded: UAir. Initial: TK
+
+Opened spinner to select USmash option. Initial: TK
+Graphic loaded: USmash. Initial: TK
+
+Opened spinner to select UThrow option. Initial: TK
+Graphic loaded: UThrow. Initial: TK
+
+Opened spinner to select UTilt option. Initial: TK
+Graphic loaded: UTilt. Initial: TK
+
+Completed by: Tristan Kingsley

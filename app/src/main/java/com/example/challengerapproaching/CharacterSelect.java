@@ -1,6 +1,5 @@
 package com.example.challengerapproaching;
 
-import android.app.AppComponentFactory;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -95,10 +94,10 @@ import com.example.challengerapproaching.characters.ZeroSuitSamus;
  * setting the contentview, instantiating buttons, and setting
  * their listeners to their respective classes.
  *********************************************************************/
-public class CharacterSelect extends AppCompatActivity {
+public class CharacterSelect extends AppCompatActivity { //NOPMD
 
   /** Image Button array of the character buttons. */
-  private transient final ImageButton [] buttons = new ImageButton[82];
+  private final transient ImageButton [] buttons = new ImageButton[82];
 
   /** Array of integers of the character ids found in the XML. */
   private final transient int [] ids = {R.id.banjoKazooie, R.id.bayonetta, R.id.bowser,
@@ -160,13 +159,10 @@ public class CharacterSelect extends AppCompatActivity {
     super.onCreate(savedInstance);
     setContentView(R.layout.activity_character_select);
 
-    int count = 0;
-
-    for (ImageButton b: buttons) {
-      b = findViewById(ids[count]);
+    for (int count = 0; count < buttons.length; count++) {
       final Intent tosend = new Intent(this,
               charClasses[count]);
-      b.setOnClickListener(v -> startActivity(tosend));
+      findViewById(ids[count]).setOnClickListener(v -> startActivity(tosend));
       count++;
     }
   }

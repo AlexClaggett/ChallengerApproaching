@@ -21,7 +21,7 @@ import com.example.challengerapproaching.utils.ListDataActivity;
  @authors Alex Clagget, Brad Samack, Katie Cussans, Tristan Kingsley
  @version v2.0 Second Release
  *********************************************************************/
-public class EventsActivity extends AppCompatActivity
+public class EventsActivity extends AppCompatActivity//NOPMD
     implements EventDialog.EventDialogListener {
 
   /**
@@ -70,16 +70,10 @@ public class EventsActivity extends AppCompatActivity
     setContentView(R.layout.events);
 
     // Initialize variables to their respective views.
-    /**
-     * Button for creating an event.
-     */
-    Button createBtn = findViewById(R.id.eventCreation);
+    Button createBtn = findViewById(R.id.eventCreation); //NOPMD
     eventName = findViewById(R.id.tView);
     eventDate = findViewById(R.id.dView);
-    /**
-     * Button for viewing the list of created events.
-     */
-    Button viewEvent = findViewById(R.id.viewevent);
+    Button viewEvent = findViewById(R.id.viewevent);//NOPMD
     upcomingEvent[0] = findViewById(R.id.mostRecent);
     upcomingEvent[1] = findViewById(R.id.mostRecent2);
     upcomingEvent[2] = findViewById(R.id.mostRecent3);
@@ -140,7 +134,7 @@ public class EventsActivity extends AppCompatActivity
     eventDate.setText(date);
 
     // Check that the Name and Date are not empty.
-    if (eventName.length() != 0 && eventDate.length() != 0) {
+    if (eventName.length() != 0 && eventDate.length() != 0) { //NOPMD
       // Add data to database.
       addData(name, date);
       // Get most recent date.

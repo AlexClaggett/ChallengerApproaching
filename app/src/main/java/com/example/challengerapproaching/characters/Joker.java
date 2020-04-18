@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Joker's xml
  * file when the respective button is pushed.*/
 
-public class Joker extends AppCompatActivity {
+public class Joker extends AppCompatActivity { //NOPMD
 
   /** Array of Joker's Framedata files. */
-  /* default */ transient String [] jokerMoves = {
+  /* default */ transient String [] jokerMoves = { //NOPMD
       "JokerBAir.gif",
       "JokerBAirArsene.gif",
       "JokerBThrow.gif",
@@ -95,8 +95,8 @@ public class Joker extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/joker/" + jokerMoves[position];
         try {

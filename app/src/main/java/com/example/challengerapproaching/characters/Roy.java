@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Roy's xml
  * file when the respective button is pushed.*/
 
-public class Roy extends AppCompatActivity {
+public class Roy extends AppCompatActivity { //NOPMD
 
   /** Array of Roy's Framedata files. */
-  /* default */ transient String [] royMoves = {
+  /* default */ transient String [] royMoves = {//NOPMD
       "RoyBAir.gif",
       "RoyBlazerA.gif",
       "RoyBlazerG.gif",
@@ -72,8 +72,8 @@ public class Roy extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/roy/" + royMoves[position];
         try {

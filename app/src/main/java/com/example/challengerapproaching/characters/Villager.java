@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Villager's xml
  * file when the respective button is pushed.*/
 
-public class Villager extends AppCompatActivity {
+public class Villager extends AppCompatActivity { //NOPMD
 
   /** Array of Villager's Framedata files. */
-  /* default */ transient String [] villagerMoves = {
+  /* default */ transient String [] villagerMoves = {//NOPMD
       "VillagerBAir.gif",
       "VillagerBalloonHurtbox.png",
       "VillagerBThrow.gif",
@@ -76,12 +76,11 @@ public class Villager extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/villager/"
-            + villagerMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/villager/" + villagerMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {

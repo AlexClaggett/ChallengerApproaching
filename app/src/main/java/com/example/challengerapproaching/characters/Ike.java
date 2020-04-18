@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Ike's xml
  * file when the respective button is pushed.*/
 
-public class Ike extends AppCompatActivity {
+public class Ike extends AppCompatActivity { //NOPMD
 
   /** Array of Ike's Framedata files. */
-  /* default */ transient String [] ikeMoves = {
+  /* default */ transient String [] ikeMoves = { //NOPMD
       "IkeAetherA.gif",
       "IkeAetherFall.gif",
       "IkeAetherG.gif",
@@ -71,8 +71,8 @@ public class Ike extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/ike/" + ikeMoves[position];
         try {

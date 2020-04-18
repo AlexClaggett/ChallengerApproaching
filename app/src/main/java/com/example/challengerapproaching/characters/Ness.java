@@ -17,10 +17,10 @@ import java.io.InputStream;
 /** This class sets the content view to Ness's xml
  * file when the respective button is pushed.*/
 
-public class Ness extends AppCompatActivity {
+public class Ness extends AppCompatActivity { //NOPMD
 
   /** Array of Ness's Framedata files. */
-  /* default */ transient String [] nessMoves = {
+  /* default */ transient String [] nessMoves = {//NOPMD
       "NessBAir.gif",
       "NessBThrow.gif",
       "NessDAir.gif",
@@ -73,8 +73,8 @@ public class Ness extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/ness/" + nessMoves[position];

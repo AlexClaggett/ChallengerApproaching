@@ -13,10 +13,10 @@ import java.io.IOException;
 /** This class sets the content view to Dark Pit's xml
  * file when the respective button is pushed.*/
 
-public class DarkPit extends AppCompatActivity {
+public class DarkPit extends AppCompatActivity { //NOPMD
 
   /** Array of Dark Pit's Framedata files. */
-  /* default */ transient String [] darkPitMoves = {
+  /* default */ transient String [] darkPitMoves = { //NOPMD
       "DarkPitBAir.gif",
       "DarkPitBThrow.gif",
       "DarkPitDAir.gif",
@@ -65,8 +65,8 @@ public class DarkPit extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view,
-                                 final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent,
+                                 final View view, final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/dark_pit/" + darkPitMoves[position];
         try {
