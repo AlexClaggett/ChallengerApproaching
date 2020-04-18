@@ -66,13 +66,13 @@ public class StageSelect extends AppCompatActivity {
       yoshiIsland, yoshisStory};
 
   /** Array of integers of the stage ids found in the XML. */
-  private transient int [] ids = {R.id.BattleField, R.id.FinalDestination, R.id.KalosPokemonStadium,
+  private final transient int [] ids = {R.id.BattleField, R.id.FinalDestination, R.id.KalosPokemonStadium,
     R.id.LylatCruise, R.id.PokemonStadium, R.id.PokemonStadium2,
     R.id.Smashville, R.id.TownAndCity, R.id.UnovaPokemonLeague,
     R.id.YoshiIsland, R.id.YoshisStory};
 
   /** Array of Classes for each stage. */
-  private transient Class [] charClasses = {BattleField.class, FinalDestination.class,
+  private final transient Class [] charClasses = {BattleField.class, FinalDestination.class,
     KalosPokemonLeague.class, LylatCruise.class, PokemonStadium.class,
     PokemonStadium2.class, Smashville.class, TownAndCity.class,
     UnovaPokemonLeague.class, YoshiIsland.class, YoshisStory.class};

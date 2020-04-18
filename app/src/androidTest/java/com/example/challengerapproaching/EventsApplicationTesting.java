@@ -16,10 +16,18 @@ import java.util.ArrayList;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class EventsApplicationTesting {
-    private Context context = ApplicationProvider.getApplicationContext();
+
+    /**Context for testing*/
+    private final Context context = ApplicationProvider.getApplicationContext();
+
+    /**Tag for testing*/
     private static final String TAG = "UNIT_TESTING";
-    private String[] testNames = { "a", "b", "c", "d" };
-    private String[] testDates = { "4/17/2020", "5/17/2020",
+
+    /**Names for testing*/
+    private final String[] testNames = { "a", "b", "c", "d" };
+
+    /**Dates for testing*/
+    private final String[] testDates = { "4/17/2020", "5/17/2020",
         "6/17/2020", "7/17/2020" };
 
     /** Test that A Database is created. */
@@ -41,6 +49,7 @@ public class EventsApplicationTesting {
         final Cursor data = helper.getDateID("4/17/18");
         while(data.moveToNext()){
             dataId = data.getInt(0);
+            boolean check = data.moveToNext();
         }
         Assert.assertTrue(dataId != -1);
         Assert.assertFalse(helper.addData(null,"4/17/2020"));

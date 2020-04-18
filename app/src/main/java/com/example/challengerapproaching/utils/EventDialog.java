@@ -177,6 +177,8 @@ public class EventDialog extends AppCompatDialogFragment {
    * method to properly apply the event.
    *******************************************************************/
   public interface EventDialogListener {
+
+    /**applies text*/
     void applyText(String eventName, String date);
   }
 }

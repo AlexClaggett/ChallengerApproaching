@@ -27,22 +27,6 @@ import java.util.Calendar;
 public class EditDataActivity extends AppCompatActivity {
 
   /**
-   * Button that represents the Save button for saving the event.
-   */
-  private transient Button btnSave;
-
-  /**
-   * Button that represents the Delete button to remove events.
-   */
-  private transient Button btnDelete;
-
-  /**
-   * Button that represents sending the event to the default calendar
-   * app.
-   */
-  private transient Button calendarSave;
-
-  /**
    * EditText that represents the name of the event.
    */
   private transient EditText editableName;
@@ -91,13 +75,23 @@ public class EditDataActivity extends AppCompatActivity {
     setContentView(R.layout.edit_data_layout);
 
     // Initialize the save button.
-    btnSave = findViewById(R.id.savebtn);
+    /**
+     * Button that represents the Save button for saving the event.
+     */
+    Button btnSave = findViewById(R.id.savebtn);
 
     // Initialize the delete button.
-    btnDelete = findViewById(R.id.delbtn);
+    /**
+     * Button that represents the Delete button to remove events.
+     */
+    Button btnDelete = findViewById(R.id.delbtn);
 
     // Initialize the save calendar button.
-    calendarSave = findViewById(R.id.calendar_Save);
+    /**
+     * Button that represents sending the event to the default calendar
+     * app.
+     */
+    Button calendarSave = findViewById(R.id.calendar_Save);
 
     // Initialize the editable name view.
     editableName = findViewById(R.id.editable_name);

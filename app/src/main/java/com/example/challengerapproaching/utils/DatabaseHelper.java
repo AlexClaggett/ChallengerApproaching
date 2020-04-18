@@ -102,11 +102,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // method call to insert the data into the table.
     final long result = dbName.insert(TABLE_NAME, null, contentValues);
 
-    if (result == -1) {
-      return false;
-    } else {
-      return true;
-    }
+    return result != -1;
   }
 
   /********************************************************************
@@ -396,8 +392,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
       do {
         count++;
       } while (data.moveToNext());
-    } else {
-      return count;
     }
     return count;
   }

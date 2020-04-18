@@ -54,16 +54,6 @@ public class EventsActivity extends AppCompatActivity
    */
   private transient TextView[] upcomingEvent = new TextView[3];
 
-  /**
-   * Button for creating an event.
-   */
-  private transient Button createBtn;
-
-  /**
-   * Button for viewing the list of created events.
-   */
-  private transient Button viewEvent;
-
   /********************************************************************
    * OnCreate method to initialize the Events screen to be presented
    * to the user.
@@ -80,10 +70,16 @@ public class EventsActivity extends AppCompatActivity
     setContentView(R.layout.events);
 
     // Initialize variables to their respective views.
-    createBtn = findViewById(R.id.eventCreation);
+    /**
+     * Button for creating an event.
+     */
+    Button createBtn = findViewById(R.id.eventCreation);
     eventName = findViewById(R.id.tView);
     eventDate = findViewById(R.id.dView);
-    viewEvent = findViewById(R.id.viewevent);
+    /**
+     * Button for viewing the list of created events.
+     */
+    Button viewEvent = findViewById(R.id.viewevent);
     upcomingEvent[0] = findViewById(R.id.mostRecent);
     upcomingEvent[1] = findViewById(R.id.mostRecent2);
     upcomingEvent[2] = findViewById(R.id.mostRecent3);
