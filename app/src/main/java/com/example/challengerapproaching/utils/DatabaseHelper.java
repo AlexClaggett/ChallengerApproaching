@@ -232,23 +232,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // String for parsing the date for comparison.
     String dateParts;
 
-    // The current events month.
-    int curMonth;
+    // The current events date.
+    int[] curTime = {0,0,0};
 
-    // The current events day.
-    int curDay;
-
-    // The current events year.
-    int curYear;
-
-    // The most recent month.
-    int month;
-
-    // The most recent day.
-    int day;
-
-    // The most recent year.
-    int year;
+    // The most recent date.
+    int[] time = {0,0,0};
 
     // Get the writable database.
     final SQLiteDatabase dbName = this.getWritableDatabase();
@@ -266,51 +254,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     if (data.moveToFirst()) {
       do {
         // set the current event to the event pointed at by cursor.
-        curEvent.setIdName(data.getInt(data.getColumnIndex(COL1)));
         curEvent.setName(data.getString(data.getColumnIndex(COL2)));
         curEvent.setDate(data.getString(data.getColumnIndex(COL3)));
 
         // Set the date parse to the current event date.
-        dateParts = curEvent.getDate();
-        // Log the Parsed date and assign the date values.
-        Log.d(TAG, "Database Current Date: " + dateParts);
-        curMonth = parseInt(dateParts.substring(0,
-                dateParts.indexOf("/")));
-        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-        Log.d(TAG, "Database Current Date minus month: " + dateParts);
-        curDay = parseInt(dateParts.substring(0,
-                dateParts.indexOf("/")));
-        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-        Log.d(TAG, "Database Current Year: " + dateParts);
-        curYear = parseInt(dateParts);
+        parseDate(curEvent.getDate(), curTime);
 
         // Check if there isn't a most recent date amd assign it.
         if (mostRecent.getDate().equals("")) {
           mostRecent.setName(curEvent.getName());
           mostRecent.setDate(curEvent.getDate());
         } else {
-          // Now reassign the int parser to the most recent event.
-          dateParts = mostRecent.getDate();
-          month = parseInt(dateParts.substring(0,
-                  dateParts.indexOf("/")));
-          dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-          day = parseInt(dateParts.substring(0,
-                  dateParts.indexOf("/")));
-          dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-          year = parseInt(dateParts);
+          // Now get the values for the date.
+          parseDate(mostRecent.getDate(), time);
 
           // Compare the Two dates and see which one is earlier..
-          if (curYear < year) {
-            mostRecent.setIdName(curEvent.getIdName());
+          if (curTime[2] < time[2]) {
             mostRecent.setName(curEvent.getName());
             mostRecent.setDate(curEvent.getDate());
-          } else if (curYear == year && curMonth < month) {
-            mostRecent.setIdName(curEvent.getIdName());
+          } else if (curTime[2] == time[2] && curTime[0] < time[0]) {
             mostRecent.setName(curEvent.getName());
             mostRecent.setDate(curEvent.getDate());
-          } else if (curYear == year && curMonth == month
-                  && curDay < day) {
-            mostRecent.setIdName(curEvent.getIdName());
+          } else if (curTime[2] == time[2] && curTime[0] == time[0]
+                  && curTime[1] < time[1]) {
             mostRecent.setName(curEvent.getName());
             mostRecent.setDate(curEvent.getDate());
           }
@@ -336,27 +302,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // An array list to hold all the events in the database.
     final ArrayList<Event> eventList = getAllData();
 
-    // Data parse and date format same as mostRecent
-    String dateParts;
-    int curMonth;
-    int curDay;
-    int curYear;
-    int month;
-    int day;
-    int year;
+    // Current Date Array.
+    int[] curTime = {0,0,0};
+
+    // Next Most Recent Time Array.
+    int[] time = {0,0,0};
+
+
 
     // For each loop to compare the events in the database.
     for (final Event e : eventList) {
 
       // Parse current event and set month, day, year.
-      dateParts = e.getDate();
-      curMonth = parseInt(dateParts.substring(0,
-              dateParts.indexOf("/")));
-      dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-      curDay = parseInt(dateParts.substring(0,
-              dateParts.indexOf("/")));
-      dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-      curYear = parseInt(dateParts);
+      parseDate(e.getDate(),curTime);
 
       // Log the event that was just parsed.
       Log.d(TAG, "Event: " + e.getDate() + " " + e.getName());
@@ -368,16 +326,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         continue;
       } else if (nextMost.getDate().equals("")) {
         // Parse the most recent date.
-        dateParts = mostRecent.getDate();
-        month = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
-        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-        day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
-        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-        year = parseInt(dateParts);
+        parseDate(mostRecent.getDate(),time);
 
         /* check that the current event is not earlier than the most
            recent date passed into the method. */
-        if (curYear <= year && curMonth <= month && curDay <= day) {
+        if (curTime[2] <= time[2] && curTime[0] <= time[0]
+            && curTime[1] <= time[1]) {
           continue;
         } else {
           nextMost.setIdName(e.getIdName());
@@ -386,34 +340,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
       } else {  // Compare dates.
         // Parse most recent again.
-        dateParts = mostRecent.getDate();
-        month = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
-        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-        day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
-        dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-        year = parseInt(dateParts);
+        parseDate(mostRecent.getDate(),time);
         // Check that current event isn't before this date again.
-        if (curYear <= year && curMonth <= month && curDay <= day) {
+        if (curTime[2] <= time[2] && curTime[0] <= time[0]
+            && curTime[1] <= time[1]) {
           continue;
         } else {
           // Now Parse the current earliest date value.
-          dateParts = nextMost.getDate();
-          month = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
-          dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-          day = parseInt(dateParts.substring(0, dateParts.indexOf("/")));
-          dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
-          year = parseInt(dateParts);
+          parseDate(nextMost.getDate(), time);
 
           // Compare date to current event.
-          if (curYear < year) {
+          if (curTime[2] < time[2]) {
             nextMost.setIdName(e.getIdName());
             nextMost.setName(e.getName());
             nextMost.setDate(e.getDate());
-          } else if (curYear == year && curMonth < month) {
+          } else if (curTime[2] == time[2] && curTime[0] < time[0]) {
             nextMost.setIdName(e.getIdName());
             nextMost.setName(e.getName());
             nextMost.setDate(e.getDate());
-          } else if (curYear == year && curMonth == month && curDay < day) {
+          } else if (curTime[2] <= time[2] && curTime[0] <= time[0]
+              && curTime[1] <= time[1]) {
             nextMost.setIdName(e.getIdName());
             nextMost.setName(e.getName());
             nextMost.setDate(e.getDate());
@@ -454,5 +400,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
       return count;
     }
     return count;
+  }
+
+  /********************************************************************
+   * Parse Date method that separates the date from the string.
+   * @param date the date in string form.
+   * @param time an array for the month day and year.
+   *******************************************************************/
+  private void parseDate(String date, int[] time){
+    // Log the Parsed date and assign the date values.
+    Log.d(TAG, "Database Current Date: " + date);
+    time[0] = parseInt(date.substring(0,
+        date.indexOf("/")));
+    date = date.substring(date.indexOf("/") + 1);
+    Log.d(TAG, "Database Current Date minus month: " + date);
+    time[1] = parseInt(date.substring(0,
+        date.indexOf("/")));
+    date = date.substring(date.indexOf("/") + 1);
+    Log.d(TAG, "Database Current Year: " + date);
+    time[2] = parseInt(date);
   }
 }
