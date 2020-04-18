@@ -18,16 +18,16 @@ import java.util.ArrayList;
 public class EventsApplicationTesting {
 
     /**Context for testing*/
-    private final Context context = ApplicationProvider.getApplicationContext();
+    private final transient Context context = ApplicationProvider.getApplicationContext();
 
     /**Tag for testing*/
     private static final String TAG = "UNIT_TESTING";
 
     /**Names for testing*/
-    private final String[] testNames = { "a", "b", "c", "d" };
+    private final transient String[] testNames = { "a", "b", "c", "d" };
 
     /**Dates for testing*/
-    private final String[] testDates = { "4/17/2020", "5/17/2020",
+    private final transient String[] testDates = { "4/17/2020", "5/17/2020",
         "6/17/2020", "7/17/2020" };
 
     /** Test that A Database is created. */

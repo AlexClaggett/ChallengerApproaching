@@ -1,6 +1,5 @@
 package com.example.challengerapproaching;
 
-import android.app.AppComponentFactory;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -160,13 +159,10 @@ public class CharacterSelect extends AppCompatActivity {
     super.onCreate(savedInstance);
     setContentView(R.layout.activity_character_select);
 
-    int count = 0;
-
-    for (ImageButton b: buttons) {
-      b = findViewById(ids[count]);
+    for (int count = 0; count<buttons.length; count++) {
       final Intent tosend = new Intent(this,
               charClasses[count]);
-      b.setOnClickListener(v -> startActivity(tosend));
+      findViewById(ids[count]).setOnClickListener(v -> startActivity(tosend));
       count++;
     }
   }

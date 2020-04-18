@@ -156,9 +156,9 @@ public class EditDataActivity extends AppCompatActivity {
         // Adds one to the month because the calendar starts at 0
         month = month + 1;
         String date = "";
-        date += month + "/";
-        date += dayOfMonth + "/";
-        date += year;
+        date = date.concat(month + "/");
+        date = date.concat(dayOfMonth + "/");
+        date = date.concat(date + year);
         editableDate.setText(date);
       }
     };
@@ -234,17 +234,17 @@ public class EditDataActivity extends AppCompatActivity {
 
       // Parse the month from the date.
       final int month =
-          parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+          parseInt(dateParts.substring(0, dateParts.indexOf('/')));
 
       // Shrink the string.
-      dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+      dateParts = dateParts.substring(dateParts.indexOf('/') + 1);
 
       // Parse the day.
       final int day =
-          parseInt(dateParts.substring(0, dateParts.indexOf("/")));
+          parseInt(dateParts.substring(0, dateParts.indexOf('/')));
 
       // Shrink the string again.
-      dateParts = dateParts.substring(dateParts.indexOf("/") + 1);
+      dateParts = dateParts.substring(dateParts.indexOf('/') + 1);
 
       // Parse the yest.
       final int year = parseInt(dateParts);

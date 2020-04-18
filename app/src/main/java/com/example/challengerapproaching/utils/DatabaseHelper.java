@@ -405,12 +405,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Log the Parsed date and assign the date values.
     Log.d(TAG, "Database Current Date: " + date);
     time[0] = parseInt(date.substring(0,
-        date.indexOf("/")));
-    date = date.substring(date.indexOf("/") + 1);
+        date.indexOf('/')));
+    date = date.substring(date.indexOf('/') + 1);
     Log.d(TAG, "Database Current Date minus month: " + date);
     time[1] = parseInt(date.substring(0,
-        date.indexOf("/")));
-    date = date.substring(date.indexOf("/") + 1);
+        date.indexOf('/')));
+    date = date.substring(date.indexOf('/') + 1);
     Log.d(TAG, "Database Current Year: " + date);
     time[2] = parseInt(date);
   }

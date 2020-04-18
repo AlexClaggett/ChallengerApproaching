@@ -114,9 +114,9 @@ public class EventDialog extends AppCompatDialogFragment {
         // Adds one to the month because the calendar starts at 0.
         month = month + 1;
         String date = "";
-        date += month + "/";
-        date += dayOfMonth + "/";
-        date += year;
+        date = date + month + "/";
+        date = date + dayOfMonth + "/";
+        date = date + year;
         newDate.set(year,month,dayOfMonth);
         textEventDate.setText(date);
       }
