@@ -53,6 +53,7 @@ public class EventsApplicationTesting {
         Assert.assertTrue(id != -1);
         Assert.assertFalse(db.addData(null,"4/17/2020"));
         Assert.assertFalse(db.addData("EVENT!",null));
+        data.close();
         db.close();
     }
     @Test
@@ -82,7 +83,8 @@ public class EventsApplicationTesting {
         db.addData("1", "5/5/2020");
         int id = -1;
         Log.d(TAG, "Date ID: " + id);
-        Cursor data = db.getDateID("5/5/2020");
+        Cursor data;
+        data = db.getDateID("5/5/2020");
         while(data.moveToNext()){
             id = data.getInt(0);
         }

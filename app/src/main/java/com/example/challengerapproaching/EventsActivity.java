@@ -173,7 +173,7 @@ public class EventsActivity extends AppCompatActivity
    * @param newDate The date of the event
    *******************************************************************/
   public void addData(final String newName, final String newDate) {
-    final boolean insertData = eventDatabase.addData(newName, newDate);
+    eventDatabase.addData(newName, newDate);
   }
 
   /********************************************************************
