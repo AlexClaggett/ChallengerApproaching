@@ -2,23 +2,12 @@ package com.example.challengerapproaching;
 
 import android.content.Context;
 import androidx.test.core.app.ApplicationProvider;
-
 import android.database.Cursor;
-import android.database.sqlite.SQLiteConstraintException;
-import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-
-import com.example.challengerapproaching.EventsActivity;
 import com.example.challengerapproaching.utils.DatabaseHelper;
-import com.example.challengerapproaching.utils.EditDataActivity;
 import com.example.challengerapproaching.utils.Event;
-import com.example.challengerapproaching.utils.EventDialog;
-import com.example.challengerapproaching.utils.ListDataActivity;
-
-
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.ArrayList;
 
 /**
@@ -32,6 +21,8 @@ public class EventsApplicationTesting {
     private String[] testNames = { "a", "b", "c", "d" };
     private String[] testDates = { "4/17/2020", "5/17/2020",
         "6/17/2020", "7/17/2020" };
+
+    /** Test that A Database is created. */
     @Test
     public void DatabaseHelper_onCreate() {
         final DatabaseHelper helper = new DatabaseHelper(context);
@@ -39,6 +30,7 @@ public class EventsApplicationTesting {
         helper.close();
     }
 
+    /** Test adding data into the database and the data inside. */
     @Test
     public void DatabaseHelper_addData() {
         final DatabaseHelper helper = new DatabaseHelper(context);
@@ -56,6 +48,8 @@ public class EventsApplicationTesting {
         data.close();
         helper.close();
     }
+
+    /** Test getting the data and the values retrieved. */
     @Test
     public void DatabaseHelper_getAllData() {
         final DatabaseHelper helper = new DatabaseHelper(context);
@@ -77,6 +71,7 @@ public class EventsApplicationTesting {
         helper.close();
     }
 
+    /** Test changing an event name and if it updated. */
     @Test
     public void DatabaseHelper_updateName(){
         final DatabaseHelper helper = new DatabaseHelper(context);
@@ -101,6 +96,7 @@ public class EventsApplicationTesting {
         helper.close();
     }
 
+    /** Test changing the event date and if the value changed. */
     @Test
     public void DatabaseHelper_updateDate(){
         final DatabaseHelper helper = new DatabaseHelper(context);
@@ -124,6 +120,7 @@ public class EventsApplicationTesting {
         helper.close();
     }
 
+    /** Test Deleting event from the database and verifying its gone.*/
     @Test
     public void DatabaseHelper_DeleteEvent(){
         final DatabaseHelper helper = new DatabaseHelper(context);
@@ -151,6 +148,7 @@ public class EventsApplicationTesting {
         helper.close();
     }
 
+    /** Test Most Recent Date. */
     @Test
     public void DatabaseHelper_MostRecent(){
         final DatabaseHelper helper = new DatabaseHelper(context);
@@ -165,6 +163,7 @@ public class EventsApplicationTesting {
         helper.close();
     }
 
+    /** Test Next Most Recent in database. */
     @Test
     public void DatabaseHelper_NextMostRecent(){
         final DatabaseHelper helper = new DatabaseHelper(context);
@@ -180,10 +179,11 @@ public class EventsApplicationTesting {
         helper.close();
     }
 
+    /** Test retrieving the number of events in the database. */
     @Test
     public void DatabaseHelper_getNumEvents(){
         final DatabaseHelper helper = new DatabaseHelper(context);
-        int total = 0;
+        int total;
         for(int i = 0; i < 4; i++){
             helper.addData(testNames[i], testDates[i]);
         }
