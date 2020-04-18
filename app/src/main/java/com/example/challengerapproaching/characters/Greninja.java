@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Greninja extends AppCompatActivity {
 
-  /** Array of Greninja's Framedata files */
+  /** Array of Greninja's Framedata files. */
   /* default */ transient String [] greninjaMoves = {
       "GreninjaBAir.gif",
       "GreninjaBThrow.gif",
@@ -70,9 +70,11 @@ public class Greninja extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/greninja/" + greninjaMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/greninja/"
+            + greninjaMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class DuckHunt extends AppCompatActivity {
 
-  /** Array of Duck Hunt's Framedata files */
+  /** Array of Duck Hunt's Framedata files. */
   /* default */ transient String [] duckHuntMoves = {
       "DuckHuntBAir.gif",
       "DuckHuntBThrow.gif",
@@ -72,10 +72,12 @@ public class DuckHunt extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/duck_hunt/" + duckHuntMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/duck_hunt/"
+            + duckHuntMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
@@ -83,7 +85,7 @@ public class DuckHunt extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Ryu extends AppCompatActivity {
 
-  /** Array of Ryu's Framedata files */
+  /** Array of Ryu's Framedata files. */
   /* default */ transient String [] ryuMoves = {
       "RyuBAir.gif",
       "RyuBThrow.gif",
@@ -79,7 +79,8 @@ public class Ryu extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/ryu/" + ryuMoves[position];
         try {

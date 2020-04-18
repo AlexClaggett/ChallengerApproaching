@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Ganondorf extends AppCompatActivity {
 
-  /** Array of Ganondorf's Framedata files */
+  /** Array of Ganondorf's Framedata files. */
   /* default */ transient String [] ganondorfMoves = {
       "GanondorfBAir.gif",
       "GanondorfBThrow.gif",
@@ -68,7 +68,8 @@ public class Ganondorf extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/ganondorf/" + ganondorfMoves[position];
         try {

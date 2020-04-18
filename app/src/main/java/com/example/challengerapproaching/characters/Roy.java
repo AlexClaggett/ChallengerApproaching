@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Roy extends AppCompatActivity {
 
-  /** Array of Roy's Framedata files */
+  /** Array of Roy's Framedata files. */
   /* default */ transient String [] royMoves = {
       "RoyBAir.gif",
       "RoyBlazerA.gif",
@@ -72,7 +72,8 @@ public class Roy extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/roy/" + royMoves[position];
         try {

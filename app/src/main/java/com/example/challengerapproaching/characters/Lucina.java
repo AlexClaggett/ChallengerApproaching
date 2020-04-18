@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Lucina extends AppCompatActivity {
 
-  /** Array of Lucina's Framedata files */
+  /** Array of Lucina's Framedata files. */
   /* default */ transient String [] lucinaMoves = {
       "LucinaBAir.gif",
       "LucinaBThrow.gif",
@@ -73,9 +73,11 @@ public class Lucina extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/lucina/" + lucinaMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/lucina/"
+            + lucinaMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

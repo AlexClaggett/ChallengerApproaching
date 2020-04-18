@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Ivysaur extends AppCompatActivity {
 
-  /** Array of Ivysaur's Framedata files */
+  /** Array of Ivysaur's Framedata files. */
   /* default */ transient String [] ivysaurMoves = {
       "IvysaurBAir.gif",
       "IvysaurBThrow.gif",
@@ -63,9 +63,11 @@ public class Ivysaur extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/pt_ivysaur/" + ivysaurMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/pt_ivysaur/"
+            + ivysaurMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

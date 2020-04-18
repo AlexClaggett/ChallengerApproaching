@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class DarkPit extends AppCompatActivity {
 
-  /** Array of Dark Pit's Framedata files */
+  /** Array of Dark Pit's Framedata files. */
   /* default */ transient String [] darkPitMoves = {
       "DarkPitBAir.gif",
       "DarkPitBThrow.gif",
@@ -65,7 +65,8 @@ public class DarkPit extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/dark_pit/" + darkPitMoves[position];
         try {

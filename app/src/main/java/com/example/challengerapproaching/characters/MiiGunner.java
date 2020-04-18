@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class MiiGunner extends AppCompatActivity {
 
-  /** Array of MiiGunner's Framedata files */
+  /** Array of MiiGunner's Framedata files. */
   /* default */ transient String [] miiGunnerMoves = {
       "MiiGunnerBombDrop.png",
       "MiiGunnerBombDropExplosion.png",
@@ -72,10 +72,12 @@ public class MiiGunner extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/mii_gunner/" + miiGunnerMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/mii_gunner/"
+            + miiGunnerMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
@@ -83,7 +85,7 @@ public class MiiGunner extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

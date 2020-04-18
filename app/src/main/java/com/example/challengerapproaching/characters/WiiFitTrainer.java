@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class WiiFitTrainer extends AppCompatActivity {
 
-  /** Array of WiiFitTrainer's Framedata files */
+  /** Array of WiiFitTrainer's Framedata files. */
   /* default */ transient String [] wiiFitmoves = {
       "WiiFitTrainerBAir.gif",
       "WiiFitTrainerBThrow.gif",
@@ -67,10 +67,12 @@ public class WiiFitTrainer extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/wii_fit_trainer/" + wiiFitmoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/wii_fit_trainer/"
+            + wiiFitmoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
@@ -78,7 +80,7 @@ public class WiiFitTrainer extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

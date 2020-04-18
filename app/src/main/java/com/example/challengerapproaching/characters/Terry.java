@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Terry extends AppCompatActivity {
 
-  /** Array of Terry's Framedata files */
+  /** Array of Terry's Framedata files. */
   /* default */ transient String [] terryMoves = {
       "TerryBAir.gif",
       "TerryBThrow.gif",
@@ -85,9 +85,11 @@ public class Terry extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/terry/" + terryMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/terry/"
+            + terryMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

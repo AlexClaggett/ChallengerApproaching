@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class BowserJr extends AppCompatActivity {
 
-  /**Array of BowserJr's Framedata files*/
+  /**Array of BowserJr's Framedata files. */
   /* default */ transient String [] bowserJrMoves = {
       "BowserJrAbandonShip.gif",
       "BowserJrAbandonShipExplosion.png",
@@ -77,10 +77,12 @@ public class BowserJr extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/bowser_jr/" + bowserJrMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/bowser_jr/"
+            + bowserJrMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
@@ -88,7 +90,7 @@ public class BowserJr extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

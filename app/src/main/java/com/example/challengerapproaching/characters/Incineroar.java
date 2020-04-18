@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Incineroar extends AppCompatActivity {
 
-  /** Array of Incineroar's Framedata files */
+  /** Array of Incineroar's Framedata files. */
   /* default */ transient String [] incineroarMoves = {
       "IncineroarAlolanWhipA.gif",
       "IncineroarAlolanWhipEarly.gif",
@@ -71,9 +71,11 @@ public class Incineroar extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/incineroar/" + incineroarMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/incineroar/"
+            + incineroarMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

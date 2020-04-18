@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class DarkSamus extends AppCompatActivity {
 
-  /** Array of Dark Samus's Framedata files */
+  /** Array of Dark Samus's Framedata files. */
   /* default */ transient String [] darkSamusMoves = {
       "DarkSamusBAir.gif",
       "DarkSamusBomb.png",
@@ -71,10 +71,12 @@ public class DarkSamus extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/dark_samus/" + darkSamusMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/dark_samus/"
+            + darkSamusMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
@@ -82,7 +84,7 @@ public class DarkSamus extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Ridley extends AppCompatActivity {
 
-  /** Array of Ridley's Framedata files */
+  /** Array of Ridley's Framedata files. */
   /* default */ transient String [] ridleyMoves = {
       "RidleyBAir.gif",
       "RidleyBThrow.gif",
@@ -73,9 +73,11 @@ public class Ridley extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/ridley/" + ridleyMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/ridley/"
+            + ridleyMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {

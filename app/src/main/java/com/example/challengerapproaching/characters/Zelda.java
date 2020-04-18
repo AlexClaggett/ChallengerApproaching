@@ -19,7 +19,7 @@ import java.io.InputStream;
 
 public class Zelda extends AppCompatActivity {
 
-  /** Array of Zelda's Framedata files */
+  /** Array of Zelda's Framedata files. */
   /* default */ transient String [] zeldaMoves = {
       "ZeldaBAir.gif",
       "ZeldaBThrow.gif",
@@ -73,7 +73,8 @@ public class Zelda extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/zelda/" + zeldaMoves[position];
@@ -84,7 +85,7 @@ public class Zelda extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {

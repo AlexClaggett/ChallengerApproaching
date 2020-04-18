@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Marth extends AppCompatActivity {
 
-  /** Array of Marth's Framedata files */
+  /** Array of Marth's Framedata files. */
   /* default */ transient String [] marthMoves = {
       "MarthBAir.gif",
       "MarthBThrow.gif",
@@ -72,7 +72,8 @@ public class Marth extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/marth/" + marthMoves[position];
         try {

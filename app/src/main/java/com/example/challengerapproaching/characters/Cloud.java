@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Cloud extends AppCompatActivity {
 
-  /** Array of Cloud's Framedata files */
+  /** Array of Cloud's Framedata files. */
   /* default */ transient String [] cloudMoves = {
       "CloudBAir.gif",
       "CloudBladeBeam.gif",
@@ -74,7 +74,8 @@ public class Cloud extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/cloud/" + cloudMoves[position];
         try {

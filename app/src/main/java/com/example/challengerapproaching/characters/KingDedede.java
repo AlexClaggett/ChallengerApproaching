@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class KingDedede extends AppCompatActivity {
 
-  /** Array of Dedede's Framedata files */
+  /** Array of Dedede's Framedata files. */
   /* default */ transient String [] kingDededeMoves = {
       "KingDededeBAir.gif",
       "KingDededeBThrow.gif",
@@ -70,9 +70,11 @@ public class KingDedede extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/king_dedede/" + kingDededeMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/king_dedede/"
+            + kingDededeMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
