@@ -401,7 +401,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
    * @param date the date in string form.
    * @param time an array for the month day and year.
    *******************************************************************/
-  private void parseDate(String date, int[] time){
+  private void parseDate(String date, int[] time) {
     // Log the Parsed date and assign the date values.
     Log.d(TAG, "Database Current Date: " + date);
     time[0] = parseInt(date.substring(0,
