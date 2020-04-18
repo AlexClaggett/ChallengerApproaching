@@ -34,162 +34,162 @@ public class EventsApplicationTesting {
         "6/17/2020", "7/17/2020" };
     @Test
     public void DatabaseHelper_onCreate() {
-        DatabaseHelper db = new DatabaseHelper(context);
-        Assert.assertEquals("Events_Table",db.getDatabaseName());
-        db.close();
+        final DatabaseHelper helper = new DatabaseHelper(context);
+        Assert.assertEquals("Events_Table",helper.getDatabaseName());
+        helper.close();
     }
 
     @Test
     public void DatabaseHelper_addData() {
-        DatabaseHelper db = new DatabaseHelper(context);
+        final DatabaseHelper helper = new DatabaseHelper(context);
 
-        Assert.assertTrue(db.addData("Smash", "4/17/18"));
-        int id = -1;
-        Log.d(TAG, "Date ID: " + id);
-        Cursor data = db.getDateID("4/17/18");
+        Assert.assertTrue(helper.addData("Smash", "4/17/18"));
+        int dataId = -1;
+        Log.d(TAG, "Date ID: " + dataId);
+        final Cursor data = helper.getDateID("4/17/18");
         while(data.moveToNext()){
-            id = data.getInt(0);
+            dataId = data.getInt(0);
         }
-        Assert.assertTrue(id != -1);
-        Assert.assertFalse(db.addData(null,"4/17/2020"));
-        Assert.assertFalse(db.addData("EVENT!",null));
+        Assert.assertTrue(dataId != -1);
+        Assert.assertFalse(helper.addData(null,"4/17/2020"));
+        Assert.assertFalse(helper.addData("EVENT!",null));
         data.close();
-        db.close();
+        helper.close();
     }
     @Test
     public void DatabaseHelper_getAllData() {
-        DatabaseHelper db = new DatabaseHelper(context);
-        db.addData("1", "5/5/2020");
-        db.addData("2", "5/6/2020");
-        db.addData("3", "5/7/2020");
-        db.addData("4", "5/8/2020");
-        ArrayList<Event> ev = new ArrayList<>();
-        ev = db.getAllData();
-        int i = 1;
-        String[] dates = {"5/5/2020", "5/6/2020", "5/7/2020","5/8/2020"};
+        final DatabaseHelper helper = new DatabaseHelper(context);
+        helper.addData("1", "5/5/2020");
+        helper.addData("2", "5/6/2020");
+        helper.addData("3", "5/7/2020");
+        helper.addData("4", "5/8/2020");
+        ArrayList<Event> events = new ArrayList<>();
+        events = helper.getAllData();
+        int count = 1;
+        final String[] dates = {"5/5/2020", "5/6/2020", "5/7/2020","5/8/2020"};
 
         // Check Events in database
-        for(Event e: ev){
-            assert(e.getName().equals(Integer.toString(i)));
-            assert(e.getDate().equals(dates[i-1]));
-            i++;
+        for(final Event e: events){
+            assert e.getName().equals(Integer.toString(count));
+            assert e.getDate().equals(dates[count-1]);
+            count++;
         }
-        db.close();
+        helper.close();
     }
 
     @Test
     public void DatabaseHelper_updateName(){
-        DatabaseHelper db = new DatabaseHelper(context);
-        db.addData("1", "5/5/2020");
-        int id = -1;
-        Log.d(TAG, "Date ID: " + id);
+        final DatabaseHelper helper = new DatabaseHelper(context);
+        helper.addData("1", "5/5/2020");
+        int dataId = -1;
+        Log.d(TAG, "Date ID: " + dataId);
         Cursor data;
-        data = db.getDateID("5/5/2020");
+        data = helper.getDateID("5/5/2020");
         while(data.moveToNext()){
-            id = data.getInt(0);
+            dataId = data.getInt(0);
         }
-        db.updateName("2",id,"1");
-        ArrayList<Event> ev = new ArrayList<>();
-        ev = db.getAllData();
-        assert(ev.get(0).getName().equals("2"));
-        db.updateName("1abc2def",id,"2");
-        assert(ev.get(0).getName().equals("2"));
-        db.updateName("smash a bash",id,"1abc2def");
-        assert(ev.get(0).getName().equals("smash a bash"));
-        db.updateName("abc",id,"1");
-        assert(ev.get(0).getName().equals("abc"));
-        db.close();
+        helper.updateName("2",dataId,"1");
+        ArrayList<Event> events = new ArrayList<>();
+        events = helper.getAllData();
+        assert events.get(0).getName().equals("2");
+        helper.updateName("1abc2def",dataId,"2");
+        assert events.get(0).getName().equals("2");
+        helper.updateName("smash a bash",dataId,"1abc2def");
+        assert events.get(0).getName().equals("smash a bash");
+        helper.updateName("abc",dataId,"1");
+        assert events.get(0).getName().equals("abc");
+        helper.close();
     }
 
     @Test
     public void DatabaseHelper_updateDate(){
-        DatabaseHelper db = new DatabaseHelper(context);
-        db.addData("1", "5/5/2020");
-        int id = -1;
-        Log.d(TAG, "Date ID: " + id);
-        Cursor data = db.getDateID("5/5/2020");
+        final DatabaseHelper helper = new DatabaseHelper(context);
+        helper.addData("1", "5/5/2020");
+        int dataId = -1;
+        Log.d(TAG, "Date ID: " + dataId);
+        final Cursor data = helper.getDateID("5/5/2020");
         while(data.moveToNext()){
-            id = data.getInt(0);
+            dataId = data.getInt(0);
         }
-        db.updateDate("5/10/2020",id,"5/5/2020");
-        ArrayList<Event> ev = new ArrayList<>();
-        ev = db.getAllData();
-        assert(ev.get(0).getName().equals("5/10/2020"));
-        db.updateDate("7/10/2020",id,"5/10/2020");
-        assert(ev.get(0).getName().equals("7/10/2020"));
-        db.updateDate("9/20/3030",id,"7/10/2020");
-        assert(ev.get(0).getName().equals("9/20/3030"));
-        db.updateDate("1/20/1996",id,"9/20/3030");
-        assert(ev.get(0).getName().equals("1/20/1996"));
-        db.close();
+        helper.updateDate("5/10/2020",dataId,"5/5/2020");
+        ArrayList<Event> events = new ArrayList<>();
+        events = helper.getAllData();
+        assert events.get(0).getName().equals("5/10/2020");
+        helper.updateDate("7/10/2020",dataId,"5/10/2020");
+        assert events.get(0).getName().equals("7/10/2020");
+        helper.updateDate("9/20/3030",dataId,"7/10/2020");
+        assert events.get(0).getName().equals("9/20/3030");
+        helper.updateDate("1/20/1996",dataId,"9/20/3030");
+        assert events.get(0).getName().equals("1/20/1996");
+        helper.close();
     }
 
     @Test
     public void DatabaseHelper_DeleteEvent(){
-        DatabaseHelper db = new DatabaseHelper(context);
+        final DatabaseHelper helper = new DatabaseHelper(context);
 
-        db.addData("1", "55/555/2020");
-        int id = -1;
-        Log.d(TAG, "Date ID: " + id);
-        Cursor data = db.getDateID("55/555/2020");
+        helper.addData("1", "55/555/2020");
+        int dataId = -1;
+        Log.d(TAG, "Date ID: " + dataId);
+        Cursor data = helper.getDateID("55/555/2020");
         while(data.moveToNext()){
-            id = data.getInt(0);
+            dataId = data.getInt(0);
         }
 
-        Log.d(TAG, "Date ID: " + id);
-        assert(id != -1);
-        db.deleteEvent(id,"1", "55/555/2020");
-        id = -1;
-        Log.d(TAG, "Date ID: " + id);
-        data = db.getDateID("55/555/2020");
+        Log.d(TAG, "Date ID: " + dataId);
+        assert dataId != -1;
+        helper.deleteEvent(dataId,"1", "55/555/2020");
+        dataId = -1;
+        Log.d(TAG, "Date ID: " + dataId);
+        data = helper.getDateID("55/555/2020");
         while(data.moveToNext()){
-            id = data.getInt(0);
+            dataId = data.getInt(0);
         }
-        Log.d(TAG, "Date ID: " + id);
+        Log.d(TAG, "Date ID: " + dataId);
 
-        Assert.assertTrue(id == -1);
-        db.close();
+        Assert.assertTrue(dataId == -1);
+        helper.close();
     }
 
     @Test
     public void DatabaseHelper_MostRecent(){
-        DatabaseHelper db = new DatabaseHelper(context);
+        final DatabaseHelper helper = new DatabaseHelper(context);
 
         for(int i = 0; i < 4; i++){
-            db.addData(testNames[i], testDates[i]);
+            helper.addData(testNames[i], testDates[i]);
         }
-        Event e;
-        e = db.getMostRecent();
-        assert(e.getName().equals(testNames[0]));
-        assert(e.getDate().equals(testDates[0]));
-        db.close();
+        Event event;
+        event = helper.getMostRecent();
+        assert event.getName().equals(testNames[0]);
+        assert event.getDate().equals(testDates[0]);
+        helper.close();
     }
 
     @Test
     public void DatabaseHelper_NextMostRecent(){
-        DatabaseHelper db = new DatabaseHelper(context);
+        final DatabaseHelper helper = new DatabaseHelper(context);
 
         for(int i = 0; i < 4; i++){
-            db.addData(testNames[i], testDates[i]);
+            helper.addData(testNames[i], testDates[i]);
         }
-        Event e;
-        e = db.getMostRecent();
-        e = db.nextMostRecent(e);
-        assert(e.getName().equals(testNames[1]));
-        assert(e.getDate().equals(testDates[1]));
-        db.close();
+        Event event;
+        event = helper.getMostRecent();
+        event = helper.nextMostRecent(event);
+        assert event.getName().equals(testNames[1]);
+        assert event.getDate().equals(testDates[1]);
+        helper.close();
     }
 
     @Test
     public void DatabaseHelper_getNumEvents(){
-        DatabaseHelper db = new DatabaseHelper(context);
+        final DatabaseHelper helper = new DatabaseHelper(context);
         int total = 0;
         for(int i = 0; i < 4; i++){
-            db.addData(testNames[i], testDates[i]);
+            helper.addData(testNames[i], testDates[i]);
         }
-        total = db.getNumEvents();
-        assert(total == 4);
-        db.close();
+        total = helper.getNumEvents();
+        assert total == 4;
+        helper.close();
     }
 
 

@@ -230,13 +230,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final Event curEvent = new Event();
 
     // String for parsing the date for comparison.
-    String dateParts;
+    final String dateParts;
 
     // The current events date.
-    int[] curTime = {0,0,0};
+    final int[] curTime = {0,0,0};
 
     // The most recent date.
-    int[] time = {0,0,0};
+    final int[] time = {0,0,0};
 
     // Get the writable database.
     final SQLiteDatabase dbName = this.getWritableDatabase();
@@ -303,10 +303,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final ArrayList<Event> eventList = getAllData();
 
     // Current Date Array.
-    int[] curTime = {0,0,0};
+    final int[] curTime = {0,0,0};
 
     // Next Most Recent Time Array.
-    int[] time = {0,0,0};
+    final int[] time = {0,0,0};
 
 
 

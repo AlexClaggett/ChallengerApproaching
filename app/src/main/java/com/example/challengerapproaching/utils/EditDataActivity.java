@@ -286,6 +286,7 @@ public class EditDataActivity extends AppCompatActivity {
    * Method to determine what happens when the activity is destoryed.
    * Returns a result value to the parent activity.
    *******************************************************************/
+  @Override
   public void onDestroy() {
     this.setResult(0);
     super.onDestroy();

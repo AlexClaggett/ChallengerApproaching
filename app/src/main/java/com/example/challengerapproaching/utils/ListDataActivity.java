@@ -88,7 +88,7 @@ public class ListDataActivity extends AppCompatActivity {
 
     /* Loop through event list to add the name and dates to the
      *  event title array list. */
-    for (Event event: eventList) {
+    for (final Event event: eventList) {
       eventTitle.add(event.getName() + "\n" + event.getDate());
     }
 
@@ -141,10 +141,11 @@ public class ListDataActivity extends AppCompatActivity {
            * @param adapterView the adapter the view is from.
            * @param view the view selected.
            * @param index the index within the ArrayAdapter.
-           * @param l some other needed parameter.
+           * @param listenerLong some other needed parameter.
            *************************************************/
+          @Override
           public void onItemClick(final AdapterView<?> adapterView,
-                                  final View view, final int index, final long l) {
+                                  final View view, final int index, final long listenerLong) {
             // Set name to the event at the same index as view.
             final String name = finalEventList.get(index).getName();
 

@@ -70,6 +70,8 @@ public class EventsActivity extends AppCompatActivity
    * @param savedInstance standard state parameter needed for
    *                           define a specific state.
    *******************************************************************/
+
+  @Override
   protected void onCreate(final Bundle savedInstance) {
 
     super.onCreate(savedInstance);
