@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class Wolf extends AppCompatActivity {
 
-  /** Array of Wolf's Framedata files */
-  transient String [] wolfMoves = {
+  /** Array of Wolf's Framedata files. */
+  /* default */ transient String [] wolfMoves = {
       "WolfBAir.gif",
       "WolfBlaster.gif",
       "WolfBThrow.gif",
@@ -65,7 +65,8 @@ public class Wolf extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/wolf/" + wolfMoves[position];
         try {
@@ -77,7 +78,8 @@ public class Wolf extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
 

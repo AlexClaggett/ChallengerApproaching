@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class Palutena extends AppCompatActivity {
 
-  /** Array of Palutena's Framedata files */
-  transient String [] palutenaMoves = {
+  /** Array of Palutena's Framedata files. */
+  /* default */ transient String [] palutenaMoves = {
       "PalutenaAutoreticle.gif",
       "PalutenaBAir.gif",
       "PalutenaBThrow.gif",
@@ -63,9 +63,11 @@ public class Palutena extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/palutena/" + palutenaMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/palutena/"
+            + palutenaMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
@@ -75,7 +77,8 @@ public class Palutena extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
 

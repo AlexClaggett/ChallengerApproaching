@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class Mario extends AppCompatActivity {
 
-  /** Array of Mario's Framedata files */
-  transient String [] marioMoves = {
+  /** Array of Mario's Framedata files. */
+  /* default */ transient String [] marioMoves = {
       "MarioBAir.gif",
       "MarioBThrow.gif",
       "MarioCape.gif",
@@ -65,7 +65,8 @@ public class Mario extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/mario/" + marioMoves[position];
         try {
@@ -77,7 +78,8 @@ public class Mario extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
   }

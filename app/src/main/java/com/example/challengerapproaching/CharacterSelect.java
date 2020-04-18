@@ -1,5 +1,6 @@
 package com.example.challengerapproaching;
 
+import android.app.AppComponentFactory;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -97,10 +98,10 @@ import com.example.challengerapproaching.characters.ZeroSuitSamus;
 public class CharacterSelect extends AppCompatActivity {
 
   /** Image Button array of the character buttons. */
-  private transient ImageButton [] buttons = new ImageButton[82];
+  private transient final ImageButton [] buttons = new ImageButton[82];
 
   /** Array of integers of the character ids found in the XML. */
-  private transient int [] ids = {R.id.banjoKazooie, R.id.bayonetta, R.id.bowser,
+  private final transient int [] ids = {R.id.banjoKazooie, R.id.bayonetta, R.id.bowser,
     R.id.bowserJr, R.id.bylthe, R.id.captainFalcon, R.id.chrom,
     R.id.cloud, R.id.corrin, R.id.daisy, R.id.darkPit,
     R.id.darkSamus, R.id.diddyKong, R.id.donkeyKong,
@@ -124,7 +125,7 @@ public class CharacterSelect extends AppCompatActivity {
     R.id.zeroSuitSamus};
 
   /** Array of Classes for each character. */
-  private transient Class [] charClasses = {BanjoKazooie.class, Bayonetta.class,
+  private final transient Class [] charClasses = {BanjoKazooie.class, Bayonetta.class,
     Bowser.class, BowserJr.class, Byleth.class,
     CaptainFalcon.class, Chrom.class, Cloud.class, Corrin.class,
     Daisy.class, DarkPit.class, DarkSamus.class, DiddyKong.class,
@@ -163,7 +164,7 @@ public class CharacterSelect extends AppCompatActivity {
 
     for (ImageButton b: buttons) {
       b = findViewById(ids[count]);
-      final Intent tosend = new Intent(CharacterSelect.this,
+      final Intent tosend = new Intent(this,
               charClasses[count]);
       b.setOnClickListener(v -> startActivity(tosend));
       count++;

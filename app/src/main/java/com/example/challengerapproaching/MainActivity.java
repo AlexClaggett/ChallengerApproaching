@@ -16,13 +16,13 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
   /** Image Button for Characters. */
-  transient ImageButton characters;
+  /* default */ transient ImageButton characters;
 
   /** Image Button for Stages. */
-  transient ImageButton stages;
+  /* default */ transient ImageButton stages;
 
   /** Image Button for Events. */
-  transient ImageButton events;
+  /* default */ transient ImageButton events;
 
   /********************************************************************
    * Upon app start up this method sets the content view to main
@@ -34,26 +34,27 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(final Bundle savedInstance) {
     super.onCreate(savedInstance);
 
-    final StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+    final StrictMode.ThreadPolicy policy =
+        new StrictMode.ThreadPolicy.Builder().permitAll().build();
     StrictMode.setThreadPolicy(policy);
 
     setContentView(R.layout.activity_main);
 
     characters = findViewById(R.id.characters);
     characters.setOnClickListener(v -> {
-      final Intent toCharacters = new Intent(MainActivity.this, CharacterSelect.class);
+      final Intent toCharacters = new Intent(this, CharacterSelect.class);
       startActivity(toCharacters);
     });
 
     stages = findViewById(R.id.stages);
     stages.setOnClickListener(v -> {
-      final Intent toStages = new Intent(MainActivity.this, StageSelect.class);
+      final Intent toStages = new Intent(this, StageSelect.class);
       startActivity(toStages);
     });
 
     events = findViewById(R.id.events);
     events.setOnClickListener(v -> {
-      final Intent toEvents = new Intent(MainActivity.this, EventsActivity.class);
+      final Intent toEvents = new Intent(this, EventsActivity.class);
       startActivity(toEvents);
     });
   }

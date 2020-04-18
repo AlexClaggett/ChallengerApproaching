@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class ZeroSuitSamus extends AppCompatActivity {
 
-  /** Array of Zero Suit Samus's Framedata files */
-  transient String [] zzsMoves = {
+  /** Array of Zero Suit Samus's Framedata files. */
+  /* default */ transient String [] zzsMoves = {
       "ZeroSuitSamusBAir.gif",
       "ZeroSuitSamusBoostKickA.gif",
       "ZeroSuitSamusBoostKickG.gif",
@@ -67,9 +67,11 @@ public class ZeroSuitSamus extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/zero_suit_samus/" + zzsMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/zero_suit_samus/"
+            + zzsMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
@@ -79,7 +81,8 @@ public class ZeroSuitSamus extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
   }

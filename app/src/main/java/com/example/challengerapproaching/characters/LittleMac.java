@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class LittleMac extends AppCompatActivity {
 
-  /** Array of LittleMac's Framedata files */
-  transient String [] littleMacMoves = {
+  /** Array of LittleMac's Framedata files. */
+  /* default */ transient String [] littleMacMoves = {
       "LittleMacBAir.gif",
       "LittleMacBThrow.gif",
       "LittleMacDAir.gif",
@@ -68,9 +68,11 @@ public class LittleMac extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/little_mac/" + littleMacMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/little_mac/"
+            + littleMacMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
@@ -80,7 +82,8 @@ public class LittleMac extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
 

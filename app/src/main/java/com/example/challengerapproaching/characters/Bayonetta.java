@@ -16,8 +16,8 @@ import java.io.IOException;
 
 public class Bayonetta extends AppCompatActivity {
 
-  /**Array of Bayonetta's Framedata files*/
-  transient String [] bayonettaMoves = {
+  /**Array of Bayonetta's Framedata files. */
+  /* default */ transient String [] bayonettaMoves = {
       "BayonettaAfterburnerKickDown.gif",
       "BayonettaAfterburnerKickLanding.gif",
       "BayonettaAfterburnerKickUp.gif",
@@ -75,9 +75,11 @@ public class Bayonetta extends AppCompatActivity {
 
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/bayonetta/" + bayonettaMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/bayonetta/"
+            + bayonettaMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
@@ -87,7 +89,8 @@ public class Bayonetta extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
 

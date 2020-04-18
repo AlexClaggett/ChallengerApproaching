@@ -19,8 +19,8 @@ import java.io.InputStream;
 
 public class MiiSwordfighter extends AppCompatActivity {
 
-  /** Array of MiiSwordfighter's Framedata files */
-  transient String [] miiFightMoves = {
+  /** Array of MiiSwordfighter's Framedata files. */
+  /* default */ transient String [] miiFightMoves = {
       "MiiSwordfighterAirborneAssault.gif",
       "MiiSwordfighterAirborneAssaultHit.gif",
       "MiiSwordfighterBAir.gif",
@@ -78,9 +78,11 @@ public class MiiSwordfighter extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/mii_swordfighte/" + miiFightMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/mii_swordfighte/"
+            + miiFightMoves[position];
         final ImageView imageView = findViewById(R.id.imageView3);
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
@@ -89,7 +91,7 @@ public class MiiSwordfighter extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {
@@ -105,7 +107,10 @@ public class MiiSwordfighter extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
+        final ImageView imageView = findViewById(R.id.imageView3);
+        imageView.setVisibility(View.INVISIBLE);
       }
     });
 

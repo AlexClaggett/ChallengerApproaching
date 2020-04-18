@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class Lucario extends AppCompatActivity {
 
-  /** Array of Lucario's Framedata files */
-  transient String [] lucarioMoves = {
+  /** Array of Lucario's Framedata files. */
+  /* default */ transient String [] lucarioMoves = {
       "LucarioBAir.gif",
       "LucarioBThrow.gif",
       "LucarioDAir.gif",
@@ -65,9 +65,11 @@ public class Lucario extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/lucario/" + lucarioMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/lucario/"
+            + lucarioMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
@@ -77,7 +79,8 @@ public class Lucario extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
 

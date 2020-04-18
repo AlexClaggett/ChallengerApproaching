@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class PiranhaPlant extends AppCompatActivity {
 
-  /** Array of Piranha Plant's Framedata files */
-  transient String [] piranhaPlantMoves = {
+  /** Array of Piranha Plant's Framedata files. */
+  /* default */ transient String [] piranhaPlantMoves = {
       "PiranhaPlantBAir.gif",
       "PiranhaPlantBThrow.gif",
       "PiranhaPlantDAir.gif",
@@ -67,9 +67,11 @@ public class PiranhaPlant extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/piranha_plant/" + piranhaPlantMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/piranha_plant/"
+            + piranhaPlantMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
@@ -79,7 +81,8 @@ public class PiranhaPlant extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
 

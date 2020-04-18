@@ -19,8 +19,8 @@ import java.io.InputStream;
 
 public class Bowser extends AppCompatActivity {
 
-  /**Array of Bowser's Framedata files*/
-  transient String [] bowserMoves = {
+  /**Array of Bowser's Framedata files. */
+  /* default */ transient String [] bowserMoves = {
       "BowserBAir.gif",
       "BowserBowserBomb.png",
       "BowserBowserBombG.gif",
@@ -71,10 +71,12 @@ public class Bowser extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/bowser/" + bowserMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/bowser/"
+            + bowserMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
@@ -82,7 +84,7 @@ public class Bowser extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {
@@ -98,7 +100,10 @@ public class Bowser extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
+        final ImageView imageView = findViewById(R.id.imageView3);
+        imageView.setVisibility(View.INVISIBLE);
       }
     });
 

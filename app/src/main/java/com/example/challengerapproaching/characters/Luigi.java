@@ -19,8 +19,8 @@ import java.io.InputStream;
 
 public class Luigi extends AppCompatActivity {
 
-  /** Array of Luigi's Framedata files */
-  transient String [] luigiMoves = {
+  /** Array of Luigi's Framedata files. */
+  /* default */ transient String [] luigiMoves = {
       "LuigiBAir.gif",
       "LuigiBThrow.gif",
       "LuigiCycloneA.gif",
@@ -75,7 +75,8 @@ public class Luigi extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
         final String toUrl = "https://ultimateframedata.com/hitboxes/luigi/" + luigiMoves[position];
@@ -86,7 +87,7 @@ public class Luigi extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {
@@ -102,7 +103,10 @@ public class Luigi extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
+        final ImageView imageView = findViewById(R.id.imageView3);
+        imageView.setVisibility(View.INVISIBLE);
       }
     });
 

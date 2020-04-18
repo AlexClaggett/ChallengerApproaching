@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class Rob extends AppCompatActivity {
 
-  /** Array of Rob's Framedata files */
-  transient String [] robMoves = {
+  /** Array of Rob's Framedata files. */
+  /* default */ transient String [] robMoves = {
       "ROBArmRotor.gif",
       "ROBArmRotorEnd.gif",
       "ROBBAir.gif",
@@ -64,7 +64,8 @@ public class Rob extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/rob/" + robMoves[position];
         try {
@@ -76,7 +77,8 @@ public class Rob extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
 

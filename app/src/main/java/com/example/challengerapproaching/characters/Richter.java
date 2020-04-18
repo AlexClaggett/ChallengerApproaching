@@ -19,8 +19,8 @@ import java.io.InputStream;
 
 public class Richter extends AppCompatActivity {
 
-  /** Array of Richter's Framedata files */
-  transient String [] richterMoves = {
+  /** Array of Richter's Framedata files. */
+  /* default */ transient String [] richterMoves = {
       "RichterAxe.gif",
       "RichterBAir.gif",
       "RichterBAirDown.gif",
@@ -73,10 +73,12 @@ public class Richter extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final ImageView imageView = findViewById(R.id.imageView3);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/richter/" + richterMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/richter/"
+            + richterMoves[position];
         if (toUrl.endsWith("png")) {
           gifImageView.setVisibility(View.INVISIBLE);
           try {
@@ -84,7 +86,7 @@ public class Richter extends AppCompatActivity {
             final Bitmap bmmap = BitmapFactory.decodeStream(inputStream);
             imageView.setImageBitmap(bmmap);
             imageView.setVisibility(View.VISIBLE);
-          } catch (IOException e){
+          } catch (IOException e) {
             imageView.setVisibility(View.INVISIBLE);
           }
         } else {
@@ -100,7 +102,10 @@ public class Richter extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
+        final ImageView imageView = findViewById(R.id.imageView3);
+        imageView.setVisibility(View.INVISIBLE);
       }
     });
 

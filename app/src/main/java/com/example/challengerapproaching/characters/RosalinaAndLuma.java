@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class RosalinaAndLuma extends AppCompatActivity {
 
-  /** Array of Rosalina's Framedata files */
-  transient String [] rosalinaMoves = {
+  /** Array of Rosalina's Framedata files. */
+  /* default */ transient String [] rosalinaMoves = {
       "RosalinaBAir.gif",
       "RosalinaBThrow.gif",
       "RosalinaDAir.gif",
@@ -83,9 +83,11 @@ public class RosalinaAndLuma extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/rosalina_and_luma/" + rosalinaMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/rosalina_and_luma/"
+            + rosalinaMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
@@ -94,8 +96,9 @@ public class RosalinaAndLuma extends AppCompatActivity {
       }
 
       @Override
-      public void onNothingSelected(AdapterView<?> parent) {
-
+      public void onNothingSelected(final AdapterView<?> parent) {
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
   }

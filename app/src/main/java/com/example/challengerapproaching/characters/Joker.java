@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class Joker extends AppCompatActivity {
 
-  /** Array of Joker's Framedata files */
-  transient String [] jokerMoves = {
+  /** Array of Joker's Framedata files. */
+  /* default */ transient String [] jokerMoves = {
       "JokerBAir.gif",
       "JokerBAirArsene.gif",
       "JokerBThrow.gif",
@@ -95,7 +95,8 @@ public class Joker extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/joker/" + jokerMoves[position];
         try {
@@ -107,7 +108,8 @@ public class Joker extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
 

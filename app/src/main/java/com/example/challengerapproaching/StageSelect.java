@@ -60,19 +60,19 @@ public class StageSelect extends AppCompatActivity {
   public transient ImageButton yoshisStory;
 
   /** Button array of the stage buttons. */
-  transient ImageButton [] buttons = {battleField, finalDestination, kalosPL,
+  /* default */ transient ImageButton [] buttons = {battleField, finalDestination, kalosPL,
       lylatCruise, pokemonStadium, pokemonStadium2,
       smashville, townAndCity, unovaPL,
       yoshiIsland, yoshisStory};
 
   /** Array of integers of the stage ids found in the XML. */
-  private transient int [] ids = {R.id.BattleField, R.id.FinalDestination, R.id.KalosPokemonStadium,
+  private final transient int [] ids = {R.id.BattleField, R.id.FinalDestination, R.id.KalosPokemonStadium,
     R.id.LylatCruise, R.id.PokemonStadium, R.id.PokemonStadium2,
     R.id.Smashville, R.id.TownAndCity, R.id.UnovaPokemonLeague,
     R.id.YoshiIsland, R.id.YoshisStory};
 
   /** Array of Classes for each stage. */
-  private transient Class [] charClasses = {BattleField.class, FinalDestination.class,
+  private final transient Class [] charClasses = {BattleField.class, FinalDestination.class,
     KalosPokemonLeague.class, LylatCruise.class, PokemonStadium.class,
     PokemonStadium2.class, Smashville.class, TownAndCity.class,
     UnovaPokemonLeague.class, YoshiIsland.class, YoshisStory.class};
@@ -92,7 +92,7 @@ public class StageSelect extends AppCompatActivity {
 
     for (ImageButton b: buttons) {
       b = findViewById(ids[count]);
-      final Intent tosend = new Intent(StageSelect.this,
+      final Intent tosend = new Intent(this,
               charClasses[count]);
       b.setOnClickListener(v -> startActivity(tosend));
       count++;

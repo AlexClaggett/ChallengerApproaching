@@ -54,22 +54,14 @@ public class EventsActivity extends AppCompatActivity
    */
   private transient TextView[] upcomingEvent = new TextView[3];
 
-  /**
-   * Button for creating an event.
-   */
-  private transient Button createBtn;
-
-  /**
-   * Button for viewing the list of created events.
-   */
-  private transient Button viewEvent;
-
   /********************************************************************
    * OnCreate method to initialize the Events screen to be presented
    * to the user.
    * @param savedInstance standard state parameter needed for
    *                           define a specific state.
    *******************************************************************/
+
+  @Override
   protected void onCreate(final Bundle savedInstance) {
 
     super.onCreate(savedInstance);
@@ -78,10 +70,16 @@ public class EventsActivity extends AppCompatActivity
     setContentView(R.layout.events);
 
     // Initialize variables to their respective views.
-    createBtn = findViewById(R.id.eventCreation);
+    /**
+     * Button for creating an event.
+     */
+    Button createBtn = findViewById(R.id.eventCreation);
     eventName = findViewById(R.id.tView);
     eventDate = findViewById(R.id.dView);
-    viewEvent = findViewById(R.id.viewevent);
+    /**
+     * Button for viewing the list of created events.
+     */
+    Button viewEvent = findViewById(R.id.viewevent);
     upcomingEvent[0] = findViewById(R.id.mostRecent);
     upcomingEvent[1] = findViewById(R.id.mostRecent2);
     upcomingEvent[2] = findViewById(R.id.mostRecent3);
@@ -99,7 +97,7 @@ public class EventsActivity extends AppCompatActivity
       if (eventDatabase.getNumEvents() == 0) {
         toastMessage("Currently No Events Are Scheduled.");
       } else {
-        final Intent intent = new Intent(EventsActivity.this,
+        final Intent intent = new Intent(this,
             ListDataActivity.class);
         startActivityForResult(intent, 1);
       }
@@ -173,7 +171,7 @@ public class EventsActivity extends AppCompatActivity
    * @param newDate The date of the event
    *******************************************************************/
   public void addData(final String newName, final String newDate) {
-    final boolean insertData = eventDatabase.addData(newName, newDate);
+    eventDatabase.addData(newName, newDate);
   }
 
   /********************************************************************

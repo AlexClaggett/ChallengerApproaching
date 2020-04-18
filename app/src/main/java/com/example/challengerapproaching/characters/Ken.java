@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class Ken extends AppCompatActivity {
 
-  /** Array of Ken's Framedata files */
-  transient String [] kenMoves = {
+  /** Array of Ken's Framedata files. */
+  /* default */ transient String [] kenMoves = {
       "KenBAir.gif",
       "KenBThrow.gif",
       "KenDAir.gif",
@@ -80,7 +80,8 @@ public class Ken extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/ken/" + kenMoves[position];
         try {
@@ -92,7 +93,8 @@ public class Ken extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
 

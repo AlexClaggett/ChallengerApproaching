@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class Charizard extends AppCompatActivity {
 
-  /** Array of Charizard's Framedata files */
-  transient String [] charizardMoves = {
+  /** Array of Charizard's Framedata files. */
+  /* default */ transient String [] charizardMoves = {
       "charitardBAir.gif",
       "charitardBThrow.gif",
       "charitardDAir.gif",
@@ -63,7 +63,8 @@ public class Charizard extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
         final String toUrl = "https://ultimateframedata.com/hitboxes/pt_charizard/" + charizardMoves[position];
         try {
@@ -75,7 +76,8 @@ public class Charizard extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
 

@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class CaptainFalcon extends AppCompatActivity {
 
-  /** Array of Captain Falcon's Framedata files */
-  transient String [] cptnFalconMoves = {
+  /** Array of Captain Falcon's Framedata files. */
+  /* default */ transient String [] cptnFalconMoves = {
       "CaptainFalconBAir.gif",
       "CaptainFalconBThrow.gif",
       "CaptainFalconDAir.gif",
@@ -77,9 +77,11 @@ public class CaptainFalcon extends AppCompatActivity {
     spnLocale.setAdapter(adapter);
     spnLocale.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long idName) {
+      public void onItemSelected(final AdapterView<?> parent, final View view,
+                                 final int position, final long idName) {
         final GifImageView gifImageView = findViewById(R.id.GifImageView);
-        final String toUrl = "https://ultimateframedata.com/hitboxes/captain_falcon/" + cptnFalconMoves[position];
+        final String toUrl = "https://ultimateframedata.com/hitboxes/captain_falcon/"
+            + cptnFalconMoves[position];
         try {
           gifImageView.setGifImageUrl(toUrl);
         } catch (IOException e) {
@@ -89,7 +91,8 @@ public class CaptainFalcon extends AppCompatActivity {
 
       @Override
       public void onNothingSelected(final AdapterView<?> parent) {
-
+        final GifImageView gifImageView = findViewById(R.id.GifImageView);
+        gifImageView.setVisibility(View.INVISIBLE);
       }
     });
   }
