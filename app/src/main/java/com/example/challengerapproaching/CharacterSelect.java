@@ -163,7 +163,6 @@ public class CharacterSelect extends AppCompatActivity { //NOPMD
       final Intent tosend = new Intent(this,
               charClasses[count]);
       findViewById(ids[count]).setOnClickListener(v -> startActivity(tosend));
-      count++;
     }
   }
 }
