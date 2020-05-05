@@ -148,7 +148,7 @@ public class EditDataActivity extends AppCompatActivity { //NOPMD
         String date = "";
         date = date.concat(month + "/");
         date = date.concat(dayOfMonth + "/");
-        date = date.concat(date + year);
+        date = date.concat("" + year);
         editableDate.setText(date);
       }
     };
